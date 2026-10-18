@@ -1,0 +1,9 @@
+[
+ {"match": ["MILLA DE ORO"], "lat": 6.1982, "lng": -75.5735, "approx": true},
+ {"match": ["11-73"], "lat": 6.2078, "lng": -75.5668, "approx": true},
+ {"match": ["32F", "78-105"], "lat": 6.2426, "lng": -75.5987, "approx": true},
+ {"match": ["75 SUR", "43A-90"], "lat": 6.1525, "lng": -75.6165, "approx": true},
+ {"match": ["AVES MARIA"], "lat": 6.1525, "lng": -75.6165, "approx": true},
+ {"match": ["78", "32EE-25"], "lat": 6.2381, "lng": -75.5991, "approx": true},
+ {"match": ["SWEET GEORGIA"], "lat": 6.2381, "lng": -75.5991, "approx": true}
+]

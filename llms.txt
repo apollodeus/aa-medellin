@@ -1,0 +1,34 @@
+# AA Medellín Map
+
+> Independent, daily-updated directory of Alcoholics Anonymous meetings in Medellín, Colombia: 105 Spanish-language groups (from AA Colombia's directory, aacolombia.org) and 8 English-speaking meetings (from aamedellin.org and local listings). Not affiliated with AA.
+
+Last updated: 2026-10-18
+
+- [English-speaking AA meetings in Medellín](https://www.aamedellinmap.org/en/): map, weekly schedule, addresses and contacts
+- [Reuniones de AA en Medellín (español)](https://www.aamedellinmap.org/): all groups with map and filters
+- [Raw data (JSON)](https://www.aamedellinmap.org/data.json)
+
+## English-speaking meetings
+
+- **Clean Living (Zoom Only)**: Monday through Friday 8:00 am; Sunday 9:00 am; open meeting; online; Online (Zoom); Contact: Bill +57 310 722-4804, or Kevin +57 321 398-3118 for the Zoom link
+- **A Vision for Medellin**: Tue 6:00 pm; closed meeting; Big Book Study; hybrid; Edificio Milla de Oro · Cra. 42 & Cl. 3 Sur 81 Torre 1 Piso 15, Sala 6, El Poblado; Contact: Joey – joey@joeymobile.com 727-238-5297 (google voice) WhatsApp +57 318 692-8619
+- **AA Poblado Group Manila**: Tue, Fri 12:30 pm; open meeting; in-person; Sede Social Manila · Cra 43D #11-73, El Poblado, Medellin; Contact: John B. +57 324 608-9091
+- **A Vision for You Group**: Wed 12:30 pm; open meeting; Open AA 12×12 Study; in-person; Calle 32F # 78-105, Laureles
+- **Sabaneta English-Speaking AA Meeting**: Thu 12:00 Noon; closed meeting; in-person; Zendaya Coffee Studio #2 · Cl. 75 Sur #43a-90; Contact: Richard K. +57 323 812 9248
+- **A Vision for Medellin**: Sat 9:00 am; closed meeting; 12 & 12 Step/Tradition Study; hybrid; Edificio Milla de Oro · Cra. 42 & Cl. 3 Sur 81 Torre 1 Piso 15, Sala 6, El Poblado; Contact: Joey – joey@joeymobile.com 727-238-5297 (google voice) WhatsApp +57 318 692-8619
+- **There Is A Solution**: Sat 9:00 am; open meeting; AA Big Book Study; in-person; Sweet Georgia Cafe – back room (in Laureles) · Carrera 78 #32ee-25, Medellin, Antioquia; Contact: Rick +57 302 296-7611
+- **There Is A Solution**: Sun 9:00 am; open meeting; Open Speaker Meeting; in-person; Sweet Georgia Cafe – back room (in Laureles) · Carrera 78 #32ee-25, Medellin, Antioquia; Contact: Rick +57 302 296-7611
+
+## Weekly English schedule
+
+- Monday: 8:00 am Clean Living (Zoom Only)
+- Tuesday: 8:00 am Clean Living (Zoom Only); 12:30 pm AA Poblado Group Manila; 6:00 pm A Vision for Medellin
+- Wednesday: 8:00 am Clean Living (Zoom Only); 12:30 pm A Vision for You Group
+- Thursday: 8:00 am Clean Living (Zoom Only); 12:00 noon Sabaneta English-Speaking AA Meeting
+- Friday: 8:00 am Clean Living (Zoom Only); 12:30 pm AA Poblado Group Manila
+- Saturday: 9:00 am A Vision for Medellin; 9:00 am There Is A Solution
+- Sunday: 9:00 am Clean Living (Zoom Only); 9:00 am There Is A Solution
+
+## Spanish-language groups
+
+105 groups across Medellín; full list with addresses and schedules at https://www.aamedellinmap.org/ and in https://www.aamedellinmap.org/data.json.
