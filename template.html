@@ -75,7 +75,7 @@ h1{font:600 clamp(1.9rem,4.6vw,2.9rem)/1.1 var(--serif);margin:0 0 12px;color:#f
 /* filters */
 .controls{position:sticky;top:0;z-index:500;background:var(--bg);padding-block:14px 12px;display:grid;gap:8px;margin-bottom:6px}
 .controls::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line)}
-input[type=search],select{font:inherit;font-size:.95rem;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px;width:100%;min-width:0}
+input[type=search],input[type=text],select{font:inherit;font-size:.95rem;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px;width:100%;min-width:0}
 input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--gold-hi);outline-offset:2px}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .row>*{min-width:0}
@@ -88,6 +88,15 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 .seg button[aria-pressed=true]{background:var(--accent-soft);color:var(--accent);font-weight:700}
 .sortwrap{display:flex;gap:8px;flex:1 1 220px;align-items:center;font-size:.9rem;color:var(--muted)}
 .sortwrap select{flex:1}
+.addr-row{margin:0}
+.go{font:600 .9rem var(--sans);background:var(--navy);color:#fff;border:0;border-radius:10px;padding:9px 16px;cursor:pointer;box-shadow:inset 0 -2px 0 var(--gold-hi)}
+.go:hover{filter:brightness(1.12)}
+.addr-msg{font-size:.85rem;color:var(--muted);flex:1 1 100%}
+.upin{width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--gold-hi);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
+.upin::after{content:"";position:absolute;inset:5px;border-radius:50%;background:#14244a}
+.notes a,.iw .notes a{color:var(--accent);text-decoration:none;font-weight:600}
+.notes a:hover{text-decoration:underline}
+.wa::before{content:"";display:inline-block;width:13px;height:13px;margin-right:3px;vertical-align:-2px;background:#25d366;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4zm-3 4.5c-.2 0-.5 0-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.5.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4l-.5-.3-1.7-.9c-.3-.1-.5-.1-.7.1l-.9 1c-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.6l-.8-1.9c-.2-.5-.4-.4-.6-.4H9z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4zm-3 4.5c-.2 0-.5 0-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.5.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4l-.5-.3-1.7-.9c-.3-.1-.5-.1-.7.1l-.9 1c-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.6l-.8-1.9c-.2-.5-.4-.4-.6-.4H9z'/%3E%3C/svg%3E") center/contain no-repeat}
 
 /* cards */
 .list{display:grid;gap:12px;margin-top:12px}
@@ -166,6 +175,11 @@ footer .inner{padding-block:22px 34px}
       <select id="center"></select>
     </label>
   </div>
+  <form class="row addr-row" id="addrform" autocomplete="off">
+    <input type="text" id="addr" placeholder="{{T_ADDR_PH}}" aria-label="{{T_ADDR}}" style="flex:1 1 260px">
+    <button type="submit" class="go" id="addrgo">{{T_ADDR_GO}}</button>
+    <span class="addr-msg" id="addrmsg"></span>
+  </form>
 </div>
 
 <div class="list" id="list">{{STATIC_LIST}}</div>
@@ -193,7 +207,7 @@ function locate(){
   const sel=document.getElementById("center");
   if(!navigator.geolocation){sel.value="pob";state.center="pob";render(false);return;}
   document.getElementById("count").textContent=T.locating;
-  navigator.geolocation.getCurrentPosition(pos=>{CENTERS.me=[pos.coords.latitude,pos.coords.longitude];state.center="me";render(false);},
+  navigator.geolocation.getCurrentPosition(pos=>{CENTERS.me=[pos.coords.latitude,pos.coords.longitude];state.center="me";MAP.user(CENTERS.me[0],CENTERS.me[1],T.myloc);render(false);},
     ()=>{document.getElementById("count").textContent=T.locfail;state.center="pob";sel.value="pob";setTimeout(()=>render(false),2500);},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
 }
 const ZONES=[["Centro",6.2518,-75.5636],["El Poblado",6.2096,-75.5681],["Laureles",6.2456,-75.5916],["Belén",6.2320,-75.6010],["Robledo",6.2800,-75.5950],["Manrique",6.2690,-75.5540],["Aranjuez",6.2800,-75.5600],["Castilla",6.2920,-75.5750],["Buenos Aires",6.2380,-75.5540],["Guayabal",6.2180,-75.5880],["San Javier",6.2560,-75.6130],["La América",6.2520,-75.6010],["Villa Hermosa",6.2600,-75.5450],["Santa Cruz / Popular",6.2960,-75.5500],["Doce de Octubre",6.3020,-75.5860],["Santa Elena",6.2140,-75.4980],["San Antonio de Prado",6.1830,-75.6720],["San Cristóbal",6.2800,-75.6350],["Altavista",6.2080,-75.6230],["Envigado",6.1700,-75.5900],["Sabaneta",6.1515,-75.6160],["Itagüí",6.1720,-75.6110]];
@@ -203,6 +217,41 @@ const NAMES={lunes:"L",martes:"M","miércoles":"Mc",miercoles:"Mc",jueves:"J",vi
 const ORDER=["L","M","Mc","J","V","S","D"];
 function km(a,b,c,d){const R=6371,x=(c-a)*Math.PI/180,y=(d-b)*Math.PI/180*Math.cos((a+c)/2*Math.PI/180);return R*Math.sqrt(x*x+y*y)}
 function esc(s){return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function linkify(text){
+  let h=esc(text);
+  h=h.replace(/\b((?:https?:\/\/|www\.)[^\s<]+[^\s<.,;:)])/g,m=>`<a href="${m.startsWith("http")?m:"https://"+m}" target="_blank" rel="noopener">${m}</a>`);
+  h=h.replace(/\b([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})\b/gi,m=>`<a href="mailto:${m}">${m}</a>`);
+  h=h.replace(/(\+\s?\d[\d\s().-]{7,}\d|\b\d{3}[\s.-]\d{3}[\s.-]\d{4}\b)/g,m=>{
+    let d=m.replace(/\D/g,"");
+    if(!m.trim().startsWith("+")){ if(d.length===10&&d.startsWith("3"))d="57"+d; else if(d.length===10)d="1"+d; else return m; }
+    if(d.length<10||d.length>14)return m;
+    const wa=d.startsWith("57")&&d[2]==="3";
+    return wa?`<a class="wa" href="https://wa.me/${d}" target="_blank" rel="noopener" title="WhatsApp">${m}</a>`:`<a href="tel:+${d}">${m}</a>`;});
+  return h;
+}
+async function geocodeAddress(q){
+  q=q.trim(); if(!q)return null;
+  if(MAP.g&&window.google){
+    const r=await new Promise(res=>new google.maps.Geocoder().geocode({address:q,region:"co",bounds:new google.maps.LatLngBounds({lat:6.10,lng:-75.72},{lat:6.40,lng:-75.45})},(x,st)=>res(st==="OK"?x:null)));
+    if(r&&r[0]){const l=r[0].geometry.location;return {lat:l.lat(),lng:l.lng(),label:r[0].formatted_address};}
+    return null;
+  }
+  const u="https://nominatim.openstreetmap.org/search?"+new URLSearchParams({q:/medell|envigado|sabaneta|itag|bello|colombia/i.test(q)?q:q+", Medellín, Colombia",format:"json",limit:1,viewbox:"-75.72,6.40,-75.45,6.10",bounded:1,"accept-language":PAGE_LANG});
+  const r=await (await fetch(u)).json();
+  if(r&&r[0])return {lat:+r[0].lat,lng:+r[0].lon,label:r[0].display_name.split(",").slice(0,3).join(",")};
+  return null;
+}
+document.getElementById("addrform").addEventListener("submit",async e=>{
+  e.preventDefault();const q=document.getElementById("addr").value,msg=document.getElementById("addrmsg"),btn=document.getElementById("addrgo");
+  if(!q.trim())return; btn.disabled=true; msg.textContent=T.locating;
+  try{const r=await geocodeAddress(q);
+    if(!r){msg.textContent=T.addrFail;return;}
+    CENTERS.addr=[r.lat,r.lng];const sel=document.getElementById("center");let o=sel.querySelector('option[value="addr"]');
+    if(!o){o=document.createElement("option");o.value="addr";sel.insertBefore(o,sel.firstChild);}
+    o.textContent="📍 "+r.label;sel.value="addr";state.center="addr";msg.textContent=T.addrOk+" "+r.label;
+    MAP.user(r.lat,r.lng,r.label);render(false);
+  }catch(x){msg.textContent=T.addrFail;}finally{btn.disabled=false;}
+});
 function norm(s){return String(s??"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase()}
 function parseDays(h){
   const s=h.toLowerCase(), out=new Set();
@@ -260,6 +309,11 @@ const MAP={pins:{},
     this.pop=new maplibregl.Popup({offset:14,maxWidth:"240px"}).setLngLat([g.lng,g.lat]).setHTML(infoHtml(grp)).addTo(this.m);
   },
   focus(g){if(this.g){this.g.panTo({lat:g.lat,lng:g.lng});this.g.setZoom(16);}else this.m.flyTo({center:[g.lng,g.lat],zoom:15.5});this.open(g);},
+  user(lat,lng,label){
+    if(this.g){if(this.um)this.um.setMap(null);this.um=new google.maps.Marker({position:{lat,lng},map:this.g,title:label,zIndex:2000});this.g.panTo({lat,lng});this.g.setZoom(14);return;}
+    if(this.um)this.um.remove();const el=document.createElement("div");el.className="upin";el.title=label;
+    this.um=new maplibregl.Marker({element:el,anchor:"bottom"}).setLngLat([lng,lat]).addTo(this.m);this.m.flyTo({center:[lng,lat],zoom:14});
+  },
   fit(list){
     const pts=list.filter(g=>g.lat!=null&&g.lat>6.10&&g.lat<6.36&&g.lng>-75.72&&g.lng<-75.47);if(!pts.length)return;
     if(this.g){const b=new google.maps.LatLngBounds();pts.forEach(g=>b.extend({lat:g.lat,lng:g.lng}));this.g.fitBounds(b,40);if(pts.length===1)this.g.setZoom(15);return;}
@@ -324,9 +378,9 @@ function render(refit){
     ${g.address?`<div class="addr"><a href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${esc(g.address)}</a>${g.detail?" · "+esc(g.detail):""}</div>`:(g.detail?`<div class="addr">${esc(g.detail)}</div>`:"")}
     ${g.zone?`<div class="zone">${esc(g.zone)}</div>`:""}
     <div class="hor">${esc(g.hor)}</div>
-    ${(g.notes&&g.notes.length)?`<div class="notes">${g.notes.map(esc).join("<br>")}</div>`:""}
-    ${g.zoom?`<div class="notes">${esc(g.zoom)}</div>`:""}
-    ${(g.contact||g.email)?`<div class="notes">${T.contact}: ${esc([g.contact,g.email].filter(Boolean).join(" · "))}</div>`:""}
+    ${(g.notes&&g.notes.length)?`<div class="notes">${g.notes.map(linkify).join("<br>")}</div>`:""}
+    ${g.zoom?`<div class="notes">${linkify(g.zoom)}</div>`:""}
+    ${(g.contact||g.email)?`<div class="notes">${T.contact}: ${linkify([g.contact,g.email].filter(Boolean).join(" · "))}</div>`:""}
     <div class="links">
       ${g.format!=="online"&&(g.lat!=null||g.address)?`<a class="dir" href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${T.directions}</a>`:""}
       ${g.lat!=null?`<a href="#map" data-i="${g.i}" class="tomap">${T.onmap}</a>`:""}

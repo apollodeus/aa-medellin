@@ -26,6 +26,24 @@ ZONES = [("Centro", 6.2518, -75.5636), ("El Poblado", 6.2096, -75.5681), ("Laure
 def esc(s):
     return html.escape(str(s or ""), quote=True)
 
+def linkify(text):
+    """Same rules as linkify() in template.html: URLs, emails, phones (Colombian mobiles → WhatsApp)."""
+    h = esc(text)
+    h = re.sub(r"\b((?:https?://|www\.)[^\s<]+[^\s<.,;:)])",
+               lambda m: '<a href="%s" target="_blank" rel="noopener">%s</a>' % (m.group(1) if m.group(1).startswith("http") else "https://" + m.group(1), m.group(1)), h)
+    h = re.sub(r"\b([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})\b", r'<a href="mailto:\1">\1</a>', h)
+    def phone(m):
+        raw = m.group(1); d = re.sub(r"\D", "", raw)
+        if not raw.strip().startswith("+"):
+            if len(d) == 10 and d.startswith("3"): d = "57" + d
+            elif len(d) == 10: d = "1" + d
+            else: return raw
+        if len(d) < 10 or len(d) > 14: return raw
+        if d.startswith("57") and d[2] == "3":
+            return '<a class="wa" href="https://wa.me/%s" target="_blank" rel="noopener" title="WhatsApp">%s</a>' % (d, raw)
+        return '<a href="tel:+%s">%s</a>' % (d, raw)
+    return re.sub(r"(\+\s?\d[\d\s().-]{7,}\d|\b\d{3}[\s.-]\d{3}[\s.-]\d{4}\b)", phone, h)
+
 def zone(m):
     if m.get("barrio"):
         return m["barrio"]
@@ -104,9 +122,9 @@ def card(m, T):
     z = zone(m)
     if z: parts.append('<div class="zone">%s</div>' % esc(z))
     parts.append('<div class="hor">%s</div>' % esc(sched))
-    if m.get("notes"): parts.append('<div class="notes">%s</div>' % "<br>".join(esc(n) for n in m["notes"]))
-    if m.get("zoom"): parts.append('<div class="notes">%s</div>' % esc(m["zoom"]))
-    if contact: parts.append('<div class="notes">%s: %s</div>' % (T["contact"], esc(contact)))
+    if m.get("notes"): parts.append('<div class="notes">%s</div>' % "<br>".join(linkify(n) for n in m["notes"]))
+    if m.get("zoom"): parts.append('<div class="notes">%s</div>' % linkify(m["zoom"]))
+    if contact: parts.append('<div class="notes">%s: %s</div>' % (T["contact"], linkify(contact)))
     links = []
     if fmt != "online" and (m.get("lat") is not None or m.get("address")):
         dest = (", ".join(x for x in [m.get("place"), m.get("address")] if x) + ", Medellín, Antioquia, Colombia") if (en or m.get("lat") is None) else "%s,%s" % (m["lat"], m["lng"])
@@ -173,7 +191,7 @@ ES = dict(LANG="es", OGLOCALE="es_CO", CANON="/", DATA="data.json", DEFAULT_FILT
     H1="Reuniones de AA en Medellín",
     T_LANG="Idioma", T_ALL="Todos", T_SEARCH="Buscar nombre, dirección o barrio", T_DAY="Día", T_FMT="Modalidad",
     T_ALLF="Todas", T_INPERSON="Presencial", T_ONLINE="Virtual", T_NEAR="Cerca de", T_BYNAME="Ordenar por nombre",
-    T_MAP="Mapa de reuniones", T_LEG_EN="Reunión en inglés", T_LEG_ES="Grupo en español", T_LEG_MIX="Ambos en el mismo lugar",
+    T_MAP="Mapa de reuniones", T_ADDR="Dirección u hotel", T_ADDR_PH="Escribe tu dirección u hotel para ordenar por distancia", T_ADDR_GO="Buscar", T_LEG_EN="Reunión en inglés", T_LEG_ES="Grupo en español", T_LEG_MIX="Ambos en el mismo lugar",
     BRAND="AA Medellín Map",
     LANGSW='<span lang="es">ES</span><a href="en/" hreflang="en" lang="en">EN</a>')
 EN = dict(LANG="en", OGLOCALE="en_US", CANON="/en/", DATA="../data.json", DEFAULT_FILTER="en",
@@ -181,19 +199,21 @@ EN = dict(LANG="en", OGLOCALE="en_US", CANON="/en/", DATA="../data.json", DEFAUL
     H1="English-Speaking AA Meetings in Medellín",
     T_LANG="Language", T_ALL="All", T_SEARCH="Search name, address or neighborhood", T_DAY="Day", T_FMT="Format",
     T_ALLF="All", T_INPERSON="In person", T_ONLINE="Online", T_NEAR="Near", T_BYNAME="Sort by name",
-    T_MAP="Meeting map", T_LEG_EN="English-speaking meeting", T_LEG_ES="Spanish-language group", T_LEG_MIX="Both at the same venue",
+    T_MAP="Meeting map", T_ADDR="Address or hotel", T_ADDR_PH="Type your address or hotel to sort by distance", T_ADDR_GO="Go", T_LEG_EN="English-speaking meeting", T_LEG_ES="Spanish-language group", T_LEG_MIX="Both at the same venue",
     BRAND="AA Medellín Map",
     LANGSW='<a href="../" hreflang="es" lang="es">ES</a><span lang="en">EN</span>')
 TOPIC_ES = {"Big Book Study": "Estudio del Libro Grande", "AA Big Book Study": "Estudio del Libro Grande",
             "12 & 12 Step/Tradition Study": "Estudio de Pasos y Tradiciones", "Open AA 12×12 Study": "Estudio de los Doce y Doce",
             "Open Speaker Meeting": "Reunión de oradores"}
 TJS = {
- "es": {"approx": "ubicación aproximada", "approxTitle": "El pin se colocó a partir de la dirección y puede estar a una cuadra de distancia. Usa 'Cómo llegar' para la ruta exacta.",
+ "es": {"addrOk": "Ordenado por distancia desde:", "addrFail": "No encontramos esa dirección. Prueba con el nombre del hotel o agrega el barrio.",
+        "approx": "ubicación aproximada", "approxTitle": "El pin se colocó a partir de la dirección y puede estar a una cuadra de distancia. Usa 'Cómo llegar' para la ruta exacta.",
         "myloc": "📍 Mi ubicación", "metro": "Área metropolitana", "byname": "Ordenar por nombre", "locating": "Buscando tu ubicación…", "locfail": "No se pudo obtener tu ubicación","directions": "Cómo llegar", "details": "Ver detalles", "topic": TOPIC_ES,
         "tag": {"english": "Inglés", "open": "abierta", "closed": "cerrada", "online": "solo virtual", "hybrid": "híbrida", "virtual": "virtual"},"locale": "es-CO", "updated": "Actualizado: ", "empty": "Ningún grupo coincide con esos filtros.", "contact": "Contacto",
         "onmap": "Ver en el mapa", "source": "Fuente", "loadfail": "No se pudo cargar la lista.", "nosched": "Horario no publicado",
         "days": [["L", "Lun"], ["M", "Mar"], ["Mc", "Mié"], ["J", "Jue"], ["V", "Vie"], ["S", "Sáb"], ["D", "Dom"]]},
- "en": {"approx": "approx. location", "approxTitle": "This pin was placed from the address and may be off by a block. Use Directions for the exact route.",
+ "en": {"addrOk": "Sorted by distance from:", "addrFail": "Couldn't find that address. Try the hotel name or add the neighborhood.",
+        "approx": "approx. location", "approxTitle": "This pin was placed from the address and may be off by a block. Use Directions for the exact route.",
         "myloc": "📍 My location", "metro": "Metro area", "byname": "Sort by name", "locating": "Finding your location…", "locfail": "Couldn't get your location",
         "directions": "Directions", "details": "Details", "topic": {},
         "tag": {"english": "English", "open": "open", "closed": "closed", "online": "online only", "hybrid": "hybrid", "virtual": "online"},
