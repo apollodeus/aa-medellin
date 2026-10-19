@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{TITLE}}</title>
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/svg+xml" href="{{SITE}}/assets/icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="{{SITE}}/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="{{SITE}}/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#1d3461">
+<link rel="manifest" href="{{SITE}}/site.webmanifest">
 <meta name="description" content="{{DESC}}">
 <link rel="canonical" href="{{CANONICAL}}">
 <link rel="alternate" hreflang="es" href="{{SITE}}/">
@@ -15,7 +19,13 @@
 <meta property="og:description" content="{{DESC}}">
 <meta property="og:url" content="{{CANONICAL}}">
 <meta property="og:locale" content="{{OGLOCALE}}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{{SITE}}/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{TITLE}}">
+<meta property="og:site_name" content="AA Medellín Map">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{SITE}}/assets/og-image.png">
 <script type="application/ld+json">{{JSONLD}}</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
@@ -141,7 +151,7 @@ footer .inner{padding-block:22px 34px}
 <body>
 <div class="band"><div class="inner">
   <div class="topbar">
-    <span class="brand"><svg width="18" height="22" viewBox="0 0 18 22" aria-hidden="true"><path d="M9 1.2a7.6 7.6 0 0 0-7.6 7.6c0 5.4 7.6 12 7.6 12s7.6-6.6 7.6-12A7.6 7.6 0 0 0 9 1.2Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="8.8" r="2.6" fill="currentColor"/></svg>{{BRAND}}</span>
+    <span class="brand"><img src="{{SITE}}/assets/icon.svg" width="26" height="26" alt="" style="border-radius:6px">{{BRAND}}</span>
     <nav class="langsw" aria-label="Language / Idioma">{{LANGSW}}</nav>
   </div>
   <h1>{{H1}}</h1>
