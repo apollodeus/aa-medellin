@@ -14,7 +14,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE_PATH = os.path.join(ROOT, "geocache.json")
 UA = {"User-Agent": "aa-medellin-map/1.0 (+https://github.com/apollodeus/aa-medellin)"}
 # Aburrá valley: anything outside this is not a Medellín-area meeting
-BBOX = (6.10, 6.40, -75.72, -75.45)
+BBOX = (6.08, 6.42, -75.72, -75.45)
 GOOGLE_KEY = os.environ.get("GOOGLE_GEOCODING_KEY", "").strip()
 
 _cache = None

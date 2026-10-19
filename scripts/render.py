@@ -45,6 +45,9 @@ def linkify(text):
     return re.sub(r"(\+\s?\d[\d\s().-]{7,}\d|\b\d{3}[\s.-]\d{3}[\s.-]\d{4}\b)", phone, h)
 
 def zone(m):
+    mu = (m.get("municipio") or "").strip()
+    if mu and mu.upper() != "MEDELLÍN":
+        return (m["barrio"] + ", " + mu) if m.get("barrio") else mu
     if m.get("barrio"):
         return m["barrio"]
     txt = " ".join([m.get("name") or "", m.get("address") or "", m.get("place") or ""] + list(m.get("notes") or [])).lower().replace("centro comercial", "")
@@ -139,7 +142,7 @@ def card(m, T, lang="es"):
 def place_ld(m):
     p = {"@type": "Place", "name": m.get("place") or m["name"]}
     if m.get("address"):
-        p["address"] = {"@type": "PostalAddress", "streetAddress": m["address"], "addressLocality": "Medellín",
+        p["address"] = {"@type": "PostalAddress", "streetAddress": m["address"], "addressLocality": (m.get("municipio") or "Medellín"),
                         "addressRegion": "Antioquia", "addressCountry": "CO"}
     if m.get("lat") is not None:
         p["geo"] = {"@type": "GeoCoordinates", "latitude": m["lat"], "longitude": m["lng"]}
@@ -269,8 +272,8 @@ def render():
 
     pages = {
      "es": dict(ES, CARDS=sorted(es_list + en_list, key=lambda m: m["name"]), SCHEDULE=es_table,
-        DESC="Mapa y horarios de %d grupos de Alcohólicos Anónimos en Medellín y %d reuniones de AA en inglés. Filtra por día, barrio y modalidad. Actualizado a diario." % (len(es_list), len(en_list)),
-        INTRO='<p class="intro">Hay %d grupos de Alcohólicos Anónimos en Medellín según el directorio de AA Colombia, y %d reuniones en inglés en El Poblado, Laureles y Sabaneta. Usa el mapa o los filtros para encontrar una reunión hoy. <a href="en/">English meetings →</a></p>' % (len(es_list), len(en_list)),
+        DESC="Mapa y horarios de %d grupos de Alcohólicos Anónimos en Medellín, Bello y Envigado y %d reuniones de AA en inglés. Filtra por día, barrio y modalidad. Actualizado a diario." % (len(es_list), len(en_list)),
+        INTRO='<p class="intro">Hay %d grupos de Alcohólicos Anónimos en Medellín, Bello y Envigado según el directorio de AA Colombia, y %d reuniones en inglés en El Poblado, Laureles y Sabaneta. Usa el mapa o los filtros para encontrar una reunión hoy. <a href="en/">English meetings →</a></p>' % (len(es_list), len(en_list)),
         SRC="Fuentes: aacolombia.org y aamedellin.org.", NOTE=disclaimer_es,
         COUNT="%d grupos" % (len(es_list) + len(en_list)), UPDATED="Actualizado: %s." % upd.strftime("%d/%m/%Y")),
      "en": dict(EN, CARDS=en_list, SCHEDULE=en_table,

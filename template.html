@@ -343,7 +343,7 @@ function build(d){
   for(const g of d.es){
     const slotDays=g.slots&&g.slots.length?new Set(g.slots.flatMap(x=>x.days).filter(d=>d!=="F")):parseDays(g.schedule||"");
     ITEMS.push({...g,address:[g.place,g.address].filter(Boolean).join(" · "),days:slotDays,virtualOnly:g.virtual&&/^(virtual|reuniones virtual)/i.test(g.schedule||""),
-      zone:g.barrio||nearestZone(g),hor:g["schedule_"+PAGE_LANG]||g.schedule||T.nosched});
+      zone:(g.municipio&&g.municipio.toUpperCase()!=="MEDELLÍN")?(g.barrio?g.barrio+", "+g.municipio:g.municipio):(g.barrio||nearestZone(g)),hor:g["schedule_"+PAGE_LANG]||g.schedule||T.nosched});
   }
   for(const g of [...d.en,...d.manual]){
     if(g.hidden)continue;

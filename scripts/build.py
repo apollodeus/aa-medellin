@@ -10,6 +10,7 @@ ROOT = __import__("os").path.dirname(__import__("os").path.dirname(__import__("o
 OUT = f"{ROOT}/data.json"
 MANUAL = f"{ROOT}/manual.json"
 VENUES = f"{ROOT}/venues.json"
+MUNICIPIOS = {"MEDELLIN", "BELLO", "ENVIGADO"}   # municipalities included on the map
 UA = {"User-Agent": "aa-medellin-directory/1.0 (+https://github.com/apollodeus/aa-medellin)"}
 
 def get(url, timeout=60):
@@ -59,7 +60,7 @@ def fetch_spanish():
         for g in data:
             m = g.get("spectra_custom_meta") or {}
             f = lambda k: html.unescape(((m.get(k) or [""])[0] or "")).strip()
-            if norm(f("municipio")) != "MEDELLIN":
+            if norm(f("municipio")) not in MUNICIPIOS:
                 continue
             if f("activo") == "false":
                 continue
@@ -72,6 +73,7 @@ def fetch_spanish():
                 "address": f("direccion"),
                 "detail": f("detalle"),
                 "barrio": f("barrio"),
+                "municipio": f("municipio").title().replace("Itagüí", "Itagüí"),
                 "schedule": f("horario"),
                 "virtual": f("virtual") == "true",
                 "contact": f("contacto"),
