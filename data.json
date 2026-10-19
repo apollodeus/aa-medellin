@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T16:26:48Z",
+ "updated": "2026-10-19T21:59:27Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -7124,17 +7124,18 @@
    ],
    "type": "open",
    "format": "in-person",
-   "topic": "12-Step (AA, NA, Al-Anon welcome)",
+   "topic": "",
    "place": "Sede Social Manila",
    "address": "Cra. 43D #11-73, Manila, El Poblado",
    "notes": [
-    "Open to anyone, including friends and family. An hour on the clock, 12:30 to 1:30 pm. A few blocks from Parque Poblado. Free; a voluntary contribution is passed for the room."
+    "Not AA-only: members of AA, NA, Al-Anon and any 12-step program are welcome, as are friends and family. An hour on the clock, 12:30 to 1:30 pm. A few blocks from Parque Poblado. Free; a voluntary contribution is passed for the room."
    ],
    "contact": "John +57 314 895 0952 (WhatsApp)",
    "zoom": "",
    "url": "https://12stepmedellin.org/",
    "lat": 6.2128758,
    "lng": -75.5718995,
+   "kind": "12step",
    "id": "manual-1",
    "source": "manual",
    "approx": false,
