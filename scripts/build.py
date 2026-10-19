@@ -10,7 +10,7 @@ ROOT = __import__("os").path.dirname(__import__("os").path.dirname(__import__("o
 OUT = f"{ROOT}/data.json"
 MANUAL = f"{ROOT}/manual.json"
 VENUES = f"{ROOT}/venues.json"
-MUNICIPIOS = {"MEDELLIN", "BELLO", "ENVIGADO"}   # municipalities included on the map
+MUNICIPIOS = {"MEDELLIN", "BELLO", "ENVIGADO", "ITAGUI", "SABANETA"}   # municipalities included on the map
 UA = {"User-Agent": "aa-medellin-directory/1.0 (+https://github.com/apollodeus/aa-medellin)"}
 
 def get(url, timeout=60):
