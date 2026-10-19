@@ -77,6 +77,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 29A 50-75 | ITAGUI": {
+  "lat": 6.1627538,
+  "lng": -75.6236857,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 30A NO. 79-97- SEDE SOCIAL LA PALMA-BELEN PARQUE": {
   "lat": 6.2318756,
   "lng": -75.6000105,
@@ -86,6 +92,12 @@
  "google:CALLE 31 75-55": {
   "lat": 6.2327935,
   "lng": -75.59599589999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 33 46-42 | ITAGUI": {
+  "lat": 6.165071999999999,
+  "lng": -75.619323,
   "precise": true,
   "source": "google"
  },
@@ -275,6 +287,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 66 NO. 47-24 | ITAGUI": {
+  "lat": 6.179850699999999,
+  "lng": -75.5985377,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 67 45-53": {
   "lat": 6.263021300000001,
   "lng": -75.5560357,
@@ -291,6 +309,12 @@
   "lat": 6.2413709,
   "lng": -75.5718959,
   "precise": false,
+  "source": "google"
+ },
+ "google:CALLE 67 SUR #45-31 | SABANETA": {
+  "lat": 6.153303699999999,
+  "lng": -75.6142988,
+  "precise": true,
   "source": "google"
  },
  "google:CALLE 74 NO. 70-79": {
@@ -446,6 +470,12 @@
  "google:CARRERA 43B NO. 20E-70, BARRIO": {
   "lat": 6.3089325,
   "lng": -75.5532003,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 43B NO. 71 SUR-35 | SABANETA": {
+  "lat": 6.1496755,
+  "lng": -75.616377,
   "precise": true,
   "source": "google"
  },
@@ -605,6 +635,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 69 NO. 26-03 | ITAGUI": {
+  "lat": 6.171211,
+  "lng": -75.6421488,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 69 NO. 97-70": {
   "lat": 6.293408100000001,
   "lng": -75.5720352,
@@ -638,6 +674,12 @@
  "google:CARRERA 76 NO.90-12,ESCUELA CAROLINA KENNEDY": {
   "lat": 6.286609299999999,
   "lng": -75.58207019999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 77C SUR #45-73 | SABANETA": {
+  "lat": 6.1462672,
+  "lng": -75.6213701,
   "precise": true,
   "source": "google"
  },
@@ -695,6 +737,24 @@
   "precise": true,
   "source": "google"
  },
+ "google:CL 73A 52C-03 | ITAGUI": {
+  "lat": 6.184942599999999,
+  "lng": -75.5983466,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CL 80 50A-09 | ITAGUI": {
+  "lat": 6.1878796,
+  "lng": -75.59314549999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CL 86 47-04 | ITAGUI": {
+  "lat": 6.1920739,
+  "lng": -75.5885638,
+  "precise": true,
+  "source": "google"
+ },
  "google:CRA 22 47-79": {
   "lat": 6.237529899999999,
   "lng": -75.549033,
@@ -707,9 +767,27 @@
   "precise": true,
   "source": "google"
  },
+ "google:CRA 49 50-43 | ITAGUI": {
+  "lat": 6.171384,
+  "lng": -75.608963,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CRA 58E 64A-12 | ITAGUI": {
+  "lat": 6.1819564,
+  "lng": -75.607619,
+  "precise": true,
+  "source": "google"
+ },
  "google:CRA.43D NO.11-73, PISO 2 , BARRIO": {
   "lat": 6.2128675,
   "lng": -75.5719688,
+  "precise": true,
+  "source": "google"
+ },
+ "google:DIAGONAL 40 NO. 34-34 | ITAGUI": {
+  "lat": 6.165478999999999,
+  "lng": -75.614946,
   "precise": true,
   "source": "google"
  },

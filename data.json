@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T13:52:00Z",
+ "updated": "2026-10-19T13:55:07Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -3545,6 +3545,76 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27502",
+   "lang": "es",
+   "name": "Aceptación y Fe",
+   "address": "Calle 29A 50-75",
+   "detail": "Salón comunal, Conjunto Residencial Estación del Sur",
+   "barrio": "",
+   "municipio": "Itagüí",
+   "schedule": "Lunes a Sábado 12:30 pm; Domingos 11:00 am; Lunes a Domingo 7:00 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1627538,
+   "lng": -75.6236857,
+   "url": "https://aacolombia.org/grupos/aceptacion-y-fe-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "12:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 12:30 pm · Dom 11:00 am · Todos los días 7:00 pm",
+   "schedule_en": "Mon to Sat 12:30 pm · Sun 11:00 am · Every day 7:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27501",
    "lang": "es",
    "name": "Santa Elena",
@@ -3628,6 +3698,59 @@
    ],
    "schedule_es": "Lun, Mié, Vie y Sáb 7:00 pm",
    "schedule_en": "Mon, Wed, Fri and Sat 7:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
+   "id": "es-27499",
+   "lang": "es",
+   "name": "Sabaneta",
+   "address": "Calle 67 Sur #45-31",
+   "detail": "",
+   "barrio": "",
+   "municipio": "Sabaneta",
+   "schedule": "Todos los días 7:00 pm; Domingo 9:30 am",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1533037,
+   "lng": -75.6142988,
+   "url": "https://aacolombia.org/grupos/sabaneta-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 7:00 pm · Dom 9:30 am",
+   "schedule_en": "Every day 7:00 pm · Sun 9:30 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -3882,6 +4005,55 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27493",
+   "lang": "es",
+   "name": "La Honestidad",
+   "address": "Calle 66 No. 47-24",
+   "detail": "",
+   "barrio": "Simón Bolívar",
+   "municipio": "Itagüí",
+   "schedule": "Lunes, Miércoles y Viernes 7:00 pm; Domingos 8:00 am (Oración y Meditación)",
+   "virtual": false,
+   "contact": "",
+   "email": "lahonestidadaa@hotmail.com",
+   "lat": 6.2564242,
+   "lng": -75.5492701,
+   "url": "https://aacolombia.org/grupos/la-honestidad-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      }
+     ],
+     "note": "Oración y Meditación"
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:00 pm · Dom 8:00 am (Oración y Meditación)",
+   "schedule_en": "Mon, Wed and Fri 7:00 pm · Sun 8:00 am (Oración y Meditación)",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27491",
    "lang": "es",
    "name": "La Gloria",
@@ -4035,6 +4207,97 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27488",
+   "lang": "es",
+   "name": "Esperanza de Vivir",
+   "address": "Cl 73A 52C-03",
+   "detail": "Piso 2",
+   "barrio": "Santa María II",
+   "municipio": "Itagüí",
+   "schedule": "Lunes a Sábado 10:00 a.m.",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1849426,
+   "lng": -75.5983466,
+   "url": "https://aacolombia.org/grupos/esperanza-de-vivir-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 10:00 am",
+   "schedule_en": "Mon to Sat 10:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
+   "id": "es-27487",
+   "lang": "es",
+   "name": "La Entrega",
+   "address": "Cl 80 50A-09",
+   "detail": "Piso 2",
+   "barrio": "El Carmelo",
+   "municipio": "Itagüí",
+   "schedule": "Lunes a Viernes 7:00 pm; Domingo 9:00 am",
+   "virtual": false,
+   "contact": "",
+   "email": "laentregaalcoholicosanonimos@gmail.com",
+   "lat": 6.1878796,
+   "lng": -75.5931455,
+   "url": "https://aacolombia.org/grupos/la-entrega-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 7:00 pm · Dom 9:00 am",
+   "schedule_en": "Mon to Fri 7:00 pm · Sun 9:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27486",
    "lang": "es",
    "name": "La Dignidad",
@@ -4079,6 +4342,47 @@
    ],
    "schedule_es": "Mié y Vie 7:30 pm · Dom 11:00 am",
    "schedule_en": "Wed and Fri 7:30 pm · Sun 11:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
+   "id": "es-27485",
+   "lang": "es",
+   "name": "La Decisión",
+   "address": "Carrera 69 No. 26-03",
+   "detail": "Barrio San Francisco",
+   "barrio": "",
+   "municipio": "Itagüí",
+   "schedule": "Todos los días 7:00 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.171211,
+   "lng": -75.6421488,
+   "url": "https://aacolombia.org/grupos/la-decision-6/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 7:00 pm",
+   "schedule_en": "Every day 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -4273,6 +4577,89 @@
    ],
    "schedule_es": "Lun a Vie 7:00 am · Sáb y Dom 9:00 am · Lun a Vie 12:00 m · Todos los días 7:00 pm",
    "schedule_en": "Mon to Fri 7:00 am · Sat and Sun 9:00 am · Mon to Fri 12:00 noon · Every day 7:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
+   "id": "es-27477",
+   "lang": "es",
+   "name": "Itagüí",
+   "address": "Cra 49 50-43",
+   "detail": "Segundo Piso",
+   "barrio": "Los Naranjos",
+   "municipio": "Itagüí",
+   "schedule": "Lunes a Sábado 7:00 am; Todos los días 7:00 pm; Domingos y festivos 8:00 am; Domingos 10:00 am (Oración y…",
+   "virtual": false,
+   "contact": "",
+   "email": "aagrupoitagui@hotmail.com",
+   "lat": 6.171384,
+   "lng": -75.608963,
+   "url": "https://aacolombia.org/grupos/itagui-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 7:00 am · Todos los días 7:00 pm · Dom y Festivos 8:00 am · Dom 10:00 am",
+   "schedule_en": "Mon to Sat 7:00 am · Every day 7:00 pm · Sun and Holidays 8:00 am · Sun 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -5144,6 +5531,70 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27452",
+   "lang": "es",
+   "name": "Transmítelo",
+   "address": "Diagonal 40 No. 34-34",
+   "detail": "(null)",
+   "barrio": "San José",
+   "municipio": "Itagüí",
+   "schedule": "Lunes a Sábado 6:00 p.m., Domingo 9:00 am, Miércoles 11:00 am",
+   "virtual": false,
+   "contact": "",
+   "email": "transmiteloaa@yahoo.es",
+   "lat": 6.165479,
+   "lng": -75.614946,
+   "url": "https://aacolombia.org/grupos/transmitelo-10/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 6:00 pm · Dom 9:00 am · Mié 11:00 am",
+   "schedule_en": "Mon to Sat 6:00 pm · Sun 9:00 am · Wed 11:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27450",
    "lang": "es",
    "name": "Trabajando con Otros",
@@ -5287,6 +5738,79 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27446",
+   "lang": "es",
+   "name": "San Pío X",
+   "address": "Calle 33 46-42",
+   "detail": "Segundo Piso",
+   "barrio": "",
+   "municipio": "Itagüí",
+   "schedule": "Lunes a Sábado 7:00 pm; Domingo 11:30 am y 7:00 pm; Lunes Festivo 12:30 pm y 7:00 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.165072,
+   "lng": -75.619323,
+   "url": "https://aacolombia.org/grupos/san-pio-x-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "11:30",
+       "end": null
+      },
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "L",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "12:30",
+       "end": null
+      },
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 7:00 pm · Dom 11:30 am y 7:00 pm · Lun y Festivos 12:30 pm y 7:00 pm",
+   "schedule_en": "Mon to Sat 7:00 pm · Sun 11:30 am and 7:00 pm · Mon and Holidays 12:30 pm and 7:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27445",
    "lang": "es",
    "name": "San José",
@@ -5401,6 +5925,63 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27443",
+   "lang": "es",
+   "name": "San Fernando",
+   "address": "Cl 86 47-04",
+   "detail": "",
+   "barrio": "Guayabal - La Raya",
+   "municipio": "Itagüí",
+   "schedule": "Lunes a Viernes 12:15 pm y 7:00pm; Sábado, Domingo y Festivo 3:00 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "gruposanfernandoaa@gmail.com",
+   "lat": 6.1920739,
+   "lng": -75.5885638,
+   "url": "https://aacolombia.org/grupos/san-fernando-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "12:15",
+       "end": null
+      },
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S",
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "15:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 12:15 pm y 7:00 pm · Sáb, Dom y Festivos 3:00 pm",
+   "schedule_en": "Mon to Fri 12:15 pm and 7:00 pm · Sat, Sun and Holidays 3:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27442",
    "lang": "es",
    "name": "San Antonio de Prado",
@@ -5474,6 +6055,74 @@
    ],
    "schedule_es": "Lun a Vie 7:00 pm · Mar, Jue y Sáb 7:00 am · Dom 10:00 am · Sáb 6:00 pm",
    "schedule_en": "Mon to Fri 7:00 pm · Tue, Thu and Sat 7:00 am · Sun 10:00 am · Sat 6:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
+   "id": "es-27441",
+   "lang": "es",
+   "name": "Luz en Mi Camino",
+   "address": "Carrera 43B No. 71 Sur-35",
+   "detail": "(null)",
+   "barrio": "",
+   "municipio": "Sabaneta",
+   "schedule": "Lunes a Viernes 7:00 pm; Domingo 9:30 am y 7:00 pm; Miércoles y Viernes 12:15 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1496755,
+   "lng": -75.616377,
+   "url": "https://aacolombia.org/grupos/luz-en-mi-camino-4/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:30",
+       "end": null
+      },
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "12:15",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 7:00 pm · Dom 9:30 am y 7:00 pm · Mié y Vie 12:15 pm",
+   "schedule_en": "Mon to Fri 7:00 pm · Sun 9:30 am and 7:00 pm · Wed and Fri 12:15 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -5742,6 +6391,62 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27434",
+   "lang": "es",
+   "name": "La Virtud",
+   "address": "Carrera 77C sur #45-73",
+   "detail": "Interior 102",
+   "barrio": "",
+   "municipio": "Sabaneta",
+   "schedule": "Lunes a Sábado 7:00 pm; Domingo 8:00 am 6:00 pm (principiantes)",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1462672,
+   "lng": -75.6213701,
+   "url": "https://aacolombia.org/grupos/la-virtud-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      },
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": "principiantes"
+    }
+   ],
+   "schedule_es": "Lun a Sáb 7:00 pm · Dom 8:00 am y 6:00 pm (principiantes)",
+   "schedule_en": "Mon to Sat 7:00 pm · Sun 8:00 am and 6:00 pm (beginners)",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27433",
    "lang": "es",
    "name": "La Viña",
@@ -5937,6 +6642,56 @@
    ],
    "schedule_es": "Mar y Jue 7:00 pm · Dom 2:00 pm · Festivos 10:00 am",
    "schedule_en": "Tue and Thu 7:00 pm · Sun 2:00 pm · Holidays 10:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
+   "id": "es-27429",
+   "lang": "es",
+   "name": "Calatrava",
+   "address": "Cra 58E 64A-12",
+   "detail": "",
+   "barrio": "Calatrava",
+   "municipio": "Itagüí",
+   "schedule": "Lunes, Miércoles, Jueves y Viernes 7:00 pm; Sábados 5:30 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1819564,
+   "lng": -75.607619,
+   "url": "https://aacolombia.org/grupos/calatrava-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "17:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié, Jue y Vie 7:00 pm · Sáb 5:30 pm",
+   "schedule_en": "Mon, Wed, Thu and Fri 7:00 pm · Sat 5:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
