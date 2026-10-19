@@ -29,6 +29,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 11 NO. 8-35": {
+  "lat": 6.1990057,
+  "lng": -75.5904067,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 11 NO. 8-35, PISO 4": {
   "lat": 6.1990057,
   "lng": -75.5904067,
@@ -65,6 +71,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 22 NO. 59-50": {
+  "lat": 6.224428,
+  "lng": -75.5832186,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 22 NO. 59-50, PISO 3": {
   "lat": 6.224428,
   "lng": -75.5832186,
@@ -98,6 +110,18 @@
  "google:CALLE 31 75-55": {
   "lat": 6.2327935,
   "lng": -75.59599589999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 32 NO. 30-60": {
+  "lat": 6.229553600000001,
+  "lng": -75.55998029999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 32F # 78-105, LAURELES": {
+  "lat": 6.238067,
+  "lng": -75.5993821,
   "precise": true,
   "source": "google"
  },
@@ -152,6 +176,12 @@
  "google:CALLE 40 SUR NO.29A-25,IGLESIA SAN JOSE,BARRIO ROSELLON | ENVIGADO": {
   "lat": 6.1627743,
   "lng": -75.5826186,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 42 NO. 79-07": {
+  "lat": 6.2486059,
+  "lng": -75.59790819999999,
   "precise": true,
   "source": "google"
  },
@@ -216,6 +246,12 @@
   "source": "google"
  },
  "google:CALLE 4B SUR 30-98": {
+  "lat": 6.1919483,
+  "lng": -75.5559618,
+  "precise": false,
+  "source": "google"
+ },
+ "google:CALLE 4B SUR 30-98 | EL POBLADO": {
   "lat": 6.1919483,
   "lng": -75.5559618,
   "precise": false,
@@ -305,7 +341,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 66 NO. 47-24 | ITAGUI | SIMON BOLIVAR": {
+  "lat": 6.179850699999999,
+  "lng": -75.5985377,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 67 45-53": {
+  "lat": 6.263021300000001,
+  "lng": -75.5560357,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 67 45-53 | MANRIQUE": {
   "lat": 6.263021300000001,
   "lng": -75.5560357,
   "precise": true,
@@ -342,6 +390,18 @@
   "source": "google"
  },
  "google:CALLE 76 41A-44": {
+  "lat": 6.268651999999999,
+  "lng": -75.5510647,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 76 41A-44 | LAS NIEVES": {
+  "lat": 6.268651999999999,
+  "lng": -75.5510647,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 76 41A-44 | MANRIQUE": {
   "lat": 6.268651999999999,
   "lng": -75.5510647,
   "precise": true,
@@ -389,6 +449,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 95 50-32 | ARANJUEZ": {
+  "lat": 6.287337099999999,
+  "lng": -75.5581468,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 95 NO. 50-32": {
   "lat": 6.287337099999999,
   "lng": -75.5581468,
@@ -419,6 +485,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 33 39SUR-50 | ENVIGADO | MESA": {
+  "lat": 6.1645733,
+  "lng": -75.5830917,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 33B NO.107A.-51, SEDE ACCION COMUNAL": {
   "lat": 6.2944007,
   "lng": -75.54378299999999,
@@ -426,6 +498,12 @@
   "source": "google"
  },
  "google:CARRERA 34 10A -32": {
+  "lat": 6.2091679,
+  "lng": -75.56461469999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 34 10A -32 | EL POBLADO": {
   "lat": 6.2091679,
   "lng": -75.56461469999999,
   "precise": true,
@@ -443,9 +521,21 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 38B NO. 40-71": {
+  "lat": 6.238942,
+  "lng": -75.561959,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 38B NO. 40-71,": {
   "lat": 6.238942,
   "lng": -75.561959,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 39 NO. 35 SUR 26 | ENVIGADO": {
+  "lat": 6.1658518,
+  "lng": -75.58688839999999,
   "precise": true,
   "source": "google"
  },
@@ -485,6 +575,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 43 31-182 | SAN DIEGO": {
+  "lat": 6.2327206,
+  "lng": -75.5701663,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 43B NO. 20E-70, BARRIO": {
   "lat": 6.3089325,
   "lng": -75.5532003,
@@ -498,6 +594,12 @@
   "source": "google"
  },
  "google:CARRERA 43D NO. 11-73": {
+  "lat": 6.2128675,
+  "lng": -75.5719688,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 43D NO. 11-73 | MANILA - EL POBLADO": {
   "lat": 6.2128675,
   "lng": -75.5719688,
   "precise": true,
@@ -518,6 +620,18 @@
  "google:CARRERA 46A  39SUR-52 | ENVIGADO": {
   "lat": 6.1704577,
   "lng": -75.5932188,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 46A  39SUR-52 | ENVIGADO | ALCALA": {
+  "lat": 6.1704577,
+  "lng": -75.5932188,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 48 (ECUADOR) NO. 61-35": {
+  "lat": 6.2575574,
+  "lng": -75.56144669999999,
   "precise": true,
   "source": "google"
  },
@@ -557,6 +671,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 49 NO. 50 - 58": {
+  "lat": 6.2493352,
+  "lng": -75.5665116,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 49 NO. 50 - 58 - OF. 308 - ED. SAN FERNANDO": {
   "lat": 6.183179099999999,
   "lng": -75.5945218,
@@ -566,6 +686,12 @@
  "google:CARRERA 49 NO. 93-38": {
   "lat": 6.284866,
   "lng": -75.555956,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 51 NO. 41-56": {
+  "lat": 6.242447299999999,
+  "lng": -75.5713875,
   "precise": true,
   "source": "google"
  },
@@ -641,6 +767,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 54  52-55 | CENTRO": {
+  "lat": 6.2530486,
+  "lng": -75.5705104,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 64 NO. 50-32, BIBLIOTECA PUBLICA PILOTO": {
   "lat": 6.2559194,
   "lng": -75.5774332,
@@ -654,6 +786,12 @@
   "source": "google"
  },
  "google:CARRERA 65 113-86": {
+  "lat": 6.308650999999999,
+  "lng": -75.56365,
+  "precise": false,
+  "source": "google"
+ },
+ "google:CARRERA 65 113-86 | BOYACA LAS BRISAS": {
   "lat": 6.308650999999999,
   "lng": -75.56365,
   "precise": false,
@@ -678,6 +816,12 @@
   "source": "google"
  },
  "google:CARRERA 65A 32B-70": {
+  "lat": 6.2370528,
+  "lng": -75.58313199999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 65A 32B-70 | BELEN FATIMA": {
   "lat": 6.2370528,
   "lng": -75.58313199999999,
   "precise": true,
@@ -725,6 +869,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 73 20A-14 | BELEN SAN BERNARDO": {
+  "lat": 6.2241754,
+  "lng": -75.5947382,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 76 NO.90-12,ESCUELA CAROLINA KENNEDY": {
   "lat": 6.286609299999999,
   "lng": -75.58207019999999,
@@ -734,6 +884,18 @@
  "google:CARRERA 77C SUR #45-73 | SABANETA": {
   "lat": 6.1462672,
   "lng": -75.6213701,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 78 #32EE-25, MEDELLIN, ANTIOQUIA": {
+  "lat": 6.238135499999999,
+  "lng": -75.59839219999999,
+  "precise": false,
+  "source": "google"
+ },
+ "google:CARRERA 79 NO. 92-232": {
+  "lat": 6.2915926,
+  "lng": -75.5826735,
   "precise": true,
   "source": "google"
  },
@@ -785,7 +947,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 95 62C-87 | ROBLEDO": {
+  "lat": 6.288596,
+  "lng": -75.59618499999999,
+  "precise": true,
+  "source": "google"
+ },
  "google:CL 5SUR 53-26": {
+  "lat": 6.205419,
+  "lng": -75.5875949,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CL 5SUR 53-26 | GUAYABAL": {
   "lat": 6.205419,
   "lng": -75.5875949,
   "precise": true,
@@ -797,7 +971,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CL 73A 52C-03 | ITAGUI | SANTA MARIA II": {
+  "lat": 6.184942599999999,
+  "lng": -75.5983466,
+  "precise": true,
+  "source": "google"
+ },
  "google:CL 80 50A-09 | ITAGUI": {
+  "lat": 6.1878796,
+  "lng": -75.59314549999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CL 80 50A-09 | ITAGUI | EL CARMELO": {
   "lat": 6.1878796,
   "lng": -75.59314549999999,
   "precise": true,
@@ -806,6 +992,18 @@
  "google:CL 86 47-04 | ITAGUI": {
   "lat": 6.1920739,
   "lng": -75.5885638,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CL 86 47-04 | ITAGUI | GUAYABAL - LA RAYA": {
+  "lat": 6.1920739,
+  "lng": -75.5885638,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CL. 32F #78-105, BELEN": {
+  "lat": 6.238067,
+  "lng": -75.5993821,
   "precise": true,
   "source": "google"
  },
@@ -821,7 +1019,25 @@
   "precise": true,
   "source": "google"
  },
+ "google:CRA 43D #11-73, EL POBLADO | MANILA": {
+  "lat": 6.2128675,
+  "lng": -75.5719688,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CRA 43D #11-73, EL POBLADO, MEDELLIN": {
+  "lat": 6.2128675,
+  "lng": -75.5719688,
+  "precise": true,
+  "source": "google"
+ },
  "google:CRA 49 50-43 | ITAGUI": {
+  "lat": 6.171384,
+  "lng": -75.608963,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CRA 49 50-43 | ITAGUI | LOS NARANJOS": {
   "lat": 6.171384,
   "lng": -75.608963,
   "precise": true,
@@ -833,6 +1049,24 @@
   "precise": true,
   "source": "google"
  },
+ "google:CRA 58E 64A-12 | ITAGUI | CALATRAVA": {
+  "lat": 6.1819564,
+  "lng": -75.607619,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CRA. 43D #11-73, MANILA, EL POBLADO": {
+  "lat": 6.2128675,
+  "lng": -75.5719688,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CRA.43D NO.11-73": {
+  "lat": 6.2128675,
+  "lng": -75.5719688,
+  "precise": true,
+  "source": "google"
+ },
  "google:CRA.43D NO.11-73, PISO 2 , BARRIO": {
   "lat": 6.2128675,
   "lng": -75.5719688,
@@ -840,6 +1074,12 @@
   "source": "google"
  },
  "google:DIAGONAL 40 NO. 34-34 | ITAGUI": {
+  "lat": 6.165478999999999,
+  "lng": -75.614946,
+  "precise": true,
+  "source": "google"
+ },
+ "google:DIAGONAL 40 NO. 34-34 | ITAGUI | SAN JOSE": {
   "lat": 6.165478999999999,
   "lng": -75.614946,
   "precise": true,
@@ -864,6 +1104,12 @@
   "source": "google"
  },
  "google:DIAGONAL 59 #40-31 | BELLO": {
+  "lat": 6.341183399999999,
+  "lng": -75.5481116,
+  "precise": true,
+  "source": "google"
+ },
+ "google:DIAGONAL 59 #40-31 | BELLO | NIQUIA": {
   "lat": 6.341183399999999,
   "lng": -75.5481116,
   "precise": true,
@@ -977,6 +1223,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:TRANSVERSAL 33A SUR 31E-20 | ENVIGADO | LA MAGNOLIA": {
+  "lat": 6.1743142,
+  "lng": -75.5815305,
+  "precise": true,
+  "source": "google"
+ },
  "google:TRANSVERSAL 34B NO. 39-36": {
   "lat": 6.171462,
   "lng": -75.5845279,
@@ -986,6 +1238,12 @@
  "google:TRANSVERSAL 34B NO. 39-36 | ENVIGADO": {
   "lat": 6.171462,
   "lng": -75.5845279,
+  "precise": true,
+  "source": "google"
+ },
+ "google:TRANSVERSAL 78A NO. 88-06": {
+  "lat": 6.285656899999999,
+  "lng": -75.59091680000002,
   "precise": true,
   "source": "google"
  },

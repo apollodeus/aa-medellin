@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T22:07:13Z",
+ "updated": "2026-10-19T22:08:47Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -21,8 +21,8 @@
    "info": "",
    "contact": "",
    "email": "",
-   "lat": 6.2128758,
-   "lng": -75.5718995,
+   "lat": 6.2128675,
+   "lng": -75.5719688,
    "url": "https://aacolombia.org/grupos/libertad-y-responsabilidad/",
    "source": "aacolombia.org",
    "place": "Sede Social Manila",
@@ -2780,8 +2780,8 @@
    "info": "",
    "contact": "",
    "email": "",
-   "lat": 6.2769263,
-   "lng": -75.6251101,
+   "lat": 6.2688233,
+   "lng": -75.5906039,
    "url": "https://aacolombia.org/grupos/san-cristobal-2/",
    "source": "aacolombia.org",
    "slots": [
@@ -2816,7 +2816,7 @@
    "schedule_en": "Mon, Wed and Fri 7:00 pm · Sun 5:00 pm",
    "format": "in-person",
    "approx": false,
-   "pin_source": "google geocoder (official pin was 3.9 km off)"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27531",
@@ -5550,8 +5550,8 @@
    "info": "",
    "contact": "",
    "email": "",
-   "lat": 6.2346426,
-   "lng": -75.6121019,
+   "lat": 6.2295536,
+   "lng": -75.5599803,
    "url": "https://aacolombia.org/grupos/nuevo-ser-2/",
    "source": "aacolombia.org",
    "slots": [
@@ -5585,7 +5585,7 @@
    "schedule_en": "Tue and Thu 7:00 pm · Sun 11:00 am",
    "format": "in-person",
    "approx": false,
-   "pin_source": "google geocoder (official pin was 5.8 km off)"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27464",
@@ -7630,8 +7630,8 @@
    "map": "https://share.google/H8b7m7IL6QS1D0d0m",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2128758,
-   "lng": -75.5718995,
+   "lat": 6.2128675,
+   "lng": -75.5719688,
    "topic": "",
    "approx": false,
    "pin_source": "google geocoder"
@@ -7739,11 +7739,11 @@
    "map": "https://maps.app.goo.gl/5gt2hsbVM8B2gr9W7",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.238080099999999,
-   "lng": -75.59841879999999,
+   "lat": 6.2377,
+   "lng": -75.5984,
    "topic": "AA Big Book Study",
-   "approx": false,
-   "pin_source": "google geocoder"
+   "approx": true,
+   "pin_source": "venues.json (approx)"
   },
   {
    "id": "en-there-is-a-solution-d",
@@ -7765,11 +7765,11 @@
    "map": "https://maps.app.goo.gl/5gt2hsbVM8B2gr9W7",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.238080099999999,
-   "lng": -75.59841879999999,
+   "lat": 6.2377,
+   "lng": -75.5984,
    "topic": "Open Speaker Meeting",
-   "approx": false,
-   "pin_source": "google geocoder"
+   "approx": true,
+   "pin_source": "venues.json (approx)"
   }
  ],
  "manual": [
@@ -7819,8 +7819,8 @@
    "contact": "John +57 314 895 0952 (WhatsApp)",
    "zoom": "",
    "url": "https://12stepmedellin.org/",
-   "lat": 6.2128758,
-   "lng": -75.5718995,
+   "lat": 6.2128675,
+   "lng": -75.5719688,
    "kind": "12step",
    "id": "manual-1",
    "source": "manual",
