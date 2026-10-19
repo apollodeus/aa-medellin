@@ -83,6 +83,9 @@ GOOGLE_ERRORS = []
 def clean_address(a):
     """Drop office/floor/building suffixes that confuse geocoders: 'Carrera 49 No. 50-58 - Of. 308 - Ed. San Fernando' -> 'Carrera 49 No. 50-58'."""
     a = re.split(r"\s*[-,(]\s*(?:of(?:icina)?\.?|piso|local|ed(?:ificio)?\.?|apto|torre|segundo piso|primer piso|tercer piso)\b", a, 1, flags=re.I)[0]
+    m = re.search(r"\b(calle|carrera|cra\.?|cr\.?|cl\.?|cll\.?|diagonal|dg\.?|transversal|tv\.?|avenida|av\.?|circular|cq\.?)\s*\d", a, re.I)
+    if m and m.start() > 0:
+        a = a[m.start():]          # drop leading descriptions like "Local Parroquial-"
     return a.strip(" -,")
 
 def google_geocode(address, city="Medellín", hint=""):
@@ -212,12 +215,14 @@ def audit_official(rec, report):
     if not GOOGLE_KEY or rec.get("lat") is None or not rec.get("address"):
         return
     hint = rec.get("barrio") or ""
-    if not hint and rec.get("detail") and not re.search(r"\d", rec["detail"]) and len(rec["detail"]) < 40:
-        hint = rec["detail"]
     g = google_geocode(rec["address"], rec.get("municipio") or "Medellín", hint)
     if g and g[2]:
         d = km(rec["lat"], rec["lng"], g[0], g[1])
-        if d > 1.5:
+        g2 = google_geocode(rec["address"], rec.get("municipio") or "Medellín", "") if (d > 1.5 and hint) else g
+        agree = bool(g2) and g2[2] and km(g[0], g[1], g2[0], g2[1]) < 0.3
+        if d > 1.5 and not agree:
+            report.append("official pin and geocoder disagree, official kept (check): %s — %s — %s" % (rec["name"], rec["address"], rec["url"]))
+        elif d > 1.5:
             report.append("official pin replaced: it was %.1f km from the address, now pinned by geocoder (check): %s — %s — %s" % (d, rec["name"], rec["address"], rec["url"]))
             rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = g[0], g[1], False, "google geocoder (official pin was %.1f km off)" % d
         elif d > 0.4:
