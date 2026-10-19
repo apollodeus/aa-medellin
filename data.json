@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T06:40:48Z",
+ "updated": "2026-10-19T06:44:07Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -1964,11 +1964,11 @@
    "map": "https://share.google/H8b7m7IL6QS1D0d0m",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2118,
-   "lng": -75.5714,
+   "lat": 6.2128758,
+   "lng": -75.5718995,
    "topic": "",
-   "approx": true,
-   "pin_source": "venues.json (approx)"
+   "approx": false,
+   "pin_source": "google geocoder"
   },
   {
    "id": "en-a-vision-for-you-group-mc",
@@ -1990,11 +1990,11 @@
    "map": "https://maps.app.goo.gl/ENZSjHQDntWv89YJ7?g_st=ic",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2384,
-   "lng": -75.5984,
+   "lat": 6.238067,
+   "lng": -75.5993821,
    "topic": "Open AA 12×12 Study",
-   "approx": true,
-   "pin_source": "venues.json (approx)"
+   "approx": false,
+   "pin_source": "google geocoder"
   },
   {
    "id": "en-sabaneta-english-speaking-aa-meeting-j",
@@ -2073,11 +2073,11 @@
    "map": "https://maps.app.goo.gl/5gt2hsbVM8B2gr9W7",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2377,
-   "lng": -75.5984,
+   "lat": 6.238080099999999,
+   "lng": -75.59841879999999,
    "topic": "AA Big Book Study",
-   "approx": true,
-   "pin_source": "venues.json (approx)"
+   "approx": false,
+   "pin_source": "google geocoder"
   },
   {
    "id": "en-there-is-a-solution-d",
@@ -2099,11 +2099,11 @@
    "map": "https://maps.app.goo.gl/5gt2hsbVM8B2gr9W7",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2377,
-   "lng": -75.5984,
+   "lat": 6.238080099999999,
+   "lng": -75.59841879999999,
    "topic": "Open Speaker Meeting",
-   "approx": true,
-   "pin_source": "venues.json (approx)"
+   "approx": false,
+   "pin_source": "google geocoder"
   }
  ],
  "manual": [
@@ -2125,12 +2125,12 @@
    ],
    "contact": "Peter",
    "zoom": "",
-   "lat": 6.2384,
-   "lng": -75.5984,
+   "lat": 6.238067,
+   "lng": -75.5993821,
    "id": "manual-0",
    "source": "manual",
-   "approx": true,
-   "pin_source": "venues.json (approx)"
+   "approx": false,
+   "pin_source": "google geocoder"
   }
  ]
 }
