@@ -272,7 +272,7 @@ function build(d){
   }
   ITEMS.forEach((g,i)=>g.i=i);
   for(const g of ITEMS){if(g.lat==null)continue;g.loc=g.lat.toFixed(4)+","+g.lng.toFixed(4);(LOCS[g.loc]=LOCS[g.loc]||[]).push(g);}
-  for(const k in LOCS){const grp=LOCS[k].sort((a,b)=>(a.lang==="en"?0:1)-(b.lang==="en"?0:1));MAP.add(grp,g2=>{state.sel=g2.i;render(false);MAP.sel(g2.loc);const el=document.getElementById("g-"+g2.i);if(el&&window.innerWidth>700)el.scrollIntoView({behavior:"smooth",block:"nearest"});});}
+  for(const k in LOCS){const grp=LOCS[k].sort((a,b)=>(a.lang==="en"?0:1)-(b.lang==="en"?0:1));MAP.add(grp,g2=>{state.sel=g2.i;render(false);MAP.sel(g2.loc);});}
   document.getElementById("upd").textContent=T.updated+new Date(d.updated).toLocaleDateString(T.locale,{day:"numeric",month:"short",year:"numeric"})+".";
 }
 function nearestZone(g){const txt=[g.name,g.address,g.place,...(g.notes||[])].join(" ").toLowerCase().replace(/centro comercial/g,"");for(const z of ZONES)if(txt.includes(z[0].toLowerCase()))return z[0];if(g.lat==null)return "";let best="",bd=1e9;for(const z of ZONES){const d=km(g.lat,g.lng,z[1],z[2]);if(d<bd){bd=d;best=z[0]}}return best}
