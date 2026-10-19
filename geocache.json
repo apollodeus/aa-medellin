@@ -1,4 +1,10 @@
 {
+ "google:BARRIO ROBLEDO LA CAMPINA, URBANIZACION": {
+  "lat": 6.2814102,
+  "lng": -75.604441,
+  "precise": false,
+  "source": "google"
+ },
  "google:CAFE CLICHE, CALLE 32F # 78-105, LAURELES": {
   "lat": 6.238067,
   "lng": -75.5993821,
@@ -143,9 +149,21 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 51 NO. 49-96, OFICINA 303": {
+  "lat": 6.2502068,
+  "lng": -75.5671424,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 52 NO. 10-16, IGLESIA LOS DOLORES": {
   "lat": 6.233361,
   "lng": -75.53806440000001,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 53 30-61": {
+  "lat": 6.2431255,
+  "lng": -75.5518944,
   "precise": true,
   "source": "google"
  },
@@ -158,6 +176,12 @@
  "google:CALLE 61 NO. 160-72": {
   "lat": 6.268823299999999,
   "lng": -75.59060389999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 67 45-53": {
+  "lat": 6.263021300000001,
+  "lng": -75.5560357,
   "precise": true,
   "source": "google"
  },
@@ -185,6 +209,24 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 76 41A-44": {
+  "lat": 6.268651999999999,
+  "lng": -75.5510647,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 79 NO. 55B-55": {
+  "lat": 6.274363999999999,
+  "lng": -75.566262,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 79 NO. 85A-13": {
+  "lat": 6.284243099999999,
+  "lng": -75.5867854,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 80A NO. 51B-08, BARRIO MIRANDA": {
   "lat": 6.2750204,
   "lng": -75.5636859,
@@ -209,6 +251,24 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 95 50-32": {
+  "lat": 6.287337099999999,
+  "lng": -75.5581468,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 95 NO. 50-32": {
+  "lat": 6.287337099999999,
+  "lng": -75.5581468,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 95 NO. 52-25": {
+  "lat": 6.2872946,
+  "lng": -75.562924,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 29. NO. 58-30, BARRIO ENCISO": {
   "lat": 6.249767599999999,
   "lng": -75.54922110000001,
@@ -224,6 +284,12 @@
  "google:CARRERA 34 10A -32": {
   "lat": 6.2091679,
   "lng": -75.56461469999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 37 NO. 68-17": {
+  "lat": 6.263084999999999,
+  "lng": -75.548919,
   "precise": true,
   "source": "google"
  },
@@ -269,6 +335,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 48 NO. 96-53": {
+  "lat": 6.289009999999999,
+  "lng": -75.55546799999999,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 48 NO. 99-70": {
   "lat": 6.291175,
   "lng": -75.554738,
@@ -284,6 +356,18 @@
  "google:CARRERA 49 NO. 50 - 58 - OF. 308 - ED. SAN FERNANDO": {
   "lat": 6.183179099999999,
   "lng": -75.5945218,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 49 NO. 93-38": {
+  "lat": 6.284866,
+  "lng": -75.555956,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 51 NO. 41-56, LOCAL 203, FRENTE ESTACION ALPUJARRA": {
+  "lat": 6.242447299999999,
+  "lng": -75.5713875,
   "precise": true,
   "source": "google"
  },
@@ -317,6 +401,18 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 53 NO. 60-51": {
+  "lat": 6.259767699999999,
+  "lng": -75.568367,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 54  52-55": {
+  "lat": 6.2530486,
+  "lng": -75.5705104,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 64 NO. 50-32, BIBLIOTECA PUBLICA PILOTO": {
   "lat": 6.2559194,
   "lng": -75.5774332,
@@ -344,6 +440,12 @@
  "google:CARRERA 65 NO. 32F-23": {
   "lat": 6.2392055,
   "lng": -75.583148,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 65A 32B-70": {
+  "lat": 6.2370528,
+  "lng": -75.58313199999999,
   "precise": true,
   "source": "google"
  },
@@ -413,15 +515,39 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 92 NO. 34D-43": {
+  "lat": 6.2458944,
+  "lng": -75.6168862,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 92 NO. 35-18, BARRIO": {
   "lat": 6.247319999999999,
   "lng": -75.615231,
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 95 62C-87": {
+  "lat": 6.281025,
+  "lng": -75.60592,
+  "precise": true,
+  "source": "google"
+ },
  "google:CL 5SUR 53-26": {
   "lat": 6.205419,
   "lng": -75.5875949,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CRA 22 47-79": {
+  "lat": 6.237529899999999,
+  "lng": -75.549033,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CRA 40 #95A.-16, BARRIO VILLA DE GUADALUPE": {
+  "lat": 6.286537,
+  "lng": -75.54899189999999,
   "precise": true,
   "source": "google"
  },
@@ -440,6 +566,12 @@
  "google:LOCAL PARROQUIAL- CALLE 32 NO. 30-60": {
   "lat": 6.229553600000001,
   "lng": -75.55998029999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:PARQUE BICENTENARIO": {
+  "lat": 6.2466074,
+  "lng": -75.5568187,
   "precise": true,
   "source": "google"
  },
@@ -465,6 +597,12 @@
   "lat": 6.2091026,
   "lng": -75.49775799999999,
   "precise": false,
+  "source": "google"
+ },
+ "google:SEDE SOCIAL MANILA, CRA 43D #11-73, EL POBLADO": {
+  "lat": 6.2128758,
+  "lng": -75.5718995,
+  "precise": true,
   "source": "google"
  },
  "google:SEDE SOCIAL MANILA, CRA 43D #11-73, EL POBLADO, MEDELLIN": {

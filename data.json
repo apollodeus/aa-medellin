@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T06:44:07Z",
+ "updated": "2026-10-19T06:44:46Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -16,13 +16,13 @@
    "virtual": false,
    "contact": "",
    "email": "",
-   "lat": 6.2118,
-   "lng": -75.5714,
+   "lat": 6.2128758,
+   "lng": -75.5718995,
    "url": "https://aacolombia.org/grupos/libertad-y-responsabilidad/",
    "source": "aacolombia.org",
    "place": "Sede Social Manila",
-   "approx": true,
-   "pin_source": "venues.json (approx)"
+   "approx": false,
+   "pin_source": "google geocoder"
   },
   {
    "id": "es-28293",
@@ -35,12 +35,12 @@
    "virtual": false,
    "contact": "",
    "email": "",
-   "lat": 6.2545276,
-   "lng": -75.5821812,
+   "lat": 6.2370528,
+   "lng": -75.58313199999999,
    "url": "https://aacolombia.org/grupos/la-cuarta-dimension-de-la-existencia/",
    "source": "aacolombia.org",
-   "approx": true,
-   "pin_source": "openstreetmap street"
+   "approx": false,
+   "pin_source": "google geocoder"
   },
   {
    "id": "es-28109",
@@ -53,12 +53,12 @@
    "virtual": false,
    "contact": "",
    "email": "",
-   "lat": 6.2870106,
-   "lng": -75.5673731,
+   "lat": 6.287337099999999,
+   "lng": -75.5581468,
    "url": "https://aacolombia.org/grupos/el-oasis/",
    "source": "aacolombia.org",
-   "approx": true,
-   "pin_source": "openstreetmap street"
+   "approx": false,
+   "pin_source": "google geocoder"
   },
   {
    "id": "es-27786",
