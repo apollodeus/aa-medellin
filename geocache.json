@@ -47,6 +47,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 123A #51A-29 | BELLO": {
+  "lat": 6.3064725,
+  "lng": -75.5544596,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 2 SUR NO. 79-211 PISO 2": {
   "lat": 6.2035944,
   "lng": -75.5765905,
@@ -60,6 +66,12 @@
   "source": "google"
  },
  "google:CALLE 24A NO. 59-112, CONTIGUO A LA": {
+  "lat": 6.3137169,
+  "lng": -75.56945309999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 24A NO. 59-112, CONTIGUO A LA | BELLO": {
   "lat": 6.3137169,
   "lng": -75.56945309999999,
   "precise": true,
@@ -119,6 +131,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 40 SUR NO.29A-25,IGLESIA SAN JOSE,BARRIO ROSELLON | ENVIGADO": {
+  "lat": 6.1627743,
+  "lng": -75.5826186,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 42 NO. 79-07, PISO 2": {
   "lat": 6.2486059,
   "lng": -75.59790819999999,
@@ -132,6 +150,12 @@
   "source": "google"
  },
  "google:CALLE 45 SUR NO. 43A-70": {
+  "lat": 6.1655883,
+  "lng": -75.5949213,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 45 SUR NO. 43A-70 | ENVIGADO": {
   "lat": 6.1655883,
   "lng": -75.5949213,
   "precise": true,
@@ -158,6 +182,12 @@
  "google:CALLE 49 NO. 48-13": {
   "lat": 6.1700843,
   "lng": -75.60989599999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 49 NO. 48-13 | BELLO": {
+  "lat": 6.334017999999999,
+  "lng": -75.5568881,
   "precise": true,
   "source": "google"
  },
@@ -209,15 +239,33 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 54 NO. 48-41 | BELLO": {
+  "lat": 6.337629,
+  "lng": -75.557615,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 54 NO. 50-11": {
   "lat": 6.253051,
   "lng": -75.566448,
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 54 NO. 50-11 | BELLO": {
+  "lat": 6.337445,
+  "lng": -75.558994,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 54 NO. 55-13": {
   "lat": 6.2532567,
   "lng": -75.5667153,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 54 NO. 55-13 | BELLO": {
+  "lat": 6.3386536,
+  "lng": -75.5625766,
   "precise": true,
   "source": "google"
  },
@@ -329,6 +377,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 33 39SUR-50 | ENVIGADO": {
+  "lat": 6.1645733,
+  "lng": -75.5830917,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 33B NO.107A.-51, SEDE ACCION COMUNAL": {
   "lat": 6.2944007,
   "lng": -75.54378299999999,
@@ -365,9 +419,21 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 39 NO. 35 SUR 26, PISO 4 | ENVIGADO": {
+  "lat": 6.1658518,
+  "lng": -75.58688839999999,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 42 NO. 36S-44, OFICINA 202": {
   "lat": 6.263693300000001,
   "lng": -75.5524068,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 42 NO. 36S-44, OFICINA 202 | ENVIGADO": {
+  "lat": 6.1704969,
+  "lng": -75.5866333,
   "precise": true,
   "source": "google"
  },
@@ -401,6 +467,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 46A  39SUR-52 | ENVIGADO": {
+  "lat": 6.1704577,
+  "lng": -75.5932188,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 48 (ECUADOR) NO. 61-35, LOCAL 106": {
   "lat": 6.2575574,
   "lng": -75.56144669999999,
@@ -410,6 +482,12 @@
  "google:CARRERA 48 NO. 45-52": {
   "lat": 6.1686893,
   "lng": -75.6121355,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 48 NO. 45-52 | BELLO": {
+  "lat": 6.3319189,
+  "lng": -75.5554262,
   "precise": true,
   "source": "google"
  },
@@ -641,7 +719,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:DIAGONAL 57 NO. 42-01, BARRIO NIQUIA | BELLO": {
+  "lat": 6.340235,
+  "lng": -75.548445,
+  "precise": true,
+  "source": "google"
+ },
  "google:DIAGONAL 59 #40-31": {
+  "lat": 6.341183399999999,
+  "lng": -75.5481116,
+  "precise": true,
+  "source": "google"
+ },
+ "google:DIAGONAL 59 #40-31 | BELLO": {
   "lat": 6.341183399999999,
   "lng": -75.5481116,
   "precise": true,
@@ -650,6 +740,12 @@
  "google:IGLESIA EL MIRADOR": {
   "lat": 6.2461788,
   "lng": -75.63006779999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:IGLESIA EL MIRADOR | BELLO": {
+  "lat": 6.3403641,
+  "lng": -75.5569984,
   "precise": true,
   "source": "google"
  },
@@ -668,6 +764,12 @@
  "google:OLAYA": {
   "lat": 6.274074,
   "lng": -75.6077147,
+  "precise": false,
+  "source": "google"
+ },
+ "google:OLAYA | ENVIGADO": {
+  "lat": 6.167286499999999,
+  "lng": -75.5836963,
   "precise": false,
   "source": "google"
  },
@@ -737,7 +839,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:TRANSVERSAL 33A SUR 31E-20 | ENVIGADO": {
+  "lat": 6.1743142,
+  "lng": -75.5815305,
+  "precise": true,
+  "source": "google"
+ },
  "google:TRANSVERSAL 34B NO. 39-36": {
+  "lat": 6.171462,
+  "lng": -75.5845279,
+  "precise": true,
+  "source": "google"
+ },
+ "google:TRANSVERSAL 34B NO. 39-36 | ENVIGADO": {
   "lat": 6.171462,
   "lng": -75.5845279,
   "precise": true,
