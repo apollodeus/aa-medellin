@@ -80,17 +80,23 @@ def coords_from_maplink(url):
 
 # ---------------------------------------------------------------- 3. Google Geocoding
 GOOGLE_ERRORS = []
-def google_geocode(address, city="Medellín"):
+def clean_address(a):
+    """Drop office/floor/building suffixes that confuse geocoders: 'Carrera 49 No. 50-58 - Of. 308 - Ed. San Fernando' -> 'Carrera 49 No. 50-58'."""
+    a = re.split(r"\s*[-,(]\s*(?:of(?:icina)?\.?|piso|local|ed(?:ificio)?\.?|apto|torre|segundo piso|primer piso|tercer piso)\b", a, 1, flags=re.I)[0]
+    return a.strip(" -,")
+
+def google_geocode(address, city="Medellín", hint=""):
     if not GOOGLE_KEY or not address:
         return None
-    key = "google:" + norm(address) + ("" if norm(city) == "MEDELLIN" else " | " + norm(city))
+    address = clean_address(address)
+    key = "google:" + norm(address) + ("" if norm(city) == "MEDELLIN" else " | " + norm(city)) + (" | " + norm(hint) if hint else "")
     c = cache()
     if key in c:
         v = c[key]
         return (v["lat"], v["lng"], v["precise"]) if v else None
     result, status = None, "EXCEPTION"
     try:
-        q = urllib.parse.urlencode({"address": address + ", %s, Antioquia, Colombia" % city,
+        q = urllib.parse.urlencode({"address": address + (", " + hint if hint else "") + ", %s, Antioquia, Colombia" % city,
                                     "components": "country:CO", "region": "co", "language": "es",
                                     "bounds": "%s,%s|%s,%s" % (BBOX[0], BBOX[2], BBOX[1], BBOX[3]),
                                     "key": GOOGLE_KEY})
@@ -180,7 +186,7 @@ def place(rec, venues, report):
     if hit:
         rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = hit[0], hit[1], False, "organizer map link"; return
 
-    g = google_geocode(full_addr, rec.get("municipio") or "Medellín")
+    g = google_geocode(full_addr, rec.get("municipio") or "Medellín", rec.get("barrio") or "")
     if g and g[2]:
         rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = g[0], g[1], False, "google geocoder"; return
 
@@ -201,11 +207,18 @@ def place(rec, venues, report):
         report.append("NO PIN: %s — %s" % (rec["name"], full_addr or "(no address)"))
 
 def audit_official(rec, report):
-    """For a Spanish group with official coordinates: compare against the geocoded address when a key is set."""
+    """Spanish group with official coordinates: compare against the geocoded address (with the barrio/detail hint).
+    If a precise geocode lands more than 1.5 km away, the official pin is almost certainly stale: use the geocode and report it."""
     if not GOOGLE_KEY or rec.get("lat") is None or not rec.get("address"):
         return
-    g = google_geocode(rec["address"], rec.get("municipio") or "Medellín")
+    hint = rec.get("barrio") or ""
+    if not hint and rec.get("detail") and not re.search(r"\d", rec["detail"]) and len(rec["detail"]) < 40:
+        hint = rec["detail"]
+    g = google_geocode(rec["address"], rec.get("municipio") or "Medellín", hint)
     if g and g[2]:
         d = km(rec["lat"], rec["lng"], g[0], g[1])
-        if d > 0.4:
+        if d > 1.5:
+            report.append("official pin replaced: it was %.1f km from the address, now pinned by geocoder (check): %s — %s — %s" % (d, rec["name"], rec["address"], rec["url"]))
+            rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = g[0], g[1], False, "google geocoder (official pin was %.1f km off)" % d
+        elif d > 0.4:
             report.append("official pin is %.1f km from its address (check): %s — %s — %s" % (d, rec["name"], rec["address"], rec["url"]))

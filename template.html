@@ -131,6 +131,8 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 .dir::before{content:"";width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.7 11.3l-9-9a1 1 0 00-1.4 0l-9 9a1 1 0 000 1.4l9 9a1 1 0 001.4 0l9-9a1 1 0 000-1.4zM14 14.5V12h-4v3H8v-4a1 1 0 011-1h5V7.5l3.5 3.5z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.7 11.3l-9-9a1 1 0 00-1.4 0l-9 9a1 1 0 000 1.4l9 9a1 1 0 001.4 0l9-9a1 1 0 000-1.4zM14 14.5V12h-4v3H8v-4a1 1 0 011-1h5V7.5l3.5 3.5z'/%3E%3C/svg%3E") center/contain no-repeat}
 @media (prefers-color-scheme: dark){.dir{background:#2c4f8f}.chip[aria-pressed=true]{background:#2c4f8f;border-color:#2c4f8f}}
 .dir:hover{filter:brightness(1.12)}
+.dir.join{background:#1f6b5a}
+.dir.join::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 5h11a2 2 0 0 1 2 2v2.5l4-2.5v10l-4-2.5V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 5h11a2 2 0 0 1 2 2v2.5l4-2.5v10l-4-2.5V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z'/%3E%3C/svg%3E")}
 .dist{font:600 .82rem var(--sans);color:var(--muted);font-variant-numeric:tabular-nums;margin-left:auto;white-space:nowrap}
 .empty{color:var(--muted);padding:32px 0;text-align:center}
 
@@ -344,7 +346,7 @@ function build(d){
   ITEMS=[];
   for(const g of d.es){
     const slotDays=g.slots&&g.slots.length?new Set(g.slots.flatMap(x=>x.days).filter(d=>d!=="F")):parseDays(g.schedule||"");
-    ITEMS.push({...g,address:[g.place,g.address].filter(Boolean).join(" · "),days:slotDays,virtualOnly:g.virtual&&/^(virtual|reuniones virtual)/i.test(g.schedule||""),
+    ITEMS.push({...g,address:[g.place,g.address].filter(Boolean).join(" · "),days:slotDays,virtual:g.format!=="in-person",virtualOnly:g.format==="online",
       zone:(g.municipio&&g.municipio.toUpperCase()!=="MEDELLÍN")?(g.barrio?g.barrio+", "+g.municipio:g.municipio):(g.barrio||nearestZone(g)),hor:g["schedule_"+PAGE_LANG]||g.schedule||T.nosched});
   }
   for(const g of [...d.en,...d.manual]){
@@ -395,12 +397,16 @@ function render(refit){
       ${g.approx&&g.lat!=null?`<span class="tag o" title="${T.approxTitle}">≈ ${T.approx}</span>`:''}
       ${g.dist!=null?`<span class="dist">${g.dist.toFixed(1)} km</span>`:''}</h2>
     ${g.address?`<div class="addr"><a href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${esc(g.address)}</a>${g.detail?" · "+esc(g.detail):""}</div>`:(g.detail?`<div class="addr">${esc(g.detail)}</div>`:"")}
-    ${g.zone?`<div class="zone">${esc(g.zone)}</div>`:""}
+    ${g.zone&&g.format!=="online"?`<div class="zone">${esc(g.zone)}</div>`:""}
     <div class="hor">${esc(g.hor)}</div>
     ${(g.notes&&g.notes.length)?`<div class="notes">${g.notes.map(linkify).join("<br>")}</div>`:""}
+    ${g.info?`<div class="notes">${linkify(g.info)}</div>`:""}
     ${g.zoom?`<div class="notes">${linkify(g.zoom)}</div>`:""}
+    ${g.link_note?`<div class="notes">${T.online}: ${esc(g.link_note)}</div>`:""}
+    ${g.link_password?`<div class="notes">${T.password}: <b>${esc(g.link_password)}</b></div>`:""}
     ${(g.contact||g.email)?`<div class="notes">${T.contact}: ${linkify([g.contact,g.email].filter(Boolean).join(" · "))}</div>`:""}
     <div class="links">
+      ${g.link?`<a class="dir join" href="${esc(g.link)}" target="_blank" rel="noopener">${T.join}</a>`:""}
       ${g.format!=="online"&&(g.lat!=null||g.address)?`<a class="dir" href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${T.directions}</a>`:""}
       ${g.lat!=null?`<a href="#map" data-i="${g.i}" class="tomap">${T.onmap}</a>`:""}
       ${g.format!=="online"?`<a href="${esc(viewUrl(g))}" target="_blank" rel="noopener">Google Maps</a>`:""}

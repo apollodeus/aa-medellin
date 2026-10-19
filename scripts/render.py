@@ -123,13 +123,18 @@ def card(m, T, lang="es"):
     gm = m.get("map") or ("https://www.google.com/maps/search/?api=1&query=%s,%s" % (m["lat"], m["lng"]) if m.get("lat") is not None else "")
     parts = ['<article class="card%s">' % (" ts" if m.get("kind") == "12step" else ""), '<h2>%s %s</h2>' % (esc(m["name"]), " ".join(tags))]
     if addr: parts.append('<div class="addr">%s</div>' % esc(addr))
-    z = zone(m)
+    z = zone(m) if fmt != "online" else ""
     if z: parts.append('<div class="zone">%s</div>' % esc(z))
     parts.append('<div class="hor">%s</div>' % esc(sched))
     if m.get("notes"): parts.append('<div class="notes">%s</div>' % "<br>".join(linkify(n) for n in m["notes"]))
+    if m.get("info"): parts.append('<div class="notes">%s</div>' % linkify(m["info"]))
     if m.get("zoom"): parts.append('<div class="notes">%s</div>' % linkify(m["zoom"]))
+    if m.get("link_note"): parts.append('<div class="notes">%s: %s</div>' % (T["online"], esc(m["link_note"])))
+    if m.get("link_password"): parts.append('<div class="notes">%s: <b>%s</b></div>' % (T["password"], esc(m["link_password"])))
     if contact: parts.append('<div class="notes">%s: %s</div>' % (T["contact"], linkify(contact)))
     links = []
+    if m.get("link"):
+        links.append('<a class="dir join" href="%s" target="_blank" rel="noopener">%s</a>' % (esc(m["link"]), T["join"]))
     if fmt != "online" and (m.get("lat") is not None or m.get("address")):
         dest = (", ".join(x for x in [m.get("place"), m.get("address")] if x) + ", Medellín, Antioquia, Colombia") if (en or m.get("lat") is None) else "%s,%s" % (m["lat"], m["lng"])
         links.append('<a class="dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=%s" target="_blank" rel="noopener">%s</a>' % (urllib.parse.quote(dest), T["directions"]))
@@ -157,7 +162,7 @@ def event_ld(m, lang):
     ev["eventAttendanceMode"] = {"online": "https://schema.org/OnlineEventAttendanceMode",
                                  "hybrid": "https://schema.org/MixedEventAttendanceMode"}.get(fmt, "https://schema.org/OfflineEventAttendanceMode")
     if fmt == "online":
-        ev["location"] = {"@type": "VirtualLocation", "url": m.get("url") or SITE}
+        ev["location"] = {"@type": "VirtualLocation", "url": m.get("link") or m.get("url") or SITE}
     else:
         ev["location"] = place_ld(m)
     desc = [m.get("topic"), (m.get("type") or "").capitalize() + " meeting" if m.get("type") else "", en_schedule(m) if "times" in m else m.get("schedule")]
@@ -185,7 +190,8 @@ def event_ld(m, lang):
 def group_ld(m):
     ev = {"@type": "Event", "name": m["name"] + " (Alcohólicos Anónimos)", "inLanguage": "es", "isAccessibleForFree": True,
           "organizer": {"@type": "Organization", "name": m["name"]},
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": place_ld(m),
+          "eventAttendanceMode": {"online": "https://schema.org/OnlineEventAttendanceMode", "hybrid": "https://schema.org/MixedEventAttendanceMode"}.get(m.get("format"), "https://schema.org/OfflineEventAttendanceMode"),
+          "location": ({"@type": "VirtualLocation", "url": m.get("link") or SITE} if m.get("format") == "online" else place_ld(m)),
           "description": "Grupo de AA. Horario: " + (m.get("schedule_es") or m.get("schedule") or "no publicado")}
     sched = []
     for sg in m.get("slots") or []:
@@ -202,7 +208,7 @@ ES = dict(LANG="es", OGLOCALE="es_CO", CANON="/", DATA="data.json", DEFAULT_FILT
     TITLE="AA en Medellín: mapa y horarios de reuniones de Alcohólicos Anónimos",
     H1="Reuniones de AA en Medellín",
     T_LANG="Idioma", T_ALL="Todos", T_SEARCH="Buscar nombre, dirección o barrio", T_DAY="Día", T_FMT="Modalidad",
-    T_ALLF="Todas", T_INPERSON="Presencial", T_ONLINE="Virtual", T_NEAR="Cerca de", T_BYNAME="Ordenar por nombre",
+    T_ALLF="Todas", T_INPERSON="Presencial", T_ONLINE="Con opción virtual", T_NEAR="Cerca de", T_BYNAME="Ordenar por nombre",
     T_MAP="Mapa de reuniones", T_ADDR="Dirección u hotel", T_ADDR_PH="Escribe tu dirección u hotel para ordenar por distancia", T_ADDR_GO="Buscar", T_LEG_EN="Reunión en inglés", T_LEG_ES="Grupo en español", T_LEG_MIX="Ambos en el mismo lugar",
     BRAND="AA Medellín Map",
     LANGSW='<span lang="es">ES</span><a href="en/" hreflang="en" lang="en">EN</a>')
@@ -210,7 +216,7 @@ EN = dict(LANG="en", OGLOCALE="en_US", CANON="/en/", DATA="../data.json", DEFAUL
     TITLE="English-Speaking AA Meetings in Medellín, Colombia: Map and Schedule",
     H1="English-Speaking AA Meetings in Medellín",
     T_LANG="Language", T_ALL="All", T_SEARCH="Search name, address or neighborhood", T_DAY="Day", T_FMT="Format",
-    T_ALLF="All", T_INPERSON="In person", T_ONLINE="Online", T_NEAR="Near", T_BYNAME="Sort by name",
+    T_ALLF="All", T_INPERSON="In person", T_ONLINE="Online option", T_NEAR="Near", T_BYNAME="Sort by name",
     T_MAP="Meeting map", T_ADDR="Address or hotel", T_ADDR_PH="Type your address or hotel to sort by distance", T_ADDR_GO="Go", T_LEG_EN="English-speaking meeting", T_LEG_ES="Spanish-language group", T_LEG_MIX="Both at the same venue",
     BRAND="AA Medellín Map",
     LANGSW='<a href="../" hreflang="es" lang="es">ES</a><span lang="en">EN</span>')
@@ -218,21 +224,21 @@ TOPIC_ES = {"Big Book Study": "Estudio del Libro Grande", "AA Big Book Study": "
             "12 & 12 Step/Tradition Study": "Estudio de Pasos y Tradiciones", "Open AA 12×12 Study": "Estudio de los Doce y Doce",
             "Open Speaker Meeting": "Reunión de oradores"}
 TJS = {
- "es": {"allprog": "Todos los programas de 12 pasos", "allprogTitle": "Reunión abierta de 12 pasos: bienvenidos miembros de AA, NA, Al-Anon y cualquier programa de 12 pasos",
+ "es": {"join": "Unirse en línea", "online": "En línea", "password": "Contraseña", "allprog": "Todos los programas de 12 pasos", "allprogTitle": "Reunión abierta de 12 pasos: bienvenidos miembros de AA, NA, Al-Anon y cualquier programa de 12 pasos",
         "website": "Sitio web", "addrNeedsGoogle": "Por ahora la búsqueda por dirección exacta no está disponible; escribe el nombre del hotel, un parque o un punto conocido.",
         "addrOk": "Ordenado por distancia desde:", "addrFail": "No encontramos esa dirección. Prueba con el nombre del hotel o agrega el barrio.",
         "approx": "ubicación aproximada", "approxTitle": "El pin se colocó a partir de la dirección y puede estar a una cuadra de distancia. Usa 'Cómo llegar' para la ruta exacta.",
         "myloc": "📍 Mi ubicación", "metro": "Área metropolitana", "byname": "Ordenar por nombre", "locating": "Buscando tu ubicación…", "locfail": "No se pudo obtener tu ubicación","directions": "Cómo llegar", "details": "Ver detalles", "topic": TOPIC_ES,
-        "tag": {"english": "Inglés", "open": "abierta", "closed": "cerrada", "online": "solo virtual", "hybrid": "híbrida", "virtual": "virtual"},"locale": "es-CO", "updated": "Actualizado: ", "empty": "Ningún grupo coincide con esos filtros.", "contact": "Contacto",
+        "tag": {"english": "Inglés", "open": "abierta", "closed": "cerrada", "online": "solo virtual", "hybrid": "presencial y virtual", "virtual": "presencial y virtual"},"locale": "es-CO", "updated": "Actualizado: ", "empty": "Ningún grupo coincide con esos filtros.", "contact": "Contacto",
         "onmap": "Ver en el mapa", "source": "Fuente", "loadfail": "No se pudo cargar la lista.", "nosched": "Horario no publicado",
         "days": [["L", "Lun"], ["M", "Mar"], ["Mc", "Mié"], ["J", "Jue"], ["V", "Vie"], ["S", "Sáb"], ["D", "Dom"]]},
- "en": {"allprog": "All 12-step programs welcome", "allprogTitle": "Open 12-step meeting: AA, NA, Al-Anon and any 12-step program welcome",
+ "en": {"join": "Join online", "online": "Online", "password": "Password", "allprog": "All 12-step programs welcome", "allprogTitle": "Open 12-step meeting: AA, NA, Al-Anon and any 12-step program welcome",
         "website": "Website", "addrNeedsGoogle": "Exact street-number search isn't available yet; type the hotel name, a park or a known landmark.",
         "addrOk": "Sorted by distance from:", "addrFail": "Couldn't find that address. Try the hotel name or add the neighborhood.",
         "approx": "approx. location", "approxTitle": "This pin was placed from the address and may be off by a block. Use Directions for the exact route.",
         "myloc": "📍 My location", "metro": "Metro area", "byname": "Sort by name", "locating": "Finding your location…", "locfail": "Couldn't get your location",
         "directions": "Directions", "details": "Details", "topic": {},
-        "tag": {"english": "English", "open": "open", "closed": "closed", "online": "online only", "hybrid": "hybrid", "virtual": "online"},
+        "tag": {"english": "English", "open": "open", "closed": "closed", "online": "online only", "hybrid": "in person and online", "virtual": "in person and online"},
         "locale": "en-US", "updated": "Updated: ", "empty": "No meetings match those filters.", "contact": "Contact",
         "onmap": "Show on map", "source": "Source", "loadfail": "Couldn't load the meeting list.", "nosched": "Schedule not published",
         "days": [["L", "Mon"], ["M", "Tue"], ["Mc", "Wed"], ["J", "Thu"], ["V", "Fri"], ["S", "Sat"], ["D", "Sun"]]},

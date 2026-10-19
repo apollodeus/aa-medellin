@@ -76,6 +76,10 @@ def fetch_spanish():
                 "municipio": f("municipio").title().replace("Itagüí", "Itagüí"),
                 "schedule": f("horario"),
                 "virtual": f("virtual") == "true",
+                "link": f("transmision") if f("transmision").startswith("http") else "",
+                "link_note": "" if f("transmision").startswith("http") else f("transmision"),
+                "link_password": f("transmision_password"),
+                "info": "" if f("informacion_adicional") in ("", "(null)") else f("informacion_adicional"),
                 "contact": f("contacto"),
                 "email": f("correo_electronico"),
                 "lat": float(lat) if lat else None,
@@ -248,6 +252,18 @@ def main():
         r["slots"] = segs
         r["schedule_es"] = SCH.format(segs, "es") if segs else r.get("schedule", "")
         r["schedule_en"] = SCH.format(segs, "en") if segs else r.get("schedule", "")
+        sch = (r.get("schedule") or "").strip().lower()
+        online_only = bool(re.match(r"(reuniones\s+)?virtual", sch))
+        if online_only and not r["link"]:
+            zid = re.search(r"zoom\s*id\s*(?:de\s*reuni[oó]n)?\s*:?\s*(\d[\d\s]{7,}\d)", sch)
+            if zid:
+                r["link"] = "https://zoom.us/j/" + re.sub(r"\D", "", zid.group(1))
+            pw = re.search(r"(?:contrase[ñn]a|password|clave|c[oó]digo)\s*:?\s*(\S+)", sch)
+            if pw and not r["link_password"]:
+                r["link_password"] = pw.group(1)
+        r["format"] = "online" if online_only else ("hybrid" if (r["virtual"] or r["link"]) else "in-person")
+        if online_only:
+            r["address"] = ""; r["detail"] = ""; r["lat"] = None; r["lng"] = None
         if not segs and r.get("schedule"):
             report.append("schedule not understood (shown as written): %s — \"%s\"" % (r["name"], r["schedule"]))
         if r["lat"] is not None and not G.in_bbox(r["lat"], r["lng"]):
