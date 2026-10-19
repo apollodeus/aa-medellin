@@ -195,7 +195,6 @@ def fetch_english(venues):
                 rec["place"] = rec["notes"].pop(0)
         rec["notes"] = [re.sub(r"\s*\(?GSO Approved\s*https?://\S+\s*\)?", " (GSO approved)", n).strip() for n in rec["notes"]]
         rec["id"] = "en-" + re.sub(r"[^a-z0-9]+", "-", (rec["name"] + "-" + "".join(rec["days"])).lower()).strip("-")
-        geocode(rec, venues)
         # merge with an earlier entry of the same group at the same place
         same = next((o for o in out if o["name"] == rec["name"] and o["address"] == rec["address"] and o.get("topic") == rec.get("topic")), None)
         if same:
@@ -209,36 +208,26 @@ def fetch_english(venues):
         out.append(rec)
     return out
 
-def geocode(rec, venues):
-    hay = norm(" ".join([rec.get("address", ""), rec.get("place", ""), rec.get("name", "")] + list(rec.get("notes", []))))
-    for v in venues:
-        if all(norm(k) in hay for k in v["match"]):
-            rec["lat"], rec["lng"] = v["lat"], v["lng"]
-            if v.get("place") and not rec.get("place"):
-                rec["place"] = v["place"]
-            rec["approx"] = v.get("approx", True)
-            return
-
 # ---------------------------------------------------------------- main
 def main():
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import geocode as G
     prev = load_json(OUT, {"es": [], "en": [], "manual": []})
     venues = load_json(VENUES, [])
-    status = {}
+    status, report = {}, []
+    prev_es, prev_en = len(prev.get("es", [])), len(prev.get("en", []))
 
     try:
         es = fetch_spanish()
-        if len(es) < 50:
-            raise RuntimeError("only %d Spanish groups parsed" % len(es))
-        for r in es:
-            if r["lat"] is None:
-                geocode(r, venues)
+        if len(es) < 50 or (prev_es and len(es) < 0.7 * prev_es):
+            raise RuntimeError("only %d Spanish groups parsed (previously %d)" % (len(es), prev_es))
         status["es"] = "ok"
     except Exception as e:
         es = prev.get("es", []); status["es"] = "kept previous (%s)" % e
     try:
         en = fetch_english(venues)
-        if len(en) < 4:
-            raise RuntimeError("only %d English meetings parsed" % len(en))
+        if len(en) < 4 or (prev_en and len(en) < 0.6 * prev_en):
+            raise RuntimeError("only %d English meetings parsed (previously %d)" % (len(en), prev_en))
         status["en"] = "ok"
     except Exception as e:
         en = prev.get("en", []); status["en"] = "kept previous (%s)" % e
@@ -248,12 +237,37 @@ def main():
         fix = overrides.get(rec["id"])
         if fix:
             rec.update(fix)
+
+    # Spanish groups: official coordinates, sanity-checked
+    kept = []
+    for r in es:
+        if r["lat"] is not None and not G.in_bbox(r["lat"], r["lng"]):
+            report.append("dropped, outside the Medellín area (%s): %s — %s — %s" % (r.get("detail") or r["address"], r["name"], r["address"], r["url"]))
+            continue
+        if r["lat"] is None:
+            G.place(r, venues, report)
+        else:
+            r["approx"] = False; r["pin_source"] = "aacolombia.org"
+            G.audit_official(r, report)
+        kept.append(r)
+    es = kept
+
+    for rec in en:
+        G.place(rec, venues, report)
+
     manual = load_json(MANUAL, [])
     for i, m in enumerate(manual):
         m.setdefault("id", "manual-%d" % i)
         m.setdefault("source", "manual")
-        if m.get("lat") is None:
-            geocode(m, venues)
+        if not m.get("hidden"):
+            G.place(m, venues, report)
+    G.save_cache()
+
+    for k, v in status.items():
+        if v != "ok":
+            report.insert(0, "SOURCE PROBLEM (%s): %s" % (k, v))
+    if not G.GOOGLE_KEY:
+        report.append("note: GOOGLE_GEOCODING_KEY is not set, so addresses are pinned from map links and hand-placed estimates only")
 
     data = {
         "updated": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -261,8 +275,12 @@ def main():
     }
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
-    print(json.dumps(status), len(es), "es", len(en), "en", len(manual), "manual")
-    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    with open(os.path.join(ROOT, "report.md"), "w", encoding="utf-8") as f:
+        f.write("# Build report\n\nUpdated %s. Sources: %s. %d Spanish groups, %d English meetings, %d manual.\n\n"
+                % (data["updated"], json.dumps(status), len(es), len(en), len(manual)))
+        f.write("\n".join("- " + line for line in report) if report else "No issues.")
+        f.write("\n")
+    print(json.dumps(status), len(es), "es", len(en), "en", len(manual), "manual;", len(report), "report lines")
     import render
     render.render()
 

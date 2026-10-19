@@ -1,0 +1,15 @@
+{
+ "link:https://maps.app.goo.gl/5gt2hsbVM8B2gr9W7": null,
+ "link:https://maps.app.goo.gl/ENZSjHQDntWv89YJ7?g_st=ic": null,
+ "link:https://share.google/H8b7m7IL6QS1D0d0m": null,
+ "osm:CALLE 95": {
+  "lat": 6.2870106,
+  "lng": -75.5673731,
+  "source": "osm"
+ },
+ "osm:CARRERA 65A": {
+  "lat": 6.2545276,
+  "lng": -75.5821812,
+  "source": "osm"
+ }
+}

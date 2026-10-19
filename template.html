@@ -319,6 +319,7 @@ function render(refit){
       ${g.topic?`<span class="tag o">${esc(T.topic[g.topic]||g.topic)}</span>`:''}
       ${g.type?`<span class="tag o">${T.tag[g.type]}</span>`:''}
       ${g.virtualOnly?`<span class="tag o">${T.tag.online}</span>`:(g.virtual?`<span class="tag o">${g.format==="hybrid"?T.tag.hybrid:T.tag.virtual}</span>`:'')}
+      ${g.approx&&g.lat!=null?`<span class="tag o" title="${T.approxTitle}">≈ ${T.approx}</span>`:''}
       ${g.dist!=null?`<span class="dist">${g.dist.toFixed(1)} km</span>`:''}</h2>
     ${g.address?`<div class="addr"><a href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${esc(g.address)}</a>${g.detail?" · "+esc(g.detail):""}</div>`:(g.detail?`<div class="addr">${esc(g.detail)}</div>`:"")}
     ${g.zone?`<div class="zone">${esc(g.zone)}</div>`:""}

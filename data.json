@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T06:28:16Z",
+ "updated": "2026-10-19T06:32:04Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -21,7 +21,8 @@
    "url": "https://aacolombia.org/grupos/libertad-y-responsabilidad/",
    "source": "aacolombia.org",
    "place": "Sede Social Manila",
-   "approx": true
+   "approx": true,
+   "pin_source": "venues.json (approx)"
   },
   {
    "id": "es-28293",
@@ -34,10 +35,12 @@
    "virtual": false,
    "contact": "",
    "email": "",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2545276,
+   "lng": -75.5821812,
    "url": "https://aacolombia.org/grupos/la-cuarta-dimension-de-la-existencia/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": true,
+   "pin_source": "openstreetmap street"
   },
   {
    "id": "es-28109",
@@ -50,10 +53,12 @@
    "virtual": false,
    "contact": "",
    "email": "",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2870106,
+   "lng": -75.5673731,
    "url": "https://aacolombia.org/grupos/el-oasis/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": true,
+   "pin_source": "openstreetmap street"
   },
   {
    "id": "es-27786",
@@ -69,7 +74,9 @@
    "lat": 6.268652,
    "lng": -75.5510647,
    "url": "https://aacolombia.org/grupos/llegamos-a-creer/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27785",
@@ -85,7 +92,9 @@
    "lat": 6.2530486,
    "lng": -75.5705104,
    "url": "https://aacolombia.org/grupos/dos-buscando-al-tercero/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27732",
@@ -101,7 +110,9 @@
    "lat": 6.281025,
    "lng": -75.60592,
    "url": "https://aacolombia.org/grupos/fuente-clara/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27602",
@@ -117,7 +128,9 @@
    "lat": 6.268652,
    "lng": -75.5510647,
    "url": "https://aacolombia.org/grupos/llegamos-a-creer-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27601",
@@ -133,7 +146,9 @@
    "lat": 6.2630213,
    "lng": -75.5560357,
    "url": "https://aacolombia.org/grupos/la-solucion-11/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27599",
@@ -149,7 +164,9 @@
    "lat": 6.2867916,
    "lng": -75.5700157,
    "url": "https://aacolombia.org/grupos/tabla-de-salvacion-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27598",
@@ -165,7 +182,9 @@
    "lat": 6.2431255,
    "lng": -75.5518944,
    "url": "https://aacolombia.org/grupos/dimension-espiritual-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27597",
@@ -181,7 +200,9 @@
    "lat": 6.2375299,
    "lng": -75.549033,
    "url": "https://aacolombia.org/grupos/espiritu-de-guerreros-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27591",
@@ -197,7 +218,9 @@
    "lat": 6.2934081,
    "lng": -75.5720352,
    "url": "https://aacolombia.org/grupos/la-sobriedad-7/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27590",
@@ -213,7 +236,9 @@
    "lat": 6.2493352,
    "lng": -75.5665116,
    "url": "https://aacolombia.org/grupos/la-serenidad-15/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27589",
@@ -229,7 +254,9 @@
    "lat": 6.2462794,
    "lng": -75.5575288,
    "url": "https://aacolombia.org/grupos/la-recuperacion-3/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27587",
@@ -245,7 +272,9 @@
    "lat": 6.2424473,
    "lng": -75.5713875,
    "url": "https://aacolombia.org/grupos/la-luz-6/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27586",
@@ -261,7 +290,9 @@
    "lat": 6.263085,
    "lng": -75.548919,
    "url": "https://aacolombia.org/grupos/la-humildad-8/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27583",
@@ -277,7 +308,9 @@
    "lat": 6.2498513,
    "lng": -75.5698707,
    "url": "https://aacolombia.org/grupos/la-candelaria-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27582",
@@ -293,7 +326,9 @@
    "lat": 6.2502068,
    "lng": -75.5671424,
    "url": "https://aacolombia.org/grupos/la-alternativa-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27581",
@@ -309,7 +344,9 @@
    "lat": 6.2466074,
    "lng": -75.5568187,
    "url": "https://aacolombia.org/grupos/nueva-dimension-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27580",
@@ -325,7 +362,9 @@
    "lat": 6.28901,
    "lng": -75.555468,
    "url": "https://aacolombia.org/grupos/nuevos-amigos-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27579",
@@ -341,7 +380,9 @@
    "lat": 6.2842431,
    "lng": -75.5867854,
    "url": "https://aacolombia.org/grupos/robledo-el-diamante-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27576",
@@ -357,7 +398,9 @@
    "lat": 6.273413,
    "lng": -75.573513,
    "url": "https://aacolombia.org/grupos/una-nueva-dimension-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27573",
@@ -373,7 +416,9 @@
    "lat": 6.2866093,
    "lng": -75.5820702,
    "url": "https://aacolombia.org/grupos/kennedy-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27571",
@@ -389,7 +434,9 @@
    "lat": 6.2872946,
    "lng": -75.562924,
    "url": "https://aacolombia.org/grupos/fuente-de-vida-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27570",
@@ -405,7 +452,9 @@
    "lat": 6.2915926,
    "lng": -75.5826735,
    "url": "https://aacolombia.org/grupos/el-progreso-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27569",
@@ -421,7 +470,9 @@
    "lat": 6.2498513,
    "lng": -75.5698707,
    "url": "https://aacolombia.org/grupos/el-porvenir-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27568",
@@ -437,7 +488,9 @@
    "lat": 6.274364,
    "lng": -75.566262,
    "url": "https://aacolombia.org/grupos/el-bosque-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27567",
@@ -453,7 +506,9 @@
    "lat": 6.3020702,
    "lng": -75.578712,
    "url": "https://aacolombia.org/grupos/doce-de-octubre-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27566",
@@ -469,7 +524,9 @@
    "lat": 6.260491,
    "lng": -75.566796,
    "url": "https://aacolombia.org/grupos/el-lenguaje-del-corazon-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27565",
@@ -485,7 +542,9 @@
    "lat": 6.257101,
    "lng": -75.573653,
    "url": "https://aacolombia.org/grupos/una-vision-para-ti-12/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27563",
@@ -501,7 +560,9 @@
    "lat": 6.2719606,
    "lng": -75.5530891,
    "url": "https://aacolombia.org/grupos/una-nueva-luz-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27562",
@@ -517,7 +578,9 @@
    "lat": 6.2597677,
    "lng": -75.568367,
    "url": "https://aacolombia.org/grupos/tradicion-dos-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27559",
@@ -533,7 +596,9 @@
    "lat": 6.3009353,
    "lng": -75.5713804,
    "url": "https://aacolombia.org/grupos/pedregal-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27557",
@@ -549,7 +614,9 @@
    "lat": 6.291175,
    "lng": -75.554738,
    "url": "https://aacolombia.org/grupos/el-camino-7/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27554",
@@ -565,7 +632,9 @@
    "lat": 6.308651,
    "lng": -75.56365,
    "url": "https://aacolombia.org/grupos/el-milagro-12/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27553",
@@ -581,7 +650,9 @@
    "lat": 6.2816421,
    "lng": -75.6044626,
    "url": "https://aacolombia.org/grupos/un-nuevo-renacer-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27551",
@@ -597,7 +668,9 @@
    "lat": 6.2873371,
    "lng": -75.5581468,
    "url": "https://aacolombia.org/grupos/una-nueva-experiencia-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27550",
@@ -613,7 +686,9 @@
    "lat": 6.245725,
    "lng": -75.5681414,
    "url": "https://aacolombia.org/grupos/alfa-y-omega-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27547",
@@ -629,7 +704,9 @@
    "lat": 6.2856569,
    "lng": -75.5909168,
    "url": "https://aacolombia.org/grupos/vida-sobria-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27545",
@@ -645,7 +722,9 @@
    "lat": 6.232601,
    "lng": -75.568716,
    "url": "https://aacolombia.org/grupos/el-refugio-3/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27544",
@@ -661,7 +740,9 @@
    "lat": 6.3033683,
    "lng": -75.5495157,
    "url": "https://aacolombia.org/grupos/solo-por-hoy-13/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27543",
@@ -677,7 +758,9 @@
    "lat": 6.3089325,
    "lng": -75.5532003,
    "url": "https://aacolombia.org/grupos/zamora-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27540",
@@ -693,7 +776,9 @@
    "lat": 6.259024,
    "lng": -75.549266,
    "url": "https://aacolombia.org/grupos/el-despertar-de-villa-hermosa-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27539",
@@ -709,7 +794,9 @@
    "lat": 6.286537,
    "lng": -75.5489919,
    "url": "https://aacolombia.org/grupos/villa-de-guadalupe-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27538",
@@ -725,7 +812,9 @@
    "lat": 6.2829663,
    "lng": -75.5801955,
    "url": "https://aacolombia.org/grupos/sendero-de-vida-6/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27537",
@@ -741,7 +830,9 @@
    "lat": 6.274132,
    "lng": -75.581008,
    "url": "https://aacolombia.org/grupos/medellin-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27536",
@@ -757,7 +848,9 @@
    "lat": 6.2944007,
    "lng": -75.543783,
    "url": "https://aacolombia.org/grupos/santo-domingo-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27534",
@@ -773,7 +866,9 @@
    "lat": 6.2635442,
    "lng": -75.560099,
    "url": "https://aacolombia.org/grupos/san-pablo-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27533",
@@ -789,7 +884,9 @@
    "lat": 6.2688233,
    "lng": -75.5906039,
    "url": "https://aacolombia.org/grupos/san-cristobal-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27529",
@@ -805,7 +902,9 @@
    "lat": 6.2498364,
    "lng": -75.569984,
    "url": "https://aacolombia.org/grupos/obrero-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27526",
@@ -821,7 +920,9 @@
    "lat": 6.2750204,
    "lng": -75.5636859,
    "url": "https://aacolombia.org/grupos/miranda-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27524",
@@ -837,7 +938,9 @@
    "lat": 6.2498513,
    "lng": -75.5698707,
    "url": "https://aacolombia.org/grupos/meridiano-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27523",
@@ -853,7 +956,9 @@
    "lat": 6.2730814,
    "lng": -75.5500532,
    "url": "https://aacolombia.org/grupos/las-nieves-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27522",
@@ -869,7 +974,9 @@
    "lat": 6.2575574,
    "lng": -75.5614467,
    "url": "https://aacolombia.org/grupos/las-doce-tradiciones-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27521",
@@ -885,7 +992,9 @@
    "lat": 6.1831791,
    "lng": -75.5945218,
    "url": "https://aacolombia.org/grupos/la-unidad-14/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27520",
@@ -901,7 +1010,9 @@
    "lat": 6.2559194,
    "lng": -75.5774332,
    "url": "https://aacolombia.org/grupos/piloto-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27519",
@@ -917,7 +1028,9 @@
    "lat": 6.2630573,
    "lng": -75.5561894,
    "url": "https://aacolombia.org/grupos/la-solucion-10/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27517",
@@ -933,7 +1046,9 @@
    "lat": 6.2498513,
    "lng": -75.5698707,
    "url": "https://aacolombia.org/grupos/colombia-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27513",
@@ -949,7 +1064,9 @@
    "lat": 6.282141,
    "lng": -75.5615234,
    "url": "https://aacolombia.org/grupos/bienestar-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27511",
@@ -965,7 +1082,9 @@
    "lat": 6.284866,
    "lng": -75.555956,
    "url": "https://aacolombia.org/grupos/aranjuez-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27508",
@@ -981,7 +1100,9 @@
    "lat": 6.257101,
    "lng": -75.573653,
    "url": "https://aacolombia.org/grupos/las-24-horas-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27506",
@@ -997,7 +1118,9 @@
    "lat": 6.2327935,
    "lng": -75.5959959,
    "url": "https://aacolombia.org/grupos/belen-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27505",
@@ -1013,7 +1136,9 @@
    "lat": 6.2091679,
    "lng": -75.5646147,
    "url": "https://aacolombia.org/grupos/vizcaya-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27504",
@@ -1029,7 +1154,9 @@
    "lat": 6.1919483,
    "lng": -75.5559618,
    "url": "https://aacolombia.org/grupos/el-poblado-virtual-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27501",
@@ -1045,7 +1172,9 @@
    "lat": 6.2091026,
    "lng": -75.497758,
    "url": "https://aacolombia.org/grupos/santa-elena-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27498",
@@ -1061,7 +1190,9 @@
    "lat": 6.2192633,
    "lng": -75.5951856,
    "url": "https://aacolombia.org/grupos/la-resurreccion-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27496",
@@ -1077,7 +1208,9 @@
    "lat": 6.205419,
    "lng": -75.5875949,
    "url": "https://aacolombia.org/grupos/la-oportunidad-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27495",
@@ -1093,7 +1226,9 @@
    "lat": 6.2360561,
    "lng": -75.5537112,
    "url": "https://aacolombia.org/grupos/la-milagrosa-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27491",
@@ -1109,7 +1244,9 @@
    "lat": 6.22538,
    "lng": -75.600346,
    "url": "https://aacolombia.org/grupos/la-gloria-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27490",
@@ -1125,7 +1262,9 @@
    "lat": 6.2497676,
    "lng": -75.5492211,
    "url": "https://aacolombia.org/grupos/la-fortaleza-9/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27489",
@@ -1141,7 +1280,9 @@
    "lat": 6.2551599,
    "lng": -75.6032152,
    "url": "https://aacolombia.org/grupos/la-floresta-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27486",
@@ -1157,7 +1298,9 @@
    "lat": 6.2372967,
    "lng": -75.5405453,
    "url": "https://aacolombia.org/grupos/la-dignidad-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27482",
@@ -1173,7 +1316,9 @@
    "lat": 6.2318756,
    "lng": -75.6000105,
    "url": "https://aacolombia.org/grupos/la-espiritualidad-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27480",
@@ -1189,7 +1334,9 @@
    "lat": 6.2486059,
    "lng": -75.5979082,
    "url": "https://aacolombia.org/grupos/felices-alegres-y-libres-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27478",
@@ -1205,7 +1352,9 @@
    "lat": 6.2444736,
    "lng": -75.6024734,
    "url": "https://aacolombia.org/grupos/la-fraternidad-5/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27475",
@@ -1221,7 +1370,9 @@
    "lat": 6.2351934,
    "lng": -75.5452157,
    "url": "https://aacolombia.org/grupos/florida-nueva-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27474",
@@ -1237,7 +1388,9 @@
    "lat": 6.238942,
    "lng": -75.561959,
    "url": "https://aacolombia.org/grupos/el-salvador-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27473",
@@ -1253,7 +1406,9 @@
    "lat": 6.1919483,
    "lng": -75.5559618,
    "url": "https://aacolombia.org/grupos/el-poblado-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27472",
@@ -1269,7 +1424,9 @@
    "lat": 6.2141979,
    "lng": -75.6025653,
    "url": "https://aacolombia.org/grupos/el-mensaje-13/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27469",
@@ -1285,7 +1442,9 @@
    "lat": 6.2417825,
    "lng": -75.583712,
    "url": "https://aacolombia.org/grupos/conquistadores-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27468",
@@ -1301,7 +1460,9 @@
    "lat": 6.1948271,
    "lng": -75.5610791,
    "url": "https://aacolombia.org/grupos/luz-y-esperanza-de-vida-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27467",
@@ -1317,7 +1478,9 @@
    "lat": 6.2295536,
    "lng": -75.5599803,
    "url": "https://aacolombia.org/grupos/nuevo-ser-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27464",
@@ -1333,7 +1496,9 @@
    "lat": 6.2623965,
    "lng": -75.605644,
    "url": "https://aacolombia.org/grupos/nueva-esperanza-8/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27461",
@@ -1349,7 +1514,9 @@
    "lat": 6.224428,
    "lng": -75.5832186,
    "url": "https://aacolombia.org/grupos/aa-sin-fronteras-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27460",
@@ -1365,7 +1532,9 @@
    "lat": 6.24732,
    "lng": -75.615231,
    "url": "https://aacolombia.org/grupos/regla-no-62-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27459",
@@ -1381,7 +1550,9 @@
    "lat": 6.2128675,
    "lng": -75.5719688,
    "url": "https://aacolombia.org/grupos/mente-abierta-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27458",
@@ -1397,7 +1568,9 @@
    "lat": 6.2390879,
    "lng": -75.5829838,
    "url": "https://aacolombia.org/grupos/viviendo-sobrio-16/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27457",
@@ -1413,7 +1586,9 @@
    "lat": 6.2267932,
    "lng": -75.6055683,
    "url": "https://aacolombia.org/grupos/la-ilusion-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27456",
@@ -1429,7 +1604,9 @@
    "lat": 6.2241754,
    "lng": -75.5947382,
    "url": "https://aacolombia.org/grupos/volver-a-vivir-16/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27455",
@@ -1445,7 +1622,9 @@
    "lat": 6.233361,
    "lng": -75.5380644,
    "url": "https://aacolombia.org/grupos/villa-lilian-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27453",
@@ -1461,7 +1640,9 @@
    "lat": 6.2282479,
    "lng": -75.5829485,
    "url": "https://aacolombia.org/grupos/trinidad-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27450",
@@ -1477,7 +1658,9 @@
    "lat": 6.2291994,
    "lng": -75.5926095,
    "url": "https://aacolombia.org/grupos/trabajando-con-otros-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27449",
@@ -1493,7 +1676,9 @@
    "lat": 6.2128675,
    "lng": -75.5719688,
    "url": "https://aacolombia.org/grupos/the-twelve-steps-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27448",
@@ -1509,7 +1694,9 @@
    "lat": 6.257403,
    "lng": -75.6071458,
    "url": "https://aacolombia.org/grupos/santa-lucia-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27444",
@@ -1525,7 +1712,9 @@
    "lat": 6.2576523,
    "lng": -75.615311,
    "url": "https://aacolombia.org/grupos/san-javier-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27442",
@@ -1541,7 +1730,9 @@
    "lat": 6.1990057,
    "lng": -75.5904067,
    "url": "https://aacolombia.org/grupos/san-antonio-de-prado-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27440",
@@ -1557,7 +1748,9 @@
    "lat": 6.2346482,
    "lng": -75.5912945,
    "url": "https://aacolombia.org/grupos/rosales-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27439",
@@ -1573,23 +1766,9 @@
    "lat": 6.2458944,
    "lng": -75.6168862,
    "url": "https://aacolombia.org/grupos/los-principios-de-aa-2/",
-   "source": "aacolombia.org"
-  },
-  {
-   "id": "es-27435",
-   "lang": "es",
-   "name": "Nuevo Despertar",
-   "address": "SOPETRAN",
-   "detail": "de la parroquia Santa Teresita",
-   "barrio": "",
-   "schedule": "Martes y Jueves 7:00 pm",
-   "virtual": false,
-   "contact": "",
-   "email": "",
-   "lat": 6.501534,
-   "lng": -75.743398,
-   "url": "https://aacolombia.org/grupos/nuevo-despertar-13/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27433",
@@ -1605,7 +1784,9 @@
    "lat": 6.2486731,
    "lng": -75.5893199,
    "url": "https://aacolombia.org/grupos/la-vina-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27432",
@@ -1621,7 +1802,9 @@
    "lat": 6.2071548,
    "lng": -75.577018,
    "url": "https://aacolombia.org/grupos/camino-a-la-sobriedad-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27431",
@@ -1637,7 +1820,9 @@
    "lat": 6.2035944,
    "lng": -75.5765905,
    "url": "https://aacolombia.org/grupos/cambio-de-vida-4/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27428",
@@ -1653,7 +1838,9 @@
    "lat": 6.2446127,
    "lng": -75.6193781,
    "url": "https://aacolombia.org/grupos/belencito-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27427",
@@ -1669,7 +1856,9 @@
    "lat": 6.2329535,
    "lng": -75.6075778,
    "url": "https://aacolombia.org/grupos/alegria-2/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-26798",
@@ -1685,7 +1874,9 @@
    "lat": 6.2444736,
    "lng": -75.6024734,
    "url": "https://aacolombia.org/grupos/redcuperacion-del-alcoholismo/",
-   "source": "aacolombia.org"
+   "source": "aacolombia.org",
+   "approx": false,
+   "pin_source": "aacolombia.org"
   }
  ],
  "en": [
@@ -1746,7 +1937,8 @@
    "lat": 6.1996,
    "lng": -75.5722,
    "topic": "Big Book Study",
-   "approx": false
+   "approx": false,
+   "pin_source": "venues.json (confirmed)"
   },
   {
    "id": "en-aa-poblado-group-manila-mv",
@@ -1775,7 +1967,8 @@
    "lat": 6.2118,
    "lng": -75.5714,
    "topic": "",
-   "approx": true
+   "approx": true,
+   "pin_source": "venues.json (approx)"
   },
   {
    "id": "en-a-vision-for-you-group-mc",
@@ -1800,7 +1993,8 @@
    "lat": 6.2384,
    "lng": -75.5984,
    "topic": "Open AA 12×12 Study",
-   "approx": true
+   "approx": true,
+   "pin_source": "venues.json (approx)"
   },
   {
    "id": "en-sabaneta-english-speaking-aa-meeting-j",
@@ -1828,7 +2022,8 @@
    "lat": 6.149,
    "lng": -75.6174,
    "topic": "",
-   "approx": false
+   "approx": false,
+   "pin_source": "venues.json (confirmed)"
   },
   {
    "id": "en-a-vision-for-medellin-s",
@@ -1855,7 +2050,8 @@
    "lat": 6.1996,
    "lng": -75.5722,
    "topic": "12 & 12 Step/Tradition Study",
-   "approx": false
+   "approx": false,
+   "pin_source": "venues.json (confirmed)"
   },
   {
    "id": "en-there-is-a-solution-s",
@@ -1880,7 +2076,8 @@
    "lat": 6.2377,
    "lng": -75.5984,
    "topic": "AA Big Book Study",
-   "approx": true
+   "approx": true,
+   "pin_source": "venues.json (approx)"
   },
   {
    "id": "en-there-is-a-solution-d",
@@ -1905,7 +2102,8 @@
    "lat": 6.2377,
    "lng": -75.5984,
    "topic": "Open Speaker Meeting",
-   "approx": true
+   "approx": true,
+   "pin_source": "venues.json (approx)"
   }
  ],
  "manual": [
@@ -1931,7 +2129,8 @@
    "lng": -75.5984,
    "id": "manual-0",
    "source": "manual",
-   "approx": true
+   "approx": true,
+   "pin_source": "venues.json (approx)"
   }
  ]
 }
