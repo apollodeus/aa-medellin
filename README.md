@@ -50,3 +50,7 @@ Si dejas `lat`/`lng` en `null`, el build intenta ubicarlo con `venues.json` (lis
 python3 scripts/build.py
 python3 -m http.server 8000   # abre http://localhost:8000 y http://localhost:8000/en/
 ```
+
+## Corregir datos de las fuentes
+
+Si aacolombia.org o aamedellin.org tienen un dato equivocado, agrega una corrección en `overrides.json`, usando el `id` de la reunión que aparece en `data.json`. Se aplica en cada actualización diaria.

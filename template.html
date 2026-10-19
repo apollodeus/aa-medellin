@@ -272,7 +272,7 @@ let ITEMS=[], LOCS={}, SHOWN=new Set();
 function build(d){
   ITEMS=[];
   for(const g of d.es){
-    ITEMS.push({...g,days:parseDays(g.schedule||""),virtualOnly:g.virtual&&/^(virtual|reuniones virtual)/i.test(g.schedule||""),
+    ITEMS.push({...g,address:[g.place,g.address].filter(Boolean).join(" · "),days:parseDays(g.schedule||""),virtualOnly:g.virtual&&/^(virtual|reuniones virtual)/i.test(g.schedule||""),
       zone:g.barrio||nearestZone(g),hor:g.schedule||"Horario no publicado"});
   }
   for(const g of [...d.en,...d.manual]){

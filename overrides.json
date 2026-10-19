@@ -1,0 +1,4 @@
+{
+ "_help": "Corrections applied on every daily update, keyed by meeting id (see data.json). Only the fields listed are replaced.",
+ "es-28516": {"place": "Sede Social Manila", "address": "Cra 43D #11-73, El Poblado"}
+}

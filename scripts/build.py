@@ -243,6 +243,11 @@ def main():
     except Exception as e:
         en = prev.get("en", []); status["en"] = "kept previous (%s)" % e
 
+    overrides = load_json(os.path.join(ROOT, "overrides.json"), {})
+    for rec in es + en:
+        fix = overrides.get(rec["id"])
+        if fix:
+            rec.update(fix)
     manual = load_json(MANUAL, [])
     for i, m in enumerate(manual):
         m.setdefault("id", "manual-%d" % i)

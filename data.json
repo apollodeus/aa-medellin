@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T06:18:11Z",
+ "updated": "2026-10-19T06:22:49Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -9,7 +9,7 @@
    "id": "es-28516",
    "lang": "es",
    "name": "Libertad y Responsabilidad",
-   "address": "Carrera 43 11-73",
+   "address": "Cra 43D #11-73, El Poblado",
    "detail": "",
    "barrio": "Manila",
    "schedule": "Martes, Miércoles, Jueves, Sábado y Domingo 6:00 pm",
@@ -20,7 +20,8 @@
    "lng": -75.5668,
    "url": "https://aacolombia.org/grupos/libertad-y-responsabilidad/",
    "source": "aacolombia.org",
-   "approx": true
+   "approx": true,
+   "place": "Sede Social Manila"
   },
   {
    "id": "es-28293",
