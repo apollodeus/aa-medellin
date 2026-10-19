@@ -266,6 +266,8 @@ def main():
     for k, v in status.items():
         if v != "ok":
             report.insert(0, "SOURCE PROBLEM (%s): %s" % (k, v))
+    for msg in G.GOOGLE_ERRORS:
+        report.insert(0, "GOOGLE GEOCODING ERROR — pins fell back to estimates: " + msg)
     if not G.GOOGLE_KEY:
         report.append("note: GOOGLE_GEOCODING_KEY is not set, so addresses are pinned from map links and hand-placed estimates only")
 

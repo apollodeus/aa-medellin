@@ -79,6 +79,7 @@ def coords_from_maplink(url):
     return result
 
 # ---------------------------------------------------------------- 3. Google Geocoding
+GOOGLE_ERRORS = []
 def google_geocode(address):
     if not GOOGLE_KEY or not address:
         return None
@@ -87,7 +88,7 @@ def google_geocode(address):
     if key in c:
         v = c[key]
         return (v["lat"], v["lng"], v["precise"]) if v else None
-    result = None
+    result, status = None, "EXCEPTION"
     try:
         q = urllib.parse.urlencode({"address": address + ", Medellín, Antioquia, Colombia",
                                     "components": "country:CO", "region": "co", "language": "es",
@@ -95,6 +96,12 @@ def google_geocode(address):
                                     "key": GOOGLE_KEY})
         _, body = _get("https://maps.googleapis.com/maps/api/geocode/json?" + q)
         data = json.loads(body)
+        status = data.get("status", "?")
+        if status not in ("OK", "ZERO_RESULTS"):
+            msg = "%s: %s" % (status, data.get("error_message", ""))
+            if msg not in GOOGLE_ERRORS:
+                GOOGLE_ERRORS.append(msg)
+            return None          # do not cache a failed call
         for res in data.get("results", []):
             loc = res["geometry"]["location"]
             lt = res["geometry"].get("location_type", "")
@@ -103,8 +110,11 @@ def google_geocode(address):
             precise = lt in ("ROOFTOP", "RANGE_INTERPOLATED")
             result = (loc["lat"], loc["lng"], precise)
             break
-    except Exception:
-        pass
+    except Exception as e:
+        msg = "EXCEPTION: %s" % e
+        if msg not in GOOGLE_ERRORS:
+            GOOGLE_ERRORS.append(msg)
+        return None
     c[key] = {"lat": result[0], "lng": result[1], "precise": result[2], "source": "google"} if result else None
     return result
 
