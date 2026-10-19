@@ -23,15 +23,39 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 101D NO. 80-14, FRENTE AL HOSPITAL | BARRIO DOCE DE OCTUBRE": {
+  "lat": 6.3020667,
+  "lng": -75.5787129,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 104 NO. 724A-16": {
   "lat": 6.3009353,
   "lng": -75.5713804,
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 104 NO. 724A-16 | BARRIO PEDREGAL": {
+  "lat": 6.3009353,
+  "lng": -75.5713804,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 11 NO. 8-35 | ED. COMPARTAMOS": {
+  "lat": 6.1990057,
+  "lng": -75.5904067,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 11 NO. 8-35, PISO 4": {
   "lat": 6.1990057,
   "lng": -75.5904067,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 120 NO. 46-65": {
+  "lat": 6.3030177,
+  "lng": -75.54897559999999,
   "precise": true,
   "source": "google"
  },
@@ -53,9 +77,27 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 123A #51A-29 | BELLO | BARRIO NUEVO (BELLO)": {
+  "lat": 6.3064725,
+  "lng": -75.5544596,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 2 SUR NO. 79-211 PISO 2": {
   "lat": 6.2035944,
   "lng": -75.5765905,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 2 SUR NO. 79-211 PISO 2 | CAPILLA DEL ROSARIO, BELEN RINCON": {
+  "lat": 6.2035944,
+  "lng": -75.5765905,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 22 NO. 59-50 | SEDE SOCIAL SANTA FE": {
+  "lat": 6.224428,
+  "lng": -75.5832186,
   "precise": true,
   "source": "google"
  },
@@ -101,7 +143,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 33 46-42 | ITAGUI | SEGUNDO PISO": {
+  "lat": 6.165071999999999,
+  "lng": -75.619323,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 34B NO. 93B-31": {
+  "lat": 6.244612699999999,
+  "lng": -75.61937809999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 34B NO. 93B-31 | OBRA SOCIAL MADRE LAURA": {
   "lat": 6.244612699999999,
   "lng": -75.61937809999999,
   "precise": true,
@@ -119,7 +173,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 36 NO. 80B-66 | BARRIO LAURELES": {
+  "lat": 6.2445207,
+  "lng": -75.6024683,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 37 NO. 65D-04": {
+  "lat": 6.2417825,
+  "lng": -75.58371199999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 37 NO. 65D-04 | IGLESIA VERBO DIVINO": {
   "lat": 6.2417825,
   "lng": -75.58371199999999,
   "precise": true,
@@ -131,7 +197,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 3B NO. 78B-42 | BARRIO BELEN RINCON": {
+  "lat": 6.214197899999999,
+  "lng": -75.6025653,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 4 SUR NO. 29-24 SEDE COMUNAL LOMA": {
+  "lat": 6.194827099999999,
+  "lng": -75.5610791,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 4 SUR NO. 29-24 SEDE COMUNAL LOMA | DEL GARABATO, SECTOR EL POBLADO": {
   "lat": 6.194827099999999,
   "lng": -75.5610791,
   "precise": true,
@@ -149,6 +227,18 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 40 SUR NO.29A-25,IGLESIA SAN JOSE,BARRIO ROSELLON | ENVIGADO | (NULL)": {
+  "lat": 6.1627743,
+  "lng": -75.5826186,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 42 NO. 79-07 | A UN COSTADO DE LA IGLESIA LA CONSOLATA": {
+  "lat": 6.249161,
+  "lng": -75.598343,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 42 NO. 79-07, PISO 2": {
   "lat": 6.2486059,
   "lng": -75.59790819999999,
@@ -156,6 +246,12 @@
   "source": "google"
  },
  "google:CALLE 43 NO. 28-19": {
+  "lat": 6.2360561,
+  "lng": -75.5537112,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 43 NO. 28-19 | COSTADO IGLESIA LA MILAGROSA": {
   "lat": 6.2360561,
   "lng": -75.5537112,
   "precise": true,
@@ -179,13 +275,31 @@
   "precise": false,
   "source": "google"
  },
+ "google:CALLE 46E NO. 75-65 | (NULL)": {
+  "lat": 6.2351934,
+  "lng": -75.5452157,
+  "precise": false,
+  "source": "google"
+ },
  "google:CALLE 47A NO. 99-81, FRENTE A LA ESTACION METRO": {
   "lat": 6.257652299999999,
   "lng": -75.61531099999999,
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 47A NO. 99-81, FRENTE A LA ESTACION METRO | SAN JAVIER, PARQUE INFANTIL": {
+  "lat": 6.257616899999999,
+  "lng": -75.6152169,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 47B NO. 90A-36, BARRIO SANTA LUCIA (FLORESTA)": {
+  "lat": 6.257403,
+  "lng": -75.6071458,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 47B NO. 90A-36, BARRIO SANTA LUCIA (FLORESTA) | (NULL)": {
   "lat": 6.257403,
   "lng": -75.6071458,
   "precise": true,
@@ -203,9 +317,21 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 49 NO. 48-13 | BELLO | MUNICIPIO BELLO": {
+  "lat": 6.334017999999999,
+  "lng": -75.5568881,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 49DD NO. 87-11": {
   "lat": 6.262396499999999,
   "lng": -75.605644,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 49DD NO. 87-11 | IGLESIA SANTA ROSA DE LIMA": {
+  "lat": 6.262398600000001,
+  "lng": -75.6057694,
   "precise": true,
   "source": "google"
  },
@@ -215,9 +341,27 @@
   "precise": false,
   "source": "google"
  },
+ "google:CALLE 4B SUR 30-98 | EL POBLADO": {
+  "lat": 6.1919483,
+  "lng": -75.5559618,
+  "precise": false,
+  "source": "google"
+ },
  "google:CALLE 51 NO. 37-75": {
   "lat": 6.2462794,
   "lng": -75.5575288,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 51 NO. 37-75 | BARRIO BOSTON SEDE ACCION COMUNAL": {
+  "lat": 6.2462794,
+  "lng": -75.5575288,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 51 NO. 49-96": {
+  "lat": 6.2502068,
+  "lng": -75.5671424,
   "precise": true,
   "source": "google"
  },
@@ -233,7 +377,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 52 NO. 10-16, IGLESIA LOS DOLORES | BARRIO CAICEDO": {
+  "lat": 6.233361,
+  "lng": -75.53806440000001,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 53 30-61": {
+  "lat": 6.2431255,
+  "lng": -75.5518944,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 53 30-61 | SEGUNDO PISO": {
   "lat": 6.2431255,
   "lng": -75.5518944,
   "precise": true,
@@ -243,6 +399,12 @@
   "lat": 6.2372967,
   "lng": -75.54054529999999,
   "precise": false,
+  "source": "google"
+ },
+ "google:CALLE 54 CON CARRERA 17 | SALON PARROQUIAL": {
+  "lat": 6.2329611,
+  "lng": -75.5433127,
+  "precise": true,
   "source": "google"
  },
  "google:CALLE 54 NO. 48-41": {
@@ -269,6 +431,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 54 NO. 50-11 | BELLO | BARRIO PEREZ": {
+  "lat": 6.337445,
+  "lng": -75.558994,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 54 NO. 55-13": {
   "lat": 6.2532567,
   "lng": -75.5667153,
@@ -281,13 +449,31 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 54 NO. 55-13 | BELLO | BARRIO ROSALPI": {
+  "lat": 6.3386536,
+  "lng": -75.5625766,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 61 NO. 160-72": {
   "lat": 6.268823299999999,
   "lng": -75.59060389999999,
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 61 NO. 160-72 | CORREGIMIENTO SAN CRISTOBAL": {
+  "lat": 6.2769263,
+  "lng": -75.6251101,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 66 NO. 47-24 | ITAGUI": {
+  "lat": 6.179850699999999,
+  "lng": -75.5985377,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 66 NO. 47-24 | ITAGUI | SIMON BOLIVAR": {
   "lat": 6.179850699999999,
   "lng": -75.5985377,
   "precise": true,
@@ -299,7 +485,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 67 45-53 | MANRIQUE": {
+  "lat": 6.263021300000001,
+  "lng": -75.5560357,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 67 NO. 45-63": {
+  "lat": 6.2630573,
+  "lng": -75.5561894,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 67 NO. 45-63 | BARRIO MANRIQUE CENTRAL (PALOS VERDE)": {
   "lat": 6.2630573,
   "lng": -75.5561894,
   "precise": true,
@@ -308,6 +506,12 @@
  "google:CALLE 67 POR CARRERA 51": {
   "lat": 6.2413709,
   "lng": -75.5718959,
+  "precise": false,
+  "source": "google"
+ },
+ "google:CALLE 67 POR CARRERA 51 | HOSPITAL SAN VICENTE DE PAUL": {
+  "lat": 6.2643398,
+  "lng": -75.56299659999999,
   "precise": false,
   "source": "google"
  },
@@ -323,7 +527,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 74 NO. 70-79 | BARRIO ROBLEDO PILARICA": {
+  "lat": 6.274132,
+  "lng": -75.581008,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 75 NO. 64C-16, BARRIO CARIBE": {
+  "lat": 6.273413,
+  "lng": -75.57351299999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 75 NO. 64C-16, BARRIO CARIBE | BARRIO CARIBE (SEDE ACCION COMUNAL)": {
   "lat": 6.273413,
   "lng": -75.57351299999999,
   "precise": true,
@@ -335,7 +551,25 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 76 41A-44 | LAS NIEVES": {
+  "lat": 6.268651999999999,
+  "lng": -75.5510647,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 76 41A-44 | MANRIQUE": {
+  "lat": 6.268651999999999,
+  "lng": -75.5510647,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 79 NO. 55B-55": {
+  "lat": 6.274363999999999,
+  "lng": -75.566262,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 79 NO. 55B-55 | MORAVIA": {
   "lat": 6.274363999999999,
   "lng": -75.566262,
   "precise": true,
@@ -347,7 +581,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 79 NO. 85A-13 | ACCION COMUNAL DE ROBLEDO": {
+  "lat": 6.284650399999999,
+  "lng": -75.5872012,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 80A NO. 51B-08, BARRIO MIRANDA": {
+  "lat": 6.2750204,
+  "lng": -75.5636859,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 80A NO. 51B-08, BARRIO MIRANDA | BARRIO MIRANDA": {
   "lat": 6.2750204,
   "lng": -75.5636859,
   "precise": true,
@@ -359,7 +605,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 81 NO. 41-10 | BARRIO MANRIQUE": {
+  "lat": 6.2730814,
+  "lng": -75.5500532,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 82 NO. 74-09": {
+  "lat": 6.2829663,
+  "lng": -75.5801955,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 82 NO. 74-09 | BARRIO LOPEZ DE MESA": {
   "lat": 6.2829663,
   "lng": -75.5801955,
   "precise": true,
@@ -371,7 +629,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 90 NO.51-44, IGLESIA SAN CAYETANO | BARRIO ARANJUEZ": {
+  "lat": 6.282140999999999,
+  "lng": -75.5615234,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 95 50-32": {
+  "lat": 6.287337099999999,
+  "lng": -75.5581468,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 95 50-32 | ARANJUEZ": {
   "lat": 6.287337099999999,
   "lng": -75.5581468,
   "precise": true,
@@ -383,13 +653,31 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 95 NO. 50-32 | BARRIO ARANJUEZ": {
+  "lat": 6.287337099999999,
+  "lng": -75.5581468,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 95 NO. 52-25": {
   "lat": 6.2872946,
   "lng": -75.562924,
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 95 NO. 52-25 | BARRIO ARANJUEZ": {
+  "lat": 6.2872946,
+  "lng": -75.562924,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 29. NO. 58-30, BARRIO ENCISO": {
+  "lat": 6.249767599999999,
+  "lng": -75.54922110000001,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 29. NO. 58-30, BARRIO ENCISO | SEDE SALON SOCIAL": {
   "lat": 6.249767599999999,
   "lng": -75.54922110000001,
   "precise": true,
@@ -407,7 +695,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 33 39SUR-50 | ENVIGADO | MESA": {
+  "lat": 6.1645733,
+  "lng": -75.5830917,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 33B NO.107A.-51, SEDE ACCION COMUNAL": {
+  "lat": 6.2944007,
+  "lng": -75.54378299999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 33B NO.107A.-51, SEDE ACCION COMUNAL | BARRIO SANTO DOMINGO SAVIO": {
   "lat": 6.2944007,
   "lng": -75.54378299999999,
   "precise": true,
@@ -419,7 +719,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 34 10A -32 | EL POBLADO": {
+  "lat": 6.2091679,
+  "lng": -75.56461469999999,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 37 NO. 68-17": {
+  "lat": 6.263084999999999,
+  "lng": -75.548919,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 37 NO. 68-17 | MANRIQUE ORIENTAL": {
   "lat": 6.263084999999999,
   "lng": -75.548919,
   "precise": true,
@@ -431,9 +743,27 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 37 NUMERO 66D-59 | BARRIO VILLA HERMOSA": {
+  "lat": 6.259024,
+  "lng": -75.549266,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 38B NO. 40-71 | ENSEGUIDA ESCUELA DIVINO SALVADOR": {
+  "lat": 6.236339000000001,
+  "lng": -75.5605051,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 38B NO. 40-71,": {
   "lat": 6.238942,
   "lng": -75.561959,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 39 NO. 35 SUR 26 | ENVIGADO | BARRIO SAN MATEO": {
+  "lat": 6.1658518,
+  "lng": -75.58688839999999,
   "precise": true,
   "source": "google"
  },
@@ -446,6 +776,12 @@
  "google:CARRERA 39 NO. 35 SUR 26, PISO 4 | ENVIGADO": {
   "lat": 6.1658518,
   "lng": -75.58688839999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 42 NO. 36S-44 | ENVIGADO": {
+  "lat": 6.1704969,
+  "lng": -75.5866333,
   "precise": true,
   "source": "google"
  },
@@ -467,7 +803,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 43 31-182 | SAN DIEGO": {
+  "lat": 6.2327206,
+  "lng": -75.5701663,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 43B NO. 20E-70, BARRIO": {
+  "lat": 6.3089325,
+  "lng": -75.5532003,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 43B NO. 20E-70, BARRIO | ZAMORA, BIBLIOTECA BARRIO ZAMORA": {
   "lat": 6.3089325,
   "lng": -75.5532003,
   "precise": true,
@@ -479,13 +827,31 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 43B NO. 71 SUR-35 | SABANETA | (NULL)": {
+  "lat": 6.1496755,
+  "lng": -75.616377,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 43D NO. 11-73": {
   "lat": 6.2128675,
   "lng": -75.5719688,
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 43D NO. 11-73 | MANILA - EL POBLADO": {
+  "lat": 6.2128675,
+  "lng": -75.5719688,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 44 NO. 79-24, BRR. MANRIQUE CENTRAL": {
+  "lat": 6.2719606,
+  "lng": -75.5530891,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 44 NO. 79-24, BRR. MANRIQUE CENTRAL | BARRIO MANRIQUE": {
   "lat": 6.2719606,
   "lng": -75.5530891,
   "precise": true,
@@ -500,6 +866,18 @@
  "google:CARRERA 46A  39SUR-52 | ENVIGADO": {
   "lat": 6.1704577,
   "lng": -75.5932188,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 46A  39SUR-52 | ENVIGADO | ALCALA": {
+  "lat": 6.1704577,
+  "lng": -75.5932188,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 48 (ECUADOR) NO. 61-35 | EDIFICIO MOLINOS DEL PRADO": {
+  "lat": 6.2575574,
+  "lng": -75.56144669999999,
   "precise": true,
   "source": "google"
  },
@@ -521,13 +899,31 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 48 NO. 45-52 | BELLO | MUNICIPIO DE BELLO": {
+  "lat": 6.3319189,
+  "lng": -75.5554262,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 48 NO. 96-53": {
   "lat": 6.289009999999999,
   "lng": -75.55546799999999,
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 48 NO. 96-53 | BARRIO ARANJUEZ": {
+  "lat": 6.2886761,
+  "lng": -75.5554259,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 48 NO. 99-70": {
+  "lat": 6.291175,
+  "lng": -75.554738,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 48 NO. 99-70 | BARRIO SANTA CRUZ": {
   "lat": 6.291175,
   "lng": -75.554738,
   "precise": true,
@@ -545,9 +941,27 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 49 NO. 50 - 58 | CENTRO MEDELLIN": {
+  "lat": 6.2493352,
+  "lng": -75.5665116,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 49 NO. 93-38": {
   "lat": 6.284866,
   "lng": -75.555956,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 49 NO. 93-38 | BARRIO ARANJUEZ": {
+  "lat": 6.284866,
+  "lng": -75.555956,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 51 NO. 41-56 | CENTRO MEDELLIN": {
+  "lat": 6.242447299999999,
+  "lng": -75.5713875,
   "precise": true,
   "source": "google"
  },
@@ -557,15 +971,39 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 52 # 61-96": {
+  "lat": 6.260491,
+  "lng": -75.566796,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 52 # 61-96 - TERCER PISO": {
   "lat": 6.260491,
   "lng": -75.566796,
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 52 NO. 49-51": {
+  "lat": 6.2498364,
+  "lng": -75.56998399999999,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 52 NO. 49-51, PISO 2": {
   "lat": 6.2498364,
   "lng": -75.56998399999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 52 NO. 49-61": {
+  "lat": 6.2498513,
+  "lng": -75.5698707,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 52 NO. 49-61 | CENTRO MEDELLIN": {
+  "lat": 6.2498513,
+  "lng": -75.5698707,
   "precise": true,
   "source": "google"
  },
@@ -576,6 +1014,12 @@
   "source": "google"
  },
  "google:CARRERA 52 NO. 49-61, PISO 2, EDIFICIO RESTREPO ARANGO": {
+  "lat": 6.2498513,
+  "lng": -75.5698707,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 52 NO.49-61": {
   "lat": 6.2498513,
   "lng": -75.5698707,
   "precise": true,
@@ -593,7 +1037,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 53 NO. 60-51 | PRADO CENTRO MEDELLIN": {
+  "lat": 6.259767699999999,
+  "lng": -75.568367,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 54  52-55": {
+  "lat": 6.2530486,
+  "lng": -75.5705104,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 54  52-55 | CENTRO": {
   "lat": 6.2530486,
   "lng": -75.5705104,
   "precise": true,
@@ -605,7 +1061,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 64 NO. 50-32, BIBLIOTECA PUBLICA PILOTO | (NULL)": {
+  "lat": 6.2559194,
+  "lng": -75.5774332,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 64C NO. 93-86, BARRIO CASTILLA LA UNION": {
+  "lat": 6.2867916,
+  "lng": -75.5700157,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 64C NO. 93-86, BARRIO CASTILLA LA UNION | BARRIO CASTILLA": {
   "lat": 6.2867916,
   "lng": -75.5700157,
   "precise": true,
@@ -615,6 +1083,18 @@
   "lat": 6.308650999999999,
   "lng": -75.56365,
   "precise": false,
+  "source": "google"
+ },
+ "google:CARRERA 65 113-86 | BOYACA LAS BRISAS": {
+  "lat": 6.308650999999999,
+  "lng": -75.56365,
+  "precise": false,
+  "source": "google"
+ },
+ "google:CARRERA 65 NO. 27-26": {
+  "lat": 6.2282479,
+  "lng": -75.5829485,
+  "precise": true,
   "source": "google"
  },
  "google:CARRERA 65 NO. 27-26, PISO 5, BARRIO TRINIDAD": {
@@ -629,7 +1109,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 65 NO. 32F-23 | BELEN FATIMA": {
+  "lat": 6.2392055,
+  "lng": -75.583148,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 65A 32B-70": {
+  "lat": 6.2370528,
+  "lng": -75.58313199999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 65A 32B-70 | BELEN FATIMA": {
   "lat": 6.2370528,
   "lng": -75.58313199999999,
   "precise": true,
@@ -641,9 +1133,27 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 69 NO. 26-03 | ITAGUI | BARRIO SAN FRANCISCO": {
+  "lat": 6.171211,
+  "lng": -75.6421488,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 69 NO. 97-70": {
   "lat": 6.293408100000001,
   "lng": -75.5720352,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 69 NO. 97-70 | BARRIO CASTILLA": {
+  "lat": 6.293408100000001,
+  "lng": -75.5720352,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 70A NO. 43-08": {
+  "lat": 6.2486731,
+  "lng": -75.58931989999999,
   "precise": true,
   "source": "google"
  },
@@ -659,7 +1169,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 72 NO. 11-11 | BELEN LAS PLAYAS": {
+  "lat": 6.2192634,
+  "lng": -75.59518570000002,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 72 NO. 27-30": {
+  "lat": 6.2291994,
+  "lng": -75.5926095,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 72 NO. 27-30 | BELEN RINCON": {
   "lat": 6.2291994,
   "lng": -75.5926095,
   "precise": true,
@@ -671,7 +1193,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 73 20A-14 | BELEN SAN BERNARDO": {
+  "lat": 6.2241754,
+  "lng": -75.5947382,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 76 NO.90-12,ESCUELA CAROLINA KENNEDY": {
+  "lat": 6.286609299999999,
+  "lng": -75.58207019999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 76 NO.90-12,ESCUELA CAROLINA KENNEDY | ROBLEDO (KENNEDY)": {
   "lat": 6.286609299999999,
   "lng": -75.58207019999999,
   "precise": true,
@@ -680,6 +1214,12 @@
  "google:CARRERA 77C SUR #45-73 | SABANETA": {
   "lat": 6.1462672,
   "lng": -75.6213701,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 79 NO. 92-232 | BARRIO MIRAMAR ROBLEDO": {
+  "lat": 6.2915926,
+  "lng": -75.5826735,
   "precise": true,
   "source": "google"
  },
@@ -695,7 +1235,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 80A NO. 19B-24 | BARRIO BELEN LA GLORIA": {
+  "lat": 6.225379999999999,
+  "lng": -75.600346,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 83 NO. 21-22": {
+  "lat": 6.226793199999999,
+  "lng": -75.6055683,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 83 NO. 21-22 | BARRIO BELEN ALTA VISTA,PARTE BAJA": {
   "lat": 6.226793199999999,
   "lng": -75.6055683,
   "precise": true,
@@ -707,7 +1259,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 84 NO. 31-36 | BELEN LOS ALPES": {
+  "lat": 6.2329535,
+  "lng": -75.6075778,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 86 NO. 45B-17": {
+  "lat": 6.2551599,
+  "lng": -75.6032152,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 86 NO. 45B-17 | ESCUELA PICHINCHA": {
   "lat": 6.2551599,
   "lng": -75.6032152,
   "precise": true,
@@ -719,7 +1283,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 92 NO. 34D-43 | BELENCITO": {
+  "lat": 6.2458944,
+  "lng": -75.6168862,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 92 NO. 35-18, BARRIO": {
+  "lat": 6.247319999999999,
+  "lng": -75.615231,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 92 NO. 35-18, BARRIO | SANTA MONICA": {
   "lat": 6.247319999999999,
   "lng": -75.615231,
   "precise": true,
@@ -731,7 +1307,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 95 62C-87 | ROBLEDO": {
+  "lat": 6.288596,
+  "lng": -75.59618499999999,
+  "precise": true,
+  "source": "google"
+ },
  "google:CL 5SUR 53-26": {
+  "lat": 6.205419,
+  "lng": -75.5875949,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CL 5SUR 53-26 | GUAYABAL": {
   "lat": 6.205419,
   "lng": -75.5875949,
   "precise": true,
@@ -743,7 +1331,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CL 73A 52C-03 | ITAGUI | SANTA MARIA II": {
+  "lat": 6.184942599999999,
+  "lng": -75.5983466,
+  "precise": true,
+  "source": "google"
+ },
  "google:CL 80 50A-09 | ITAGUI": {
+  "lat": 6.1878796,
+  "lng": -75.59314549999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CL 80 50A-09 | ITAGUI | EL CARMELO": {
   "lat": 6.1878796,
   "lng": -75.59314549999999,
   "precise": true,
@@ -755,7 +1355,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CL 86 47-04 | ITAGUI | GUAYABAL - LA RAYA": {
+  "lat": 6.1920739,
+  "lng": -75.5885638,
+  "precise": true,
+  "source": "google"
+ },
  "google:CRA 22 47-79": {
+  "lat": 6.237529899999999,
+  "lng": -75.549033,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CRA 22 47-79 | BARRIO PRADO CENTRO": {
   "lat": 6.237529899999999,
   "lng": -75.549033,
   "precise": true,
@@ -767,7 +1379,19 @@
   "precise": true,
   "source": "google"
  },
+ "google:CRA 40 #95A.-16, BARRIO VILLA DE GUADALUPE | BARRIO VILLA DE GUADALUPE": {
+  "lat": 6.286537,
+  "lng": -75.54899189999999,
+  "precise": true,
+  "source": "google"
+ },
  "google:CRA 49 50-43 | ITAGUI": {
+  "lat": 6.171384,
+  "lng": -75.608963,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CRA 49 50-43 | ITAGUI | LOS NARANJOS": {
   "lat": 6.171384,
   "lng": -75.608963,
   "precise": true,
@@ -779,6 +1403,18 @@
   "precise": true,
   "source": "google"
  },
+ "google:CRA 58E 64A-12 | ITAGUI | CALATRAVA": {
+  "lat": 6.1819564,
+  "lng": -75.607619,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CRA.43D NO.11-73 | MANILA - SEDE ACCION COMUNAL": {
+  "lat": 6.2128675,
+  "lng": -75.5719688,
+  "precise": true,
+  "source": "google"
+ },
  "google:CRA.43D NO.11-73, PISO 2 , BARRIO": {
   "lat": 6.2128675,
   "lng": -75.5719688,
@@ -786,6 +1422,12 @@
   "source": "google"
  },
  "google:DIAGONAL 40 NO. 34-34 | ITAGUI": {
+  "lat": 6.165478999999999,
+  "lng": -75.614946,
+  "precise": true,
+  "source": "google"
+ },
+ "google:DIAGONAL 40 NO. 34-34 | ITAGUI | SAN JOSE": {
   "lat": 6.165478999999999,
   "lng": -75.614946,
   "precise": true,
@@ -803,6 +1445,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:DIAGONAL 57 NO. 42-01, BARRIO NIQUIA | BELLO | MUNICIPIO BELLO": {
+  "lat": 6.340235,
+  "lng": -75.548445,
+  "precise": true,
+  "source": "google"
+ },
  "google:DIAGONAL 59 #40-31": {
   "lat": 6.341183399999999,
   "lng": -75.5481116,
@@ -810,6 +1458,12 @@
   "source": "google"
  },
  "google:DIAGONAL 59 #40-31 | BELLO": {
+  "lat": 6.341183399999999,
+  "lng": -75.5481116,
+  "precise": true,
+  "source": "google"
+ },
+ "google:DIAGONAL 59 #40-31 | BELLO | NIQUIA": {
   "lat": 6.341183399999999,
   "lng": -75.5481116,
   "precise": true,
@@ -827,6 +1481,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:IGLESIA EL MIRADOR | BELLO | PARQUE EL MIRADOR": {
+  "lat": 6.3472138,
+  "lng": -75.55872509999999,
+  "precise": true,
+  "source": "google"
+ },
  "google:IGLESIA JESUS DE LA BUENA ESPERANZA, BARRIO BELEN ROSALES": {
   "lat": 6.2346482,
   "lng": -75.5912945,
@@ -839,6 +1499,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:LOCAL PARROQUIAL- CALLE 32 NO. 30-60 | CONTIGUO IGLESIA LORETO": {
+  "lat": 6.2346426,
+  "lng": -75.6121019,
+  "precise": true,
+  "source": "google"
+ },
  "google:OLAYA": {
   "lat": 6.274074,
   "lng": -75.6077147,
@@ -848,6 +1514,12 @@
  "google:OLAYA | ENVIGADO": {
   "lat": 6.167286499999999,
   "lng": -75.5836963,
+  "precise": false,
+  "source": "google"
+ },
+ "google:OLAYA | ENVIGADO | COMUNAL, BARRIO LAS FLORES": {
+  "lat": 6.1732735,
+  "lng": -75.5793401,
   "precise": false,
   "source": "google"
  },
@@ -875,13 +1547,31 @@
   "precise": true,
   "source": "google"
  },
+ "google:PLAZOLETA DE CONCIERTOS DEL PARQUE DE SAN ANTONIO | CENTRO MEDELLIN": {
+  "lat": 6.245725,
+  "lng": -75.5681414,
+  "precise": true,
+  "source": "google"
+ },
  "google:SALON COMUNAL CORREGIMIENTO DE SANTA ELENA": {
   "lat": 6.2091026,
   "lng": -75.49775799999999,
   "precise": false,
   "source": "google"
  },
+ "google:SALON COMUNAL CORREGIMIENTO DE SANTA ELENA | TERCER PISO": {
+  "lat": 6.2091026,
+  "lng": -75.49775799999999,
+  "precise": false,
+  "source": "google"
+ },
  "google:SEDE SOCIAL MANILA, CRA 43D #11-73, EL POBLADO": {
+  "lat": 6.2128758,
+  "lng": -75.5718995,
+  "precise": true,
+  "source": "google"
+ },
+ "google:SEDE SOCIAL MANILA, CRA 43D #11-73, EL POBLADO | MANILA": {
   "lat": 6.2128758,
   "lng": -75.5718995,
   "precise": true,
@@ -905,6 +1595,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:SEDE SOCIEAD JOSE FELIX DE RESTREPO | BELEN RINCON-MANZANILLO": {
+  "lat": 6.20593,
+  "lng": -75.6149203,
+  "precise": false,
+  "source": "google"
+ },
  "google:SWEET GEORGIA CAFE  BACK ROOM (IN LAURELES), CARRERA 78 #32EE-25, MEDELLIN, ANTIOQUIA": {
   "lat": 6.238080099999999,
   "lng": -75.59841879999999,
@@ -923,6 +1619,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:TRANSVERSAL 33A SUR 31E-20 | ENVIGADO | LA MAGNOLIA": {
+  "lat": 6.1743142,
+  "lng": -75.5815305,
+  "precise": true,
+  "source": "google"
+ },
  "google:TRANSVERSAL 34B NO. 39-36": {
   "lat": 6.171462,
   "lng": -75.5845279,
@@ -932,6 +1634,12 @@
  "google:TRANSVERSAL 34B NO. 39-36 | ENVIGADO": {
   "lat": 6.171462,
   "lng": -75.5845279,
+  "precise": true,
+  "source": "google"
+ },
+ "google:TRANSVERSAL 78A NO. 88-06 | ACCION COMUNAL VILLA DE LA CANDELARIA": {
+  "lat": 6.283409499999999,
+  "lng": -75.5925319,
   "precise": true,
   "source": "google"
  },
