@@ -229,16 +229,25 @@ function linkify(text){
     return wa?`<a class="wa" href="https://wa.me/${d}" target="_blank" rel="noopener" title="WhatsApp">${m}</a>`:`<a href="tel:+${d}">${m}</a>`;});
   return h;
 }
+const BB={s:6.10,n:6.40,w:-75.72,e:-75.45};
+function nq(s){return String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(w=>w.length>2&&!/^(hotel|hostal|hostel|el|la|los|las|de|del|en|medellin|colombia|calle|carrera|cra|cll|cl|avenida)$/.test(w));}
+function similar(q,name){const a=nq(q),b=nq(name);if(!a.length)return true;const hit=a.filter(w=>b.some(x=>x.startsWith(w)||w.startsWith(x))).length;return hit>=(a.length<=2?a.length:Math.ceil(a.length*0.67));}
 async function geocodeAddress(q){
   q=q.trim(); if(!q)return null;
-  if(MAP.g&&window.google){
-    const r=await new Promise(res=>new google.maps.Geocoder().geocode({address:q,region:"co",bounds:new google.maps.LatLngBounds({lat:6.10,lng:-75.72},{lat:6.40,lng:-75.45})},(x,st)=>res(st==="OK"?x:null)));
-    if(r&&r[0]){const l=r[0].geometry.location;return {lat:l.lat(),lng:l.lng(),label:r[0].formatted_address};}
+  const hasCity=/medell|envigado|sabaneta|itag|bello|colombia/i.test(q);
+  if(window.google&&google.maps){
+    const r=await new Promise(res=>new google.maps.Geocoder().geocode({address:hasCity?q:q+", Medellín, Colombia",region:"co",bounds:new google.maps.LatLngBounds({lat:BB.s,lng:BB.w},{lat:BB.n,lng:BB.e})},(x,st)=>res(st==="OK"?x:null)));
+    if(r&&r[0]){const l=r[0].geometry.location;if(l.lat()>BB.s&&l.lat()<BB.n&&l.lng()>BB.w&&l.lng()<BB.e)return {lat:l.lat(),lng:l.lng(),label:r[0].formatted_address.replace(/, Colombia$/,"")};}
     return null;
   }
-  const u="https://nominatim.openstreetmap.org/search?"+new URLSearchParams({q:/medell|envigado|sabaneta|itag|bello|colombia/i.test(q)?q:q+", Medellín, Colombia",format:"json",limit:1,viewbox:"-75.72,6.40,-75.45,6.10",bounded:1,"accept-language":PAGE_LANG});
-  const r=await (await fetch(u)).json();
-  if(r&&r[0])return {lat:+r[0].lat,lng:+r[0].lon,label:r[0].display_name.split(",").slice(0,3).join(",")};
+  if(/\d+\s*[a-z]?\s*(#|n[oº°]\.?|no\.)?\s*\d+\s*[a-z]?\s*-\s*\d+/i.test(q))return {needsGoogle:true};
+  const ok=(r,name)=>r&&similar(q,name)?r:null;
+  const tries=[
+    ()=>fetch("https://nominatim.openstreetmap.org/search?"+new URLSearchParams({q:hasCity?q:q+", Medellín, Colombia",format:"json",limit:1,viewbox:`${BB.w},${BB.n},${BB.e},${BB.s}`,bounded:1})).then(r=>r.json()).then(r=>r[0]&&ok({lat:+r[0].lat,lng:+r[0].lon,label:r[0].display_name.split(",").slice(0,3).join(",")},r[0].display_name.split(",")[0])),
+    ()=>fetch("https://nominatim.openstreetmap.org/search?"+new URLSearchParams({q:hasCity?q:q+" Medellín",format:"json",limit:3})).then(r=>r.json()).then(r=>{const h=r.find(x=>+x.lat>BB.s&&+x.lat<BB.n&&+x.lon>BB.w&&+x.lon<BB.e);return h&&ok({lat:+h.lat,lng:+h.lon,label:h.display_name.split(",").slice(0,3).join(",")},h.display_name.split(",")[0]);}),
+    ()=>fetch("https://photon.komoot.io/api/?"+new URLSearchParams({q,bbox:`${BB.w},${BB.s},${BB.e},${BB.n}`,limit:3})).then(r=>r.json()).then(r=>{const f=(r.features||[]).find(x=>similar(q,x.properties.name||""));if(!f)return null;const [lng,lat]=f.geometry.coordinates;const p=f.properties;return {lat,lng,label:[p.name,p.street,p.district].filter(Boolean).join(", ")};})
+  ];
+  for(const t of tries){try{const r=await t();if(r)return r;}catch(e){}}
   return null;
 }
 document.getElementById("addrform").addEventListener("submit",async e=>{
@@ -246,6 +255,7 @@ document.getElementById("addrform").addEventListener("submit",async e=>{
   if(!q.trim())return; btn.disabled=true; msg.textContent=T.locating;
   try{const r=await geocodeAddress(q);
     if(!r){msg.textContent=T.addrFail;return;}
+    if(r.needsGoogle){msg.textContent=T.addrNeedsGoogle;return;}
     CENTERS.addr=[r.lat,r.lng];const sel=document.getElementById("center");let o=sel.querySelector('option[value="addr"]');
     if(!o){o=document.createElement("option");o.value="addr";sel.insertBefore(o,sel.firstChild);}
     o.textContent="📍 "+r.label;sel.value="addr";state.center="addr";msg.textContent=T.addrOk+" "+r.label;
@@ -326,8 +336,9 @@ let ITEMS=[], LOCS={}, SHOWN=new Set();
 function build(d){
   ITEMS=[];
   for(const g of d.es){
-    ITEMS.push({...g,address:[g.place,g.address].filter(Boolean).join(" · "),days:parseDays(g.schedule||""),virtualOnly:g.virtual&&/^(virtual|reuniones virtual)/i.test(g.schedule||""),
-      zone:g.barrio||nearestZone(g),hor:g.schedule||"Horario no publicado"});
+    const slotDays=g.slots&&g.slots.length?new Set(g.slots.flatMap(x=>x.days).filter(d=>d!=="F")):parseDays(g.schedule||"");
+    ITEMS.push({...g,address:[g.place,g.address].filter(Boolean).join(" · "),days:slotDays,virtualOnly:g.virtual&&/^(virtual|reuniones virtual)/i.test(g.schedule||""),
+      zone:g.barrio||nearestZone(g),hor:g["schedule_"+PAGE_LANG]||g.schedule||T.nosched});
   }
   for(const g of [...d.en,...d.manual]){
     if(g.hidden)continue;

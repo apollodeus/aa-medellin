@@ -100,7 +100,7 @@ def fmt12(hhmm):
     return "%d:%02d %s" % ((h - 1) % 12 + 1, mi, "am" if h < 12 else "pm")
 
 # ------------------------------------------------------------------ cards
-def card(m, T):
+def card(m, T, lang="es"):
     en = m.get("lang") == "en"
     tags = []
     tg = T["tag"]
@@ -114,7 +114,7 @@ def card(m, T):
     if m.get("approx") and m.get("lat") is not None:
         tags.append('<span class="tag o" title="%s">≈ %s</span>' % (esc(T["approxTitle"]), T["approx"]))
     addr = " · ".join(x for x in [m.get("place"), m.get("address"), m.get("detail")] if x)
-    sched = en_schedule(m, dict(T["days"])) if "times" in m else (m.get("schedule") or T["nosched"])
+    sched = en_schedule(m, dict(T["days"])) if "times" in m else (m.get("schedule_" + lang) or m.get("schedule") or T["nosched"])
     contact = " · ".join(x for x in [m.get("contact"), m.get("email")] if x)
     gm = m.get("map") or ("https://www.google.com/maps/search/?api=1&query=%s,%s" % (m["lat"], m["lng"]) if m.get("lat") is not None else "")
     parts = ['<article class="card">', '<h2>%s %s</h2>' % (esc(m["name"]), " ".join(tags))]
@@ -179,11 +179,19 @@ def event_ld(m, lang):
     return ev
 
 def group_ld(m):
-    p = place_ld(m)
-    p["name"] = m["name"] + " (Alcohólicos Anónimos)"
-    p["description"] = "Grupo de AA. Horario: " + (m.get("schedule") or en_schedule(m) or "no publicado")
-    if m.get("url"): p["url"] = m["url"]
-    return p
+    ev = {"@type": "Event", "name": m["name"] + " (Alcohólicos Anónimos)", "inLanguage": "es", "isAccessibleForFree": True,
+          "organizer": {"@type": "Organization", "name": m["name"]},
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": place_ld(m),
+          "description": "Grupo de AA. Horario: " + (m.get("schedule_es") or m.get("schedule") or "no publicado")}
+    sched = []
+    for sg in m.get("slots") or []:
+        days = [SCHEMA_DAY[d] for d in sg["days"] if d in SCHEMA_DAY]
+        for t in sg["times"]:
+            if days:
+                sched.append({"@type": "Schedule", "repeatFrequency": "P1W", "byDay": days, "startTime": t["start"], "scheduleTimezone": "America/Bogota"})
+    if sched: ev["eventSchedule"] = sched
+    if m.get("url"): ev["url"] = m["url"]
+    return ev
 
 # ------------------------------------------------------------------ strings
 ES = dict(LANG="es", OGLOCALE="es_CO", CANON="/", DATA="data.json", DEFAULT_FILTER="all",
@@ -206,13 +214,15 @@ TOPIC_ES = {"Big Book Study": "Estudio del Libro Grande", "AA Big Book Study": "
             "12 & 12 Step/Tradition Study": "Estudio de Pasos y Tradiciones", "Open AA 12×12 Study": "Estudio de los Doce y Doce",
             "Open Speaker Meeting": "Reunión de oradores"}
 TJS = {
- "es": {"addrOk": "Ordenado por distancia desde:", "addrFail": "No encontramos esa dirección. Prueba con el nombre del hotel o agrega el barrio.",
+ "es": {"addrNeedsGoogle": "Por ahora la búsqueda por dirección exacta no está disponible; escribe el nombre del hotel, un parque o un punto conocido.",
+        "addrOk": "Ordenado por distancia desde:", "addrFail": "No encontramos esa dirección. Prueba con el nombre del hotel o agrega el barrio.",
         "approx": "ubicación aproximada", "approxTitle": "El pin se colocó a partir de la dirección y puede estar a una cuadra de distancia. Usa 'Cómo llegar' para la ruta exacta.",
         "myloc": "📍 Mi ubicación", "metro": "Área metropolitana", "byname": "Ordenar por nombre", "locating": "Buscando tu ubicación…", "locfail": "No se pudo obtener tu ubicación","directions": "Cómo llegar", "details": "Ver detalles", "topic": TOPIC_ES,
         "tag": {"english": "Inglés", "open": "abierta", "closed": "cerrada", "online": "solo virtual", "hybrid": "híbrida", "virtual": "virtual"},"locale": "es-CO", "updated": "Actualizado: ", "empty": "Ningún grupo coincide con esos filtros.", "contact": "Contacto",
         "onmap": "Ver en el mapa", "source": "Fuente", "loadfail": "No se pudo cargar la lista.", "nosched": "Horario no publicado",
         "days": [["L", "Lun"], ["M", "Mar"], ["Mc", "Mié"], ["J", "Jue"], ["V", "Vie"], ["S", "Sáb"], ["D", "Dom"]]},
- "en": {"addrOk": "Sorted by distance from:", "addrFail": "Couldn't find that address. Try the hotel name or add the neighborhood.",
+ "en": {"addrNeedsGoogle": "Exact street-number search isn't available yet; type the hotel name, a park or a known landmark.",
+        "addrOk": "Sorted by distance from:", "addrFail": "Couldn't find that address. Try the hotel name or add the neighborhood.",
         "approx": "approx. location", "approxTitle": "This pin was placed from the address and may be off by a block. Use Directions for the exact route.",
         "myloc": "📍 My location", "metro": "Metro area", "byname": "Sort by name", "locating": "Finding your location…", "locfail": "Couldn't get your location",
         "directions": "Directions", "details": "Details", "topic": {},
@@ -282,7 +292,7 @@ def render():
         rep["GMAPS_KEY"] = SITECFG.get("google_maps_key", "")
         rep.update(TITLE=esc(P["TITLE"]), DESC=esc(P["DESC"]), CANONICAL=SITE + P["CANON"], SITE=SITE,
                    JSONLD=json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"),
-                   STATIC_LIST="\n".join(card(m, T) for m in P["CARDS"]), TJS=json.dumps(T, ensure_ascii=False))
+                   STATIC_LIST="\n".join(card(m, T, lang) for m in P["CARDS"]), TJS=json.dumps(T, ensure_ascii=False))
         for k, v in rep.items():
             out = out.replace("{{%s}}" % k, str(v))
         left = re.findall(r"\{\{[A-Z_]+\}\}", out)

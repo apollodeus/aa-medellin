@@ -238,9 +238,16 @@ def main():
         if fix:
             rec.update(fix)
 
-    # Spanish groups: official coordinates, sanity-checked
+    # Spanish groups: official coordinates, sanity-checked; schedules parsed into slots
+    import schedule as SCH
     kept = []
     for r in es:
+        segs = SCH.parse(r.get("schedule", ""))
+        r["slots"] = segs
+        r["schedule_es"] = SCH.format(segs, "es") if segs else r.get("schedule", "")
+        r["schedule_en"] = SCH.format(segs, "en") if segs else r.get("schedule", "")
+        if not segs and r.get("schedule"):
+            report.append("schedule not understood (shown as written): %s — \"%s\"" % (r["name"], r["schedule"]))
         if r["lat"] is not None and not G.in_bbox(r["lat"], r["lng"]):
             report.append("dropped, outside the Medellín area (%s): %s — %s — %s" % (r.get("detail") or r["address"], r["name"], r["address"], r["url"]))
             continue
