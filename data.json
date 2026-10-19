@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T02:10:59Z",
+ "updated": "2026-10-19T02:32:46Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -1909,29 +1909,28 @@
  ],
  "manual": [
   {
-   "name": "EXAMPLE – replace me",
+   "name": "AA for Effort",
    "lang": "en",
    "days": [
-    "L",
-    "Mc"
+    "D"
    ],
    "times": [
-    "7:00 pm"
+    "6:00 pm"
    ],
    "type": "open",
    "format": "in-person",
-   "place": "Venue name",
-   "address": "Carrera 00 #00-00, Barrio",
+   "place": "Cafe Cliche",
+   "address": "Cl. 32F #78-105, Belén",
    "notes": [
-    "Anything useful: how to find the room, who to ask for."
+    "Enter through the main entrance; the room is in the back to the right."
    ],
-   "contact": "Name +57 300 000 0000",
+   "contact": "Peter",
    "zoom": "",
-   "lat": null,
-   "lng": null,
-   "hidden": true,
+   "lat": 6.2426,
+   "lng": -75.5987,
    "id": "manual-0",
-   "source": "manual"
+   "source": "manual",
+   "approx": true
   }
  ]
 }

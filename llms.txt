@@ -1,6 +1,6 @@
 # AA Medellín Map
 
-> Independent, daily-updated directory of Alcoholics Anonymous meetings in Medellín, Colombia: 105 Spanish-language groups (from AA Colombia's directory, aacolombia.org) and 8 English-speaking meetings (from aamedellin.org and local listings). Not affiliated with AA.
+> Independent, daily-updated directory of Alcoholics Anonymous meetings in Medellín, Colombia: 105 Spanish-language groups (from AA Colombia's directory, aacolombia.org) and 9 English-speaking meetings (from aamedellin.org and local listings). Not affiliated with AA.
 
 Last updated: 2026-10-19
 
@@ -18,6 +18,7 @@ Last updated: 2026-10-19
 - **A Vision for Medellin**: Sat 9:00 am; closed meeting; 12 & 12 Step/Tradition Study; hybrid; Edificio Milla de Oro · Cra. 42 & Cl. 3 Sur 81 Torre 1 Piso 15, Sala 6, El Poblado; Contact: Joey – joey@joeymobile.com 727-238-5297 (google voice) WhatsApp +57 318 692-8619
 - **There Is A Solution**: Sat 9:00 am; open meeting; AA Big Book Study; in-person; Sweet Georgia Cafe – back room (in Laureles) · Carrera 78 #32ee-25, Medellin, Antioquia; Contact: Rick +57 302 296-7611
 - **There Is A Solution**: Sun 9:00 am; open meeting; Open Speaker Meeting; in-person; Sweet Georgia Cafe – back room (in Laureles) · Carrera 78 #32ee-25, Medellin, Antioquia; Contact: Rick +57 302 296-7611
+- **AA for Effort**: Sun 6:00 pm; open meeting; in-person; Cafe Cliche · Cl. 32F #78-105, Belén; Contact: Peter
 
 ## Weekly English schedule
 
@@ -27,7 +28,7 @@ Last updated: 2026-10-19
 - Thursday: 8:00 am Clean Living (Zoom Only); 12:00 noon Sabaneta English-Speaking AA Meeting
 - Friday: 8:00 am Clean Living (Zoom Only); 12:30 pm AA Poblado Group Manila
 - Saturday: 9:00 am A Vision for Medellin; 9:00 am There Is A Solution
-- Sunday: 9:00 am Clean Living (Zoom Only); 9:00 am There Is A Solution
+- Sunday: 9:00 am Clean Living (Zoom Only); 9:00 am There Is A Solution; 6:00 pm AA for Effort
 
 ## Spanish-language groups
 
