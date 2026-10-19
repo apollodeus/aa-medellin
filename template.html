@@ -70,6 +70,7 @@ h1{font:600 clamp(1.9rem,4.6vw,2.9rem)/1.1 var(--serif);margin:0 0 12px;color:#f
 .pin:hover,.pin.sel{transform:scale(1.35)}
 .pin[data-n]::after{content:attr(data-n);position:absolute;top:-9px;right:-9px;background:#14244a;color:#fff;font:700 9px/14px var(--sans);min-width:14px;height:14px;border-radius:7px;text-align:center}
 .pin.es{background:#2c4f8f}.pin.en{background:#d4a03a;width:20px;height:20px}.pin.dim{opacity:.15!important;pointer-events:none}
+.pin.mix{background:linear-gradient(90deg,#d4a03a 50%,#2c4f8f 50%)}
 
 /* filters */
 .controls{position:sticky;top:0;z-index:500;background:var(--bg);padding-block:14px 12px;display:grid;gap:8px;margin-bottom:6px}
@@ -142,7 +143,7 @@ footer .inner{padding-block:22px 34px}
 <div class="wrap">
 <div class="mapcard">
   <div id="map" role="region" aria-label="{{T_MAP}}"></div>
-  <p class="legend"><span><i style="background:#d4a03a"></i>{{T_LEG_EN}}</span><span><i style="background:#2c4f8f"></i>{{T_LEG_ES}}</span><span class="count" id="count">{{COUNT}}</span></p>
+  <p class="legend"><span><i style="background:#d4a03a"></i>{{T_LEG_EN}}</span><span><i style="background:#2c4f8f"></i>{{T_LEG_ES}}</span><span><i style="background:linear-gradient(90deg,#d4a03a 50%,#2c4f8f 50%)"></i>{{T_LEG_MIX}}</span><span class="count" id="count">{{COUNT}}</span></p>
 </div>
 
 <div class="controls">
@@ -240,13 +241,13 @@ const MAP={pins:{},
     this.m.on("load",()=>{const a=document.querySelector(".maplibregl-ctrl-attrib");if(a)a.classList.remove("maplibregl-compact-show");});
     this.m.addControl(new maplibregl.GeolocateControl({positionOptions:{enableHighAccuracy:true}}),"top-right");
   },
-  add(grp,onClick){const g=grp[0];const en=grp.some(x=>x.lang==="en");
+  add(grp,onClick){const g=grp[0];const en=grp.some(x=>x.lang==="en"),es=grp.some(x=>x.lang!=="en"),mix=en&&es;
     if(this.g){
       const mk=new google.maps.Marker({position:{lat:g.lat,lng:g.lng},map:this.g,title:grp.map(x=>x.name).join(" / "),zIndex:en?1000:1,
-        icon:{path:google.maps.SymbolPath.CIRCLE,scale:en?9:7,fillColor:en?"#d4a03a":"#2c4f8f",fillOpacity:1,strokeColor:"#fff",strokeWeight:2}});
+        icon:{path:google.maps.SymbolPath.CIRCLE,scale:en?9:7,fillColor:en?"#d4a03a":"#2c4f8f",fillOpacity:1,strokeColor:mix?"#2c4f8f":"#fff",strokeWeight:mix?3:2}});
       mk.addListener("click",()=>{this.open(g);onClick(g);});this.pins[g.loc]=mk;return;
     }
-    const el=document.createElement("div");el.className="pin "+(en?"en":"es");el.title=grp.map(x=>x.name).join(" / ");if(grp.length>1)el.dataset.n=grp.length;
+    const el=document.createElement("div");el.className="pin "+(mix?"en mix":(en?"en":"es"));el.title=grp.map(x=>x.name).join(" / ");if(grp.length>1)el.dataset.n=grp.length;
     el.addEventListener("click",e=>{e.stopPropagation();this.open(g);onClick(g);});
     const mk=new maplibregl.Marker({element:el}).setLngLat([g.lng,g.lat]).addTo(this.m);if(en)el.style.zIndex=2;this.pins[g.loc]={mk,el};
   },

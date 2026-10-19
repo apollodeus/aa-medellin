@@ -171,7 +171,7 @@ ES = dict(LANG="es", OGLOCALE="es_CO", CANON="/", DATA="data.json", DEFAULT_FILT
     H1="Reuniones de AA en Medellín",
     T_LANG="Idioma", T_ALL="Todos", T_SEARCH="Buscar nombre, dirección o barrio", T_DAY="Día", T_FMT="Modalidad",
     T_ALLF="Todas", T_INPERSON="Presencial", T_ONLINE="Virtual", T_NEAR="Cerca de", T_BYNAME="Ordenar por nombre",
-    T_MAP="Mapa de reuniones", T_LEG_EN="Reunión en inglés", T_LEG_ES="Grupo en español",
+    T_MAP="Mapa de reuniones", T_LEG_EN="Reunión en inglés", T_LEG_ES="Grupo en español", T_LEG_MIX="Ambos en el mismo lugar",
     BRAND="AA Medellín Map",
     LANGSW='<span lang="es">ES</span><a href="en/" hreflang="en" lang="en">EN</a>')
 EN = dict(LANG="en", OGLOCALE="en_US", CANON="/en/", DATA="../data.json", DEFAULT_FILTER="en",
@@ -179,7 +179,7 @@ EN = dict(LANG="en", OGLOCALE="en_US", CANON="/en/", DATA="../data.json", DEFAUL
     H1="English-Speaking AA Meetings in Medellín",
     T_LANG="Language", T_ALL="All", T_SEARCH="Search name, address or neighborhood", T_DAY="Day", T_FMT="Format",
     T_ALLF="All", T_INPERSON="In person", T_ONLINE="Online", T_NEAR="Near", T_BYNAME="Sort by name",
-    T_MAP="Meeting map", T_LEG_EN="English-speaking meeting", T_LEG_ES="Spanish-language group",
+    T_MAP="Meeting map", T_LEG_EN="English-speaking meeting", T_LEG_ES="Spanish-language group", T_LEG_MIX="Both at the same venue",
     BRAND="AA Medellín Map",
     LANGSW='<a href="../" hreflang="es" lang="es">ES</a><span lang="en">EN</span>')
 TOPIC_ES = {"Big Book Study": "Estudio del Libro Grande", "AA Big Book Study": "Estudio del Libro Grande",
