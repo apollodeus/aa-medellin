@@ -107,6 +107,7 @@ def card(m, T, lang="es"):
     en = m.get("lang") == "en"
     tags = []
     tg = T["tag"]
+    if m.get("kind") == "12step": tags.append('<span class="tag ts" title="%s">%s</span>' % (esc(T["allprogTitle"]), T["allprog"]))
     if en: tags.append('<span class="tag en">%s</span>' % tg["english"])
     if m.get("topic"): tags.append('<span class="tag o">%s</span>' % esc(T["topic"].get(m["topic"], m["topic"])))
     if m.get("type"): tags.append('<span class="tag o">%s</span>' % tg[m["type"]])
@@ -120,7 +121,7 @@ def card(m, T, lang="es"):
     sched = en_schedule(m, dict(T["days"])) if "times" in m else (m.get("schedule_" + lang) or m.get("schedule") or T["nosched"])
     contact = " · ".join(x for x in [m.get("contact"), m.get("email")] if x)
     gm = m.get("map") or ("https://www.google.com/maps/search/?api=1&query=%s,%s" % (m["lat"], m["lng"]) if m.get("lat") is not None else "")
-    parts = ['<article class="card">', '<h2>%s %s</h2>' % (esc(m["name"]), " ".join(tags))]
+    parts = ['<article class="card%s">' % (" ts" if m.get("kind") == "12step" else ""), '<h2>%s %s</h2>' % (esc(m["name"]), " ".join(tags))]
     if addr: parts.append('<div class="addr">%s</div>' % esc(addr))
     z = zone(m)
     if z: parts.append('<div class="zone">%s</div>' % esc(z))
@@ -217,14 +218,16 @@ TOPIC_ES = {"Big Book Study": "Estudio del Libro Grande", "AA Big Book Study": "
             "12 & 12 Step/Tradition Study": "Estudio de Pasos y Tradiciones", "Open AA 12×12 Study": "Estudio de los Doce y Doce",
             "Open Speaker Meeting": "Reunión de oradores"}
 TJS = {
- "es": {"website": "Sitio web", "addrNeedsGoogle": "Por ahora la búsqueda por dirección exacta no está disponible; escribe el nombre del hotel, un parque o un punto conocido.",
+ "es": {"allprog": "Todos los programas de 12 pasos", "allprogTitle": "Reunión abierta de 12 pasos: bienvenidos miembros de AA, NA, Al-Anon y cualquier programa de 12 pasos",
+        "website": "Sitio web", "addrNeedsGoogle": "Por ahora la búsqueda por dirección exacta no está disponible; escribe el nombre del hotel, un parque o un punto conocido.",
         "addrOk": "Ordenado por distancia desde:", "addrFail": "No encontramos esa dirección. Prueba con el nombre del hotel o agrega el barrio.",
         "approx": "ubicación aproximada", "approxTitle": "El pin se colocó a partir de la dirección y puede estar a una cuadra de distancia. Usa 'Cómo llegar' para la ruta exacta.",
         "myloc": "📍 Mi ubicación", "metro": "Área metropolitana", "byname": "Ordenar por nombre", "locating": "Buscando tu ubicación…", "locfail": "No se pudo obtener tu ubicación","directions": "Cómo llegar", "details": "Ver detalles", "topic": TOPIC_ES,
         "tag": {"english": "Inglés", "open": "abierta", "closed": "cerrada", "online": "solo virtual", "hybrid": "híbrida", "virtual": "virtual"},"locale": "es-CO", "updated": "Actualizado: ", "empty": "Ningún grupo coincide con esos filtros.", "contact": "Contacto",
         "onmap": "Ver en el mapa", "source": "Fuente", "loadfail": "No se pudo cargar la lista.", "nosched": "Horario no publicado",
         "days": [["L", "Lun"], ["M", "Mar"], ["Mc", "Mié"], ["J", "Jue"], ["V", "Vie"], ["S", "Sáb"], ["D", "Dom"]]},
- "en": {"website": "Website", "addrNeedsGoogle": "Exact street-number search isn't available yet; type the hotel name, a park or a known landmark.",
+ "en": {"allprog": "All 12-step programs welcome", "allprogTitle": "Open 12-step meeting: AA, NA, Al-Anon and any 12-step program welcome",
+        "website": "Website", "addrNeedsGoogle": "Exact street-number search isn't available yet; type the hotel name, a park or a known landmark.",
         "addrOk": "Sorted by distance from:", "addrFail": "Couldn't find that address. Try the hotel name or add the neighborhood.",
         "approx": "approx. location", "approxTitle": "This pin was placed from the address and may be off by a block. Use Directions for the exact route.",
         "myloc": "📍 My location", "metro": "Metro area", "byname": "Sort by name", "locating": "Finding your location…", "locfail": "Couldn't get your location",

@@ -115,6 +115,8 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 .card h2{font:600 1.18rem/1.25 var(--serif);color:var(--accent);margin:0;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
 .tag{font:700 .68rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:4px 7px;border-radius:999px;background:var(--accent-soft);color:var(--accent);position:relative;top:-2px}
 .tag.en{background:var(--gold-soft);color:var(--gold)}
+.tag.ts{background:#1f6b5a;color:#fff}
+.card.ts{border-left:4px solid #1f6b5a}
 .tag.o{background:transparent;border:1px solid var(--line);color:var(--muted)}
 .hor{font-weight:600;font-size:.98rem;color:var(--fg);background:var(--tint);border-left:3px solid var(--gold-hi);padding:7px 10px;border-radius:4px 8px 8px 4px;word-break:break-word;font-variant-numeric:tabular-nums}
 .addr{color:var(--fg)}
@@ -383,8 +385,9 @@ function render(refit){
   document.getElementById("count").textContent=rows.length+" / "+ITEMS.length;
   const list=document.getElementById("list");
   if(!rows.length){list.innerHTML='<p class="empty">'+T.empty+'</p>';return;}
-  list.innerHTML=rows.map(g=>`<article class="card${g.i===state.sel?" sel":""}" id="g-${g.i}">
+  list.innerHTML=rows.map(g=>`<article class="card${g.i===state.sel?" sel":""}${g.kind==="12step"?" ts":""}" id="g-${g.i}">
     <h2>${esc(g.name)}
+      ${g.kind==="12step"?`<span class="tag ts" title="${esc(T.allprogTitle)}">${T.allprog}</span>`:''}
       ${g.lang==="en"?`<span class="tag en">${T.tag.english}</span>`:''}
       ${g.topic?`<span class="tag o">${esc(T.topic[g.topic]||g.topic)}</span>`:''}
       ${g.type?`<span class="tag o">${T.tag[g.type]}</span>`:''}
