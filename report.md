@@ -1,6 +1,6 @@
 # Build report
 
-Updated 2026-10-19T06:32:04Z. Sources: {"es": "ok", "en": "ok"}. 104 Spanish groups, 8 English meetings, 1 manual.
+Updated 2026-10-19T06:32:28Z. Sources: {"es": "ok", "en": "ok"}. 104 Spanish groups, 8 English meetings, 1 manual.
 
 - approx pin (hand-placed estimate): Libertad y Responsabilidad — Sede Social Manila, Cra 43D #11-73, El Poblado
 - approx pin (street only): La Cuarta Dimensión de la Existencia — Carrera 65A 32B-70
