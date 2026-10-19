@@ -2,7 +2,7 @@
 
 > Independent, daily-updated directory of Alcoholics Anonymous meetings in Medellín, Colombia: 105 Spanish-language groups (from AA Colombia's directory, aacolombia.org) and 8 English-speaking meetings (from aamedellin.org and local listings). Not affiliated with AA.
 
-Last updated: 2026-10-18
+Last updated: 2026-10-19
 
 - [English-speaking AA meetings in Medellín](https://www.aamedellinmap.org/en/): map, weekly schedule, addresses and contacts
 - [Reuniones de AA en Medellín (español)](https://www.aamedellinmap.org/): all groups with map and filters
