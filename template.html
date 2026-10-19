@@ -201,9 +201,9 @@ footer .inner{padding-block:22px 34px}
 <script>
 const PAGE_LANG="{{LANG}}";const T={{TJS}};
 const PLACES=[
- ["pob","El Poblado (Parque Lleras)",6.2096,-75.5681],["lau","Laureles (Segundo Parque)",6.2456,-75.5916],["cen","Centro (Parque Berrío)",6.2518,-75.5636],
- ["bel","Belén (Parque de Belén)",6.2320,-75.6010],["env","Envigado (Parque principal)",6.1700,-75.5900],["sab","Sabaneta (Parque principal)",6.1515,-75.6160],
- ["ita","Itagüí (Parque principal)",6.1720,-75.6110],["bello","Bello (Parque principal)",6.3370,-75.5580]];
+ ["pob","El Poblado",6.2096,-75.5681],["lau","Laureles",6.2456,-75.5916],["cen","Centro",6.2518,-75.5636],
+ ["bel","Belén",6.2320,-75.6010],["env","Envigado",6.1700,-75.5900],["sab","Sabaneta",6.1515,-75.6160],
+ ["ita","Itagüí",6.1720,-75.6110],["bello","Bello",6.3370,-75.5580]];
 const CENTERS={};PLACES.forEach(p=>CENTERS[p[0]]=[p[2],p[3]]);
 (function(){const sel=document.getElementById("center");let h=`<option value="me">${T.myloc}</option>`;
  PLACES.forEach(p=>{h+=`<option value="${p[0]}">${p[1]}</option>`;});
