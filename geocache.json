@@ -611,6 +611,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:SEDE SOCIAL MANILA, CRA. 43D #11-73, MANILA, EL POBLADO": {
+  "lat": 6.2128758,
+  "lng": -75.5718995,
+  "precise": true,
+  "source": "google"
+ },
  "google:SEDE SOCIEAD JOSE FELIX DE RESTREPO": {
   "lat": 6.2071548,
   "lng": -75.577018,

@@ -1,6 +1,6 @@
 # AA Medellín Map
 
-> Independent, daily-updated directory of Alcoholics Anonymous meetings in Medellín, Colombia: 104 Spanish-language groups (from AA Colombia's directory, aacolombia.org) and 9 English-speaking meetings (from aamedellin.org and local listings). Not affiliated with AA.
+> Independent, daily-updated directory of Alcoholics Anonymous meetings in Medellín, Colombia: 104 Spanish-language groups (from AA Colombia's directory, aacolombia.org) and 10 English-speaking meetings (from aamedellin.org and local listings). Not affiliated with AA.
 
 Last updated: 2026-10-19
 
@@ -19,13 +19,14 @@ Last updated: 2026-10-19
 - **There Is A Solution**: Sat 9:00 am; open meeting; AA Big Book Study; in-person; Sweet Georgia Cafe – back room (in Laureles) · Carrera 78 #32ee-25, Medellin, Antioquia; Contact: Rick +57 302 296-7611
 - **There Is A Solution**: Sun 9:00 am; open meeting; Open Speaker Meeting; in-person; Sweet Georgia Cafe – back room (in Laureles) · Carrera 78 #32ee-25, Medellin, Antioquia; Contact: Rick +57 302 296-7611
 - **AA for Effort**: Sun 6:00 pm; open meeting; in-person; Cafe Cliche · Cl. 32F #78-105, Belén; Contact: Peter
+- **Open 12-Step Meeting Medellín**: Mon, Thu 12:30 pm; open meeting; 12-Step (AA, NA, Al-Anon welcome); in-person; Sede Social Manila · Cra. 43D #11-73, Manila, El Poblado; Contact: John +57 314 895 0952 (WhatsApp)
 
 ## Weekly English schedule
 
-- Monday: 8:00 am Clean Living (Zoom Only)
+- Monday: 8:00 am Clean Living (Zoom Only); 12:30 pm Open 12-Step Meeting Medellín
 - Tuesday: 8:00 am Clean Living (Zoom Only); 12:30 pm AA Poblado Group Manila; 6:00 pm A Vision for Medellin
 - Wednesday: 8:00 am Clean Living (Zoom Only); 12:30 pm A Vision for You Group
-- Thursday: 8:00 am Clean Living (Zoom Only); 12:00 noon Sabaneta English-Speaking AA Meeting
+- Thursday: 8:00 am Clean Living (Zoom Only); 12:00 noon Sabaneta English-Speaking AA Meeting; 12:30 pm Open 12-Step Meeting Medellín
 - Friday: 8:00 am Clean Living (Zoom Only); 12:30 pm AA Poblado Group Manila
 - Saturday: 9:00 am A Vision for Medellin; 9:00 am There Is A Solution
 - Sunday: 9:00 am Clean Living (Zoom Only); 9:00 am There Is A Solution; 6:00 pm AA for Effort
