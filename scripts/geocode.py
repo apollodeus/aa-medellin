@@ -80,17 +80,17 @@ def coords_from_maplink(url):
 
 # ---------------------------------------------------------------- 3. Google Geocoding
 GOOGLE_ERRORS = []
-def google_geocode(address):
+def google_geocode(address, city="Medellín"):
     if not GOOGLE_KEY or not address:
         return None
-    key = "google:" + norm(address)
+    key = "google:" + norm(address) + ("" if norm(city) == "MEDELLIN" else " | " + norm(city))
     c = cache()
     if key in c:
         v = c[key]
         return (v["lat"], v["lng"], v["precise"]) if v else None
     result, status = None, "EXCEPTION"
     try:
-        q = urllib.parse.urlencode({"address": address + ", Medellín, Antioquia, Colombia",
+        q = urllib.parse.urlencode({"address": address + ", %s, Antioquia, Colombia" % city,
                                     "components": "country:CO", "region": "co", "language": "es",
                                     "bounds": "%s,%s|%s,%s" % (BBOX[0], BBOX[2], BBOX[1], BBOX[3]),
                                     "key": GOOGLE_KEY})
@@ -180,7 +180,7 @@ def place(rec, venues, report):
     if hit:
         rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = hit[0], hit[1], False, "organizer map link"; return
 
-    g = google_geocode(full_addr)
+    g = google_geocode(full_addr, rec.get("municipio") or "Medellín")
     if g and g[2]:
         rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = g[0], g[1], False, "google geocoder"; return
 
@@ -204,7 +204,7 @@ def audit_official(rec, report):
     """For a Spanish group with official coordinates: compare against the geocoded address when a key is set."""
     if not GOOGLE_KEY or rec.get("lat") is None or not rec.get("address"):
         return
-    g = google_geocode(rec["address"])
+    g = google_geocode(rec["address"], rec.get("municipio") or "Medellín")
     if g and g[2]:
         d = km(rec["lat"], rec["lng"], g[0], g[1])
         if d > 0.4:
