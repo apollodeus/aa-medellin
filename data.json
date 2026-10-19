@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T06:23:18Z",
+ "updated": "2026-10-19T06:27:54Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -16,12 +16,12 @@
    "virtual": false,
    "contact": "",
    "email": "",
-   "lat": 6.2078,
-   "lng": -75.5668,
+   "lat": 6.2118,
+   "lng": -75.5714,
    "url": "https://aacolombia.org/grupos/libertad-y-responsabilidad/",
    "source": "aacolombia.org",
-   "approx": true,
-   "place": "Sede Social Manila"
+   "place": "Sede Social Manila",
+   "approx": true
   },
   {
    "id": "es-28293",
@@ -1743,10 +1743,10 @@
    "map": "https://maps.app.goo.gl/Fr8iXKGSpNQZHCS37",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.1982,
-   "lng": -75.5735,
+   "lat": 6.1996,
+   "lng": -75.5722,
    "topic": "Big Book Study",
-   "approx": true
+   "approx": false
   },
   {
    "id": "en-aa-poblado-group-manila-mv",
@@ -1772,8 +1772,8 @@
    "map": "https://share.google/H8b7m7IL6QS1D0d0m",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2078,
-   "lng": -75.5668,
+   "lat": 6.2118,
+   "lng": -75.5714,
    "topic": "",
    "approx": true
   },
@@ -1797,8 +1797,8 @@
    "map": "https://maps.app.goo.gl/ENZSjHQDntWv89YJ7?g_st=ic",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2426,
-   "lng": -75.5987,
+   "lat": 6.2384,
+   "lng": -75.5984,
    "topic": "Open AA 12×12 Study",
    "approx": true
   },
@@ -1825,10 +1825,10 @@
    "map": "",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.1525,
-   "lng": -75.6165,
+   "lat": 6.149,
+   "lng": -75.6174,
    "topic": "",
-   "approx": true
+   "approx": false
   },
   {
    "id": "en-a-vision-for-medellin-s",
@@ -1852,10 +1852,10 @@
    "map": "https://maps.app.goo.gl/Fr8iXKGSpNQZHCS37",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.1982,
-   "lng": -75.5735,
+   "lat": 6.1996,
+   "lng": -75.5722,
    "topic": "12 & 12 Step/Tradition Study",
-   "approx": true
+   "approx": false
   },
   {
    "id": "en-there-is-a-solution-s",
@@ -1877,8 +1877,8 @@
    "map": "https://maps.app.goo.gl/5gt2hsbVM8B2gr9W7",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2381,
-   "lng": -75.5991,
+   "lat": 6.2377,
+   "lng": -75.5984,
    "topic": "AA Big Book Study",
    "approx": true
   },
@@ -1902,8 +1902,8 @@
    "map": "https://maps.app.goo.gl/5gt2hsbVM8B2gr9W7",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2381,
-   "lng": -75.5991,
+   "lat": 6.2377,
+   "lng": -75.5984,
    "topic": "Open Speaker Meeting",
    "approx": true
   }
@@ -1927,8 +1927,8 @@
    ],
    "contact": "Peter",
    "zoom": "",
-   "lat": 6.2426,
-   "lng": -75.5987,
+   "lat": 6.2384,
+   "lng": -75.5984,
    "id": "manual-0",
    "source": "manual",
    "approx": true
