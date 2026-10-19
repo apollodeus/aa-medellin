@@ -162,15 +162,7 @@ footer .inner{padding-block:22px 34px}
       <button aria-pressed="false" data-v="v">Online</button>
     </div>
     <label class="sortwrap">Near
-      <select id="center">
-        <option value="pob">El Poblado (Parque Lleras)</option>
-        <option value="cen">Centro (Parque Berrío)</option>
-        <option value="lau">Laureles (Segundo Parque)</option>
-        <option value="bel">Belén (Parque de Belén)</option>
-        <option value="env">Envigado (Parque principal)</option>
-        <option value="sab">Sabaneta (Parque principal)</option>
-        <option value="name">Sort by name</option>
-      </select>
+      <select id="center"></select>
     </label>
   </div>
 </div>
@@ -258,8 +250,27 @@ footer .inner{padding-block:22px 34px}
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script>
-const PAGE_LANG="en";const T={"directions": "Directions", "details": "Details", "topic": {}, "tag": {"english": "English", "open": "open", "closed": "closed", "online": "online only", "hybrid": "hybrid", "virtual": "online"}, "locale": "en-US", "updated": "Updated: ", "empty": "No meetings match those filters.", "contact": "Contact", "onmap": "Show on map", "source": "Source", "loadfail": "Couldn't load the meeting list.", "nosched": "Schedule not published", "days": [["L", "Mon"], ["M", "Tue"], ["Mc", "Wed"], ["J", "Thu"], ["V", "Fri"], ["S", "Sat"], ["D", "Sun"]]};
-const CENTERS={pob:[6.2096,-75.5681],cen:[6.2518,-75.5636],lau:[6.2456,-75.5916],bel:[6.2320,-75.6010],env:[6.1700,-75.5900],sab:[6.1515,-75.6160]};
+const PAGE_LANG="en";const T={"myloc": "📍 My location", "metro": "Metro area", "byname": "Sort by name", "locating": "Finding your location…", "locfail": "Couldn't get your location", "directions": "Directions", "details": "Details", "topic": {}, "tag": {"english": "English", "open": "open", "closed": "closed", "online": "online only", "hybrid": "hybrid", "virtual": "online"}, "locale": "en-US", "updated": "Updated: ", "empty": "No meetings match those filters.", "contact": "Contact", "onmap": "Show on map", "source": "Source", "loadfail": "Couldn't load the meeting list.", "nosched": "Schedule not published", "days": [["L", "Mon"], ["M", "Tue"], ["Mc", "Wed"], ["J", "Thu"], ["V", "Fri"], ["S", "Sat"], ["D", "Sun"]]};
+const PLACES=[
+ ["pob","El Poblado (Parque Lleras)",6.2096,-75.5681],["man","Manila",6.2079,-75.5676],["prov","Provenza",6.2087,-75.5652],["cdr","Ciudad del Río",6.2235,-75.5738],
+ ["cen","Centro (Parque Berrío)",6.2518,-75.5636],["pra","Prado Centro",6.2587,-75.5612],["bos","Boston",6.2510,-75.5530],["bue","Buenos Aires",6.2380,-75.5540],
+ ["lau","Laureles (Segundo Parque)",6.2456,-75.5916],["est","Estadio",6.2530,-75.5900],["flo","Floresta",6.2600,-75.6050],["ame","La América",6.2520,-75.6010],
+ ["bel","Belén (Parque de Belén)",6.2320,-75.6010],["guay","Guayabal",6.2180,-75.5880],["sjav","San Javier",6.2560,-75.6130],["rob","Robledo",6.2800,-75.5950],
+ ["cas","Castilla",6.2920,-75.5750],["ara","Aranjuez",6.2800,-75.5600],["manr","Manrique",6.2690,-75.5540],["vh","Villa Hermosa",6.2600,-75.5450],
+ ["sel","Santa Elena",6.2140,-75.4980],["sap","San Antonio de Prado",6.1830,-75.6720],
+ ["env","Envigado (Parque principal)",6.1700,-75.5900],["sab","Sabaneta (Parque principal)",6.1515,-75.6160],["ita","Itagüí (Parque principal)",6.1720,-75.6110],
+ ["est2","La Estrella",6.1580,-75.6430],["bello","Bello (Parque principal)",6.3370,-75.5580],["cop","Copacabana",6.3480,-75.5090]];
+const CENTERS={};PLACES.forEach(p=>CENTERS[p[0]]=[p[2],p[3]]);
+(function(){const sel=document.getElementById("center");let h=`<option value="me">${T.myloc}</option><optgroup label="Medellín">`;
+ PLACES.forEach((p,i)=>{if(i===22)h+=`</optgroup><optgroup label="${T.metro}">`;h+=`<option value="${p[0]}">${p[1]}</option>`;});
+ h+=`</optgroup><option value="name">${T.byname}</option>`;sel.innerHTML=h;})();
+function locate(){
+  const sel=document.getElementById("center");
+  if(!navigator.geolocation){sel.value="pob";state.center="pob";render(false);return;}
+  document.getElementById("count").textContent=T.locating;
+  navigator.geolocation.getCurrentPosition(pos=>{CENTERS.me=[pos.coords.latitude,pos.coords.longitude];state.center="me";render(false);},
+    ()=>{document.getElementById("count").textContent=T.locfail;state.center="pob";sel.value="pob";setTimeout(()=>render(false),2500);},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
+}
 const ZONES=[["Centro",6.2518,-75.5636],["El Poblado",6.2096,-75.5681],["Laureles",6.2456,-75.5916],["Belén",6.2320,-75.6010],["Robledo",6.2800,-75.5950],["Manrique",6.2690,-75.5540],["Aranjuez",6.2800,-75.5600],["Castilla",6.2920,-75.5750],["Buenos Aires",6.2380,-75.5540],["Guayabal",6.2180,-75.5880],["San Javier",6.2560,-75.6130],["La América",6.2520,-75.6010],["Villa Hermosa",6.2600,-75.5450],["Santa Cruz / Popular",6.2960,-75.5500],["Doce de Octubre",6.3020,-75.5860],["Santa Elena",6.2140,-75.4980],["San Antonio de Prado",6.1830,-75.6720],["San Cristóbal",6.2800,-75.6350],["Altavista",6.2080,-75.6230],["Envigado",6.1700,-75.5900],["Sabaneta",6.1515,-75.6160],["Itagüí",6.1720,-75.6110]];
 const DAYS=T.days;
 const DAYNAME=Object.fromEntries(T.days);
@@ -281,7 +292,7 @@ function parseDays(h){
 
 const state={q:"",days:new Set(),fmt:"all",lang:"en",center:"pob",sel:null};
 try{const s=JSON.parse(localStorage.getItem("aa-med")||"{}");if(s.center)state.center=s.center;if(s.lang&&PAGE_LANG==="es")state.lang=s.lang;}catch(e){}
-document.getElementById("center").value=state.center;
+if(!CENTERS[state.center]&&state.center!=="name")state.center="pob";document.getElementById("center").value=state.center;
 document.getElementById("lang").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===state.lang));
 
 const GKEY="";
@@ -357,7 +368,7 @@ const daysEl=document.getElementById("days");
 DAYS.forEach(([k,l])=>{const b=document.createElement("button");b.className="chip";b.id="day-"+k;b.textContent=l;b.setAttribute("aria-pressed","false");b.onclick=()=>{const on=state.days.has(k);state.days.clear();if(!on)state.days.add(k);daysEl.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",state.days.has(x.id.slice(4))));render(true);};daysEl.appendChild(b);});
 document.getElementById("q").oninput=e=>{state.q=e.target.value.trim();render(true)};
 for(const id of ["fmt","lang"]){const el=document.getElementById(id);el.querySelectorAll("button").forEach(b=>b.onclick=()=>{state[id]=b.dataset.v;el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));save();render(true);});}
-document.getElementById("center").onchange=e=>{state.center=e.target.value;save();render(false);};
+document.getElementById("center").onchange=e=>{const v=e.target.value;if(v==="me"){locate();return;}state.center=v;save();render(false);};
 function save(){try{localStorage.setItem("aa-med",JSON.stringify({center:state.center,lang:state.lang}))}catch(x){}}
 
 function render(refit){

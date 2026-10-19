@@ -186,11 +186,12 @@ TOPIC_ES = {"Big Book Study": "Estudio del Libro Grande", "AA Big Book Study": "
             "12 & 12 Step/Tradition Study": "Estudio de Pasos y Tradiciones", "Open AA 12×12 Study": "Estudio de los Doce y Doce",
             "Open Speaker Meeting": "Reunión de oradores"}
 TJS = {
- "es": {"directions": "Cómo llegar", "details": "Ver detalles", "topic": TOPIC_ES,
+ "es": {"myloc": "📍 Mi ubicación", "metro": "Área metropolitana", "byname": "Ordenar por nombre", "locating": "Buscando tu ubicación…", "locfail": "No se pudo obtener tu ubicación","directions": "Cómo llegar", "details": "Ver detalles", "topic": TOPIC_ES,
         "tag": {"english": "Inglés", "open": "abierta", "closed": "cerrada", "online": "solo virtual", "hybrid": "híbrida", "virtual": "virtual"},"locale": "es-CO", "updated": "Actualizado: ", "empty": "Ningún grupo coincide con esos filtros.", "contact": "Contacto",
         "onmap": "Ver en el mapa", "source": "Fuente", "loadfail": "No se pudo cargar la lista.", "nosched": "Horario no publicado",
         "days": [["L", "Lun"], ["M", "Mar"], ["Mc", "Mié"], ["J", "Jue"], ["V", "Vie"], ["S", "Sáb"], ["D", "Dom"]]},
- "en": {"directions": "Directions", "details": "Details", "topic": {},
+ "en": {"myloc": "📍 My location", "metro": "Metro area", "byname": "Sort by name", "locating": "Finding your location…", "locfail": "Couldn't get your location",
+        "directions": "Directions", "details": "Details", "topic": {},
         "tag": {"english": "English", "open": "open", "closed": "closed", "online": "online only", "hybrid": "hybrid", "virtual": "online"},
         "locale": "en-US", "updated": "Updated: ", "empty": "No meetings match those filters.", "contact": "Contact",
         "onmap": "Show on map", "source": "Source", "loadfail": "Couldn't load the meeting list.", "nosched": "Schedule not published",
