@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T13:48:03Z",
+ "updated": "2026-10-19T13:50:47Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -12,6 +12,7 @@
    "address": "Cra 43D #11-73, El Poblado",
    "detail": "",
    "barrio": "Manila",
+   "municipio": "Medellín",
    "schedule": "Martes, Miércoles, Jueves, Sábado y Domingo 6:00 pm",
    "virtual": false,
    "contact": "",
@@ -51,6 +52,7 @@
    "address": "Carrera 65A 32B-70",
    "detail": "Parroquia Fátima",
    "barrio": "Belén Fátima",
+   "municipio": "Medellín",
    "schedule": "Lunes, Miércoles y Viernes de 9:00 am a 12: m.",
    "virtual": false,
    "contact": "",
@@ -87,6 +89,7 @@
    "address": "Calle 95 50-32",
    "detail": "",
    "barrio": "Aranjuez",
+   "municipio": "Medellín",
    "schedule": "Lunes a Sábado 7:00 pm",
    "virtual": false,
    "contact": "",
@@ -126,6 +129,7 @@
    "address": "Calle 76 41A-44",
    "detail": "",
    "barrio": "Las Nieves",
+   "municipio": "Medellín",
    "schedule": "Lunes a Viernes 6+:30 pm; Sábado 6:00 pm",
    "virtual": false,
    "contact": "",
@@ -176,6 +180,7 @@
    "address": "Carrera 54  52-55",
    "detail": "Piso 2. Adentro, al fondo del parqueadero.",
    "barrio": "Centro",
+   "municipio": "Medellín",
    "schedule": "Lunes, Martes, Viernes y Sábado 7:00 am",
    "virtual": false,
    "contact": "",
@@ -213,6 +218,7 @@
    "address": "Carrera 95 62C-87",
    "detail": "",
    "barrio": "Robledo",
+   "municipio": "Medellín",
    "schedule": "Viernes 7:00 pm; Domingo 5:00 pm",
    "virtual": false,
    "contact": "",
@@ -259,6 +265,7 @@
    "address": "Calle 76 41A-44",
    "detail": "",
    "barrio": "Manrique",
+   "municipio": "Medellín",
    "schedule": "Lunes a Sábado de 6:30 pm a 9:oo pm",
    "virtual": false,
    "contact": "",
@@ -298,6 +305,7 @@
    "address": "Calle 67 45-53",
    "detail": "Primer Piso",
    "barrio": "Manrique",
+   "municipio": "Medellín",
    "schedule": "Miércoles y viernes 7:00 pm; Domingos 10:00 am; Primer jueves de mes Reunión de Principiantes 7:00 pm",
    "virtual": false,
    "contact": "",
@@ -357,6 +365,7 @@
    "address": "Carrera 64C No. 93-86, barrio Castilla La Unión",
    "detail": "Barrio Castilla",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMcV 7pm D 2pm",
    "virtual": false,
    "contact": "",
@@ -405,6 +414,7 @@
    "address": "Calle 53 30-61",
    "detail": "Segundo Piso",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes a Viernes 6:00 pm",
    "virtual": false,
    "contact": "",
@@ -443,6 +453,7 @@
    "address": "Cra 22 47-79",
    "detail": "Barrio Prado Centro",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes a Sábado 6:30pm",
    "virtual": false,
    "contact": "",
@@ -476,12 +487,48 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27593",
+   "lang": "es",
+   "name": "Renacer",
+   "address": "Calle 49 No. 48-13",
+   "detail": "Municipio Bello",
+   "barrio": "",
+   "municipio": "Bello",
+   "schedule": "D 5pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.334018,
+   "lng": -75.5568881,
+   "url": "https://aacolombia.org/grupos/renacer-33/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Dom 5:00 pm",
+   "schedule_en": "Sun 5:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27591",
    "lang": "es",
    "name": "La Sobriedad",
    "address": "Carrera 69 No. 97-70",
    "detail": "Barrio Castilla",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJS 7pm",
    "virtual": false,
    "contact": "",
@@ -518,6 +565,7 @@
    "address": "Carrera 49 50-58",
    "detail": "oficina 308, ed. san fernando",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJV 6:00 pm S 5:30 pm",
    "virtual": false,
    "contact": "",
@@ -568,6 +616,7 @@
    "address": "Calle 51 No. 37-75",
    "detail": "Barrio Boston Sede Accion Comunal",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJVS 7pm D 3pm",
    "virtual": false,
    "contact": "",
@@ -613,12 +662,66 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27588",
+   "lang": "es",
+   "name": "La Nueva Visión",
+   "address": "Calle 54 No. 55-13",
+   "detail": "Barrio Rosalpi",
+   "barrio": "",
+   "municipio": "Bello",
+   "schedule": "LMMcJVSD 7pm D 8am",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.3386536,
+   "lng": -75.5625766,
+   "url": "https://aacolombia.org/grupos/la-nueva-vision-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 7:00 pm · Dom 8:00 am",
+   "schedule_en": "Every day 7:00 pm · Sun 8:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27587",
    "lang": "es",
    "name": "La Luz",
    "address": "Carrera 51 No. 41-56, local 203, frente estación Alpujarra",
    "detail": "Centro Medellin",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJV 7pm D 12:15M",
    "virtual": false,
    "contact": "",
@@ -669,6 +772,7 @@
    "address": "Carrera 37 No. 68-17",
    "detail": "Manrique Oriental",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJV 7pm D 5pm",
    "virtual": false,
    "contact": "",
@@ -717,6 +821,7 @@
    "address": "Carrera 52 No. 49-61, piso 2",
    "detail": "Centro de Medellin (Edificio Restrepo Arango)",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJVS 3pm",
    "virtual": false,
    "contact": "",
@@ -756,6 +861,7 @@
    "address": "Calle 51 No. 49-96, oficina 303",
    "detail": "Centro de Medellin Edificio Avenida 1o. De Mayo",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMc 12:15 p.m. - MJ 6:45 a.m. - V 12:15 - 6:00 p.m.",
    "virtual": false,
    "contact": "",
@@ -816,6 +922,7 @@
    "address": "Parque Bicentenario",
    "detail": "Municipio Medellin",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Virtuales: Zoom ID de Reunión 456252242 contraseña 049740",
    "virtual": false,
    "contact": "",
@@ -837,6 +944,7 @@
    "address": "Carrera 48 No. 96-53",
    "detail": "Barrio Aranjuez",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMcV 7pm",
    "virtual": false,
    "contact": "",
@@ -873,6 +981,7 @@
    "address": "Calle 79 No. 85A-13",
    "detail": "Acción Comunal de Robledo",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJS 7pm",
    "virtual": false,
    "contact": "",
@@ -909,6 +1018,7 @@
    "address": "Calle 75 No. 64C-16, barrio Caribe",
    "detail": "Barrio Caribe (sede Accion Comunal)",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJV 7:00 p.m. - Domingo y Festivo 2:00 p.m.",
    "virtual": false,
    "contact": "",
@@ -960,6 +1070,7 @@
    "address": "Carrera 76 No.90-12,Escuela Carolina Kennedy",
    "detail": "Robledo (Kennedy)",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Mc 7pm",
    "virtual": false,
    "contact": "",
@@ -994,6 +1105,7 @@
    "address": "Calle 95 No. 52-25",
    "detail": "Barrio Aranjuez",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMVS 7pm",
    "virtual": false,
    "contact": "",
@@ -1031,6 +1143,7 @@
    "address": "Carrera 79 No. 92-232, piso 3, local 301",
    "detail": "Barrio Miramar Robledo",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMcJS 7pm D 11am",
    "virtual": false,
    "contact": "",
@@ -1080,6 +1193,7 @@
    "address": "Carrera 52 No. 49-61, piso 2",
    "detail": "Centro de Medellin (Edificio Restrepo Arango)",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMcV 7pm MJS 7:15pm D 11am",
    "virtual": false,
    "contact": "",
@@ -1142,6 +1256,7 @@
    "address": "Calle 79 No. 55B-55",
    "detail": "Moravia",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJS 7pm",
    "virtual": false,
    "contact": "",
@@ -1178,6 +1293,7 @@
    "address": "Calle 101D No. 80-14, frente al Hospital",
    "detail": "Barrio doce de Octubre",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJS 7pm",
    "virtual": false,
    "contact": "",
@@ -1214,6 +1330,7 @@
    "address": "Carrera 52 # 61-96 - tercer piso",
    "detail": "",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJS 5:00 p.m.",
    "virtual": false,
    "contact": "",
@@ -1250,6 +1367,7 @@
    "address": "Plaza Minorista",
    "detail": "Medellin Sede administrativa Plaza Minorista",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJVSD 7:00am - Principiantes MJS 6:00am",
    "virtual": false,
    "contact": "",
@@ -1298,12 +1416,66 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27564",
+   "lang": "es",
+   "name": "Niquía",
+   "address": "Diagonal 57 No. 42-01, barrio Niquía",
+   "detail": "Municipio Bello",
+   "barrio": "",
+   "municipio": "Bello",
+   "schedule": "LMMcJVS 7pm DF 10am",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.340235,
+   "lng": -75.548445,
+   "url": "https://aacolombia.org/grupos/niquia-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 7:00 pm · Dom y Festivos 10:00 am",
+   "schedule_en": "Mon to Sat 7:00 pm · Sun and Holidays 10:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27563",
    "lang": "es",
    "name": "Una Nueva Luz",
    "address": "Carrera 44 No. 79-24, brr. Manrique Central",
    "detail": "Barrio Manrique",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MVS 7pm D 3pm",
    "virtual": false,
    "contact": "",
@@ -1352,6 +1524,7 @@
    "address": "Carrera 53 No. 60-51",
    "detail": "Prado Centro Medellin",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJVSF 5:30pm-7pm",
    "virtual": false,
    "contact": "",
@@ -1386,12 +1559,78 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27561",
+   "lang": "es",
+   "name": "La Cumbre",
+   "address": "Diagonal 59 #40-31",
+   "detail": "Manzana 7, Local 104B",
+   "barrio": "Niquía",
+   "municipio": "Bello",
+   "schedule": "Lunes a Domingo 8:00 pm; Sábado 2:00 pm (Virtual); Domingo 10:00 am",
+   "virtual": true,
+   "contact": "315 219 9698",
+   "email": "TSmejia72@hotmail.com",
+   "lat": 6.3411834,
+   "lng": -75.5481116,
+   "url": "https://aacolombia.org/grupos/la-cumbre-4/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "20:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "14:00",
+       "end": null
+      }
+     ],
+     "note": "Virtual"
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 8:00 pm · Sáb 2:00 pm (Virtual) · Dom 10:00 am",
+   "schedule_en": "Every day 8:00 pm · Sat 2:00 pm (online) · Sun 10:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27559",
    "lang": "es",
    "name": "Pedregal",
    "address": "Calle 104 No. 724A-16",
    "detail": "Barrio Pedregal",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LV 7pm",
    "virtual": false,
    "contact": "",
@@ -1427,6 +1666,7 @@
    "address": "Carrera 48 No. 99-70",
    "detail": "Barrio Santa Cruz",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MS 7pm D 5pm",
    "virtual": false,
    "contact": "",
@@ -1474,6 +1714,7 @@
    "address": "Carrera 65 113-86",
    "detail": "Contiguo a la iglesia San Gregorio",
    "barrio": "Boyacá Las Brisas",
+   "municipio": "Medellín",
    "schedule": "Martes, Miércoles y Viernes 7:00 pm; Domingo 10:00 am",
    "virtual": false,
    "contact": "",
@@ -1522,6 +1763,7 @@
    "address": "Barrio Robledo La Campiña, Urbanización",
    "detail": "Atlántida Dos, local contiguo a la piscina",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJSD 7:30 p.m.",
    "virtual": false,
    "contact": "",
@@ -1553,12 +1795,67 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27552",
+   "lang": "es",
+   "name": "La Brújula",
+   "address": "Calle 54 No. 48-41",
+   "detail": "Barrio Prado - 3023367529",
+   "barrio": "",
+   "municipio": "Bello",
+   "schedule": "LMcVS 7am LMMcJV 7pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.337629,
+   "lng": -75.557615,
+   "url": "https://aacolombia.org/grupos/la-brujula-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié, Vie y Sáb 7:00 am · Lun a Vie 7:00 pm",
+   "schedule_en": "Mon, Wed, Fri and Sat 7:00 am · Mon to Fri 7:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27551",
    "lang": "es",
    "name": "Una Nueva Experiencia",
    "address": "Calle 95 No. 50-32",
    "detail": "Barrio Aranjuez",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMcVS 5:30pm-7pm",
    "virtual": false,
    "contact": "",
@@ -1596,6 +1893,7 @@
    "address": "Plazoleta de Conciertos del parque de San Antonio",
    "detail": "Centro Medellin",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJVSDF 10am",
    "virtual": false,
    "contact": "",
@@ -1631,12 +1929,48 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27548",
+   "lang": "es",
+   "name": "El Mirador",
+   "address": "Iglesia El Mirador",
+   "detail": "Parque El Mirador",
+   "barrio": "",
+   "municipio": "Bello",
+   "schedule": "S 7:30pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.3403641,
+   "lng": -75.5569984,
+   "url": "https://aacolombia.org/grupos/el-mirador-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Sáb 7:30 pm",
+   "schedule_en": "Sat 7:30 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27547",
    "lang": "es",
    "name": "Vida Sobria",
    "address": "Transversal 78A No. 88-06, local",
    "detail": "Acción Comunal Villa de La Candelaria",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMc 7pm V 6am",
    "virtual": false,
    "contact": "",
@@ -1678,12 +2012,62 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27546",
+   "lang": "es",
+   "name": "La Mejor Decisión",
+   "address": "Calle 24A No. 59-112, contiguo a la",
+   "detail": "Institución Educativa Atanasio Girardot, barrio Nuevo",
+   "barrio": "",
+   "municipio": "Bello",
+   "schedule": "MJS 7:30pm D 10am",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.3137169,
+   "lng": -75.5694531,
+   "url": "https://aacolombia.org/grupos/la-mejor-decision-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 7:30 pm · Dom 10:00 am",
+   "schedule_en": "Tue, Thu and Sat 7:30 pm · Sun 10:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27545",
    "lang": "es",
    "name": "El Refugio",
    "address": "Carrera 43 31-182",
    "detail": "Of. 201",
    "barrio": "San Diego",
+   "municipio": "Medellín",
    "schedule": "Lunes a Viernes 8pm - Martes y Viernes 7pm (Principiantes) - Sábados 6 pm - Domingos y Festivos 11am",
    "virtual": false,
    "contact": "",
@@ -1760,6 +2144,7 @@
    "address": "Calle 120 No. 46-65, piso 2",
    "detail": "Barrio Popular No. 2",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MVS 7pm Mc 6:30pm-7:30",
    "virtual": false,
    "contact": "",
@@ -1808,6 +2193,7 @@
    "address": "Carrera 43B No. 20E-70, barrio",
    "detail": "Zamora, biblioteca barrio Zamora",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcVSF 7pm D 10am",
    "virtual": false,
    "contact": "",
@@ -1859,6 +2245,7 @@
    "address": "Carrera 37 Número 66D-59",
    "detail": "Barrio Villa Hermosa",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "McVS 7pm",
    "virtual": false,
    "contact": "",
@@ -1895,6 +2282,7 @@
    "address": "Cra 40 #95A.-16, barrio Villa de Guadalupe",
    "detail": "Barrio Villa de Guadalupe",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJD 7pm",
    "virtual": false,
    "contact": "",
@@ -1931,6 +2319,7 @@
    "address": "Calle 82 No. 74-09",
    "detail": "Barrio López de Mesa",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJVS 7pm D 4pm",
    "virtual": false,
    "contact": "",
@@ -1980,6 +2369,7 @@
    "address": "Calle 74 No. 70-79",
    "detail": "Barrio Robledo Pilarica",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJVSD 6:30pm-7:15pm y 7:30pm-8:30pm",
    "virtual": false,
    "contact": "",
@@ -2024,6 +2414,7 @@
    "address": "Carrera 33B No.107A.-51, Sede Accion Comunal",
    "detail": "Barrio Santo Domingo Savio",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJS 7pm D 4pm",
    "virtual": false,
    "contact": "",
@@ -2072,6 +2463,7 @@
    "address": "Calle 67 por carrera 51",
    "detail": "Hospital San Vicente de Paúl",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "S 8:30am",
    "virtual": false,
    "contact": "",
@@ -2106,6 +2498,7 @@
    "address": "Calle 61 No. 160-72",
    "detail": "Corregimiento San Cristobal",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMcV 7pm D 5pm",
    "virtual": false,
    "contact": "",
@@ -2148,12 +2541,150 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27531",
+   "lang": "es",
+   "name": "Resurgir",
+   "address": "Carrera 48 No. 45-52",
+   "detail": "Municipio de Bello",
+   "barrio": "",
+   "municipio": "Bello",
+   "schedule": "LMMcJV 5pm SD 2pm D 12M",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.3319189,
+   "lng": -75.5554262,
+   "url": "https://aacolombia.org/grupos/resurgir-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "14:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "12:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 5:00 pm · Sáb y Dom 2:00 pm · Dom 12:00 m",
+   "schedule_en": "Mon to Fri 5:00 pm · Sat and Sun 2:00 pm · Sun 12:00 noon",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
+   "id": "es-27530",
+   "lang": "es",
+   "name": "Recuperación y Servicio",
+   "address": "Calle 54 No. 50-11",
+   "detail": "Barrio Pérez",
+   "barrio": "",
+   "municipio": "Bello",
+   "schedule": "Martes, Jueves y Sábado 7:00 pm; Miércoles 6:00 pm; Domingo 5:00 pm; Sábado 6:00 pm para Principiantes.",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.337445,
+   "lng": -75.558994,
+   "url": "https://aacolombia.org/grupos/recuperacion-y-servicio-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": "para Principiantes"
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 7:00 pm · Mié 6:00 pm · Dom 5:00 pm · Sáb 6:00 pm (para Principiantes)",
+   "schedule_en": "Tue, Thu and Sat 7:00 pm · Wed 6:00 pm · Sun 5:00 pm · Sat 6:00 pm (para Principiantes)",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27529",
    "lang": "es",
    "name": "Obrero",
    "address": "Carrera 52 No. 49-51, piso 2",
    "detail": "Centro de Medellin (Edificio Restrepo Arango)",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MJS 6pm",
    "virtual": false,
    "contact": "",
@@ -2184,12 +2715,64 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27527",
+   "lang": "es",
+   "name": "Frontera",
+   "address": "Calle 123A #51A-29",
+   "detail": "Barrio Nuevo (Bello)",
+   "barrio": "",
+   "municipio": "Bello",
+   "schedule": "MMcJVS 7pm D 4pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.3064879,
+   "lng": -75.5545123,
+   "url": "https://aacolombia.org/grupos/frontera-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "16:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar a Sáb 7:00 pm · Dom 4:00 pm",
+   "schedule_en": "Tue to Sat 7:00 pm · Sun 4:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27526",
    "lang": "es",
    "name": "Miranda",
    "address": "Calle 80A No. 51B-08, barrio Miranda",
    "detail": "Barrio Miranda",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJVS 7pm DF 4pm",
    "virtual": false,
    "contact": "",
@@ -2242,6 +2825,7 @@
    "address": "Carrera 52 No. 49-61, piso 2, edificio Restrepo Arango",
    "detail": "Centro Medellin",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJVS 12:15m y 1:30pm",
    "virtual": false,
    "contact": "",
@@ -2285,6 +2869,7 @@
    "address": "Calle 81 No. 41-10",
    "detail": "Barrio Manrique",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "V 7pm S 4pm D 1pm",
    "virtual": false,
    "contact": "",
@@ -2343,6 +2928,7 @@
    "address": "Carrera 48 (Ecuador) No. 61-35, local 106",
    "detail": "Edificio Molinos del Prado",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMJ 7pm McV 12:30pm D 4pm",
    "virtual": false,
    "contact": "",
@@ -2404,6 +2990,7 @@
    "address": "Carrera 49 No. 50 - 58 - Of. 308 - Ed. San Fernando",
    "detail": "Centro Medellin",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Presenciales de lunes a sábado 12:15 p.m. ; Virtuales jueves y sábado 7:00 a.m.",
    "virtual": true,
    "contact": "",
@@ -2456,6 +3043,7 @@
    "address": "Carrera 64 No. 50-32, Biblioteca Pública Piloto",
    "detail": "(null)",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MV 7pm",
    "virtual": false,
    "contact": "",
@@ -2491,6 +3079,7 @@
    "address": "Calle 67 No. 45-63",
    "detail": "Barrio Manrique Central (Palos Verde)",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMcV 7pm S 6pm D 10am",
    "virtual": false,
    "contact": "",
@@ -2551,6 +3140,7 @@
    "address": "Carrera 52 No.49-61, piso 2 - Pasaje Carabobo",
    "detail": "Centro de Medellin (Edificio Restrepo Arango)",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJVSDF 7:30am-8:45am",
    "virtual": false,
    "contact": "",
@@ -2592,6 +3182,7 @@
    "address": "Calle 90 No.51-44, iglesia San Cayetano",
    "detail": "Barrio Aranjuez",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMcV 6:30pm-7:30pm D 6pm",
    "virtual": false,
    "contact": "",
@@ -2640,6 +3231,7 @@
    "address": "Carrera 49 No. 93-38",
    "detail": "Barrio Aranjuez",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "MS 7pm D 10am-11:45am",
    "virtual": false,
    "contact": "",
@@ -2681,12 +3273,55 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27510",
+   "lang": "es",
+   "name": "El Amanecer",
+   "address": "Calle 49 No. 48-13",
+   "detail": "Municipio Bello antes del parque de Bello",
+   "barrio": "",
+   "municipio": "Bello",
+   "schedule": "LMMcJVSDF 7am",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.334018,
+   "lng": -75.5568881,
+   "url": "https://aacolombia.org/grupos/el-amanecer-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días y Festivos 7:00 am",
+   "schedule_en": "Every day and Holidays 7:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27508",
    "lang": "es",
    "name": "Las 24 Horas",
    "address": "Plaza Minorista, bloque administrativo",
    "detail": "Medellin Cede administrativa Plaza Minorista",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "LMMcJV 1pm MJD 12M",
    "virtual": false,
    "contact": "",
@@ -2739,6 +3374,7 @@
    "address": "Calle 31 75-55",
    "detail": "",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Reuniones todos los días a las 12:15 pm y a las 7:30 pm.",
    "virtual": false,
    "contact": "",
@@ -2783,6 +3419,7 @@
    "address": "Carrera 34 10A -32",
    "detail": "",
    "barrio": "El Poblado",
+   "municipio": "Medellín",
    "schedule": "Lunes, Miércoles y Viernes 7:00 a 9:00 pm",
    "virtual": false,
    "contact": "",
@@ -2819,6 +3456,7 @@
    "address": "Calle 4B Sur 30-98",
    "detail": "",
    "barrio": "El Poblado",
+   "municipio": "Medellín",
    "schedule": "Reuniones Virtuales Lunes a Domingo a las 12:00 pm y a las 7:30 pm, Sábados y Domingos a las 9:00…",
    "virtual": true,
    "contact": "",
@@ -2870,12 +3508,50 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27503",
+   "lang": "es",
+   "name": "La Nueva Semilla",
+   "address": "Transversal 33A Sur 31E-20",
+   "detail": "",
+   "barrio": "La Magnolia",
+   "municipio": "Envigado",
+   "schedule": "Martes, Miércoles y Jueves 12:30 pm.",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1746196,
+   "lng": -75.5787084,
+   "url": "https://aacolombia.org/grupos/la-nueva-semilla-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "Mc",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "12:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar a Jue 12:30 pm",
+   "schedule_en": "Tue to Thu 12:30 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27501",
    "lang": "es",
    "name": "Santa Elena",
    "address": "Salón Comunal Corregimiento de Santa Elena",
    "detail": "Tercer Piso",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes, Miércoles y Viernes 7:00 PM. Domingo 10:00 AM",
    "virtual": true,
    "contact": "",
@@ -2918,12 +3594,51 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27500",
+   "lang": "es",
+   "name": "Un Día a la Vez",
+   "address": "Calle 45 Sur No. 43A-70",
+   "detail": "",
+   "barrio": "",
+   "municipio": "Envigado",
+   "schedule": "Lunes, Miércoles, Viernes y Sábado 7:00 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1655885,
+   "lng": -75.5949212,
+   "url": "https://aacolombia.org/grupos/un-dia-a-la-vez-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié, Vie y Sáb 7:00 pm",
+   "schedule_en": "Mon, Wed, Fri and Sat 7:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27498",
    "lang": "es",
    "name": "La Resurrección",
    "address": "Carrera 72 No. 11-11",
    "detail": "Belén Las Playas",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Sábado 7:30 am; Domingo 8:00 am",
    "virtual": false,
    "contact": "",
@@ -2964,12 +3679,54 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27497",
+   "lang": "es",
+   "name": "La Paz",
+   "address": "Carrera 33 39sur-50",
+   "detail": "",
+   "barrio": "Mesa",
+   "municipio": "Envigado",
+   "schedule": "Todos los días 7:30 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1573379,
+   "lng": -75.5921945,
+   "url": "https://aacolombia.org/grupos/la-paz-10/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 7:30 pm",
+   "schedule_en": "Every day 7:30 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27496",
    "lang": "es",
    "name": "La Oportunidad",
    "address": "Cl 5Sur 53-26",
    "detail": "Detrás del Mall El Rodeo",
    "barrio": "Guayabal",
+   "municipio": "Medellín",
    "schedule": "Lunes, Miércoles y Viernes 7:15am; Lunes, Miércoles y Viernes 7:00 pm; Sábado 7:30 am (Cerrada); Domingo 1:00 pm y 1:30…",
    "virtual": false,
    "contact": "",
@@ -3038,6 +3795,7 @@
    "address": "Calle 43 No. 28-19",
    "detail": "Costado iglesia La Milagrosa",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes y Miércoles 7:00 pm; Sábado 6:00 pm",
    "virtual": false,
    "contact": "",
@@ -3079,12 +3837,58 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27494",
+   "lang": "es",
+   "name": "La Iluminación",
+   "address": "Transversal 34B No. 39-36",
+   "detail": "",
+   "barrio": "",
+   "municipio": "Envigado",
+   "schedule": "Todos los días 8:00 am y 6:00 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.17146,
+   "lng": -75.5845272,
+   "url": "https://aacolombia.org/grupos/la-iluminacion-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      },
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 8:00 am y 6:00 pm",
+   "schedule_en": "Every day 8:00 am and 6:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27491",
    "lang": "es",
    "name": "La Gloria",
    "address": "Carrera 80A No. 19B-24",
    "detail": "Barrio Belén La Gloria",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes, Martes, Jueves, Viernes, Sábado y Domingo 7:30pm; Miércoles y Viernes 7:30 am 7am",
    "virtual": false,
    "contact": "",
@@ -3141,6 +3945,7 @@
    "address": "Carrera 29. No. 58-30, barrio Enciso",
    "detail": "Sede Salón Social",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Martes y Jueves 7:00 pm; Domingo 11:00 am",
    "virtual": false,
    "contact": "",
@@ -3188,6 +3993,7 @@
    "address": "Carrera 86 No. 45B-17",
    "detail": "Escuela Pichincha",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Martes y Jueves 7:30pm; Domingo 11:00 am",
    "virtual": false,
    "contact": "",
@@ -3235,6 +4041,7 @@
    "address": "Calle 54 con Carrera 17",
    "detail": "Salón Parroquial",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Miércoles y Viernes 7:30pm D 11am",
    "virtual": false,
    "contact": "",
@@ -3282,6 +4089,7 @@
    "address": "Calle 30A No. 79-97- SEDE SOCIAL LA PALMA-BELEN PARQUE",
    "detail": "3165393372",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes y Jueves 6:00 pm; Martes 7:00 am; Domingo 4:00 pm",
    "virtual": false,
    "contact": "",
@@ -3341,6 +4149,7 @@
    "address": "Calle 42 No. 79-07, piso 2",
    "detail": "A un costado de la Iglesia La Consolata",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes y Miércoles 7:00 pm; Sábado 10:00 am",
    "virtual": false,
    "contact": "",
@@ -3388,6 +4197,7 @@
    "address": "Calle 36 No. 80B-66",
    "detail": "Barrio Laureles",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes a Viernes 7:00 am; Sábados y Domingos 9:00 am; Lunes a Viernes 12:00 m;  Lunes a Domingo 7:00 pm",
    "virtual": false,
    "contact": "",
@@ -3467,12 +4277,67 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27476",
+   "lang": "es",
+   "name": "Gente Nueva",
+   "address": "Carrera 46A  39sur-52",
+   "detail": "Parroquia Santa Cruz de Alcala",
+   "barrio": "Alcalá",
+   "municipio": "Envigado",
+   "schedule": "Martes, Miércoles, Jueves y Viernes 7:00 pm; Domingos 9:30 am y 10:30 am",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1704577,
+   "lng": -75.5932188,
+   "url": "https://aacolombia.org/grupos/gente-nueva-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:30",
+       "end": null
+      },
+      {
+       "start": "10:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar a Vie 7:00 pm · Dom 9:30 am y 10:30 am",
+   "schedule_en": "Tue to Fri 7:00 pm · Sun 9:30 am and 10:30 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27475",
    "lang": "es",
    "name": "Florida Nueva",
    "address": "Calle 46E No. 75-65",
    "detail": "(null)",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes y Sábado 7:30 pm",
    "virtual": false,
    "contact": "",
@@ -3508,6 +4373,7 @@
    "address": "Carrera 38B No. 40-71,",
    "detail": "Enseguida Escuela Divino Salvador",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes 12:00 pm; Martes a Sábado 7:00 pm; Domingo 10:00 am",
    "virtual": false,
    "contact": "",
@@ -3570,6 +4436,7 @@
    "address": "Calle 4B Sur 30-98",
    "detail": "Junta de Acción Comunal de Los González, junto al Mall La Visitación",
    "barrio": "El Poblado",
+   "municipio": "Medellín",
    "schedule": "Lunes a Viernes 7:00 pm; Lunes, Miércoles y Viernes 6:00 pm (Principiantes); Sábado 12:00 pm (Cerrada)",
    "virtual": false,
    "contact": "",
@@ -3634,6 +4501,7 @@
    "address": "Calle 3B No. 78B-42",
    "detail": "Barrio Belén Rincón",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes, Martes, Miércoles, Viernes y Festivos 7:00 pm; Sábado 5:00 pm; Domingo 10:00 am",
    "virtual": false,
    "contact": "",
@@ -3696,6 +4564,7 @@
    "address": "Calle 37 No. 65D-04",
    "detail": "Iglesia Verbo Divino",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes y Viernes 7:00 pm",
    "virtual": false,
    "contact": "",
@@ -3731,6 +4600,7 @@
    "address": "Calle 4 Sur No. 29-24 Sede Comunal Loma",
    "detail": "del Garabato, Sector El Poblado",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes a Jueves 7:00 pm; Festivos no hay reunión",
    "virtual": false,
    "contact": "",
@@ -3768,6 +4638,7 @@
    "address": "Local Parroquial- Calle 32 No. 30-60",
    "detail": "Contiguo iglesia Loreto",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Martes y Jueves 7:00 pm; Domingo 11:00 am",
    "virtual": false,
    "contact": "",
@@ -3815,6 +4686,7 @@
    "address": "Calle 49DD No. 87-11",
    "detail": "Iglesia Santa Rosa de Lima",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Martes, Jueves y Sábado 7:00 pm",
    "virtual": false,
    "contact": "",
@@ -3845,12 +4717,101 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27463",
+   "lang": "es",
+   "name": "La Tranquilidad",
+   "address": "OLAYA",
+   "detail": "Comunal, barrio Las Flores",
+   "barrio": "",
+   "municipio": "Envigado",
+   "schedule": "Martes, Miércoles y Viernes 7:00 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1672865,
+   "lng": -75.5836963,
+   "url": "https://aacolombia.org/grupos/la-tranquilidad-3/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Mié y Vie 7:00 pm",
+   "schedule_en": "Tue, Wed and Fri 7:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
+   "id": "es-27462",
+   "lang": "es",
+   "name": "Envigado",
+   "address": "Transversal 33A sur 31E-20",
+   "detail": "",
+   "barrio": "La Magnolia",
+   "municipio": "Envigado",
+   "schedule": "Lunes a Viernes 5:00 pm; Sábado 4:00 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.168271,
+   "lng": -75.5850381,
+   "url": "https://aacolombia.org/grupos/envigado-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "16:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 5:00 pm · Sáb 4:00 pm",
+   "schedule_en": "Mon to Fri 5:00 pm · Sat 4:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27461",
    "lang": "es",
    "name": "AA sin Fronteras",
    "address": "Calle 22 No. 59-50, piso 3",
    "detail": "Sede Social Santa Fe",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes a Domingo 5:00 pm",
    "virtual": true,
    "contact": "",
@@ -3891,6 +4852,7 @@
    "address": "Carrera 92 No. 35-18, barrio",
    "detail": "Santa Mónica",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Todos los días 7:00 pm",
    "virtual": false,
    "contact": "",
@@ -3931,6 +4893,7 @@
    "address": "Carrera 43D No. 11-73",
    "detail": "Junta de Acción Comunal",
    "barrio": "Manila - El Poblado",
+   "municipio": "Medellín",
    "schedule": "Miércoles y Viernes 7:00 pm; Domingos y Festivos 10: am",
    "virtual": false,
    "contact": "",
@@ -3979,6 +4942,7 @@
    "address": "Carrera 65 No. 32F-23",
    "detail": "Belén Fátima",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Miércoles y Sábado 7:00 pm Lunes 7:30am",
    "virtual": false,
    "contact": "",
@@ -4026,6 +4990,7 @@
    "address": "Carrera 83 No. 21-22",
    "detail": "Barrio Belén Alta Vista,parte baja",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes, Miércoles y Viernes 7:30 pm; Domingo 10:00 am",
    "virtual": false,
    "contact": "",
@@ -4074,6 +5039,7 @@
    "address": "Carrera 73 20A-14",
    "detail": "Frente a la Iglesia",
    "barrio": "Belén San Bernardo",
+   "municipio": "Medellín",
    "schedule": "Martes, Jueves y Sábado 7:30pm",
    "virtual": true,
    "contact": "",
@@ -4110,6 +5076,7 @@
    "address": "Calle 52 No. 10-16, Iglesia Los Dolores",
    "detail": "Barrio Caicedo",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Martes, Jueves y Sábado 7:00 pm",
    "virtual": false,
    "contact": "",
@@ -4146,6 +5113,7 @@
    "address": "Carrera 65 No. 27-26, piso 5, barrio Trinidad",
    "detail": "235 94 08",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes, Miércoles y Viernes 7:00 pm",
    "virtual": false,
    "contact": "",
@@ -4182,6 +5150,7 @@
    "address": "Carrera 72 No. 27-30",
    "detail": "Belén Rincón",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes a Viernes 5:00 pm y 7:00 pm; Sábado 4:00 pm; Domingo 1:00 pm y 6:00 pm; Domingo 1:00 pm",
    "virtual": false,
    "contact": "",
@@ -4252,6 +5221,7 @@
    "address": "Cra.43D No.11-73, piso 2 , barrio",
    "detail": "Manila - Sede Acción Comunal",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Mc 6pm",
    "virtual": false,
    "contact": "",
@@ -4286,6 +5256,7 @@
    "address": "Calle 47B No. 90A-36, barrio Santa Lucía (Floresta)",
    "detail": "(null)",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes, Miércoles y Viernes 7:30 pm",
    "virtual": false,
    "contact": "",
@@ -4316,12 +5287,51 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27445",
+   "lang": "es",
+   "name": "San José",
+   "address": "Calle 40 Sur No.29A-25,iglesia San José,barrio Rosellón",
+   "detail": "(null)",
+   "barrio": "",
+   "municipio": "Envigado",
+   "schedule": "Martes, Jueves, Viernes y Domingo 7:00 pm",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1627743,
+   "lng": -75.5826186,
+   "url": "https://aacolombia.org/grupos/san-jose-4/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "V",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue, Vie y Dom 7:00 pm",
+   "schedule_en": "Tue, Thu, Fri and Sun 7:00 pm",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27444",
    "lang": "es",
    "name": "San Javier",
    "address": "Calle 47A No. 99-81, frente a la Estación Metro",
    "detail": "San Javier, parque infantil",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes, Martes, Miércoles, Viernes, Sábado y Domingo 7:00 pm Sábado 5:00 pm; Domingo 9:00 am; Lunes 10:00 am",
    "virtual": false,
    "contact": "",
@@ -4397,6 +5407,7 @@
    "address": "Calle 11 No. 8-35, piso 4",
    "detail": "Ed. Compartamos",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes a Viernes 7:00 pm; Martes, Jueves y Sábado 7:00 am; Domingo 10:00 am; Sábado 6:00 pm",
    "virtual": false,
    "contact": "",
@@ -4473,6 +5484,7 @@
    "address": "Iglesia Jesús de La Buena Esperanza, barrio Belén Rosales",
    "detail": "Carrera 70 x Calle 32",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Martes 7:00 pm; Domingos y Festivos 8:45am y 10:oo am",
    "virtual": false,
    "contact": "",
@@ -4524,6 +5536,7 @@
    "address": "Carrera 92 No. 34D-43",
    "detail": "Belencito",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes, Miércoles, Viernes y Sábado 7:00 p.m. Domingo y Festivos 11:00 a.m.",
    "virtual": false,
    "contact": "",
@@ -4568,12 +5581,174 @@
    "pin_source": "aacolombia.org"
   },
   {
+   "id": "es-27437",
+   "lang": "es",
+   "name": "Nueva Vida",
+   "address": "Carrera 39 No. 35 Sur 26, piso 4",
+   "detail": "Barrio San Mateo",
+   "barrio": "",
+   "municipio": "Envigado",
+   "schedule": "Lunes a Viernes 7:00 pm; Sábado 6:00 pm; Domingo 8:00 am y 7:00 pm; Festivos 8:00 am",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1658518,
+   "lng": -75.5868884,
+   "url": "https://aacolombia.org/grupos/nueva-vida-20/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      },
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "F"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 7:00 pm · Sáb 6:00 pm · Dom 8:00 am y 7:00 pm · Festivos 8:00 am",
+   "schedule_en": "Mon to Fri 7:00 pm · Sat 6:00 pm · Sun 8:00 am and 7:00 pm · Holidays 8:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
+   "id": "es-27436",
+   "lang": "es",
+   "name": "Los Doce Pasos",
+   "address": "Carrera 42 No. 36S-44, oficina 202",
+   "detail": "",
+   "barrio": "",
+   "municipio": "Envigado",
+   "schedule": "Todos los días 12:30 pm y 7:30pm; Viernes 6:00 pm; Sábado 7:30 am; Domingo y Festivos 11:00 am",
+   "virtual": false,
+   "contact": "",
+   "email": "",
+   "lat": 6.1704969,
+   "lng": -75.5866333,
+   "url": "https://aacolombia.org/grupos/los-doce-pasos-2/",
+   "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "12:30",
+       "end": null
+      },
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "V"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "07:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 12:30 pm y 7:30 pm · Vie 6:00 pm · Sáb 7:30 am · Dom y Festivos 11:00 am",
+   "schedule_en": "Every day 12:30 pm and 7:30 pm · Fri 6:00 pm · Sat 7:30 am · Sun and Holidays 11:00 am",
+   "approx": false,
+   "pin_source": "aacolombia.org"
+  },
+  {
    "id": "es-27433",
    "lang": "es",
    "name": "La Viña",
    "address": "Carrera 70A No. 43-08, Local 9904",
    "detail": "Detrás del éxito de la 70",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Todos los días 7:00 pm; Domingo y Festivos 11:00 am; Martes y Jueves 12:00 pm",
    "virtual": false,
    "contact": "",
@@ -4640,6 +5815,7 @@
    "address": "Sede Sociead José Felix de Restrepo",
    "detail": "Belén Rincón-Manzanillo",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes, Miercoles 7:30 pm; Sábado 5:30 pm; Domingo 9:00am; Festivos 5:00 pm",
    "virtual": false,
    "contact": "",
@@ -4711,6 +5887,7 @@
    "address": "Calle 2 Sur No. 79-211 piso 2",
    "detail": "Capilla del Rosario, Belén Rincón",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Martes, Jueves 7:00 pm Domingo 2:00 pm; Festivos10:00 am",
    "virtual": false,
    "contact": "",
@@ -4770,6 +5947,7 @@
    "address": "Calle 34B No. 93B-31",
    "detail": "Obra Social Madre Laura",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Martes, Jueves 7:30 pm;  Domingos y Festivos 9:00 am",
    "virtual": false,
    "contact": "",
@@ -4818,6 +5996,7 @@
    "address": "Carrera 84 No. 31-36",
    "detail": "Belén Los Alpes",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Lunes, Jueves y Viernes 7:30 pm; Martes 7:00 am; Domingo 10:00 am",
    "virtual": false,
    "contact": "",
@@ -4878,6 +6057,7 @@
    "address": "Calle 36 80B-66",
    "detail": "",
    "barrio": "",
+   "municipio": "Medellín",
    "schedule": "Todos los días 7:00 pm; Domingos 9:00 am.",
    "virtual": true,
    "contact": "+573116432238 - +14074908969",

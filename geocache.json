@@ -41,6 +41,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 123A #51A-29": {
+  "lat": 6.3064725,
+  "lng": -75.5544596,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 2 SUR NO. 79-211 PISO 2": {
   "lat": 6.2035944,
   "lng": -75.5765905,
@@ -50,6 +56,12 @@
  "google:CALLE 22 NO. 59-50, PISO 3": {
   "lat": 6.224428,
   "lng": -75.5832186,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 24A NO. 59-112, CONTIGUO A LA": {
+  "lat": 6.3137169,
+  "lng": -75.56945309999999,
   "precise": true,
   "source": "google"
  },
@@ -101,6 +113,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CALLE 40 SUR NO.29A-25,IGLESIA SAN JOSE,BARRIO ROSELLON": {
+  "lat": 6.1627743,
+  "lng": -75.5826186,
+  "precise": true,
+  "source": "google"
+ },
  "google:CALLE 42 NO. 79-07, PISO 2": {
   "lat": 6.2486059,
   "lng": -75.59790819999999,
@@ -110,6 +128,12 @@
  "google:CALLE 43 NO. 28-19": {
   "lat": 6.2360561,
   "lng": -75.5537112,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 45 SUR NO. 43A-70": {
+  "lat": 6.1655883,
+  "lng": -75.5949213,
   "precise": true,
   "source": "google"
  },
@@ -128,6 +152,12 @@
  "google:CALLE 47B NO. 90A-36, BARRIO SANTA LUCIA (FLORESTA)": {
   "lat": 6.257403,
   "lng": -75.6071458,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 49 NO. 48-13": {
+  "lat": 6.1700843,
+  "lng": -75.60989599999999,
   "precise": true,
   "source": "google"
  },
@@ -171,6 +201,24 @@
   "lat": 6.2372967,
   "lng": -75.54054529999999,
   "precise": false,
+  "source": "google"
+ },
+ "google:CALLE 54 NO. 48-41": {
+  "lat": 6.1720675,
+  "lng": -75.6059767,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 54 NO. 50-11": {
+  "lat": 6.253051,
+  "lng": -75.566448,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CALLE 54 NO. 55-13": {
+  "lat": 6.2532567,
+  "lng": -75.5667153,
+  "precise": true,
   "source": "google"
  },
  "google:CALLE 61 NO. 160-72": {
@@ -275,6 +323,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 33 39SUR-50": {
+  "lat": 6.2812591,
+  "lng": -75.5452415,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 33B NO.107A.-51, SEDE ACCION COMUNAL": {
   "lat": 6.2944007,
   "lng": -75.54378299999999,
@@ -305,6 +359,18 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 39 NO. 35 SUR 26, PISO 4": {
+  "lat": 6.2663897,
+  "lng": -75.55023369999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 42 NO. 36S-44, OFICINA 202": {
+  "lat": 6.263693300000001,
+  "lng": -75.5524068,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 43 31-182": {
   "lat": 6.2327206,
   "lng": -75.5701663,
@@ -329,9 +395,21 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 46A  39SUR-52": {
+  "lat": 6.281336800000001,
+  "lng": -75.5545568,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 48 (ECUADOR) NO. 61-35, LOCAL 106": {
   "lat": 6.2575574,
   "lng": -75.56144669999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:CARRERA 48 NO. 45-52": {
+  "lat": 6.1686893,
+  "lng": -75.6121355,
   "precise": true,
   "source": "google"
  },
@@ -557,6 +635,24 @@
   "precise": true,
   "source": "google"
  },
+ "google:DIAGONAL 57 NO. 42-01, BARRIO NIQUIA": {
+  "lat": 6.340235,
+  "lng": -75.548445,
+  "precise": true,
+  "source": "google"
+ },
+ "google:DIAGONAL 59 #40-31": {
+  "lat": 6.341183399999999,
+  "lng": -75.5481116,
+  "precise": true,
+  "source": "google"
+ },
+ "google:IGLESIA EL MIRADOR": {
+  "lat": 6.2461788,
+  "lng": -75.63006779999999,
+  "precise": true,
+  "source": "google"
+ },
  "google:IGLESIA JESUS DE LA BUENA ESPERANZA, BARRIO BELEN ROSALES": {
   "lat": 6.2346482,
   "lng": -75.5912945,
@@ -567,6 +663,12 @@
   "lat": 6.229553600000001,
   "lng": -75.55998029999999,
   "precise": true,
+  "source": "google"
+ },
+ "google:OLAYA": {
+  "lat": 6.274074,
+  "lng": -75.6077147,
+  "precise": false,
   "source": "google"
  },
  "google:PARQUE BICENTENARIO": {
@@ -626,6 +728,18 @@
  "google:SWEET GEORGIA CAFE  BACK ROOM (IN LAURELES), CARRERA 78 #32EE-25, MEDELLIN, ANTIOQUIA": {
   "lat": 6.238080099999999,
   "lng": -75.59841879999999,
+  "precise": true,
+  "source": "google"
+ },
+ "google:TRANSVERSAL 33A SUR 31E-20": {
+  "lat": 6.1743142,
+  "lng": -75.5815305,
+  "precise": true,
+  "source": "google"
+ },
+ "google:TRANSVERSAL 34B NO. 39-36": {
+  "lat": 6.171462,
+  "lng": -75.5845279,
   "precise": true,
   "source": "google"
  },
