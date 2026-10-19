@@ -239,7 +239,7 @@ function build(d){
 function nearestZone(g){const txt=[g.name,g.address,g.place,...(g.notes||[])].join(" ").toLowerCase().replace(/centro comercial/g,"");for(const z of ZONES)if(txt.includes(z[0].toLowerCase()))return z[0];if(g.lat==null)return "";let best="",bd=1e9;for(const z of ZONES){const d=km(g.lat,g.lng,z[1],z[2]);if(d<bd){bd=d;best=z[0]}}return best}
 
 const daysEl=document.getElementById("days");
-DAYS.forEach(([k,l])=>{const b=document.createElement("button");b.className="chip";b.id="day-"+k;b.textContent=l;b.setAttribute("aria-pressed","false");b.onclick=()=>{state.days.has(k)?state.days.delete(k):state.days.add(k);b.setAttribute("aria-pressed",state.days.has(k));render(true);};daysEl.appendChild(b);});
+DAYS.forEach(([k,l])=>{const b=document.createElement("button");b.className="chip";b.id="day-"+k;b.textContent=l;b.setAttribute("aria-pressed","false");b.onclick=()=>{const on=state.days.has(k);state.days.clear();if(!on)state.days.add(k);daysEl.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",state.days.has(x.id.slice(4))));render(true);};daysEl.appendChild(b);});
 document.getElementById("q").oninput=e=>{state.q=e.target.value.trim();render(true)};
 for(const id of ["fmt","lang"]){const el=document.getElementById(id);el.querySelectorAll("button").forEach(b=>b.onclick=()=>{state[id]=b.dataset.v;el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));save();render(true);});}
 document.getElementById("center").onchange=e=>{state.center=e.target.value;save();render(false);};

@@ -199,6 +199,8 @@ def geocode(rec, venues):
     for v in venues:
         if all(norm(k) in hay for k in v["match"]):
             rec["lat"], rec["lng"] = v["lat"], v["lng"]
+            if v.get("place") and not rec.get("place"):
+                rec["place"] = v["place"]
             rec["approx"] = v.get("approx", True)
             return
 
