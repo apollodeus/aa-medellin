@@ -20,6 +20,21 @@ def get(url, timeout=60):
 def norm(s):
     return unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().upper().strip()
 
+SMALL = {"y", "e", "o", "u", "de", "del", "la", "las", "el", "los", "a", "al", "en", "con", "por", "para", "sin"}
+def nice_name(n):
+    if n != n.upper():
+        return n
+    words = n.lower().split()
+    out = []
+    for i, w in enumerate(words):
+        if i and w in SMALL:
+            out.append(w)
+        elif w in ("aa", "a.a."):
+            out.append(w.upper())
+        else:
+            out.append(w[:1].upper() + w[1:])
+    return " ".join(out)
+
 def load_json(path, default):
     try:
         with open(path, encoding="utf-8") as f:
@@ -53,7 +68,7 @@ def fetch_spanish():
             rows.append({
                 "id": "es-%s" % g["id"],
                 "lang": "es",
-                "name": html.unescape(g["title"]["rendered"]).strip(),
+                "name": nice_name(html.unescape(g["title"]["rendered"]).strip()),
                 "address": f("direccion"),
                 "detail": f("detalle"),
                 "barrio": f("barrio"),
