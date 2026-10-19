@@ -2,15 +2,45 @@
  {
   "name": "AA for Effort",
   "lang": "en",
-  "days": ["D"],
-  "times": ["6:00 pm"],
+  "days": [
+   "D"
+  ],
+  "times": [
+   "6:00 pm"
+  ],
   "type": "open",
   "format": "in-person",
   "place": "Cafe Cliche",
   "address": "Cl. 32F #78-105, Belén",
-  "notes": ["Enter through the main entrance; the room is in the back to the right."],
+  "notes": [
+   "Enter through the main entrance; the room is in the back to the right."
+  ],
   "contact": "Peter",
   "zoom": "",
+  "lat": null,
+  "lng": null
+ },
+ {
+  "name": "Open 12-Step Meeting Medellín",
+  "lang": "en",
+  "days": [
+   "L",
+   "J"
+  ],
+  "times": [
+   "12:30 pm"
+  ],
+  "type": "open",
+  "format": "in-person",
+  "topic": "12-Step (AA, NA, Al-Anon welcome)",
+  "place": "Sede Social Manila",
+  "address": "Cra. 43D #11-73, Manila, El Poblado",
+  "notes": [
+   "Open to anyone, including friends and family. An hour on the clock, 12:30 to 1:30 pm. A few blocks from Parque Poblado. Free; a voluntary contribution is passed for the room."
+  ],
+  "contact": "John +57 314 895 0952 (WhatsApp)",
+  "zoom": "",
+  "url": "https://12stepmedellin.org/",
   "lat": null,
   "lng": null
  }

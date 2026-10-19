@@ -130,7 +130,7 @@ def card(m, T, lang="es"):
         dest = (", ".join(x for x in [m.get("place"), m.get("address")] if x) + ", Medellín, Antioquia, Colombia") if (en or m.get("lat") is None) else "%s,%s" % (m["lat"], m["lng"])
         links.append('<a class="dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=%s" target="_blank" rel="noopener">%s</a>' % (urllib.parse.quote(dest), T["directions"]))
     if gm and fmt != "online": links.append('<a href="%s" target="_blank" rel="noopener">Google Maps</a>' % esc(gm))
-    if m.get("url"): links.append('<a href="%s" target="_blank" rel="noopener">%s</a>' % (esc(m["url"]), T["source"]))
+    if m.get("url"): links.append('<a href="%s" target="_blank" rel="noopener">%s</a>' % (esc(m["url"]), T["website"] if m.get("source") == "manual" else T["source"]))
     parts.append('<div class="links">%s</div>' % "".join(links))
     parts.append("</article>")
     return "\n".join(parts)
@@ -214,14 +214,14 @@ TOPIC_ES = {"Big Book Study": "Estudio del Libro Grande", "AA Big Book Study": "
             "12 & 12 Step/Tradition Study": "Estudio de Pasos y Tradiciones", "Open AA 12×12 Study": "Estudio de los Doce y Doce",
             "Open Speaker Meeting": "Reunión de oradores"}
 TJS = {
- "es": {"addrNeedsGoogle": "Por ahora la búsqueda por dirección exacta no está disponible; escribe el nombre del hotel, un parque o un punto conocido.",
+ "es": {"website": "Sitio web", "addrNeedsGoogle": "Por ahora la búsqueda por dirección exacta no está disponible; escribe el nombre del hotel, un parque o un punto conocido.",
         "addrOk": "Ordenado por distancia desde:", "addrFail": "No encontramos esa dirección. Prueba con el nombre del hotel o agrega el barrio.",
         "approx": "ubicación aproximada", "approxTitle": "El pin se colocó a partir de la dirección y puede estar a una cuadra de distancia. Usa 'Cómo llegar' para la ruta exacta.",
         "myloc": "📍 Mi ubicación", "metro": "Área metropolitana", "byname": "Ordenar por nombre", "locating": "Buscando tu ubicación…", "locfail": "No se pudo obtener tu ubicación","directions": "Cómo llegar", "details": "Ver detalles", "topic": TOPIC_ES,
         "tag": {"english": "Inglés", "open": "abierta", "closed": "cerrada", "online": "solo virtual", "hybrid": "híbrida", "virtual": "virtual"},"locale": "es-CO", "updated": "Actualizado: ", "empty": "Ningún grupo coincide con esos filtros.", "contact": "Contacto",
         "onmap": "Ver en el mapa", "source": "Fuente", "loadfail": "No se pudo cargar la lista.", "nosched": "Horario no publicado",
         "days": [["L", "Lun"], ["M", "Mar"], ["Mc", "Mié"], ["J", "Jue"], ["V", "Vie"], ["S", "Sáb"], ["D", "Dom"]]},
- "en": {"addrNeedsGoogle": "Exact street-number search isn't available yet; type the hotel name, a park or a known landmark.",
+ "en": {"website": "Website", "addrNeedsGoogle": "Exact street-number search isn't available yet; type the hotel name, a park or a known landmark.",
         "addrOk": "Sorted by distance from:", "addrFail": "Couldn't find that address. Try the hotel name or add the neighborhood.",
         "approx": "approx. location", "approxTitle": "This pin was placed from the address and may be off by a block. Use Directions for the exact route.",
         "myloc": "📍 My location", "metro": "Metro area", "byname": "Sort by name", "locating": "Finding your location…", "locfail": "Couldn't get your location",

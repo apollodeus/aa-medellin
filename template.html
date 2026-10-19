@@ -396,7 +396,7 @@ function render(refit){
       ${g.format!=="online"&&(g.lat!=null||g.address)?`<a class="dir" href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${T.directions}</a>`:""}
       ${g.lat!=null?`<a href="#map" data-i="${g.i}" class="tomap">${T.onmap}</a>`:""}
       ${g.format!=="online"?`<a href="${esc(viewUrl(g))}" target="_blank" rel="noopener">Google Maps</a>`:""}
-      ${g.url?`<a href="${esc(g.url)}" target="_blank" rel="noopener">${T.source}</a>`:""}
+      ${g.url?`<a href="${esc(g.url)}" target="_blank" rel="noopener">${g.source==="manual"?T.website:T.source}</a>`:""}
     </div>
   </article>`).join("");
   list.querySelectorAll(".tomap").forEach(a=>a.onclick=e=>{e.preventDefault();const g=ITEMS[+a.dataset.i];state.sel=g.i;MAP.sel(g.loc);document.getElementById("map").scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>MAP.focus(g),350);});
