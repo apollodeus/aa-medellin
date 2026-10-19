@@ -1022,18 +1022,13 @@ footer .inner{padding-block:22px 34px}
 <script>
 const PAGE_LANG="es";const T={"website": "Sitio web", "addrNeedsGoogle": "Por ahora la búsqueda por dirección exacta no está disponible; escribe el nombre del hotel, un parque o un punto conocido.", "addrOk": "Ordenado por distancia desde:", "addrFail": "No encontramos esa dirección. Prueba con el nombre del hotel o agrega el barrio.", "approx": "ubicación aproximada", "approxTitle": "El pin se colocó a partir de la dirección y puede estar a una cuadra de distancia. Usa 'Cómo llegar' para la ruta exacta.", "myloc": "📍 Mi ubicación", "metro": "Área metropolitana", "byname": "Ordenar por nombre", "locating": "Buscando tu ubicación…", "locfail": "No se pudo obtener tu ubicación", "directions": "Cómo llegar", "details": "Ver detalles", "topic": {"Big Book Study": "Estudio del Libro Grande", "AA Big Book Study": "Estudio del Libro Grande", "12 & 12 Step/Tradition Study": "Estudio de Pasos y Tradiciones", "Open AA 12×12 Study": "Estudio de los Doce y Doce", "Open Speaker Meeting": "Reunión de oradores"}, "tag": {"english": "Inglés", "open": "abierta", "closed": "cerrada", "online": "solo virtual", "hybrid": "híbrida", "virtual": "virtual"}, "locale": "es-CO", "updated": "Actualizado: ", "empty": "Ningún grupo coincide con esos filtros.", "contact": "Contacto", "onmap": "Ver en el mapa", "source": "Fuente", "loadfail": "No se pudo cargar la lista.", "nosched": "Horario no publicado", "days": [["L", "Lun"], ["M", "Mar"], ["Mc", "Mié"], ["J", "Jue"], ["V", "Vie"], ["S", "Sáb"], ["D", "Dom"]]};
 const PLACES=[
- ["pob","El Poblado (Parque Lleras)",6.2096,-75.5681],["man","Manila",6.2079,-75.5676],["prov","Provenza",6.2087,-75.5652],["cdr","Ciudad del Río",6.2235,-75.5738],
- ["cen","Centro (Parque Berrío)",6.2518,-75.5636],["pra","Prado Centro",6.2587,-75.5612],["bos","Boston",6.2510,-75.5530],["bue","Buenos Aires",6.2380,-75.5540],
- ["lau","Laureles (Segundo Parque)",6.2456,-75.5916],["est","Estadio",6.2530,-75.5900],["flo","Floresta",6.2600,-75.6050],["ame","La América",6.2520,-75.6010],
- ["bel","Belén (Parque de Belén)",6.2320,-75.6010],["guay","Guayabal",6.2180,-75.5880],["sjav","San Javier",6.2560,-75.6130],["rob","Robledo",6.2800,-75.5950],
- ["cas","Castilla",6.2920,-75.5750],["ara","Aranjuez",6.2800,-75.5600],["manr","Manrique",6.2690,-75.5540],["vh","Villa Hermosa",6.2600,-75.5450],
- ["sel","Santa Elena",6.2140,-75.4980],["sap","San Antonio de Prado",6.1830,-75.6720],
- ["env","Envigado (Parque principal)",6.1700,-75.5900],["sab","Sabaneta (Parque principal)",6.1515,-75.6160],["ita","Itagüí (Parque principal)",6.1720,-75.6110],
- ["est2","La Estrella",6.1580,-75.6430],["bello","Bello (Parque principal)",6.3370,-75.5580],["cop","Copacabana",6.3480,-75.5090]];
+ ["pob","El Poblado (Parque Lleras)",6.2096,-75.5681],["lau","Laureles (Segundo Parque)",6.2456,-75.5916],["cen","Centro (Parque Berrío)",6.2518,-75.5636],
+ ["bel","Belén (Parque de Belén)",6.2320,-75.6010],["env","Envigado (Parque principal)",6.1700,-75.5900],["sab","Sabaneta (Parque principal)",6.1515,-75.6160],
+ ["ita","Itagüí (Parque principal)",6.1720,-75.6110],["bello","Bello (Parque principal)",6.3370,-75.5580]];
 const CENTERS={};PLACES.forEach(p=>CENTERS[p[0]]=[p[2],p[3]]);
-(function(){const sel=document.getElementById("center");let h=`<option value="me">${T.myloc}</option><optgroup label="Medellín">`;
- PLACES.forEach((p,i)=>{if(i===22)h+=`</optgroup><optgroup label="${T.metro}">`;h+=`<option value="${p[0]}">${p[1]}</option>`;});
- h+=`</optgroup><option value="name">${T.byname}</option>`;sel.innerHTML=h;})();
+(function(){const sel=document.getElementById("center");let h=`<option value="me">${T.myloc}</option>`;
+ PLACES.forEach(p=>{h+=`<option value="${p[0]}">${p[1]}</option>`;});
+ h+=`<option value="name">${T.byname}</option>`;sel.innerHTML=h;})();
 function locate(){
   const sel=document.getElementById("center");
   if(!navigator.geolocation){sel.value="pob";state.center="pob";render(false);return;}
