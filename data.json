@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T06:49:35Z",
+ "updated": "2026-10-19T06:59:40Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -21,6 +21,26 @@
    "url": "https://aacolombia.org/grupos/libertad-y-responsabilidad/",
    "source": "aacolombia.org",
    "place": "Sede Social Manila",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "Mc",
+      "J",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Mié, Jue, Sáb y Dom 6:00 pm",
+   "schedule_en": "Tue, Wed, Thu, Sat and Sun 6:00 pm",
    "approx": false,
    "pin_source": "google geocoder"
   },
@@ -39,6 +59,24 @@
    "lng": -75.58313199999999,
    "url": "https://aacolombia.org/grupos/la-cuarta-dimension-de-la-existencia/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": "12:00"
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 9:00 am–12:00 m",
+   "schedule_en": "Mon, Wed and Fri 9:00 am–12:00 noon",
    "approx": false,
    "pin_source": "google geocoder"
   },
@@ -57,6 +95,27 @@
    "lng": -75.5581468,
    "url": "https://aacolombia.org/grupos/el-oasis/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 7:00 pm",
+   "schedule_en": "Mon to Sat 7:00 pm",
    "approx": false,
    "pin_source": "google geocoder"
   },
@@ -75,6 +134,38 @@
    "lng": -75.5510647,
    "url": "https://aacolombia.org/grupos/llegamos-a-creer/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "18:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 6:30 pm · Sáb 6:00 pm",
+   "schedule_en": "Mon to Fri 6:30 pm · Sat 6:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -93,6 +184,25 @@
    "lng": -75.5705104,
    "url": "https://aacolombia.org/grupos/dos-buscando-al-tercero/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mar, Vie y Sáb 7:00 am",
+   "schedule_en": "Mon, Tue, Fri and Sat 7:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -111,6 +221,34 @@
    "lng": -75.60592,
    "url": "https://aacolombia.org/grupos/fuente-clara/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Vie 7:00 pm · Dom 5:00 pm",
+   "schedule_en": "Fri 7:00 pm · Sun 5:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -129,6 +267,27 @@
    "lng": -75.5510647,
    "url": "https://aacolombia.org/grupos/llegamos-a-creer-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:30",
+       "end": "21:00"
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 6:30 pm–9:00 pm",
+   "schedule_en": "Mon to Sat 6:30 pm–9:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -147,6 +306,47 @@
    "lng": -75.5560357,
    "url": "https://aacolombia.org/grupos/la-solucion-11/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "J"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": "Primer jueves de mes Reunión de Principiantes"
+    }
+   ],
+   "schedule_es": "Mié y Vie 7:00 pm · Dom 10:00 am · Jue 7:00 pm (Primer jueves de mes Reunión de Principiantes)",
+   "schedule_en": "Wed and Fri 7:00 pm · Sun 10:00 am · Thu 7:00 pm (Primer jueves de mes Reunión de Principiantes)",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -165,6 +365,36 @@
    "lng": -75.5700157,
    "url": "https://aacolombia.org/grupos/tabla-de-salvacion-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "14:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:00 pm · Dom 2:00 pm",
+   "schedule_en": "Mon, Wed and Fri 7:00 pm · Sun 2:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -183,6 +413,26 @@
    "lng": -75.5518944,
    "url": "https://aacolombia.org/grupos/dimension-espiritual-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 6:00 pm",
+   "schedule_en": "Mon to Fri 6:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -201,6 +451,27 @@
    "lng": -75.549033,
    "url": "https://aacolombia.org/grupos/espiritu-de-guerreros-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 6:30 pm",
+   "schedule_en": "Mon to Sat 6:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -219,6 +490,24 @@
    "lng": -75.5720352,
    "url": "https://aacolombia.org/grupos/la-sobriedad-7/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 7:00 pm",
+   "schedule_en": "Tue, Thu and Sat 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -237,6 +526,38 @@
    "lng": -75.5665116,
    "url": "https://aacolombia.org/grupos/la-serenidad-15/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "17:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 6:00 pm · Sáb 5:30 pm",
+   "schedule_en": "Mon to Fri 6:00 pm · Sat 5:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -255,6 +576,39 @@
    "lng": -75.5575288,
    "url": "https://aacolombia.org/grupos/la-recuperacion-3/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "15:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 7:00 pm · Dom 3:00 pm",
+   "schedule_en": "Mon to Sat 7:00 pm · Sun 3:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -273,6 +627,38 @@
    "lng": -75.5713875,
    "url": "https://aacolombia.org/grupos/la-luz-6/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "12:15",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 7:00 pm · Dom 12:15 pm",
+   "schedule_en": "Mon to Fri 7:00 pm · Sun 12:15 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -291,6 +677,36 @@
    "lng": -75.548919,
    "url": "https://aacolombia.org/grupos/la-humildad-8/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Vie 7:00 pm · Dom 5:00 pm",
+   "schedule_en": "Tue, Thu and Fri 7:00 pm · Sun 5:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -309,6 +725,27 @@
    "lng": -75.5698707,
    "url": "https://aacolombia.org/grupos/la-candelaria-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "15:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 3:00 pm",
+   "schedule_en": "Mon to Sat 3:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -327,6 +764,48 @@
    "lng": -75.5671424,
    "url": "https://aacolombia.org/grupos/la-alternativa-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "12:15",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "06:45",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "V"
+     ],
+     "times": [
+      {
+       "start": "12:15",
+       "end": "18:00"
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun y Mié 12:15 pm · Mar y Jue 6:45 am · Vie 12:15 pm–6:00 pm",
+   "schedule_en": "Mon and Wed 12:15 pm · Tue and Thu 6:45 am · Fri 12:15 pm–6:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -345,6 +824,9 @@
    "lng": -75.5568187,
    "url": "https://aacolombia.org/grupos/nueva-dimension-2/",
    "source": "aacolombia.org",
+   "slots": [],
+   "schedule_es": "Virtuales: Zoom ID de Reunión 456252242 contraseña 049740",
+   "schedule_en": "Virtuales: Zoom ID de Reunión 456252242 contraseña 049740",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -363,6 +845,24 @@
    "lng": -75.555468,
    "url": "https://aacolombia.org/grupos/nuevos-amigos-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:00 pm",
+   "schedule_en": "Mon, Wed and Fri 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -381,6 +881,24 @@
    "lng": -75.5867854,
    "url": "https://aacolombia.org/grupos/robledo-el-diamante-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 7:00 pm",
+   "schedule_en": "Tue, Thu and Sat 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -399,6 +917,39 @@
    "lng": -75.573513,
    "url": "https://aacolombia.org/grupos/una-nueva-dimension-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "14:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 7:00 pm · Dom y Festivos 2:00 pm",
+   "schedule_en": "Mon to Fri 7:00 pm · Sun and Holidays 2:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -417,6 +968,22 @@
    "lng": -75.5820702,
    "url": "https://aacolombia.org/grupos/kennedy-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mié 7:00 pm",
+   "schedule_en": "Wed 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -435,6 +1002,25 @@
    "lng": -75.562924,
    "url": "https://aacolombia.org/grupos/fuente-de-vida-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mar, Vie y Sáb 7:00 pm",
+   "schedule_en": "Mon, Tue, Fri and Sat 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -453,6 +1039,37 @@
    "lng": -75.5826735,
    "url": "https://aacolombia.org/grupos/el-progreso-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié, Jue y Sáb 7:00 pm · Dom 11:00 am",
+   "schedule_en": "Mon, Wed, Thu and Sat 7:00 pm · Sun 11:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -471,6 +1088,50 @@
    "lng": -75.5698707,
    "url": "https://aacolombia.org/grupos/el-porvenir-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:15",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:00 pm · Mar, Jue y Sáb 7:15 pm · Dom 11:00 am",
+   "schedule_en": "Mon, Wed and Fri 7:00 pm · Tue, Thu and Sat 7:15 pm · Sun 11:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -489,6 +1150,24 @@
    "lng": -75.566262,
    "url": "https://aacolombia.org/grupos/el-bosque-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 7:00 pm",
+   "schedule_en": "Tue, Thu and Sat 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -507,6 +1186,24 @@
    "lng": -75.578712,
    "url": "https://aacolombia.org/grupos/doce-de-octubre-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 7:00 pm",
+   "schedule_en": "Tue, Thu and Sat 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -525,6 +1222,24 @@
    "lng": -75.566796,
    "url": "https://aacolombia.org/grupos/el-lenguaje-del-corazon-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 5:00 pm",
+   "schedule_en": "Tue, Thu and Sat 5:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -543,6 +1258,42 @@
    "lng": -75.573653,
    "url": "https://aacolombia.org/grupos/una-vision-para-ti-12/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "06:00",
+       "end": null
+      }
+     ],
+     "note": "Principiantes"
+    }
+   ],
+   "schedule_es": "Todos los días 7:00 am · Mar, Jue y Sáb 6:00 am (Principiantes)",
+   "schedule_en": "Every day 7:00 am · Tue, Thu and Sat 6:00 am (beginners)",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -561,6 +1312,36 @@
    "lng": -75.5530891,
    "url": "https://aacolombia.org/grupos/una-nueva-luz-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "15:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Vie y Sáb 7:00 pm · Dom 3:00 pm",
+   "schedule_en": "Tue, Fri and Sat 7:00 pm · Sun 3:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -579,6 +1360,28 @@
    "lng": -75.568367,
    "url": "https://aacolombia.org/grupos/tradicion-dos-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "17:30",
+       "end": "19:00"
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb y Festivos 5:30 pm–7:00 pm",
+   "schedule_en": "Mon to Sat and Holidays 5:30 pm–7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -597,6 +1400,23 @@
    "lng": -75.5713804,
    "url": "https://aacolombia.org/grupos/pedregal-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun y Vie 7:00 pm",
+   "schedule_en": "Mon and Fri 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -615,6 +1435,35 @@
    "lng": -75.554738,
    "url": "https://aacolombia.org/grupos/el-camino-7/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar y Sáb 7:00 pm · Dom 5:00 pm",
+   "schedule_en": "Tue and Sat 7:00 pm · Sun 5:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -633,6 +1482,36 @@
    "lng": -75.56365,
    "url": "https://aacolombia.org/grupos/el-milagro-12/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Mié y Vie 7:00 pm · Dom 10:00 am",
+   "schedule_en": "Tue, Wed and Fri 7:00 pm · Sun 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -651,6 +1530,25 @@
    "lng": -75.6044626,
    "url": "https://aacolombia.org/grupos/un-nuevo-renacer-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue, Sáb y Dom 7:30 pm",
+   "schedule_en": "Tue, Thu, Sat and Sun 7:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -669,6 +1567,25 @@
    "lng": -75.5581468,
    "url": "https://aacolombia.org/grupos/una-nueva-experiencia-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "17:30",
+       "end": "19:00"
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié, Vie y Sáb 5:30 pm–7:00 pm",
+   "schedule_en": "Mon, Wed, Fri and Sat 5:30 pm–7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -687,6 +1604,29 @@
    "lng": -75.5681414,
    "url": "https://aacolombia.org/grupos/alfa-y-omega-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días y Festivos 10:00 am",
+   "schedule_en": "Every day and Holidays 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -705,6 +1645,35 @@
    "lng": -75.5909168,
    "url": "https://aacolombia.org/grupos/vida-sobria-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "V"
+     ],
+     "times": [
+      {
+       "start": "06:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun y Mié 7:00 pm · Vie 6:00 am",
+   "schedule_en": "Mon and Wed 7:00 pm · Fri 6:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -723,6 +1692,64 @@
    "lng": -75.568716,
    "url": "https://aacolombia.org/grupos/el-refugio-3/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "20:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": "Principiantes"
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 8:00 pm · Mar y Vie 7:00 pm (Principiantes) · Sáb 6:00 pm · Dom y Festivos 11:00 am",
+   "schedule_en": "Mon to Fri 8:00 pm · Tue and Fri 7:00 pm (beginners) · Sat 6:00 pm · Sun and Holidays 11:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -741,6 +1768,36 @@
    "lng": -75.5495157,
    "url": "https://aacolombia.org/grupos/solo-por-hoy-13/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "18:30",
+       "end": "19:30"
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Vie y Sáb 7:00 pm · Mié 6:30 pm–7:30 pm",
+   "schedule_en": "Tue, Fri and Sat 7:00 pm · Wed 6:30 pm–7:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -759,6 +1816,39 @@
    "lng": -75.5532003,
    "url": "https://aacolombia.org/grupos/zamora-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "V",
+      "S",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mar, Mié, Vie, Sáb y Festivos 7:00 pm · Dom 10:00 am",
+   "schedule_en": "Mon, Tue, Wed, Fri, Sat and Holidays 7:00 pm · Sun 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -777,6 +1867,24 @@
    "lng": -75.549266,
    "url": "https://aacolombia.org/grupos/el-despertar-de-villa-hermosa-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "Mc",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mié, Vie y Sáb 7:00 pm",
+   "schedule_en": "Wed, Fri and Sat 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -795,6 +1903,24 @@
    "lng": -75.5489919,
    "url": "https://aacolombia.org/grupos/villa-de-guadalupe-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Dom 7:00 pm",
+   "schedule_en": "Tue, Thu and Sun 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -813,6 +1939,37 @@
    "lng": -75.5801955,
    "url": "https://aacolombia.org/grupos/sendero-de-vida-6/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "16:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue, Vie y Sáb 7:00 pm · Dom 4:00 pm",
+   "schedule_en": "Tue, Thu, Fri and Sat 7:00 pm · Sun 4:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -831,6 +1988,32 @@
    "lng": -75.581008,
    "url": "https://aacolombia.org/grupos/medellin-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "18:30",
+       "end": "19:15"
+      },
+      {
+       "start": "19:30",
+       "end": "20:30"
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 6:30 pm–7:15 pm y 7:30 pm–8:30 pm",
+   "schedule_en": "Every day 6:30 pm–7:15 pm and 7:30 pm–8:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -849,6 +2032,36 @@
    "lng": -75.543783,
    "url": "https://aacolombia.org/grupos/santo-domingo-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "16:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 7:00 pm · Dom 4:00 pm",
+   "schedule_en": "Tue, Thu and Sat 7:00 pm · Sun 4:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -867,6 +2080,22 @@
    "lng": -75.560099,
    "url": "https://aacolombia.org/grupos/san-pablo-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "08:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Sáb 8:30 am",
+   "schedule_en": "Sat 8:30 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -885,6 +2114,36 @@
    "lng": -75.5906039,
    "url": "https://aacolombia.org/grupos/san-cristobal-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:00 pm · Dom 5:00 pm",
+   "schedule_en": "Mon, Wed and Fri 7:00 pm · Sun 5:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -903,6 +2162,24 @@
    "lng": -75.569984,
    "url": "https://aacolombia.org/grupos/obrero-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 6:00 pm",
+   "schedule_en": "Tue, Thu and Sat 6:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -921,6 +2198,40 @@
    "lng": -75.5636859,
    "url": "https://aacolombia.org/grupos/miranda-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "16:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 7:00 pm · Dom y Festivos 4:00 pm",
+   "schedule_en": "Mon to Sat 7:00 pm · Sun and Holidays 4:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -939,6 +2250,31 @@
    "lng": -75.5698707,
    "url": "https://aacolombia.org/grupos/meridiano-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "12:15",
+       "end": null
+      },
+      {
+       "start": "13:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Sáb 12:15 pm y 1:30 pm",
+   "schedule_en": "Mon to Sat 12:15 pm and 1:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -957,6 +2293,46 @@
    "lng": -75.5500532,
    "url": "https://aacolombia.org/grupos/las-nieves-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "16:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "13:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Vie 7:00 pm · Sáb 4:00 pm · Dom 1:00 pm",
+   "schedule_en": "Fri 7:00 pm · Sat 4:00 pm · Sun 1:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -975,6 +2351,49 @@
    "lng": -75.5614467,
    "url": "https://aacolombia.org/grupos/las-doce-tradiciones-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "12:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "16:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mar y Jue 7:00 pm · Mié y Vie 12:30 pm · Dom 4:00 pm",
+   "schedule_en": "Mon, Tue and Thu 7:00 pm · Wed and Fri 12:30 pm · Sun 4:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -993,6 +2412,40 @@
    "lng": -75.5945218,
    "url": "https://aacolombia.org/grupos/la-unidad-14/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "12:15",
+       "end": null
+      }
+     ],
+     "note": "Presenciales"
+    },
+    {
+     "days": [
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": "Virtuales"
+    }
+   ],
+   "schedule_es": "Lun a Sáb 12:15 pm (Presenciales) · Jue y Sáb 7:00 am (Virtuales)",
+   "schedule_en": "Mon to Sat 12:15 pm (in person) · Thu and Sat 7:00 am (online)",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1011,6 +2464,23 @@
    "lng": -75.5774332,
    "url": "https://aacolombia.org/grupos/piloto-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar y Vie 7:00 pm",
+   "schedule_en": "Tue and Fri 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1029,6 +2499,48 @@
    "lng": -75.5561894,
    "url": "https://aacolombia.org/grupos/la-solucion-10/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:00 pm · Sáb 6:00 pm · Dom 10:00 am",
+   "schedule_en": "Mon, Wed and Fri 7:00 pm · Sat 6:00 pm · Sun 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1047,6 +2559,29 @@
    "lng": -75.5698707,
    "url": "https://aacolombia.org/grupos/colombia-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "07:30",
+       "end": "08:45"
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días y Festivos 7:30 am–8:45 am",
+   "schedule_en": "Every day and Holidays 7:30 am–8:45 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1065,6 +2600,36 @@
    "lng": -75.5615234,
    "url": "https://aacolombia.org/grupos/bienestar-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "18:30",
+       "end": "19:30"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 6:30 pm–7:30 pm · Dom 6:00 pm",
+   "schedule_en": "Mon, Wed and Fri 6:30 pm–7:30 pm · Sun 6:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1083,6 +2648,35 @@
    "lng": -75.555956,
    "url": "https://aacolombia.org/grupos/aranjuez-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": "11:45"
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar y Sáb 7:00 pm · Dom 10:00 am–11:45 am",
+   "schedule_en": "Tue and Sat 7:00 pm · Sun 10:00 am–11:45 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1101,6 +2695,40 @@
    "lng": -75.573653,
    "url": "https://aacolombia.org/grupos/las-24-horas-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "13:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M",
+      "J",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "12:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 1:00 pm · Mar, Jue y Dom 12:00 m",
+   "schedule_en": "Mon to Fri 1:00 pm · Tue, Thu and Sun 12:00 noon",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1119,6 +2747,32 @@
    "lng": -75.5959959,
    "url": "https://aacolombia.org/grupos/belen-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "12:15",
+       "end": null
+      },
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 12:15 pm y 7:30 pm",
+   "schedule_en": "Every day 12:15 pm and 7:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1137,6 +2791,24 @@
    "lng": -75.5646147,
    "url": "https://aacolombia.org/grupos/vizcaya-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": "21:00"
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:00 pm–9:00 pm",
+   "schedule_en": "Mon, Wed and Fri 7:00 pm–9:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1155,6 +2827,45 @@
    "lng": -75.5559618,
    "url": "https://aacolombia.org/grupos/el-poblado-virtual-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "12:00",
+       "end": null
+      },
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": "Virtuales"
+    },
+    {
+     "days": [
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 12:00 m y 7:30 pm (Virtuales) · Sáb y Dom 9:00 am",
+   "schedule_en": "Every day 12:00 noon and 7:30 pm (online) · Sat and Sun 9:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1173,6 +2884,36 @@
    "lng": -75.497758,
    "url": "https://aacolombia.org/grupos/santa-elena-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:00 pm · Dom 10:00 am",
+   "schedule_en": "Mon, Wed and Fri 7:00 pm · Sun 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1191,6 +2932,34 @@
    "lng": -75.5951856,
    "url": "https://aacolombia.org/grupos/la-resurreccion-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "07:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Sáb 7:30 am · Dom 8:00 am",
+   "schedule_en": "Sat 7:30 am · Sun 8:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1209,6 +2978,56 @@
    "lng": -75.5875949,
    "url": "https://aacolombia.org/grupos/la-oportunidad-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "07:15",
+       "end": null
+      },
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "07:30",
+       "end": null
+      }
+     ],
+     "note": "Cerrada"
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "13:00",
+       "end": null
+      },
+      {
+       "start": "13:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:15 am y 7:00 pm · Sáb 7:30 am (Cerrada) · Dom 1:00 pm y 1:30 pm",
+   "schedule_en": "Mon, Wed and Fri 7:15 am and 7:00 pm · Sat 7:30 am (closed) · Sun 1:00 pm and 1:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1227,6 +3046,35 @@
    "lng": -75.5537112,
    "url": "https://aacolombia.org/grupos/la-milagrosa-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun y Mié 7:00 pm · Sáb 6:00 pm",
+   "schedule_en": "Mon and Wed 7:00 pm · Sat 6:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1245,6 +3093,44 @@
    "lng": -75.600346,
    "url": "https://aacolombia.org/grupos/la-gloria-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "07:30",
+       "end": null
+      },
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mar, Jue, Vie, Sáb y Dom 7:30 pm · Mié y Vie 7:30 am y 7:00 am",
+   "schedule_en": "Mon, Tue, Thu, Fri, Sat and Sun 7:30 pm · Wed and Fri 7:30 am and 7:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1263,6 +3149,35 @@
    "lng": -75.5492211,
    "url": "https://aacolombia.org/grupos/la-fortaleza-9/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar y Jue 7:00 pm · Dom 11:00 am",
+   "schedule_en": "Tue and Thu 7:00 pm · Sun 11:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1281,6 +3196,35 @@
    "lng": -75.6032152,
    "url": "https://aacolombia.org/grupos/la-floresta-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar y Jue 7:30 pm · Dom 11:00 am",
+   "schedule_en": "Tue and Thu 7:30 pm · Sun 11:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1299,6 +3243,35 @@
    "lng": -75.5405453,
    "url": "https://aacolombia.org/grupos/la-dignidad-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mié y Vie 7:30 pm · Dom 11:00 am",
+   "schedule_en": "Wed and Fri 7:30 pm · Sun 11:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1317,6 +3290,47 @@
    "lng": -75.6000105,
    "url": "https://aacolombia.org/grupos/la-espiritualidad-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M"
+     ],
+     "times": [
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "16:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun y Jue 6:00 pm · Mar 7:00 am · Dom 4:00 pm",
+   "schedule_en": "Mon and Thu 6:00 pm · Tue 7:00 am · Sun 4:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1335,6 +3349,35 @@
    "lng": -75.5979082,
    "url": "https://aacolombia.org/grupos/felices-alegres-y-libres-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun y Mié 7:00 pm · Sáb 10:00 am",
+   "schedule_en": "Mon and Wed 7:00 pm · Sat 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1353,6 +3396,73 @@
    "lng": -75.6024734,
    "url": "https://aacolombia.org/grupos/la-fraternidad-5/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "12:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 7:00 am · Sáb y Dom 9:00 am · Lun a Vie 12:00 m · Todos los días 7:00 pm",
+   "schedule_en": "Mon to Fri 7:00 am · Sat and Sun 9:00 am · Mon to Fri 12:00 noon · Every day 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1371,6 +3481,23 @@
    "lng": -75.5452157,
    "url": "https://aacolombia.org/grupos/florida-nueva-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun y Sáb 7:30 pm",
+   "schedule_en": "Mon and Sat 7:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1389,6 +3516,50 @@
    "lng": -75.561959,
    "url": "https://aacolombia.org/grupos/el-salvador-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L"
+     ],
+     "times": [
+      {
+       "start": "12:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun 12:00 m · Mar a Sáb 7:00 pm · Dom 10:00 am",
+   "schedule_en": "Mon 12:00 noon · Tue to Sat 7:00 pm · Sun 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1407,6 +3578,52 @@
    "lng": -75.5559618,
    "url": "https://aacolombia.org/grupos/el-poblado-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": "Principiantes"
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "12:00",
+       "end": null
+      }
+     ],
+     "note": "Cerrada"
+    }
+   ],
+   "schedule_es": "Lun a Vie 7:00 pm · Lun, Mié y Vie 6:00 pm (Principiantes) · Sáb 12:00 m (Cerrada)",
+   "schedule_en": "Mon to Fri 7:00 pm · Mon, Wed and Fri 6:00 pm (beginners) · Sat 12:00 noon (closed)",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1425,6 +3642,50 @@
    "lng": -75.6025653,
    "url": "https://aacolombia.org/grupos/el-mensaje-13/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "V",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mar, Mié, Vie y Festivos 7:00 pm · Sáb 5:00 pm · Dom 10:00 am",
+   "schedule_en": "Mon, Tue, Wed, Fri and Holidays 7:00 pm · Sat 5:00 pm · Sun 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1443,6 +3704,23 @@
    "lng": -75.583712,
    "url": "https://aacolombia.org/grupos/conquistadores-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun y Vie 7:00 pm",
+   "schedule_en": "Mon and Fri 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1461,6 +3739,25 @@
    "lng": -75.5610791,
    "url": "https://aacolombia.org/grupos/luz-y-esperanza-de-vida-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Jue 7:00 pm",
+   "schedule_en": "Mon to Thu 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1479,6 +3776,35 @@
    "lng": -75.5599803,
    "url": "https://aacolombia.org/grupos/nuevo-ser-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar y Jue 7:00 pm · Dom 11:00 am",
+   "schedule_en": "Tue and Thu 7:00 pm · Sun 11:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1497,6 +3823,24 @@
    "lng": -75.605644,
    "url": "https://aacolombia.org/grupos/nueva-esperanza-8/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 7:00 pm",
+   "schedule_en": "Tue, Thu and Sat 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1515,6 +3859,28 @@
    "lng": -75.5832186,
    "url": "https://aacolombia.org/grupos/aa-sin-fronteras-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 5:00 pm",
+   "schedule_en": "Every day 5:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1533,6 +3899,28 @@
    "lng": -75.615231,
    "url": "https://aacolombia.org/grupos/regla-no-62-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 7:00 pm",
+   "schedule_en": "Every day 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1551,6 +3939,36 @@
    "lng": -75.5719688,
    "url": "https://aacolombia.org/grupos/mente-abierta-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mié y Vie 7:00 pm · Dom y Festivos 10:00 am",
+   "schedule_en": "Wed and Fri 7:00 pm · Sun and Holidays 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1569,6 +3987,35 @@
    "lng": -75.5829838,
    "url": "https://aacolombia.org/grupos/viviendo-sobrio-16/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "Mc",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "L"
+     ],
+     "times": [
+      {
+       "start": "07:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mié y Sáb 7:00 pm · Lun 7:30 am",
+   "schedule_en": "Wed and Sat 7:00 pm · Mon 7:30 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1587,6 +4034,36 @@
    "lng": -75.6055683,
    "url": "https://aacolombia.org/grupos/la-ilusion-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:30 pm · Dom 10:00 am",
+   "schedule_en": "Mon, Wed and Fri 7:30 pm · Sun 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1605,6 +4082,24 @@
    "lng": -75.5947382,
    "url": "https://aacolombia.org/grupos/volver-a-vivir-16/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 7:30 pm",
+   "schedule_en": "Tue, Thu and Sat 7:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1623,6 +4118,24 @@
    "lng": -75.5380644,
    "url": "https://aacolombia.org/grupos/villa-lilian-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar, Jue y Sáb 7:00 pm",
+   "schedule_en": "Tue, Thu and Sat 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1641,6 +4154,24 @@
    "lng": -75.5829485,
    "url": "https://aacolombia.org/grupos/trinidad-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:00 pm",
+   "schedule_en": "Mon, Wed and Fri 7:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1659,6 +4190,58 @@
    "lng": -75.5926095,
    "url": "https://aacolombia.org/grupos/trabajando-con-otros-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      },
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "16:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "13:00",
+       "end": null
+      },
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 5:00 pm y 7:00 pm · Sáb 4:00 pm · Dom 1:00 pm y 6:00 pm",
+   "schedule_en": "Mon to Fri 5:00 pm and 7:00 pm · Sat 4:00 pm · Sun 1:00 pm and 6:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1677,6 +4260,22 @@
    "lng": -75.5719688,
    "url": "https://aacolombia.org/grupos/the-twelve-steps-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mié 6:00 pm",
+   "schedule_en": "Wed 6:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1695,6 +4294,24 @@
    "lng": -75.6071458,
    "url": "https://aacolombia.org/grupos/santa-lucia-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié y Vie 7:30 pm",
+   "schedule_en": "Mon, Wed and Fri 7:30 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1713,6 +4330,63 @@
    "lng": -75.615311,
    "url": "https://aacolombia.org/grupos/san-javier-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "L"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mar, Mié, Vie, Sáb y Dom 7:00 pm · Sáb 5:00 pm · Dom 9:00 am · Lun 10:00 am",
+   "schedule_en": "Mon, Tue, Wed, Fri, Sat and Sun 7:00 pm · Sat 5:00 pm · Sun 9:00 am · Mon 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1731,6 +4405,64 @@
    "lng": -75.5904067,
    "url": "https://aacolombia.org/grupos/san-antonio-de-prado-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M",
+      "J",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun a Vie 7:00 pm · Mar, Jue y Sáb 7:00 am · Dom 10:00 am · Sáb 6:00 pm",
+   "schedule_en": "Mon to Fri 7:00 pm · Tue, Thu and Sat 7:00 am · Sun 10:00 am · Sat 6:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1749,6 +4481,39 @@
    "lng": -75.5912945,
    "url": "https://aacolombia.org/grupos/rosales-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "08:45",
+       "end": null
+      },
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar 7:00 pm · Dom y Festivos 8:45 am y 10:00 am",
+   "schedule_en": "Tue 7:00 pm · Sun and Holidays 8:45 am and 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1767,6 +4532,38 @@
    "lng": -75.6168862,
    "url": "https://aacolombia.org/grupos/los-principios-de-aa-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc",
+      "V",
+      "S"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Mié, Vie y Sáb 7:00 pm · Dom y Festivos 11:00 am",
+   "schedule_en": "Mon, Wed, Fri and Sat 7:00 pm · Sun and Holidays 11:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1785,6 +4582,54 @@
    "lng": -75.5893199,
    "url": "https://aacolombia.org/grupos/la-vina-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "11:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "12:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 7:00 pm · Dom y Festivos 11:00 am · Mar y Jue 12:00 m",
+   "schedule_en": "Every day 7:00 pm · Sun and Holidays 11:00 am · Tue and Thu 12:00 noon",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1803,6 +4648,59 @@
    "lng": -75.577018,
    "url": "https://aacolombia.org/grupos/camino-a-la-sobriedad-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "17:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "F"
+     ],
+     "times": [
+      {
+       "start": "17:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun y Mié 7:30 pm · Sáb 5:30 pm · Dom 9:00 am · Festivos 5:00 pm",
+   "schedule_en": "Mon and Wed 7:30 pm · Sat 5:30 pm · Sun 9:00 am · Holidays 5:00 pm",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1821,6 +4719,47 @@
    "lng": -75.5765905,
    "url": "https://aacolombia.org/grupos/cambio-de-vida-4/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "14:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "F"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar y Jue 7:00 pm · Dom 2:00 pm · Festivos 10:00 am",
+   "schedule_en": "Tue and Thu 7:00 pm · Sun 2:00 pm · Holidays 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1839,6 +4778,36 @@
    "lng": -75.6193781,
    "url": "https://aacolombia.org/grupos/belencito-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "M",
+      "J"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D",
+      "F"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Mar y Jue 7:30 pm · Dom y Festivos 9:00 am",
+   "schedule_en": "Tue and Thu 7:30 pm · Sun and Holidays 9:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1857,6 +4826,48 @@
    "lng": -75.6075778,
    "url": "https://aacolombia.org/grupos/alegria-2/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "J",
+      "V"
+     ],
+     "times": [
+      {
+       "start": "19:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M"
+     ],
+     "times": [
+      {
+       "start": "07:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "10:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Lun, Jue y Vie 7:30 pm · Mar 7:00 am · Dom 10:00 am",
+   "schedule_en": "Mon, Thu and Fri 7:30 pm · Tue 7:00 am · Sun 10:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   },
@@ -1875,6 +4886,40 @@
    "lng": -75.6024734,
    "url": "https://aacolombia.org/grupos/redcuperacion-del-alcoholismo/",
    "source": "aacolombia.org",
+   "slots": [
+    {
+     "days": [
+      "L",
+      "M",
+      "Mc",
+      "J",
+      "V",
+      "S",
+      "D"
+     ],
+     "times": [
+      {
+       "start": "19:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ],
+   "schedule_es": "Todos los días 7:00 pm · Dom 9:00 am",
+   "schedule_en": "Every day 7:00 pm · Sun 9:00 am",
    "approx": false,
    "pin_source": "aacolombia.org"
   }
