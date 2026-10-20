@@ -311,7 +311,7 @@ function infoHtml(grp){const g=grp[0];return `<div class="iw">${grp.map(x=>`<b>$
 // Map adapter: Google Maps when a key is configured, otherwise MapLibre + OpenFreeMap.
 const MAP={pins:{},
   init(){
-    if(GKEY){return new Promise(res=>{window.__gm=()=>{this.g=new google.maps.Map(document.getElementById("map"),{center:{lat:6.225,lng:-75.585},zoom:12,mapTypeControl:false,streetViewControl:false,fullscreenControl:true,gestureHandling:"cooperative",clickableIcons:false});this.iw=new google.maps.InfoWindow();res();};
+    if(GKEY){return new Promise(res=>{window.__gm=()=>{this.g=new google.maps.Map(document.getElementById("map"),{center:{lat:6.225,lng:-75.585},zoom:12,mapTypeControl:false,streetViewControl:false,fullscreenControl:true,gestureHandling:"cooperative",clickableIcons:false,styles:[{featureType:"poi",stylers:[{visibility:"off"}]},{featureType:"poi.park",elementType:"geometry",stylers:[{visibility:"on"}]},{featureType:"transit.station",stylers:[{visibility:"on"}]}]});this.iw=new google.maps.InfoWindow();res();};
       const sc=document.createElement("script");sc.src=`https://maps.googleapis.com/maps/api/js?key=${GKEY}&callback=__gm&loading=async`;sc.async=true;sc.onerror=()=>{this.g=null;this.initLibre();res();};document.head.appendChild(sc);});}
     this.initLibre();return Promise.resolve();
   },
@@ -325,7 +325,7 @@ const MAP={pins:{},
   add(grp,onClick){const g=grp[0];const en=grp.some(x=>x.lang==="en"),es=grp.some(x=>x.lang!=="en"),mix=en&&es;
     if(this.g){
       const mk=new google.maps.Marker({position:{lat:g.lat,lng:g.lng},map:this.g,title:grp.map(x=>x.name).join(" / "),zIndex:en?1000:1,
-        icon:{path:google.maps.SymbolPath.CIRCLE,scale:en?9:7,fillColor:en?"#d4a03a":"#2c4f8f",fillOpacity:1,strokeColor:mix?"#2c4f8f":"#fff",strokeWeight:mix?3:2}});
+        icon:{path:google.maps.SymbolPath.CIRCLE,scale:en?10:8,fillColor:en?"#d4a03a":"#2c4f8f",fillOpacity:1,strokeColor:mix?"#2c4f8f":"#fff",strokeWeight:mix?3:2}});
       mk.addListener("click",()=>{this.open(g);onClick(g);});this.pins[g.loc]=mk;return;
     }
     const el=document.createElement("div");el.className="pin "+(mix?"en mix":(en?"en":"es"));el.title=grp.map(x=>x.name).join(" / ");if(grp.length>1)el.dataset.n=grp.length;
