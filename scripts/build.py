@@ -277,8 +277,10 @@ def main():
         kept.append(r)
     es = kept
 
+    import render as R
     for rec in en:
         G.place(rec, venues, report)
+        rec["slots"] = [{"days": [d], "times": [{"start": t, "end": None}], "note": ""} for d, t in R.slots(rec)]
 
     manual = load_json(MANUAL, [])
     for i, m in enumerate(manual):
@@ -286,6 +288,7 @@ def main():
         m.setdefault("source", "manual")
         if not m.get("hidden"):
             G.place(m, venues, report)
+            m["slots"] = [{"days": [d], "times": [{"start": t, "end": None}], "note": ""} for d, t in R.slots(m)]
     G.save_cache()
 
     for k, v in status.items():

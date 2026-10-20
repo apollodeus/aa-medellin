@@ -194,6 +194,19 @@ footer .inner{padding-block:22px 34px}
     <button type="submit" class="go" id="addrgo">{{T_ADDR_GO}}</button>
     <span class="addr-msg" id="addrmsg"></span>
   </form>
+  <div class="row">
+    <label class="sortwrap" style="flex:0 1 220px">{{T_RADIUS}}
+      <select id="radius">
+        <option value="0">{{T_ANYDIST}}</option>
+        <option value="1">1 km</option><option value="2">2 km</option><option value="3">3 km</option><option value="5">5 km</option><option value="10">10 km</option>
+      </select>
+    </label>
+    <div class="seg" id="sort" role="group" aria-label="{{T_SORT}}" style="flex:1 1 260px">
+      <button aria-pressed="true" data-v="dist">{{T_SORT_DIST}}</button>
+      <button aria-pressed="false" data-v="time">{{T_SORT_TIME}}</button>
+      <button aria-pressed="false" data-v="name">{{T_SORT_NAME}}</button>
+    </div>
+  </div>
 </div>
 
 <div class="list" id="list">{{STATIC_LIST}}</div>
@@ -211,7 +224,7 @@ const PLACES=[
 const CENTERS={};PLACES.forEach(p=>CENTERS[p[0]]=[p[2],p[3]]);
 (function(){const sel=document.getElementById("center");let h=`<option value="me">${T.myloc}</option>`;
  PLACES.forEach(p=>{h+=`<option value="${p[0]}">${p[1]}</option>`;});
- h+=`<option value="name">${T.byname}</option>`;sel.innerHTML=h;})();
+ sel.innerHTML=h;})();
 function locate(){
   const sel=document.getElementById("center");
   if(!navigator.geolocation){sel.value="pob";state.center="pob";render(false);return;}
@@ -283,9 +296,9 @@ function parseDays(h){
   return out;
 }
 
-const state={q:"",days:new Set(),fmt:"all",lang:"{{DEFAULT_FILTER}}",center:"pob",sel:null};
+const state={q:"",days:new Set(),fmt:"all",lang:"{{DEFAULT_FILTER}}",center:"pob",sel:null,radius:0,sort:"dist"};
 try{const s=JSON.parse(localStorage.getItem("aa-med")||"{}");if(s.center)state.center=s.center;if(s.lang&&PAGE_LANG==="es")state.lang=s.lang;}catch(e){}
-if(!CENTERS[state.center]&&state.center!=="name")state.center="pob";document.getElementById("center").value=state.center;
+if(!CENTERS[state.center])state.center="pob";document.getElementById("center").value=state.center;
 document.getElementById("lang").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===state.lang));
 
 const GKEY="{{GMAPS_KEY}}";
@@ -366,8 +379,11 @@ function nearestZone(g){const txt=[g.name,g.address,g.place,...(g.notes||[])].jo
 const daysEl=document.getElementById("days");
 DAYS.forEach(([k,l])=>{const b=document.createElement("button");b.className="chip";b.id="day-"+k;b.textContent=l;b.setAttribute("aria-pressed","false");b.onclick=()=>{const on=state.days.has(k);state.days.clear();if(!on)state.days.add(k);daysEl.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",state.days.has(x.id.slice(4))));render(true);};daysEl.appendChild(b);});
 document.getElementById("q").oninput=e=>{state.q=e.target.value.trim();render(true)};
-for(const id of ["fmt","lang"]){const el=document.getElementById(id);el.querySelectorAll("button").forEach(b=>b.onclick=()=>{state[id]=b.dataset.v;el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));save();render(true);});}
-document.getElementById("center").onchange=e=>{const v=e.target.value;if(v==="me"){locate();return;}state.center=v;save();render(false);};
+for(const id of ["fmt","lang","sort"]){const el=document.getElementById(id);el.querySelectorAll("button").forEach(b=>b.onclick=()=>{state[id]=b.dataset.v;el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));save();render(true);});}
+document.getElementById("center").onchange=e=>{const v=e.target.value;if(v==="me"){locate();return;}state.center=v;save();render(true);};
+document.getElementById("radius").onchange=e=>{state.radius=+e.target.value;render(true);};
+function fmt12(t){const [h,m]=t.split(":").map(Number);if(h===12&&m===0)return T.noon;return `${(h+11)%12+1}:${String(m).padStart(2,"0")} ${h<12?"am":"pm"}`;}
+function firstTime(g){const want=state.days.size?[...state.days][0]:null;let best=null;for(const sl of (g.slots||[])){if(want&&!sl.days.includes(want))continue;for(const t of sl.times){if(t.start&&(best===null||t.start<best))best=t.start;}}return best;}
 function save(){try{localStorage.setItem("aa-med",JSON.stringify({center:state.center,lang:state.lang}))}catch(x){}}
 
 function render(refit){
@@ -379,8 +395,12 @@ function render(refit){
     if(state.fmt==="p"&&g.virtualOnly)return false;
     for(const d of state.days)if(!g.days.has(d))return false;
     return true;});
-  rows.forEach(g=>g.dist=(c&&g.lat!=null)?km(g.lat,g.lng,c[0],c[1]):null);
-  if(c)rows.sort((a,b)=>(a.dist??1e9)-(b.dist??1e9)||a.name.localeCompare(b.name));else rows.sort((a,b)=>a.name.localeCompare(b.name));
+  rows.forEach(g=>{g.dist=(c&&g.lat!=null)?km(g.lat,g.lng,c[0],c[1]):null;g.t0=firstTime(g);});
+  if(state.radius>0)rows=rows.filter(g=>g.dist==null?g.virtualOnly:g.dist<=state.radius);
+  const byDist=(a,b)=>(a.dist??1e9)-(b.dist??1e9)||a.name.localeCompare(b.name);
+  if(state.sort==="time")rows.sort((a,b)=>((a.t0??"99")<(b.t0??"99")?-1:(a.t0??"99")>(b.t0??"99")?1:0)||byDist(a,b));
+  else if(state.sort==="name")rows.sort((a,b)=>a.name.localeCompare(b.name));
+  else rows.sort(byDist);
   const shown=new Set(rows.map(g=>g.i));
   SHOWN=shown;for(const k in LOCS)MAP.dim(k,!LOCS[k].some(x=>shown.has(x.i)));
   if(refit)MAP.fit(rows);
@@ -395,7 +415,7 @@ function render(refit){
       ${g.type?`<span class="tag o">${T.tag[g.type]}</span>`:''}
       ${g.virtualOnly?`<span class="tag o">${T.tag.online}</span>`:(g.virtual?`<span class="tag o">${g.format==="hybrid"?T.tag.hybrid:T.tag.virtual}</span>`:'')}
       ${g.approx&&g.lat!=null?`<span class="tag o" title="${T.approxTitle}">≈ ${T.approx}</span>`:''}
-      ${g.dist!=null?`<span class="dist">${g.dist.toFixed(1)} km</span>`:''}</h2>
+      <span class="dist">${state.sort==="time"&&g.t0?fmt12(g.t0)+(g.dist!=null?" · ":""):""}${g.dist!=null?g.dist.toFixed(1)+" km":""}</span></h2>
     ${g.address?`<div class="addr"><a href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${esc(g.address)}</a>${g.detail?" · "+esc(g.detail):""}</div>`:(g.detail?`<div class="addr">${esc(g.detail)}</div>`:"")}
     ${g.zone&&g.format!=="online"?`<div class="zone">${esc(g.zone)}</div>`:""}
     <div class="hor">${esc(g.hor)}</div>

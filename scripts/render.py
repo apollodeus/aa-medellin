@@ -209,7 +209,7 @@ ES = dict(LANG="es", OGLOCALE="es_CO", CANON="/", DATA="data.json", DEFAULT_FILT
     H1="Reuniones de AA en Medellín",
     T_LANG="Idioma", T_ALL="Todos", T_SEARCH="Buscar nombre, dirección o barrio", T_DAY="Día", T_FMT="Modalidad",
     T_ALLF="Todas", T_INPERSON="Presencial", T_ONLINE="Con opción virtual", T_NEAR="Cerca de", T_BYNAME="Ordenar por nombre",
-    T_MAP="Mapa de reuniones", T_ADDR="Dirección u hotel", T_ADDR_PH="Escribe tu dirección u hotel para ordenar por distancia", T_ADDR_GO="Buscar", T_LEG_EN="Reunión en inglés", T_LEG_ES="Grupo en español", T_LEG_MIX="Ambos en el mismo lugar",
+    T_MAP="Mapa de reuniones", T_RADIUS="Máximo", T_ANYDIST="Sin límite", T_SORT="Ordenar", T_SORT_DIST="Por distancia", T_SORT_TIME="Por hora", T_SORT_NAME="Por nombre", T_ADDR="Dirección u hotel", T_ADDR_PH="Escribe tu dirección u hotel para ordenar por distancia", T_ADDR_GO="Buscar", T_LEG_EN="Reunión en inglés", T_LEG_ES="Grupo en español", T_LEG_MIX="Ambos en el mismo lugar",
     BRAND="AA Medellín Map",
     LANGSW='<span lang="es">ES</span><a href="en/" hreflang="en" lang="en">EN</a>')
 EN = dict(LANG="en", OGLOCALE="en_US", CANON="/en/", DATA="../data.json", DEFAULT_FILTER="en",
@@ -217,14 +217,14 @@ EN = dict(LANG="en", OGLOCALE="en_US", CANON="/en/", DATA="../data.json", DEFAUL
     H1="English-Speaking AA Meetings in Medellín",
     T_LANG="Language", T_ALL="All", T_SEARCH="Search name, address or neighborhood", T_DAY="Day", T_FMT="Format",
     T_ALLF="All", T_INPERSON="In person", T_ONLINE="Online option", T_NEAR="Near", T_BYNAME="Sort by name",
-    T_MAP="Meeting map", T_ADDR="Address or hotel", T_ADDR_PH="Type your address or hotel to sort by distance", T_ADDR_GO="Go", T_LEG_EN="English-speaking meeting", T_LEG_ES="Spanish-language group", T_LEG_MIX="Both at the same venue",
+    T_MAP="Meeting map", T_RADIUS="Within", T_ANYDIST="Any distance", T_SORT="Sort", T_SORT_DIST="By distance", T_SORT_TIME="By time", T_SORT_NAME="By name", T_ADDR="Address or hotel", T_ADDR_PH="Type your address or hotel to sort by distance", T_ADDR_GO="Go", T_LEG_EN="English-speaking meeting", T_LEG_ES="Spanish-language group", T_LEG_MIX="Both at the same venue",
     BRAND="AA Medellín Map",
     LANGSW='<a href="../" hreflang="es" lang="es">ES</a><span lang="en">EN</span>')
 TOPIC_ES = {"Big Book Study": "Estudio del Libro Grande", "AA Big Book Study": "Estudio del Libro Grande",
             "12 & 12 Step/Tradition Study": "Estudio de Pasos y Tradiciones", "Open AA 12×12 Study": "Estudio de los Doce y Doce",
             "Open Speaker Meeting": "Reunión de oradores"}
 TJS = {
- "es": {"join": "Unirse en línea", "online": "En línea", "password": "Contraseña", "allprog": "Todos los programas de 12 pasos", "allprogTitle": "Reunión abierta de 12 pasos: bienvenidos miembros de AA, NA, Al-Anon y cualquier programa de 12 pasos",
+ "es": {"noon": "12:00 m", "join": "Unirse en línea", "online": "En línea", "password": "Contraseña", "allprog": "Todos los programas de 12 pasos", "allprogTitle": "Reunión abierta de 12 pasos: bienvenidos miembros de AA, NA, Al-Anon y cualquier programa de 12 pasos",
         "website": "Sitio web", "addrNeedsGoogle": "Por ahora la búsqueda por dirección exacta no está disponible; escribe el nombre del hotel, un parque o un punto conocido.",
         "addrOk": "Ordenado por distancia desde:", "addrFail": "No encontramos esa dirección. Prueba con el nombre del hotel o agrega el barrio.",
         "approx": "ubicación aproximada", "approxTitle": "El pin se colocó a partir de la dirección y puede estar a una cuadra de distancia. Usa 'Cómo llegar' para la ruta exacta.",
@@ -232,7 +232,7 @@ TJS = {
         "tag": {"english": "Inglés", "open": "abierta", "closed": "cerrada", "online": "solo virtual", "hybrid": "presencial y virtual", "virtual": "presencial y virtual"},"locale": "es-CO", "updated": "Actualizado: ", "empty": "Ningún grupo coincide con esos filtros.", "contact": "Contacto",
         "onmap": "Ver en el mapa", "source": "Fuente", "loadfail": "No se pudo cargar la lista.", "nosched": "Horario no publicado",
         "days": [["L", "Lun"], ["M", "Mar"], ["Mc", "Mié"], ["J", "Jue"], ["V", "Vie"], ["S", "Sáb"], ["D", "Dom"]]},
- "en": {"join": "Join online", "online": "Online", "password": "Password", "allprog": "All 12-step programs welcome", "allprogTitle": "Open 12-step meeting: AA, NA, Al-Anon and any 12-step program welcome",
+ "en": {"noon": "12:00 noon", "join": "Join online", "online": "Online", "password": "Password", "allprog": "All 12-step programs welcome", "allprogTitle": "Open 12-step meeting: AA, NA, Al-Anon and any 12-step program welcome",
         "website": "Website", "addrNeedsGoogle": "Exact street-number search isn't available yet; type the hotel name, a park or a known landmark.",
         "addrOk": "Sorted by distance from:", "addrFail": "Couldn't find that address. Try the hotel name or add the neighborhood.",
         "approx": "approx. location", "approxTitle": "This pin was placed from the address and may be off by a block. Use Directions for the exact route.",
