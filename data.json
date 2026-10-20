@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T22:08:47Z",
+ "updated": "2026-10-20T01:34:57Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -7576,7 +7576,81 @@
    "url": "https://aamedellin.org/meetings/",
    "lat": null,
    "lng": null,
-   "topic": ""
+   "topic": "",
+   "slots": [
+    {
+     "days": [
+      "L"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "M"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "J"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "V"
+     ],
+     "times": [
+      {
+       "start": "08:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ]
   },
   {
    "id": "en-a-vision-for-medellin-m",
@@ -7604,7 +7678,21 @@
    "lng": -75.5722,
    "topic": "Big Book Study",
    "approx": false,
-   "pin_source": "venues.json (confirmed)"
+   "pin_source": "venues.json (confirmed)",
+   "slots": [
+    {
+     "days": [
+      "M"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ]
   },
   {
    "id": "en-aa-poblado-group-manila-mv",
@@ -7634,7 +7722,33 @@
    "lng": -75.5719688,
    "topic": "",
    "approx": false,
-   "pin_source": "google geocoder"
+   "pin_source": "google geocoder",
+   "slots": [
+    {
+     "days": [
+      "M"
+     ],
+     "times": [
+      {
+       "start": "12:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "V"
+     ],
+     "times": [
+      {
+       "start": "12:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ]
   },
   {
    "id": "en-a-vision-for-you-group-mc",
@@ -7660,7 +7774,21 @@
    "lng": -75.5993821,
    "topic": "Open AA 12×12 Study",
    "approx": false,
-   "pin_source": "google geocoder"
+   "pin_source": "google geocoder",
+   "slots": [
+    {
+     "days": [
+      "Mc"
+     ],
+     "times": [
+      {
+       "start": "12:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ]
   },
   {
    "id": "en-sabaneta-english-speaking-aa-meeting-j",
@@ -7689,7 +7817,21 @@
    "lng": -75.6174,
    "topic": "",
    "approx": false,
-   "pin_source": "venues.json (confirmed)"
+   "pin_source": "venues.json (confirmed)",
+   "slots": [
+    {
+     "days": [
+      "J"
+     ],
+     "times": [
+      {
+       "start": "12:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ]
   },
   {
    "id": "en-a-vision-for-medellin-s",
@@ -7717,7 +7859,21 @@
    "lng": -75.5722,
    "topic": "12 & 12 Step/Tradition Study",
    "approx": false,
-   "pin_source": "venues.json (confirmed)"
+   "pin_source": "venues.json (confirmed)",
+   "slots": [
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ]
   },
   {
    "id": "en-there-is-a-solution-s",
@@ -7743,7 +7899,21 @@
    "lng": -75.5984,
    "topic": "AA Big Book Study",
    "approx": true,
-   "pin_source": "venues.json (approx)"
+   "pin_source": "venues.json (approx)",
+   "slots": [
+    {
+     "days": [
+      "S"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ]
   },
   {
    "id": "en-there-is-a-solution-d",
@@ -7769,7 +7939,21 @@
    "lng": -75.5984,
    "topic": "Open Speaker Meeting",
    "approx": true,
-   "pin_source": "venues.json (approx)"
+   "pin_source": "venues.json (approx)",
+   "slots": [
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "09:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ]
   }
  ],
  "manual": [
@@ -7796,7 +7980,21 @@
    "id": "manual-0",
    "source": "manual",
    "approx": false,
-   "pin_source": "google geocoder"
+   "pin_source": "google geocoder",
+   "slots": [
+    {
+     "days": [
+      "D"
+     ],
+     "times": [
+      {
+       "start": "18:00",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ]
   },
   {
    "name": "Open 12-Step Meeting Medellín",
@@ -7825,7 +8023,33 @@
    "id": "manual-1",
    "source": "manual",
    "approx": false,
-   "pin_source": "google geocoder"
+   "pin_source": "google geocoder",
+   "slots": [
+    {
+     "days": [
+      "L"
+     ],
+     "times": [
+      {
+       "start": "12:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    },
+    {
+     "days": [
+      "J"
+     ],
+     "times": [
+      {
+       "start": "12:30",
+       "end": null
+      }
+     ],
+     "note": ""
+    }
+   ]
   }
  ]
 }
