@@ -144,6 +144,14 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 .sched th{font-weight:700;white-space:nowrap;color:var(--accent);width:1%}
 .tw{overflow-x:auto}
 
+/* faq */
+.faq{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
+.faq h2{font:600 1.35rem/1.2 var(--serif);color:var(--accent);margin:0 0 6px}
+.faq details{border-top:1px solid var(--line);padding:10px 0}
+.faq summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::after{content:"+";color:var(--gold);font-weight:700;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:8px 0 0;color:var(--muted);max-width:70ch;line-height:1.55}
 /* footer */
 footer{margin-top:40px;background:var(--navy-deep);color:#a9b8d6;border-top:3px solid var(--gold-hi)}
 footer .inner{padding-block:22px 34px}

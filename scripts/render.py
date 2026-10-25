@@ -270,6 +270,51 @@ def render():
     en_table = '<section class="sched"><h2>Weekly schedule</h2><div class="tw"><table>%s</table></div></section>' % "".join(rows)
     es_table = en_table.replace("Weekly schedule", "Reuniones en inglés por día")
 
+    n_es, n_en_total = len(es_list), len(en_list)
+    FAQ = {
+     "es": [
+      ("¿Dónde hay reuniones de Alcohólicos Anónimos en Medellín?",
+       "Hay %d grupos de AA en Medellín y el área metropolitana (Bello, Envigado, Itagüí y Sabaneta), en casi todos los barrios: El Poblado, Laureles, Belén, Centro, Robledo, Manrique, Aranjuez y más. El mapa de esta página muestra cada grupo con su dirección, horario y cómo llegar." % n_es),
+      ("¿Hay reuniones de AA hoy en Medellín?",
+       "Sí, todos los días. La mayoría de los grupos se reúne a las 7:00 pm; también hay reuniones al mediodía y en la mañana. Toca el día de la semana en los filtros para ver solo las reuniones de hoy, ordenadas por hora o por distancia."),
+      ("¿Hay reuniones de AA en inglés en Medellín?",
+       "Sí. Hay %d reuniones en inglés cada semana, en El Poblado, Laureles, Belén y Sabaneta, además de reuniones por Zoom. Están marcadas en dorado en el mapa y en la versión en inglés de esta página." % n_en_total),
+      ("¿Cuánto cuesta ir a una reunión de AA?",
+       "Nada. Las reuniones son gratuitas y no hay que inscribirse. Algunos grupos pasan una contribución voluntaria para el arriendo del salón."),
+      ("¿Qué diferencia hay entre una reunión abierta y una cerrada?",
+       "A una reunión abierta puede asistir cualquier persona, incluidos familiares y amigos. Una reunión cerrada es solo para quienes tienen, o creen tener, un problema con el alcohol. Cuando no se indica, la mayoría de los grupos recibe a cualquier persona que llegue por primera vez."),
+      ("¿Cómo encuentro la reunión más cercana a mí?",
+       "Escribe tu dirección u hotel en el buscador de la página, o elige «Mi ubicación», y la lista se ordena por distancia. Cada reunión tiene un botón «Cómo llegar» que abre la ruta en Google Maps."),
+      ("¿De dónde salen los datos y cada cuánto se actualizan?",
+       "Del directorio oficial de AA Colombia (aacolombia.org) y de la página de las reuniones en inglés (aamedellin.org). El sitio se reconstruye todos los días con la información más reciente de ambas fuentes."),
+     ],
+     "en": [
+      ("Are there English-speaking AA meetings in Medellín?",
+       "Yes. There are %d English-speaking meetings each week in Medellín, in El Poblado, Laureles, Belén and Sabaneta, plus online meetings on Zoom. They are the gold pins on the map above, and the list below has each one's address, time and WhatsApp contact." % n_en_sessions),
+      ("Is there an English AA meeting in Medellín today?",
+       "There is at least one English-speaking meeting every day of the week, including an online meeting most mornings. Tap a day in the filters to see that day's meetings sorted by time."),
+      ("Where are the English meetings in El Poblado?",
+       "At Sede Social Manila (Cra 43D #11-73, a few blocks from Parque Poblado) and at Edificio Milla de Oro (Cra 42 & Cl 3 Sur). Both are walkable from most El Poblado hotels; use the Directions button for the route."),
+      ("Can I go to a Spanish-speaking meeting if my Spanish is limited?",
+       "Yes. Spanish-language groups welcome visitors, and many have members who speak some English. There are %d Spanish-language groups across the city; switch the filter to \"All\" to see them." % n_es),
+      ("Do I need to sign up or pay?",
+       "No. Meetings are free and there is no registration. Some groups pass a voluntary collection for the room."),
+      ("What is the difference between an open and a closed meeting?",
+       "Anyone can attend an open meeting, including friends and family. A closed meeting is for people who have, or think they may have, a drinking problem. Newcomers are welcome at both."),
+      ("How do I find the meeting closest to my hotel?",
+       "Type your hotel or address into the search box on this page, or choose \"My location\", and the list sorts by distance. Each meeting has a Directions button that opens the route in Google Maps."),
+      ("Where does this information come from?",
+       "From aamedellin.org (English meetings) and AA Colombia's official directory, aacolombia.org (Spanish groups). The site rebuilds every day from both sources."),
+     ],
+    }
+    def faq_html(lang):
+        h = T_FAQ[lang]
+        items = "".join('<details><summary>%s</summary><p>%s</p></details>' % (esc(q), esc(a)) for q, a in FAQ[lang])
+        return '<section class="faq" id="faq"><h2>%s</h2>%s</section>' % (h, items)
+    def faq_ld(lang):
+        return {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ[lang]]}
+    T_FAQ = {"es": "Preguntas frecuentes", "en": "Frequently asked questions"}
+
     disclaimer_es = ("Sitio independiente, sin afiliación con Alcoholics Anonymous World Services, AA Colombia ni los grupos listados. "
                      "Los datos se actualizan a diario desde <a href=\"https://aacolombia.org/grupos/\" target=\"_blank\" rel=\"noopener\">aacolombia.org</a> y "
                      "<a href=\"https://aamedellin.org/meetings/\" target=\"_blank\" rel=\"noopener\">aamedellin.org</a>; confirma el horario antes de ir. "
@@ -280,12 +325,12 @@ def render():
                      "Map pins for English meetings are approximate.")
 
     pages = {
-     "es": dict(ES, CARDS=sorted(es_list + en_list, key=lambda m: m["name"]), SCHEDULE=es_table,
+     "es": dict(ES, CARDS=sorted(es_list + en_list, key=lambda m: m["name"]), SCHEDULE=es_table + faq_html("es"),
         DESC="Mapa y horarios de %d grupos de Alcohólicos Anónimos en Medellín y %d reuniones de AA en inglés. Filtra por día, barrio y modalidad. Actualizado a diario." % (len(es_list), len(en_list)),
         INTRO='<p class="intro">Hay %d grupos de Alcohólicos Anónimos en Medellín según el directorio de AA Colombia, y %d reuniones en inglés en El Poblado, Laureles y Sabaneta. Usa el mapa o los filtros para encontrar una reunión hoy. <a href="en/">English meetings →</a></p>' % (len(es_list), len(en_list)),
         SRC="Fuentes: aacolombia.org y aamedellin.org.", NOTE=disclaimer_es,
         COUNT="%d grupos" % (len(es_list) + len(en_list)), UPDATED="Actualizado: %s." % upd.strftime("%d/%m/%Y")),
-     "en": dict(EN, CARDS=en_list, SCHEDULE=en_table,
+     "en": dict(EN, CARDS=en_list, SCHEDULE=en_table + faq_html("en"),
         DESC="Every English-speaking AA meeting in Medellín, Colombia: %d meetings a week in %s%s, with map, addresses, times and contacts. Updated daily." % (n_en_sessions, ", ".join(en_zones), " and online" if has_online else ""),
         INTRO='<p class="intro">There are %d English-speaking Alcoholics Anonymous meetings each week in Medellín, Colombia, in %s%s. Below is every meeting with its address, time, contact and a map. The list is refreshed daily from aamedellin.org. Spanish-language groups (%d) are listed too; switch to "All" to see them. <a href="../">Versión en español →</a></p>' % (n_en_sessions, ", ".join(en_zones), ", plus online meetings on Zoom" if has_online else "", len(es_list)),
         SRC="Sources: aamedellin.org and aacolombia.org.", NOTE=disclaimer_en,
@@ -298,6 +343,7 @@ def render():
             {"@type": "WebSite", "name": "AA Medellín Map", "url": SITE + "/", "inLanguage": ["es", "en"]},
             {"@type": "WebPage", "name": P["TITLE"], "url": SITE + P["CANON"], "description": P["DESC"],
              "inLanguage": lang, "dateModified": d["updated"], "about": {"@type": "Thing", "name": "Alcoholics Anonymous meetings in Medellín"}},
+            faq_ld(lang),
         ] + [event_ld(m, "en") for m in en_list] + ([group_ld(m) for m in es_list] if lang == "es" else [])}
         out = tpl
         rep = {k: v for k, v in P.items() if k not in ("CARDS",)}
