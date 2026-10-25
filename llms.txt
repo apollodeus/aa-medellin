@@ -7,6 +7,7 @@ Last updated: 2026-10-25
 - [English-speaking AA meetings in Medellín](https://www.aamedellinmap.org/en/): map, weekly schedule, addresses and contacts
 - [Reuniones de AA en Medellín (español)](https://www.aamedellinmap.org/): all groups with map and filters
 - [Raw data (JSON)](https://www.aamedellinmap.org/data.json)
+- [Meeting Guide API feed (JSON)](https://www.aamedellinmap.org/meetingguide.json): the same meetings in the format the AA Meeting Guide app consumes
 
 ## English-speaking meetings
 

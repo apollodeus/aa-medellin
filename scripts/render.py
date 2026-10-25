@@ -401,7 +401,8 @@ def render():
          "", "Last updated: %s" % day, "",
          "- [English-speaking AA meetings in Medellín](%s/en/): map, weekly schedule, addresses and contacts" % SITE,
          "- [Reuniones de AA en Medellín (español)](%s/): all groups with map and filters" % SITE,
-         "- [Raw data (JSON)](%s/data.json)" % SITE, "", "## English-speaking meetings", ""]
+         "- [Raw data (JSON)](%s/data.json)" % SITE,
+         "- [Meeting Guide API feed (JSON)](%s/meetingguide.json): the same meetings in the format the AA Meeting Guide app consumes" % SITE, "", "## English-speaking meetings", ""]
     for m in en_list:
         where = " · ".join(x for x in [m.get("place"), m.get("address")] if x) or "Online (Zoom)"
         bits = [en_schedule(m), (m.get("type") or "") + (" meeting" if m.get("type") else ""), m.get("topic"), m.get("format"), where,
@@ -416,6 +417,8 @@ def render():
           "%d groups across Medellín; full list with addresses and schedules at %s/ and in %s/data.json." % (len(es_list), SITE, SITE), ""]
     open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write("\n".join(L))
     open(os.path.join(ROOT, "CNAME"), "w").write(DOMAIN + "\n")
+    import meetingguide
+    meetingguide.write(d)
 
 if __name__ == "__main__":
     render()

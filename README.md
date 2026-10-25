@@ -54,3 +54,7 @@ python3 -m http.server 8000   # abre http://localhost:8000 y http://localhost:80
 ## Corregir datos de las fuentes
 
 Si aacolombia.org o aamedellin.org tienen un dato equivocado, agrega una corrección en `overrides.json`, usando el `id` de la reunión que aparece en `data.json`. Se aplica en cada actualización diaria.
+
+## Meeting Guide (app de AA)
+
+`meetingguide.json` se genera en cada actualización en el formato del Meeting Guide API (https://github.com/code4recovery/spec): una entrada por reunión, día y hora, solo reuniones de AA. Para que aparezca en la app Meeting Guide, una entidad de servicio de AA (intergrupo u oficina de servicios generales) debe registrar la URL `https://www.aamedellinmap.org/meetingguide.json` en aa.org/meeting-guide-app.

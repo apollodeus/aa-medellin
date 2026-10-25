@@ -26,7 +26,7 @@ jobs:
         run: |
           git config user.name "aa-medellin-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A data.json index.html en llms.txt sitemap.xml robots.txt CNAME geocache.json report.md
+          git add -A data.json index.html en llms.txt sitemap.xml robots.txt CNAME geocache.json report.md meetingguide.json
           if ! git diff --cached --quiet; then
             git commit -m "data: refresh $(date -u +%F)"
             git push
