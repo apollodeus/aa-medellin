@@ -154,6 +154,36 @@ def place_ld(m):
         p["geo"] = {"@type": "GeoCoordinates", "latitude": m["lat"], "longitude": m["lng"]}
     return p
 
+def next_occurrence(pairs):
+    """pairs: [(daycode, 'HH:MM')] -> (start_iso, end_iso) of the next session in Bogotá time, or None."""
+    if not pairs:
+        return None
+    base = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-5)))
+    nxt = []
+    for d, t in pairs:
+        if d not in ORDER: continue
+        ahead = (ORDER.index(d) - base.weekday()) % 7
+        h, mi = map(int, t.split(":"))
+        dt = (base + datetime.timedelta(days=ahead)).replace(hour=h, minute=mi, second=0, microsecond=0)
+        if dt < base: dt += datetime.timedelta(days=7)
+        nxt.append(dt)
+    if not nxt:
+        return None
+    st = min(nxt)
+    return st.isoformat(), (st + datetime.timedelta(hours=1)).isoformat()
+
+def event_common(ev, m, pairs, lang):
+    occ = next_occurrence(pairs)
+    if occ:
+        ev["startDate"], ev["endDate"] = occ
+        ev["eventStatus"] = "https://schema.org/EventScheduled"
+    ev["image"] = SITE + "/assets/og-image.png"
+    ev["offers"] = {"@type": "Offer", "price": "0", "priceCurrency": "COP", "availability": "https://schema.org/InStock",
+                    "url": SITE + ("/en/" if lang == "en" else "/")}
+    ev["organizer"]["url"] = m.get("url") or SITE
+    ev["performer"] = {"@type": "Organization", "name": m["name"]}
+    return ev
+
 def event_ld(m, lang):
     ev = {"@type": "Event", "name": m["name"] + (" (English-speaking AA meeting)" if lang == "en" else " (Alcohólicos Anónimos)"),
           "inLanguage": "en" if lang == "en" else "es", "isAccessibleForFree": True,
@@ -173,17 +203,7 @@ def event_ld(m, lang):
         for d, t in sl: by.setdefault(t, []).append(SCHEMA_DAY[d])
         ev["eventSchedule"] = [{"@type": "Schedule", "repeatFrequency": "P1W", "byDay": ds, "startTime": t,
                                 "scheduleTimezone": "America/Bogota"} for t, ds in by.items()]
-    if sl:
-        base = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-5)))
-        nxt = []
-        for d, t in sl:
-            ahead = (ORDER.index(d) - base.weekday()) % 7
-            h, mi = map(int, t.split(":"))
-            dt = (base + datetime.timedelta(days=ahead)).replace(hour=h, minute=mi, second=0, microsecond=0)
-            if dt < base: dt += datetime.timedelta(days=7)
-            nxt.append(dt)
-        ev["startDate"] = min(nxt).isoformat()
-        ev["eventStatus"] = "https://schema.org/EventScheduled"
+    event_common(ev, m, sl, lang)
     if m.get("url"): ev["url"] = m["url"]
     return ev
 
@@ -200,6 +220,8 @@ def group_ld(m):
             if days:
                 sched.append({"@type": "Schedule", "repeatFrequency": "P1W", "byDay": days, "startTime": t["start"], "scheduleTimezone": "America/Bogota"})
     if sched: ev["eventSchedule"] = sched
+    pairs = [(d, t["start"]) for sg in (m.get("slots") or []) for d in sg["days"] for t in sg["times"] if t.get("start")]
+    event_common(ev, m, pairs, "es")
     if m.get("url"): ev["url"] = m["url"]
     return ev
 
