@@ -137,6 +137,14 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 .dist{font:600 .82rem var(--sans);color:var(--muted);font-variant-numeric:tabular-nums;margin-left:auto;white-space:nowrap}
 .empty{color:var(--muted);padding:32px 0;text-align:center}
 
+/* add to calendar */
+.calpop{margin-top:8px;border:1px solid var(--line);border-radius:8px;background:var(--tint);padding:4px 10px;font-size:.9rem}
+.calrow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:6px 0;border-top:1px solid var(--line)}
+.calrow:first-child{border-top:0}
+.calbtns{display:flex;gap:12px}
+.calbtns a{color:var(--accent);font-weight:600;text-decoration:none}
+.calbtns a:hover{text-decoration:underline}
+.cal::before{content:"";display:inline-block;width:13px;height:13px;margin-right:4px;vertical-align:-2px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3V2zm13 8H4v10h16V10zM6 12h4v4H6v-4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3V2zm13 8H4v10h16V10zM6 12h4v4H6v-4z'/%3E%3C/svg%3E") center/contain no-repeat}
 /* weekly schedule */
 .sched{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
 .sched h2{font:600 1.35rem/1.2 var(--serif);color:var(--accent);margin:0 0 10px}
@@ -225,7 +233,7 @@ footer .inner{padding-block:22px 34px}
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script>
-const PAGE_LANG="{{LANG}}";const T={{TJS}};
+const PAGE_LANG="{{LANG}}";const SITE_URL="{{SITE}}"+("{{LANG}}"==="en"?"/en/":"/");const T={{TJS}};
 const PLACES=[
  ["pob","El Poblado",6.2096,-75.5681],["lau","Laureles",6.2456,-75.5916],["cen","Centro",6.2518,-75.5636],
  ["bel","Belén",6.2320,-75.6010],["env","Envigado",6.1700,-75.5900],["sab","Sabaneta",6.1515,-75.6160],
@@ -395,6 +403,38 @@ function fmt12(t){const [h,m]=t.split(":").map(Number);if(h===12&&m===0)return T
 function firstTime(g){const want=state.days.size?[...state.days][0]:null;let best=null;for(const sl of (g.slots||[])){if(want&&!sl.days.includes(want))continue;for(const t of sl.times){if(t.start&&(best===null||t.start<best))best=t.start;}}return best;}
 function save(){try{localStorage.setItem("aa-med",JSON.stringify({center:state.center,lang:state.lang}))}catch(x){}}
 
+const ICS_DAY={L:"MO",M:"TU",Mc:"WE",J:"TH",V:"FR",S:"SA",D:"SU"},JS_DAY={D:0,L:1,M:2,Mc:3,J:4,V:5,S:6};
+function calSlots(g){
+  // one row per start time: {days:[codes], start:"HH:MM", end:"HH:MM"|null, label}
+  const by={};
+  for(const sl of (g.slots||[]))for(const t of sl.times){if(!t.start)continue;const k=t.start+"|"+(t.end||"");(by[k]=by[k]||{days:[],start:t.start,end:t.end||null});for(const d of sl.days)if(ICS_DAY[d]&&!by[k].days.includes(d))by[k].days.push(d);}
+  return Object.values(by).filter(x=>x.days.length).map(x=>{x.days.sort((a,b)=>ORDER.indexOf(a)-ORDER.indexOf(b));x.label=x.days.map(d=>DAYNAME[d]).join(", ")+" "+fmt12(x.start)+(x.end?"–"+fmt12(x.end):"");return x;});
+}
+function nextDate(dayCode,hhmm){
+  const now=new Date(),[h,m]=hhmm.split(":").map(Number);
+  const bog=new Date(now.toLocaleString("en-US",{timeZone:"America/Bogota"}));
+  const d=new Date(bog);d.setHours(h,m,0,0);let ahead=(JS_DAY[dayCode]-bog.getDay()+7)%7;if(ahead===0&&d<=bog)ahead=7;d.setDate(d.getDate()+ahead);return d;
+}
+function pad(n){return String(n).padStart(2,"0")}
+function localStamp(d){return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`}
+function calTitle(g){return (g.lang==="en"?"AA meeting: ":"Reunión de AA: ")+g.name}
+function calLocation(g){return g.format==="online"?(g.link||""):[g.address,(g.municipio||"Medellín")+", Colombia"].filter(Boolean).join(", ")}
+function calDesc(g){return [g.hor,g.link?(T.join+": "+g.link):"",g.link_password?(T.password+": "+g.link_password):"",(g.notes||[]).join(" "),g.contact?(T.contact+": "+g.contact):"",SITE_URL].filter(Boolean).join("\n")}
+function gcalUrl(g,sl){
+  const st=nextDate(sl.days[0],sl.start);const en=new Date(st);if(sl.end){const [h,m]=sl.end.split(":").map(Number);en.setHours(h,m,0,0);if(en<=st)en.setDate(en.getDate()+1);}else en.setHours(en.getHours()+1);
+  const q=new URLSearchParams({action:"TEMPLATE",text:calTitle(g),dates:localStamp(st)+"/"+localStamp(en),ctz:"America/Bogota",location:calLocation(g),details:calDesc(g),recur:"RRULE:FREQ=WEEKLY;BYDAY="+sl.days.map(d=>ICS_DAY[d]).join(",")});
+  return "https://calendar.google.com/calendar/render?"+q.toString();
+}
+function downloadIcs(g,sl){
+  const st=nextDate(sl.days[0],sl.start);const en=new Date(st);if(sl.end){const [h,m]=sl.end.split(":").map(Number);en.setHours(h,m,0,0);if(en<=st)en.setDate(en.getDate()+1);}else en.setHours(en.getHours()+1);
+  const e=v=>String(v).replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/,/g,"\\,").replace(/;/g,"\;");
+  const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//AA Medellín Map//ES","CALSCALE:GREGORIAN",
+   "BEGIN:VTIMEZONE","TZID:America/Bogota","BEGIN:STANDARD","DTSTART:19930404T000000","TZOFFSETFROM:-0500","TZOFFSETTO:-0500","TZNAME:-05","END:STANDARD","END:VTIMEZONE",
+   "BEGIN:VEVENT","UID:"+(g.id||g.i)+"-"+sl.start.replace(":","")+"@aamedellinmap.org","DTSTAMP:"+new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z",
+   "DTSTART;TZID=America/Bogota:"+localStamp(st),"DTEND;TZID=America/Bogota:"+localStamp(en),"RRULE:FREQ=WEEKLY;BYDAY="+sl.days.map(d=>ICS_DAY[d]).join(","),
+   "SUMMARY:"+e(calTitle(g)),"LOCATION:"+e(calLocation(g)),"DESCRIPTION:"+e(calDesc(g)),"URL:"+SITE_URL,"END:VEVENT","END:VCALENDAR"].join("\r\n");
+  const blob=new Blob([ics],{type:"text/calendar;charset=utf-8"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=(g.name.replace(/[^\w\- ]+/g,"").trim()||"aa-meeting")+".ics";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000);
+}
 function render(refit){
   const c=CENTERS[state.center], nq=norm(state.q);
   let rows=ITEMS.filter(g=>{
@@ -440,8 +480,15 @@ function render(refit){
       ${g.lat!=null?`<a href="#map" data-i="${g.i}" class="tomap">${T.onmap}</a>`:""}
       ${g.format!=="online"?`<a href="${esc(viewUrl(g))}" target="_blank" rel="noopener">Google Maps</a>`:""}
       ${g.url?`<a href="${esc(g.url)}" target="_blank" rel="noopener">${g.source==="manual"?T.website:T.source}</a>`:""}
+      ${calSlots(g).length?`<a href="#" class="cal" data-i="${g.i}">${T.addcal}</a>`:""}
     </div>
+    <div class="calpop" id="cal-${g.i}" hidden></div>
   </article>`).join("");
+  list.querySelectorAll(".cal").forEach(a=>a.onclick=e=>{e.preventDefault();const g=ITEMS[+a.dataset.i];const box=document.getElementById("cal-"+g.i);
+    if(!box.hidden){box.hidden=true;return;}
+    box.innerHTML=calSlots(g).map((sl,k)=>`<div class="calrow"><span>${esc(sl.label)}</span><span class="calbtns"><a href="${esc(gcalUrl(g,sl))}" target="_blank" rel="noopener">Google</a><a href="#" data-i="${g.i}" data-k="${k}" class="ics">Apple / Outlook (.ics)</a></span></div>`).join("");
+    box.hidden=false;
+    box.querySelectorAll(".ics").forEach(b=>b.onclick=ev=>{ev.preventDefault();downloadIcs(ITEMS[+b.dataset.i],calSlots(ITEMS[+b.dataset.i])[+b.dataset.k]);});});
   list.querySelectorAll(".tomap").forEach(a=>a.onclick=e=>{e.preventDefault();const g=ITEMS[+a.dataset.i];state.sel=g.i;MAP.sel(g.loc);document.getElementById("map").scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>MAP.focus(g),350);});
 }
 
