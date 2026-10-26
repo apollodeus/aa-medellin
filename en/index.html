@@ -139,6 +139,9 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 
 /* add to calendar */
 .calpop{margin-top:8px;border:1px solid var(--line);border-radius:8px;background:var(--tint);padding:4px 10px;font-size:.9rem}
+.calmode{display:flex;gap:4px;padding:8px 0 6px}
+.calmode button{font:600 .82rem var(--sans);padding:6px 12px;border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:999px;cursor:pointer}
+.calmode button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
 .calrow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:6px 0;border-top:1px solid var(--line)}
 .calrow:first-child{border-top:0}
 .calbtns{display:flex;gap:12px}
@@ -318,7 +321,7 @@ footer .inner{padding-block:22px 34px}
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script>
-const PAGE_LANG="en";const SITE_URL="https://www.aamedellinmap.org"+("en"==="en"?"/en/":"/");const T={"addcal": "Add to calendar", "noon": "12:00 noon", "join": "Join online", "online": "Online", "password": "Password", "allprog": "All 12-step programs welcome", "allprogTitle": "Open 12-step meeting: AA, NA, Al-Anon and any 12-step program welcome", "website": "Website", "addrNeedsGoogle": "Exact street-number search isn't available yet; type the hotel name, a park or a known landmark.", "addrOk": "Sorted by distance from:", "addrFail": "Couldn't find that address. Try the hotel name or add the neighborhood.", "approx": "approx. location", "approxTitle": "This pin was placed from the address and may be off by a block. Use Directions for the exact route.", "myloc": "📍 My location", "metro": "Metro area", "byname": "Sort by name", "locating": "Finding your location…", "locfail": "Couldn't get your location", "directions": "Directions", "details": "Details", "topic": {}, "tag": {"english": "English", "open": "open", "closed": "closed", "online": "online only", "hybrid": "in person and online", "virtual": "in person and online"}, "locale": "en-US", "updated": "Updated: ", "empty": "No meetings match those filters.", "contact": "Contact", "onmap": "Show on map", "source": "Source", "loadfail": "Couldn't load the meeting list.", "nosched": "Schedule not published", "days": [["L", "Mon"], ["M", "Tue"], ["Mc", "Wed"], ["J", "Thu"], ["V", "Fri"], ["S", "Sat"], ["D", "Sun"]]};
+const PAGE_LANG="en";const SITE_URL="https://www.aamedellinmap.org"+("en"==="en"?"/en/":"/");const T={"calOnce": "One time", "calWeekly": "Every week", "addcal": "Add to calendar", "noon": "12:00 noon", "join": "Join online", "online": "Online", "password": "Password", "allprog": "All 12-step programs welcome", "allprogTitle": "Open 12-step meeting: AA, NA, Al-Anon and any 12-step program welcome", "website": "Website", "addrNeedsGoogle": "Exact street-number search isn't available yet; type the hotel name, a park or a known landmark.", "addrOk": "Sorted by distance from:", "addrFail": "Couldn't find that address. Try the hotel name or add the neighborhood.", "approx": "approx. location", "approxTitle": "This pin was placed from the address and may be off by a block. Use Directions for the exact route.", "myloc": "📍 My location", "metro": "Metro area", "byname": "Sort by name", "locating": "Finding your location…", "locfail": "Couldn't get your location", "directions": "Directions", "details": "Details", "topic": {}, "tag": {"english": "English", "open": "open", "closed": "closed", "online": "online only", "hybrid": "in person and online", "virtual": "in person and online"}, "locale": "en-US", "updated": "Updated: ", "empty": "No meetings match those filters.", "contact": "Contact", "onmap": "Show on map", "source": "Source", "loadfail": "Couldn't load the meeting list.", "nosched": "Schedule not published", "days": [["L", "Mon"], ["M", "Tue"], ["Mc", "Wed"], ["J", "Thu"], ["V", "Fri"], ["S", "Sat"], ["D", "Sun"]]};
 const PLACES=[
  ["pob","El Poblado",6.2096,-75.5681],["lau","Laureles",6.2456,-75.5916],["cen","Centro",6.2518,-75.5636],
  ["bel","Belén",6.2320,-75.6010],["env","Envigado",6.1700,-75.5900],["sab","Sabaneta",6.1515,-75.6160],
@@ -505,20 +508,44 @@ function localStamp(d){return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.g
 function calTitle(g){return (g.lang==="en"?"AA meeting: ":"Reunión de AA: ")+g.name}
 function calLocation(g){return g.format==="online"?(g.link||""):[g.address,(g.municipio||"Medellín")+", Colombia"].filter(Boolean).join(", ")}
 function calDesc(g){return [g.hor,g.link?(T.join+": "+g.link):"",g.link_password?(T.password+": "+g.link_password):"",(g.notes||[]).join(" "),g.contact?(T.contact+": "+g.contact):"",SITE_URL].filter(Boolean).join("\n")}
-function gcalUrl(g,sl){
-  const st=nextDate(sl.days[0],sl.start);const en=new Date(st);if(sl.end){const [h,m]=sl.end.split(":").map(Number);en.setHours(h,m,0,0);if(en<=st)en.setDate(en.getDate()+1);}else en.setHours(en.getHours()+1);
-  const q=new URLSearchParams({action:"TEMPLATE",text:calTitle(g),dates:localStamp(st)+"/"+localStamp(en),ctz:"America/Bogota",location:calLocation(g),details:calDesc(g),recur:"RRULE:FREQ=WEEKLY;BYDAY="+sl.days.map(d=>ICS_DAY[d]).join(",")});
+function gcalUrl(g,r){
+  const [st,en]=eventTimes(r);
+  const q=new URLSearchParams({action:"TEMPLATE",text:calTitle(g),dates:localStamp(st)+"/"+localStamp(en),ctz:"America/Bogota",location:calLocation(g),details:calDesc(g)});
+  if(!r.once)q.set("recur","RRULE:FREQ=WEEKLY;BYDAY="+r.days.map(d=>ICS_DAY[d]).join(","));
   return "https://calendar.google.com/calendar/render?"+q.toString();
 }
-function downloadIcs(g,sl){
-  const st=nextDate(sl.days[0],sl.start);const en=new Date(st);if(sl.end){const [h,m]=sl.end.split(":").map(Number);en.setHours(h,m,0,0);if(en<=st)en.setDate(en.getDate()+1);}else en.setHours(en.getHours()+1);
+function downloadIcs(g,r){
+  const [st,en]=eventTimes(r);const sl=r.sl;
   const e=v=>String(v).replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/,/g,"\\,").replace(/;/g,"\;");
   const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//AA Medellín Map//ES","CALSCALE:GREGORIAN",
    "BEGIN:VTIMEZONE","TZID:America/Bogota","BEGIN:STANDARD","DTSTART:19930404T000000","TZOFFSETFROM:-0500","TZOFFSETTO:-0500","TZNAME:-05","END:STANDARD","END:VTIMEZONE",
-   "BEGIN:VEVENT","UID:"+(g.id||g.i)+"-"+sl.start.replace(":","")+"@aamedellinmap.org","DTSTAMP:"+new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z",
-   "DTSTART;TZID=America/Bogota:"+localStamp(st),"DTEND;TZID=America/Bogota:"+localStamp(en),"RRULE:FREQ=WEEKLY;BYDAY="+sl.days.map(d=>ICS_DAY[d]).join(","),
-   "SUMMARY:"+e(calTitle(g)),"LOCATION:"+e(calLocation(g)),"DESCRIPTION:"+e(calDesc(g)),"URL:"+SITE_URL,"END:VEVENT","END:VCALENDAR"].join("\r\n");
+   "BEGIN:VEVENT","UID:"+(g.id||g.i)+"-"+sl.start.replace(":","")+"-"+localStamp(st)+"@aamedellinmap.org","DTSTAMP:"+new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z",
+   "DTSTART;TZID=America/Bogota:"+localStamp(st),"DTEND;TZID=America/Bogota:"+localStamp(en)]
+   .concat(r.once?[]:["RRULE:FREQ=WEEKLY;BYDAY="+r.days.map(d=>ICS_DAY[d]).join(",")])
+   .concat(["SUMMARY:"+e(calTitle(g)),"LOCATION:"+e(calLocation(g)),"DESCRIPTION:"+e(calDesc(g)),"URL:"+SITE_URL,"END:VEVENT","END:VCALENDAR"]).join("\r\n");
   const blob=new Blob([ics],{type:"text/calendar;charset=utf-8"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=(g.name.replace(/[^\w\- ]+/g,"").trim()||"aa-meeting")+".ics";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000);
+}
+function fmtDate(d){return d.toLocaleDateString(T.locale,{weekday:"short",day:"numeric",month:"short"})}
+function calRows(g,mode){
+  const out=[];
+  for(const sl of calSlots(g)){
+    if(mode==="weekly"){out.push({sl,days:sl.days,label:sl.label,once:false});continue;}
+    for(const d of sl.days){const st=nextDate(d,sl.start);out.push({sl,days:[d],start:st,label:fmtDate(st)+" · "+fmt12(sl.start)+(sl.end?"–"+fmt12(sl.end):""),once:true});}
+  }
+  if(mode!=="weekly")out.sort((a,b)=>a.start-b.start);
+  return out;
+}
+function renderCal(g,box){
+  const mode=box.dataset.mode;
+  box.innerHTML=`<div class="calmode"><button type="button" data-m="once" aria-pressed="${mode==="once"}">${T.calOnce}</button><button type="button" data-m="weekly" aria-pressed="${mode==="weekly"}">${T.calWeekly}</button></div>`+
+    calRows(g,mode).map((r,k)=>`<div class="calrow"><span>${esc(r.label)}</span><span class="calbtns"><a href="${esc(gcalUrl(g,r))}" target="_blank" rel="noopener">Google</a><a href="#" data-k="${k}" class="ics">Apple / Outlook (.ics)</a></span></div>`).join("");
+  box.querySelectorAll(".calmode button").forEach(b=>b.onclick=()=>{box.dataset.mode=b.dataset.m;renderCal(g,box);});
+  box.querySelectorAll(".ics").forEach(b=>b.onclick=ev=>{ev.preventDefault();downloadIcs(g,calRows(g,mode)[+b.dataset.k]);});
+}
+function eventTimes(r){
+  const sl=r.sl;const st=r.once?new Date(r.start):nextDate(r.days[0],sl.start);const en=new Date(st);
+  if(sl.end){const [h,m]=sl.end.split(":").map(Number);en.setHours(h,m,0,0);if(en<=st)en.setDate(en.getDate()+1);}else en.setHours(en.getHours()+1);
+  return [st,en];
 }
 function render(refit){
   const c=CENTERS[state.center], nq=norm(state.q);
@@ -571,9 +598,7 @@ function render(refit){
   </article>`).join("");
   list.querySelectorAll(".cal").forEach(a=>a.onclick=e=>{e.preventDefault();const g=ITEMS[+a.dataset.i];const box=document.getElementById("cal-"+g.i);
     if(!box.hidden){box.hidden=true;return;}
-    box.innerHTML=calSlots(g).map((sl,k)=>`<div class="calrow"><span>${esc(sl.label)}</span><span class="calbtns"><a href="${esc(gcalUrl(g,sl))}" target="_blank" rel="noopener">Google</a><a href="#" data-i="${g.i}" data-k="${k}" class="ics">Apple / Outlook (.ics)</a></span></div>`).join("");
-    box.hidden=false;
-    box.querySelectorAll(".ics").forEach(b=>b.onclick=ev=>{ev.preventDefault();downloadIcs(ITEMS[+b.dataset.i],calSlots(ITEMS[+b.dataset.i])[+b.dataset.k]);});});
+    box.dataset.mode=box.dataset.mode||"once";renderCal(g,box);box.hidden=false;});
   list.querySelectorAll(".tomap").forEach(a=>a.onclick=e=>{e.preventDefault();const g=ITEMS[+a.dataset.i];state.sel=g.i;MAP.sel(g.loc);document.getElementById("map").scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>MAP.focus(g),350);});
 }
 
