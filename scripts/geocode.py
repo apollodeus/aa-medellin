@@ -225,5 +225,5 @@ def audit_official(rec, report):
         elif d > 1.5:
             report.append("official pin replaced: it was %.1f km from the address, now pinned by geocoder (check): %s — %s — %s" % (d, rec["name"], rec["address"], rec["url"]))
             rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = g[0], g[1], False, "google geocoder (official pin was %.1f km off)" % d
-        elif d > 0.4:
-            report.append("official pin is %.1f km from its address (check): %s — %s — %s" % (d, rec["name"], rec["address"], rec["url"]))
+        elif d > 0.12:
+            report.append("official pin is %d m from its written address (check the text): %s — %s — %s" % (round(d * 1000), rec["name"], rec["address"], rec["url"]))
