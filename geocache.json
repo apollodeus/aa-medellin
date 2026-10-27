@@ -581,6 +581,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CARRERA 43A #31-182 | SAN DIEGO": {
+  "lat": 6.2327206,
+  "lng": -75.5701663,
+  "precise": true,
+  "source": "google"
+ },
  "google:CARRERA 43B NO. 20E-70, BARRIO": {
   "lat": 6.3089325,
   "lng": -75.5532003,
