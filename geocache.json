@@ -1283,5 +1283,185 @@
   "lat": 6.2545276,
   "lng": -75.5821812,
   "source": "osm"
+ },
+ "place:CAFE CLICHE @ CALLE 32F # 78-105, LAURELES | MEDELLIN": {
+  "lat": 6.238067,
+  "lng": -75.5993821,
+  "query": "Cafe Cliche",
+  "source": "google places"
+ },
+ "place:CAFE CLICHE @ CL. 32F #78-105, BELEN | MEDELLIN": {
+  "lat": 6.238067,
+  "lng": -75.5993821,
+  "query": "Cafe Cliche",
+  "source": "google places"
+ },
+ "place:CAPILLA DEL ROSARIO, BELEN RINCON @ CALLE 2 SUR NO. 79-211 PISO 2 | MEDELLIN": {
+  "lat": 6.2051015,
+  "lng": -75.602014,
+  "query": "Capilla del Rosario, Belén Rincón",
+  "source": "google places"
+ },
+ "place:CENTRO DE MEDELLIN EDIFICIO AVENIDA 1O. DE MAYO @ CALLE 51 NO. 49-96 | MEDELLIN": {
+  "lat": 6.2506941,
+  "lng": -75.56715129999999,
+  "query": "Centro de Medellin Edificio Avenida 1o. De Mayo",
+  "source": "google places"
+ },
+ "place:ED. COMPARTAMOS @ CALLE 11 NO. 8-35 | MEDELLIN": {
+  "lat": 6.251161199999999,
+  "lng": -75.5673827,
+  "query": "Ed. Compartamos",
+  "source": "google places"
+ },
+ "place:EDIFICIO MOLINOS DEL PRADO @ CARRERA 48 (ECUADOR) NO. 61-35 | MEDELLIN": {
+  "lat": 6.2576714,
+  "lng": -75.5613238,
+  "query": "Edificio Molinos del Prado",
+  "source": "google places"
+ },
+ "place:EDIFICIO RESTREPO ARANGO @ CARRERA 52 NO. 49-51 | MEDELLIN": {
+  "lat": 6.2117676,
+  "lng": -75.6095531,
+  "query": "Edificio Restrepo Arango",
+  "source": "google places"
+ },
+ "place:EDIFICIO RESTREPO ARANGO @ CARRERA 52 NO. 49-61 | MEDELLIN": {
+  "lat": 6.2117676,
+  "lng": -75.6095531,
+  "query": "Edificio Restrepo Arango",
+  "source": "google places"
+ },
+ "place:EDIFICIO RESTREPO ARANGO @ CARRERA 52 NO.49-61 | MEDELLIN": {
+  "lat": 6.2117676,
+  "lng": -75.6095531,
+  "query": "Edificio Restrepo Arango",
+  "source": "google places"
+ },
+ "place:ESCUELA PICHINCHA @ CARRERA 86 NO. 45B-17 | MEDELLIN": {
+  "lat": 6.2552887,
+  "lng": -75.6030438,
+  "query": "Escuela Pichincha",
+  "source": "google places"
+ },
+ "place:HOSPITAL SAN VICENTE DE PAUL @ CALLE 67 POR CARRERA 51 | MEDELLIN": {
+  "lat": 6.2639271,
+  "lng": -75.5647752,
+  "query": "Hospital San Vicente de Paúl",
+  "source": "google places"
+ },
+ "place:IGLESIA SANTA ROSA DE LIMA @ CALLE 49DD NO. 87-11 | MEDELLIN": {
+  "lat": 6.262398600000001,
+  "lng": -75.6057694,
+  "query": "Iglesia Santa Rosa de Lima",
+  "source": "google places"
+ },
+ "place:IGLESIA VERBO DIVINO @ CALLE 37 NO. 65D-04 | MEDELLIN": {
+  "lat": 6.241213200000001,
+  "lng": -75.58419769999999,
+  "query": "Iglesia Verbo Divino",
+  "source": "google places"
+ },
+ "place:INSTITUCION EDUCATIVA ATANASIO GIRARDOT, BARRIO NUEVO @ CALLE 24A NO. 59-112, CONTIGUO A LA | BELLO": {
+  "lat": 6.3136689,
+  "lng": -75.56982459999999,
+  "query": "Institución Educativa Atanasio Girardot, barrio Nuevo",
+  "source": "google places"
+ },
+ "place:JUNTA DE ACCION COMUNAL @ CARRERA 43D NO. 11-73 | MEDELLIN": {
+  "lat": 6.2977811,
+  "lng": -75.5482538,
+  "query": "Junta de Acción Comunal",
+  "source": "google places"
+ },
+ "place:OBRA SOCIAL MADRE LAURA @ CALLE 34B NO. 93B-31 | MEDELLIN": {
+  "lat": 6.2501529,
+  "lng": -75.56163600000001,
+  "query": "Obra Social Madre Laura",
+  "source": "google places"
+ },
+ "place:PARROQUIA FATIMA @ CARRERA 65A 32B-70 | MEDELLIN": {
+  "lat": 6.2365083,
+  "lng": -75.583776,
+  "query": "Parroquia Fátima",
+  "source": "google places"
+ },
+ "place:PARROQUIA SANTA CRUZ DE ALCALA @ CARRERA 46A  39SUR-52 | ENVIGADO": {
+  "lat": 6.1702517,
+  "lng": -75.593673,
+  "query": "Parroquia Santa Cruz de Alcala",
+  "source": "google places"
+ },
+ "place:SALON COMUNAL, CONJUNTO RESIDENCIAL ESTACION DEL SUR @ CALLE 29A 50-75 | ITAGUI": {
+  "lat": 6.162581599999999,
+  "lng": -75.6227201,
+  "query": "Salón comunal, Conjunto Residencial Estación del Sur",
+  "source": "google places"
+ },
+ "place:SALON PARROQUIAL @ CALLE 54 CON CARRERA 17 | MEDELLIN": {
+  "lat": 6.249797999999999,
+  "lng": -75.567196,
+  "query": "Salón Parroquial",
+  "source": "google places"
+ },
+ "place:SEDE ACCION COMUNAL @ CALLE 66 NO. 47-24 | ITAGUI": {
+  "lat": 6.1902956,
+  "lng": -75.59771359999999,
+  "query": "Sede Acción Comunal",
+  "source": "google places"
+ },
+ "place:SEDE ACCION COMUNAL @ CALLE 75 NO. 64C-16, BARRIO CARIBE | MEDELLIN": {
+  "lat": 6.3048324,
+  "lng": -75.5653726,
+  "query": "sede Accion Comunal",
+  "source": "google places"
+ },
+ "place:SEDE ACCION COMUNAL @ CL 73A 52C-03 | ITAGUI": {
+  "lat": 6.1846029,
+  "lng": -75.59789049999999,
+  "query": "Sede Acción Comunal",
+  "source": "google places"
+ },
+ "place:SEDE ACCION COMUNAL @ CL 80 50A-09 | ITAGUI": {
+  "lat": 6.1902956,
+  "lng": -75.59771359999999,
+  "query": "Sede Acción Comunal",
+  "source": "google places"
+ },
+ "place:SEDE SALON SOCIAL @ CARRERA 29. NO. 58-30, BARRIO ENCISO | MEDELLIN": {
+  "lat": 6.249795,
+  "lng": -75.550089,
+  "query": "Sede Salón Social",
+  "source": "google places"
+ },
+ "place:SEDE SOCIAL MANILA @ CRA 43D #11-73, EL POBLADO | MEDELLIN": {
+  "lat": 6.2128758,
+  "lng": -75.5718995,
+  "query": "Sede Social Manila",
+  "source": "google places"
+ },
+ "place:SEDE SOCIAL MANILA @ CRA 43D #11-73, EL POBLADO, MEDELLIN | MEDELLIN": {
+  "lat": 6.2128758,
+  "lng": -75.5718995,
+  "query": "Sede Social Manila",
+  "source": "google places"
+ },
+ "place:SEDE SOCIAL MANILA @ CRA. 43D #11-73, MANILA, EL POBLADO | MEDELLIN": {
+  "lat": 6.2128758,
+  "lng": -75.5718995,
+  "query": "Sede Social Manila",
+  "source": "google places"
+ },
+ "place:SEDE SOCIAL SANTA FE @ CALLE 22 NO. 59-50 | MEDELLIN": {
+  "lat": 6.224428199999999,
+  "lng": -75.58322079999999,
+  "query": "Sede Social Santa Fe",
+  "source": "google places"
+ },
+ "place:SWEET GEORGIA CAFE  BACK ROOM (IN LAURELES) @ CARRERA 78 #32EE-25, MEDELLIN, ANTIOQUIA | MEDELLIN": {
+  "lat": 6.2380800999999995,
+  "lng": -75.59841879999999,
+  "query": "Sweet Georgia Cafe – back room (in Laureles)",
+  "source": "google places"
  }
 }
