@@ -17,6 +17,8 @@ UA = {"User-Agent": "aa-medellin-map/1.0 (+https://github.com/apollodeus/aa-mede
 # Aburrá valley: anything outside this is not a Medellín-area meeting
 BBOX = (6.08, 6.42, -75.72, -75.45)
 GOOGLE_KEY = os.environ.get("GOOGLE_GEOCODING_KEY", "").strip()
+# a building/business name match only counts if it sits near the written address or the official pin
+PLACE_MAX_KM = 0.5
 
 _cache = None
 def cache():
@@ -256,7 +258,7 @@ def place(rec, venues, report):
     pl = google_place(rec.get("place"), rec.get("municipio") or "Medellín") if rec.get("place") else None
     if pl:
         ga = google_geocode(rec.get("address"), rec.get("municipio") or "Medellín", rec.get("barrio") or "") if rec.get("address") else None
-        if ga and km(pl[0], pl[1], ga[0], ga[1]) > 1.5:
+        if ga and km(pl[0], pl[1], ga[0], ga[1]) > PLACE_MAX_KM:
             report.append("named place '%s' matched %.1f km from the address, address used instead (check): %s" % (rec["place"], km(pl[0], pl[1], ga[0], ga[1]), rec["name"]))
         else:
             rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = pl[0], pl[1], False, "google place (%s)" % rec["place"]; return
@@ -292,7 +294,7 @@ def audit_official(rec, report):
     if pl:
         d = km(rec["lat"], rec["lng"], pl[0], pl[1])
         ga = google_geocode(rec["address"], city, rec.get("barrio") or "")
-        if d > 1.5 and (not ga or km(pl[0], pl[1], ga[0], ga[1]) > 1.5):
+        if d > PLACE_MAX_KM and (not ga or km(pl[0], pl[1], ga[0], ga[1]) > PLACE_MAX_KM):
             report.append("named place '%s' matched %.1f km from both the official pin and the address, not used (check): %s — %s" % (rec["place"], d, rec["name"], rec["url"]))
             pl = None
     if pl:
