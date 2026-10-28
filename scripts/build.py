@@ -44,11 +44,26 @@ def load_json(path, default):
         return default
 
 # ---------------------------------------------------------------- Spanish groups
+VENUE_WORDS = r"(edificio|ed\.|centro comercial|c\.c\.|galer[ií]as?|parroquia|iglesia|capilla|sede|sal[oó]n|junta de acci[oó]n comunal|jac|escuela|colegio|instituci[oó]n educativa|hospital|cl[ií]nica|obra social|biblioteca|conjunto|unidad residencial|mall|plaza|casa de la cultura|casa|fundaci[oó]n|club|hotel|centro|torre|local comercial|universidad|coliseo|polideportivo|teatro|comando|estaci[oó]n)"
+NOT_VENUE = r"^(frente|al frente|detr[aá]s|antes|despu[eé]s|enseguida|contiguo|junto|cerca|diagonal|barrio|municipio|sector|piso|primer|segundo|tercer|of\.|oficina|interior|local \d|manzana|zona|c[oó]digo)"
+def looks_like_venue(t):
+    """'Galerías de San Diego', 'Edificio Molinos del Prado', 'Parroquia Fátima' -> a building/business name worth showing as the place.
+    Returns the name (possibly extracted from parentheses) or ''."""
+    t = (t or "").strip()
+    m = re.search(r"\(([^)]+)\)", t)
+    if m and looks_like_venue(m.group(1)):
+        return m.group(1).strip()
+    if not t or len(t) > 60 or re.search(r"\d{7,}|@", t) or re.match(NOT_VENUE, t, re.I):
+        return ""
+    if re.match(r"^(%s)(?=\s|$)" % VENUE_WORDS, t, re.I) and not re.search(r"\b(centro|medell[ií]n)\s*$", t, re.I):
+        return t
+    return ""
+
 def fetch_spanish():
     rows = []
     for page in range(1, 60):
         url = ("https://aacolombia.org/wp-json/wp/v2/grupos?per_page=100&page=%d"
-               "&_fields=id,title,link,spectra_custom_meta" % page)
+               "&_fields=id,title,link,spectra_custom_meta,uagb_featured_image_src" % page)
         try:
             data = json.loads(get(url))
         except Exception as e:
@@ -66,12 +81,31 @@ def fetch_spanish():
                 continue
             lat = f("coordenadas_gps_lat") or f("grupo_coordenada_lat")
             lng = f("coordenadas_gps_lng") or f("grupo_coordenada_lng")
+            img = g.get("uagb_featured_image_src") or {}
+            photo = (img.get("medium") or img.get("full") or [None])[0] if isinstance(img, dict) else None
+            photo_full = (img.get("large") or img.get("full") or [None])[0] if isinstance(img, dict) else None
+            detail, info = f("detalle"), f("informacion_adicional")
+            if detail == "(null)": detail = ""
+            if info == "(null)": info = ""
+            place = ""
+            for which in ("detail", "info"):
+                cand = detail if which == "detail" else info
+                v = looks_like_venue(cand)
+                if v:
+                    place = v
+                    rest = cand.replace("(" + v + ")", "").strip(" -,") if v != cand else ""
+                    if which == "detail": detail = rest
+                    else: info = rest
+                    break
             rows.append({
                 "id": "es-%s" % g["id"],
+                "place": place,
+                "photo": photo if isinstance(photo, str) and photo.startswith("http") else "",
+                "photo_full": photo_full if isinstance(photo_full, str) and photo_full.startswith("http") else "",
                 "lang": "es",
                 "name": nice_name(html.unescape(g["title"]["rendered"]).strip()),
                 "address": f("direccion"),
-                "detail": f("detalle"),
+                "detail": detail,
                 "barrio": f("barrio"),
                 "municipio": f("municipio").title().replace("Itagüí", "Itagüí"),
                 "schedule": f("horario"),
@@ -79,7 +113,7 @@ def fetch_spanish():
                 "link": f("transmision") if f("transmision").startswith("http") else "",
                 "link_note": "" if f("transmision").startswith("http") else f("transmision"),
                 "link_password": f("transmision_password"),
-                "info": "" if f("informacion_adicional") in ("", "(null)") else f("informacion_adicional"),
+                "info": info,
                 "contact": f("contacto"),
                 "email": f("correo_electronico"),
                 "lat": float(lat) if lat else None,

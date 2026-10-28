@@ -2,6 +2,7 @@
 
 1. A confirmed pin in venues.json ("approx": false)       - a person checked it
 2. Coordinates inside the meeting's own Google Maps link   - the organizer's pin
+2b. The building/business name (rec["place"]) looked up on Google - best evidence when the listing names one
 3. Google Geocoding API, rooftop/range precision           - needs GOOGLE_GEOCODING_KEY
 4. An approximate pin in venues.json                       - hand-placed estimate
 5. Nominatim (OpenStreetMap), street-level only            - rough, marked approx
@@ -127,6 +128,39 @@ def google_geocode(address, city="Medellín", hint=""):
     c[key] = {"lat": result[0], "lng": result[1], "precise": result[2], "source": "google"} if result else None
     return result
 
+PLACE_TYPES = {"establishment", "point_of_interest", "premise", "shopping_mall", "church", "place_of_worship", "school",
+               "hospital", "university", "library", "city_hall", "local_government_office", "lodging", "store", "subpremise"}
+def google_place(name, city="Medellín"):
+    """Geocode a building/business name ('Galerías de San Diego'). Only a named-place match counts (not a street or area)."""
+    if not GOOGLE_KEY or not name:
+        return None
+    key = "place:" + norm(name) + " | " + norm(city)
+    c = cache()
+    if key in c:
+        v = c[key]
+        return (v["lat"], v["lng"]) if v else None
+    result = None
+    try:
+        q = urllib.parse.urlencode({"address": "%s, %s, Antioquia, Colombia" % (name, city), "components": "country:CO",
+                                    "region": "co", "language": "es",
+                                    "bounds": "%s,%s|%s,%s" % (BBOX[0], BBOX[2], BBOX[1], BBOX[3]), "key": GOOGLE_KEY})
+        _, body = _get("https://maps.googleapis.com/maps/api/geocode/json?" + q)
+        data = json.loads(body)
+        if data.get("status") not in ("OK", "ZERO_RESULTS"):
+            msg = "%s: %s" % (data.get("status"), data.get("error_message", ""))
+            if msg not in GOOGLE_ERRORS: GOOGLE_ERRORS.append(msg)
+            return None
+        for res in data.get("results", []):
+            loc = res["geometry"]["location"]
+            if in_bbox(loc["lat"], loc["lng"]) and PLACE_TYPES & set(res.get("types", [])) and not res.get("partial_match"):
+                result = (loc["lat"], loc["lng"]); break
+    except Exception as e:
+        msg = "EXCEPTION: %s" % e
+        if msg not in GOOGLE_ERRORS: GOOGLE_ERRORS.append(msg)
+        return None
+    c[key] = {"lat": result[0], "lng": result[1], "source": "google place"} if result else None
+    return result
+
 # ---------------------------------------------------------------- 5. Nominatim (street level)
 _last_nominatim = 0.0
 def nominatim(address):
@@ -189,6 +223,14 @@ def place(rec, venues, report):
     if hit:
         rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = hit[0], hit[1], False, "organizer map link"; return
 
+    pl = google_place(rec.get("place"), rec.get("municipio") or "Medellín") if rec.get("place") else None
+    if pl:
+        ga = google_geocode(rec.get("address"), rec.get("municipio") or "Medellín", rec.get("barrio") or "") if rec.get("address") else None
+        if ga and km(pl[0], pl[1], ga[0], ga[1]) > 1.5:
+            report.append("named place '%s' matched %.1f km from the address, address used instead (check): %s" % (rec["place"], km(pl[0], pl[1], ga[0], ga[1]), rec["name"]))
+        else:
+            rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = pl[0], pl[1], False, "google place (%s)" % rec["place"]; return
+
     g = google_geocode(full_addr, rec.get("municipio") or "Medellín", rec.get("barrio") or "")
     if g and g[2]:
         rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = g[0], g[1], False, "google geocoder"; return
@@ -216,6 +258,18 @@ def audit_official(rec, report):
     if not GOOGLE_KEY or rec.get("lat") is None or not rec.get("address"):
         return
     city = rec.get("municipio") or "Medellín"
+    pl = google_place(rec.get("place"), city) if rec.get("place") else None
+    if pl:
+        d = km(rec["lat"], rec["lng"], pl[0], pl[1])
+        ga = google_geocode(rec["address"], city, rec.get("barrio") or "")
+        if d > 1.5 and (not ga or km(pl[0], pl[1], ga[0], ga[1]) > 1.5):
+            report.append("named place '%s' matched %.1f km from both the official pin and the address, not used (check): %s — %s" % (rec["place"], d, rec["name"], rec["url"]))
+            pl = None
+    if pl:
+        if d > 0.12:
+            report.append("pin moved %d m to the named place '%s' (official pin disagreed): %s — %s" % (round(d * 1000), rec["place"], rec["name"], rec["url"]))
+            rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = pl[0], pl[1], False, "google place (%s)" % rec["place"]
+        return
     g = google_geocode(rec["address"], city, rec.get("barrio") or "")
     if not (g and g[2]):
         return

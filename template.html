@@ -120,7 +120,12 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 .card.ts{border-left:4px solid #1f6b5a}
 .tag.o{background:transparent;border:1px solid var(--line);color:var(--muted)}
 .hor{font-weight:600;font-size:.98rem;color:var(--fg);background:var(--tint);border-left:3px solid var(--gold-hi);padding:7px 10px;border-radius:4px 8px 8px 4px;word-break:break-word;font-variant-numeric:tabular-nums}
+.place{font-weight:700;color:var(--navy)}
 .addr{color:var(--fg)}
+.photo summary{cursor:pointer;list-style:none;font-size:.92rem;color:var(--accent);font-weight:600}
+.photo summary::before{content:"+ ";color:var(--gold);font-weight:700}
+.photo[open] summary::before{content:"– "}
+.photo img{margin-top:8px;max-width:100%;max-height:320px;border-radius:10px;border:1px solid var(--line)}
 .addr a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
 .addr a:hover{text-decoration-color:var(--accent)}
 .zone{color:var(--muted);font-size:.9rem;margin-top:-4px}
@@ -323,11 +328,11 @@ document.getElementById("lang").querySelectorAll("button").forEach(b=>b.setAttri
 
 const GKEY="{{GMAPS_KEY}}";
 function dirUrl(g){
-  const dest=(g.lang==="en"||g.lat==null)&&g.address?(g.address.replace(/ · /g,", ")+", Medellín, Antioquia, Colombia"):`${g.lat},${g.lng}`;
+  const dest=(g.lang==="en"||g.lat==null)&&g.address?([g.place,g.address].filter(Boolean).join(", ")+", Medellín, Antioquia, Colombia"):`${g.lat},${g.lng}`;
   return "https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(dest);
 }
 function viewUrl(g){return g.map||(g.lat!=null?`https://www.google.com/maps/search/?api=1&query=${g.lat},${g.lng}`:"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((g.address||g.name)+", Medellín"));}
-function infoHtml(grp){const g=grp[0];return `<div class="iw">${grp.map(x=>`<b>${esc(x.name)}</b><div class="t">${esc(x.hor)}</div>`).join("")}<div>${esc(g.address||"")}</div><a href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${T.directions}</a><a href="#g-${g.i}" data-card="${g.i}">${T.details}</a></div>`;}
+function infoHtml(grp){const g=grp[0];return `<div class="iw">${grp.map(x=>`<b>${esc(x.name)}</b><div class="t">${esc(x.hor)}</div>`).join("")}<div>${esc([g.place,g.address].filter(Boolean).join(" · "))}</div><a href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${T.directions}</a><a href="#g-${g.i}" data-card="${g.i}">${T.details}</a></div>`;}
 // Map adapter: Google Maps when a key is configured, otherwise MapLibre + OpenFreeMap.
 const MAP={pins:{},
   init(){
@@ -379,15 +384,14 @@ function build(d){
   ITEMS=[];
   for(const g of d.es){
     const slotDays=g.slots&&g.slots.length?new Set(g.slots.flatMap(x=>x.days).filter(d=>d!=="F")):parseDays(g.schedule||"");
-    ITEMS.push({...g,address:[g.place,g.address].filter(Boolean).join(" · "),days:slotDays,virtual:g.format!=="in-person",virtualOnly:g.format==="online",
+    ITEMS.push({...g,days:slotDays,virtual:g.format!=="in-person",virtualOnly:g.format==="online",
       zone:(g.municipio&&g.municipio.toUpperCase()!=="MEDELLÍN")?(g.barrio?g.barrio+", "+g.municipio:g.municipio):(g.barrio||nearestZone(g)),hor:g["schedule_"+PAGE_LANG]||g.schedule||T.nosched});
   }
   for(const g of [...d.en,...d.manual]){
     if(g.hidden)continue;
     const days=new Set(g.days||[]);
     const hor=(g.times||[]).map(t=>/^[A-Za-z]/.test(t)?t:((g.days||[]).map(x=>DAYNAME[x]).join(", ")+" "+t)).join("; ");
-    ITEMS.push({...g,days,virtual:g.format!=="in-person",virtualOnly:g.format==="online",zone:nearestZone(g),hor,
-      address:[g.place,g.address].filter(Boolean).join(" · ")});
+    ITEMS.push({...g,days,virtual:g.format!=="in-person",virtualOnly:g.format==="online",zone:nearestZone(g),hor});
   }
   ITEMS.forEach((g,i)=>g.i=i);
   for(const g of ITEMS){if(g.lat==null)continue;g.loc=g.lat.toFixed(4)+","+g.lng.toFixed(4);(LOCS[g.loc]=LOCS[g.loc]||[]).push(g);}
@@ -492,12 +496,14 @@ function render(refit){
       ${g.virtualOnly?`<span class="tag o">${T.tag.online}</span>`:(g.virtual?`<span class="tag o">${g.format==="hybrid"?T.tag.hybrid:T.tag.virtual}</span>`:'')}
       ${g.approx&&g.lat!=null?`<span class="tag o" title="${T.approxTitle}">≈ ${T.approx}</span>`:''}
       <span class="dist">${state.sort==="time"&&g.t0?fmt12(g.t0)+(g.dist!=null?" · ":""):""}${g.dist!=null?g.dist.toFixed(1)+" km":""}</span></h2>
+    ${g.place&&g.format!=="online"?`<div class="place">${esc(g.place)}</div>`:""}
     ${g.address?`<div class="addr"><a href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${esc(g.address)}</a>${g.detail?" · "+esc(g.detail):""}</div>`:(g.detail?`<div class="addr">${esc(g.detail)}</div>`:"")}
     ${g.zone&&g.format!=="online"?`<div class="zone">${esc(g.zone)}</div>`:""}
     <div class="hor">${esc(g.hor)}</div>
     ${(g.notes&&g.notes.length)?`<div class="notes">${g.notes.map(linkify).join("<br>")}</div>`:""}
     ${g.info?`<div class="notes">${linkify(g.info)}</div>`:""}
     ${g.zoom?`<div class="notes">${linkify(g.zoom)}</div>`:""}
+    ${g.photo?`<details class="photo"><summary>${T.photo}</summary><a href="${esc(g.photo_full||g.photo)}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(g.photo)}" alt="${esc(g.name)}"></a></details>`:""}
     ${g.link_note?`<div class="notes">${T.online}: ${esc(g.link_note)}</div>`:""}
     ${g.link_password?`<div class="notes">${T.password}: <b>${esc(g.link_password)}</b></div>`:""}
     ${(g.contact||g.email)?`<div class="notes">${T.contact}: ${linkify([g.contact,g.email].filter(Boolean).join(" · "))}</div>`:""}
