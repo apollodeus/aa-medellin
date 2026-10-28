@@ -17,11 +17,16 @@ def first_meeting_es(n_es, n_en, n_en_sessions):
         LEAD="Si la bebida le está causando problemas, o si ha llegado al punto de preocuparle, es posible que le interese saber qué es Alcohólicos Anónimos y qué puede esperar en una reunión.",
         BODY=f"""
 <h2>Solo usted puede decidir</h2>
-<p>Nadie en A.A. va a decirle si es alcohólico. Eso lo decide cada uno. Si bebe más de lo que quisiera, si ha intentado dejarlo y no ha podido, o si la bebida le está trayendo problemas en la casa, en el trabajo o con la salud, puede que A.A. tenga algo que ofrecerle. El único requisito para ser miembro de A.A. es el deseo de dejar de beber. No hay que firmar nada, no se pagan honorarios ni cuotas y nadie le va a preguntar por qué vino.</p>
+<p>Nadie en A.A. va a decirle si es alcohólico. Eso lo decide cada uno. Si bebe más de lo que quisiera, si ha intentado dejarlo y no ha podido, o si la bebida le está trayendo problemas en la casa, en el trabajo o con la salud, puede que A.A. tenga algo que ofrecerle. El único requisito para ser miembro de A.A. es el deseo de dejar la bebida. No hay que firmar nada, no se pagan honorarios ni cuotas y nadie le va a preguntar por qué vino.</p>
 <p>Si tiene dudas, AA Colombia ofrece un <a href="https://aacolombia.org/" target="_blank" rel="noopener">cuestionario de autoevaluación de doce preguntas</a>. Es solo para usted.</p>
 
 <h2>Qué es Alcohólicos Anónimos</h2>
-<p>A.A. es una comunidad de hombres y mujeres que comparten su experiencia, fortaleza y esperanza para resolver su problema común y ayudar a otros a recuperarse del alcoholismo. Los miembros se reúnen en grupos. En Medellín y el área metropolitana hay {n_es} grupos registrados en AA Colombia; la mayoría se reúne todas las noches, por lo general a las 7:00 p. m., y algunos también al mediodía o en la mañana. A.A. no está afiliada a ninguna religión, partido político, institución ni organización, y se mantiene con las contribuciones voluntarias de sus propios miembros.</p>
+<blockquote class="preamble">
+<p>Alcohólicos Anónimos es una comunidad de personas que comparten su mutua experiencia, fortaleza y esperanza para resolver su problema común y ayudar a otros a recuperarse del alcoholismo.</p>
+<p>El único requisito para ser miembro de A.A. es el deseo de dejar la bebida. Para ser miembro de A.A. no se pagan honorarios ni cuotas; nos mantenemos con nuestras propias contribuciones. A.A. no está afiliada a ninguna secta, religión, partido político, organización o institución alguna; no desea intervenir en controversias; no respalda ni se opone a ninguna causa. Nuestro objetivo primordial es mantenernos sobrios y ayudar a otros alcohólicos a alcanzar el estado de sobriedad.</p>
+<footer>Preámbulo de A.A. © The AA Grapevine, Inc. Reimpreso con permiso.</footer>
+</blockquote>
+<p>Los miembros se reúnen en grupos. En Medellín y el área metropolitana hay {n_es} grupos registrados en AA Colombia; la mayoría se reúne todas las noches, por lo general a las 7:00 p. m., y algunos también al mediodía o en la mañana.</p>
 <p><a class="cta" href="../">Encontrar un grupo en el mapa →</a></p>
 
 <h2>Qué pasa en una reunión</h2>
@@ -64,7 +69,12 @@ def first_meeting_en(n_es, n_en, n_en_sessions):
 <p>If you are not sure, A.A.'s pamphlet <a href="https://www.aa.org/self-assessment" target="_blank" rel="noopener">"Is A.A. for You?"</a> has twelve questions only you can answer.</p>
 
 <h2>What A.A. is</h2>
-<p>Alcoholics Anonymous is a fellowship of people who share their experience, strength and hope with each other that they may solve their common problem and help others to recover from alcoholism. Members meet in groups. A.A. is not allied with any sect, denomination, politics, organization or institution, and is self-supporting through its members' own contributions. Some meetings pass a basket; you are welcome to let it pass.</p>
+<blockquote class="preamble">
+<p>Alcoholics Anonymous is a fellowship of people who share their experience, strength and hope with each other that they may solve their common problem and help others to recover from alcoholism.</p>
+<p>The only requirement for membership is a desire to stop drinking. There are no dues or fees for A.A. membership; we are self-supporting through our own contributions. A.A. is not allied with any sect, denomination, politics, organization or institution; does not wish to engage in any controversy, neither endorses nor opposes any causes. Our primary purpose is to stay sober and help other alcoholics to achieve sobriety.</p>
+<footer>A.A. Preamble © The AA Grapevine, Inc. Reprinted with permission.</footer>
+</blockquote>
+<p>Members meet in groups. Some meetings pass a basket for the group's expenses; you are welcome to let it pass.</p>
 
 <h2>Meetings in Medellín</h2>
 <p>There are {n_en_sessions} English-speaking A.A. meetings a week in Medellín, in El Poblado, Laureles, Belén and Sabaneta, and on Zoom. They are run by English-speaking members who live here or pass through, and visitors are a normal part of them. Each one is on the <a href="../">map</a> with its address, time and a contact number.</p>
