@@ -103,6 +103,13 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 .go{font:600 .9rem var(--sans);background:var(--navy);color:#fff;border:0;border-radius:10px;padding:9px 16px;cursor:pointer;box-shadow:inset 0 -2px 0 var(--gold-hi)}
 .go:hover{filter:brightness(1.12)}
 .addr-msg{font-size:.85rem;color:var(--muted);flex:1 1 100%}
+.acwrap{position:relative}
+.acwrap input{width:100%;box-sizing:border-box}
+.ac{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:50;margin:0;padding:6px 0;list-style:none;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.18);max-height:280px;overflow:auto}
+.ac li{padding:8px 12px;cursor:pointer;font-size:.92rem;line-height:1.3}
+.ac li b{font-weight:600}
+.ac li small{display:block;color:var(--muted);font-size:.8rem}
+.ac li[aria-selected=true],.ac li:hover{background:var(--accent-soft)}
 .upin{width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--gold-hi);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
 .upin::after{content:"";position:absolute;inset:5px;border-radius:50%;background:#14244a}
 .notes a,.iw .notes a{color:var(--accent);text-decoration:none;font-weight:600}
@@ -215,7 +222,7 @@ footer .inner{padding-block:22px 34px}
     </label>
   </div>
   <form class="row addr-row" id="addrform" autocomplete="off">
-    <input type="text" id="addr" placeholder="{{T_ADDR_PH}}" aria-label="{{T_ADDR}}" style="flex:1 1 260px">
+    <div class="acwrap" style="flex:1 1 260px"><input type="text" id="addr" placeholder="{{T_ADDR_PH}}" aria-label="{{T_ADDR}}" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="aclist"><ul class="ac" id="aclist" role="listbox" hidden></ul></div>
     <button type="submit" class="go" id="addrgo">{{T_ADDR_GO}}</button>
     <span class="addr-msg" id="addrmsg"></span>
   </form>
@@ -297,18 +304,69 @@ async function geocodeAddress(q){
   for(const t of tries){try{const r=await t();if(r)return r;}catch(e){}}
   return null;
 }
+function applyLocation(r){
+  CENTERS.addr=[r.lat,r.lng];const sel=document.getElementById("center"),msg=document.getElementById("addrmsg");let o=sel.querySelector('option[value="addr"]');
+  if(!o){o=document.createElement("option");o.value="addr";sel.insertBefore(o,sel.firstChild);}
+  o.textContent="📍 "+r.label;sel.value="addr";state.center="addr";msg.textContent=T.addrOk+" "+r.label;
+  MAP.user(r.lat,r.lng,r.label);render(false);
+}
 document.getElementById("addrform").addEventListener("submit",async e=>{
   e.preventDefault();const q=document.getElementById("addr").value,msg=document.getElementById("addrmsg"),btn=document.getElementById("addrgo");
-  if(!q.trim())return; btn.disabled=true; msg.textContent=T.locating;
+  acClose(); if(!q.trim())return; btn.disabled=true; msg.textContent=T.locating;
   try{const r=await geocodeAddress(q);
     if(!r){msg.textContent=T.addrFail;return;}
     if(r.needsGoogle){msg.textContent=T.addrNeedsGoogle;return;}
-    CENTERS.addr=[r.lat,r.lng];const sel=document.getElementById("center");let o=sel.querySelector('option[value="addr"]');
-    if(!o){o=document.createElement("option");o.value="addr";sel.insertBefore(o,sel.firstChild);}
-    o.textContent="📍 "+r.label;sel.value="addr";state.center="addr";msg.textContent=T.addrOk+" "+r.label;
-    MAP.user(r.lat,r.lng,r.label);render(false);
+    applyLocation(r);
   }catch(x){msg.textContent=T.addrFail;}finally{btn.disabled=false;}
 });
+// ---- suggestions while typing: Google Places when loaded, Photon (OpenStreetMap) otherwise
+const AC={items:[],sel:-1,timer:null,seq:0,token:null,input:document.getElementById("addr"),list:document.getElementById("aclist")};
+function acClose(){AC.list.hidden=true;AC.list.innerHTML="";AC.items=[];AC.sel=-1;AC.input.setAttribute("aria-expanded","false");}
+function acRender(){
+  if(!AC.items.length){acClose();return;}
+  AC.list.innerHTML=AC.items.map((it,i)=>`<li role="option" data-i="${i}" aria-selected="${i===AC.sel}"><b>${esc(it.main)}</b>${it.sub?`<small>${esc(it.sub)}</small>`:""}</li>`).join("");
+  AC.list.hidden=false;AC.input.setAttribute("aria-expanded","true");
+}
+async function acSuggest(q){
+  const seq=++AC.seq;let items=[],done=false;
+  if(window.google&&google.maps&&google.maps.places&&google.maps.places.AutocompleteSuggestion){
+    try{
+      if(!AC.token)AC.token=new google.maps.places.AutocompleteSessionToken();
+      const {suggestions}=await google.maps.places.AutocompleteSuggestion.fetchAutocompleteSuggestions({input:q,sessionToken:AC.token,region:"co",language:PAGE_LANG,
+        locationRestriction:new google.maps.LatLngBounds({lat:BB.s,lng:BB.w},{lat:BB.n,lng:BB.e})});
+      items=(suggestions||[]).slice(0,6).map(s=>{const p=s.placePrediction;return {main:p.mainText?p.mainText.text:p.text.text,sub:p.secondaryText?p.secondaryText.text.replace(/, Colombia$/,""):"",pred:p};});
+      done=true;
+    }catch(e){done=false;}
+  }
+  if(!done)try{
+      const r=await fetch("https://photon.komoot.io/api/?"+new URLSearchParams({q,bbox:`${BB.w},${BB.s},${BB.e},${BB.n}`,limit:6})).then(r=>r.json());
+      const seen=new Set();
+      for(const f of (r.features||[])){const p=f.properties,main=p.name||[p.street,p.housenumber].filter(Boolean).join(" ");if(!main||seen.has(main))continue;seen.add(main);
+        const [lng,lat]=f.geometry.coordinates;items.push({main,sub:[p.street&&p.name?p.street:"",p.district,p.city].filter(Boolean).join(", "),lat,lng});if(items.length>=6)break;}
+  }catch(e){items=[];}
+  if(seq!==AC.seq)return;
+  AC.items=items;AC.sel=-1;acRender();
+}
+async function acPick(i){
+  const it=AC.items[i];if(!it)return;
+  AC.input.value=it.main+(it.sub?", "+it.sub.split(",")[0]:"");acClose();
+  const msg=document.getElementById("addrmsg");msg.textContent=T.locating;
+  try{
+    if(it.pred){const place=it.pred.toPlace();await place.fetchFields({fields:["location","formattedAddress","displayName"]});AC.token=null;
+      const l=place.location;applyLocation({lat:l.lat(),lng:l.lng(),label:(place.displayName&&!/^\d/.test(place.displayName)?place.displayName:(place.formattedAddress||it.main)).replace(/, Colombia$/,"")});}
+    else applyLocation({lat:it.lat,lng:it.lng,label:it.main+(it.sub?", "+it.sub.split(",")[0]:"")});
+  }catch(e){msg.textContent=T.addrFail;}
+}
+AC.input.addEventListener("input",()=>{clearTimeout(AC.timer);const q=AC.input.value.trim();if(q.length<3){acClose();return;}AC.timer=setTimeout(()=>acSuggest(q),220);});
+AC.input.addEventListener("keydown",e=>{
+  if(AC.list.hidden)return;
+  if(e.key==="ArrowDown"){e.preventDefault();AC.sel=(AC.sel+1)%AC.items.length;acRender();}
+  else if(e.key==="ArrowUp"){e.preventDefault();AC.sel=(AC.sel-1+AC.items.length)%AC.items.length;acRender();}
+  else if(e.key==="Enter"&&AC.sel>=0){e.preventDefault();acPick(AC.sel);}
+  else if(e.key==="Escape"){acClose();}
+});
+AC.list.addEventListener("mousedown",e=>{const li=e.target.closest("li");if(li){e.preventDefault();acPick(+li.dataset.i);}});
+AC.input.addEventListener("blur",()=>setTimeout(acClose,150));
 function norm(s){return String(s??"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase()}
 function parseDays(h){
   const s=h.toLowerCase(), out=new Set();
@@ -337,7 +395,7 @@ function infoHtml(grp){const g=grp[0];return `<div class="iw">${grp.map(x=>`<b>$
 const MAP={pins:{},
   init(){
     if(GKEY){return new Promise(res=>{window.__gm=()=>{this.g=new google.maps.Map(document.getElementById("map"),{center:{lat:6.225,lng:-75.585},zoom:12,mapTypeControl:false,streetViewControl:false,fullscreenControl:true,gestureHandling:"cooperative",clickableIcons:false,styles:[{featureType:"poi",stylers:[{visibility:"off"}]},{featureType:"poi.park",elementType:"geometry",stylers:[{visibility:"on"}]},{featureType:"transit.station",stylers:[{visibility:"on"}]}]});this.iw=new google.maps.InfoWindow();res();};
-      const sc=document.createElement("script");sc.src=`https://maps.googleapis.com/maps/api/js?key=${GKEY}&callback=__gm&loading=async`;sc.async=true;sc.onerror=()=>{this.g=null;this.initLibre();res();};document.head.appendChild(sc);});}
+      const sc=document.createElement("script");sc.src=`https://maps.googleapis.com/maps/api/js?key=${GKEY}&libraries=places&language=${PAGE_LANG}&region=CO&callback=__gm&loading=async`;sc.async=true;sc.onerror=()=>{this.g=null;this.initLibre();res();};document.head.appendChild(sc);});}
     this.initLibre();return Promise.resolve();
   },
   initLibre(){
