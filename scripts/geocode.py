@@ -132,21 +132,22 @@ def google_geocode(address, city="Medellín", hint=""):
 
 PLACE_TYPES = {"establishment", "point_of_interest", "premise", "shopping_mall", "church", "place_of_worship", "school",
                "hospital", "university", "library", "city_hall", "local_government_office", "lodging", "store", "subpremise"}
-def google_place(name, city="Medellín"):
+def google_place(name, city="Medellín", address=""):
     """Look up a building/business name ('Galerías de San Diego') with Places API (New) text search - the same search
     Google Maps itself uses, so local names and English/Spanish variants both work. Falls back to the Geocoding API
     (which only knows a few landmarks) when Places is not enabled. Only a named-place match counts, never a street or area."""
     if not GOOGLE_KEY or not name:
         return None
-    key = "place:" + norm(name) + " | " + norm(city)
+    address = clean_address(address or "")
+    key = "place:" + norm(name) + (" @ " + norm(address) if address else "") + " | " + norm(city)
     c = cache()
     if key in c:
         v = c[key]
         return (v["lat"], v["lng"]) if v else None
     result = None
-    # 1. Places API (New) text search
+    # 1. Places API (New) text search - name plus street address, the way a person would type it into Google Maps
     try:
-        body = json.dumps({"textQuery": "%s, %s, Antioquia, Colombia" % (name, city), "languageCode": "es", "regionCode": "CO",
+        body = json.dumps({"textQuery": ", ".join(x for x in [name, address, city, "Antioquia, Colombia"] if x), "languageCode": "es", "regionCode": "CO",
                            "pageSize": 3,
                            "locationRestriction": {"rectangle": {"low": {"latitude": BBOX[0], "longitude": BBOX[2]},
                                                                  "high": {"latitude": BBOX[1], "longitude": BBOX[3]}}}}).encode()
@@ -255,7 +256,7 @@ def place(rec, venues, report):
     if hit:
         rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = hit[0], hit[1], False, "organizer map link"; return
 
-    pl = google_place(rec.get("place"), rec.get("municipio") or "Medellín") if rec.get("place") else None
+    pl = google_place(rec.get("place"), rec.get("municipio") or "Medellín", rec.get("address") or "") if rec.get("place") else None
     if pl:
         ga = google_geocode(rec.get("address"), rec.get("municipio") or "Medellín", rec.get("barrio") or "") if rec.get("address") else None
         if ga and km(pl[0], pl[1], ga[0], ga[1]) > PLACE_MAX_KM:
@@ -290,7 +291,7 @@ def audit_official(rec, report):
     if not GOOGLE_KEY or rec.get("lat") is None or not rec.get("address"):
         return
     city = rec.get("municipio") or "Medellín"
-    pl = google_place(rec.get("place"), city) if rec.get("place") else None
+    pl = google_place(rec.get("place"), city, rec.get("address") or "") if rec.get("place") else None
     if pl:
         d = km(rec["lat"], rec["lng"], pl[0], pl[1])
         ga = google_geocode(rec["address"], city, rec.get("barrio") or "")
