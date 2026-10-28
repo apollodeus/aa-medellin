@@ -210,20 +210,21 @@ def place(rec, venues, report):
         report.append("NO PIN: %s — %s" % (rec["name"], full_addr or "(no address)"))
 
 def audit_official(rec, report):
-    """Spanish group with official coordinates: compare against the geocoded address (with the barrio/detail hint).
-    If a precise geocode lands more than 1.5 km away, the official pin is almost certainly stale: use the geocode and report it."""
+    """Spanish group with official coordinates: the written address wins. Geocode it (with the barrio hint);
+    if a precise result lands more than 120 m from the official pin, move the pin to the address and report it.
+    Only exception: the hinted and unhinted geocodes disagree with each other (ambiguous address) - keep the official pin."""
     if not GOOGLE_KEY or rec.get("lat") is None or not rec.get("address"):
         return
-    hint = rec.get("barrio") or ""
-    g = google_geocode(rec["address"], rec.get("municipio") or "Medellín", hint)
-    if g and g[2]:
-        d = km(rec["lat"], rec["lng"], g[0], g[1])
-        g2 = google_geocode(rec["address"], rec.get("municipio") or "Medellín", "") if (d > 1.5 and hint) else g
-        agree = bool(g2) and g2[2] and km(g[0], g[1], g2[0], g2[1]) < 0.3
-        if d > 1.5 and not agree:
-            report.append("official pin and geocoder disagree, official kept (check): %s — %s — %s" % (rec["name"], rec["address"], rec["url"]))
-        elif d > 1.5:
-            report.append("official pin replaced: it was %.1f km from the address, now pinned by geocoder (check): %s — %s — %s" % (d, rec["name"], rec["address"], rec["url"]))
-            rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = g[0], g[1], False, "google geocoder (official pin was %.1f km off)" % d
-        elif d > 0.12:
-            report.append("official pin is %d m from its written address (check the text): %s — %s — %s" % (round(d * 1000), rec["name"], rec["address"], rec["url"]))
+    city = rec.get("municipio") or "Medellín"
+    g = google_geocode(rec["address"], city, rec.get("barrio") or "")
+    if not (g and g[2]):
+        return
+    d = km(rec["lat"], rec["lng"], g[0], g[1])
+    if d <= 0.12:
+        return
+    g2 = google_geocode(rec["address"], city, "")
+    if g2 and g2[2] and km(g[0], g[1], g2[0], g2[1]) > 0.3:
+        report.append("address is ambiguous to the geocoder, official pin kept (check): %s — %s — %s" % (rec["name"], rec["address"], rec["url"]))
+        return
+    report.append("pin moved %d m to the written address (official pin disagreed): %s — %s — %s" % (round(d * 1000), rec["name"], rec["address"], rec["url"]))
+    rec["lat"], rec["lng"], rec["approx"], rec["pin_source"] = g[0], g[1], False, "google geocoder (official pin was %d m off)" % round(d * 1000)
