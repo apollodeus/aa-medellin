@@ -1,10 +1,10 @@
 # Build report
 
-Updated 2026-10-27T23:55:15Z. Sources: {"es": "ok", "en": "ok"}. 138 Spanish groups, 8 English meetings, 2 manual.
+Updated 2026-10-28T00:06:50Z. Sources: {"es": "ok", "en": "ok"}. 138 Spanish groups, 8 English meetings, 2 manual.
 
 - official pin is 1366 m from its written address (check the text): Fuente Clara — Carrera 95 62C-87 — https://aacolombia.org/grupos/fuente-clara/
 - schedule not understood (shown as written): Nueva Dimensión — "Virtuales: Zoom ID de Reunión 456252242 contraseña 049740"
-- official pin is 161 m from its written address (check the text): El Refugio — Carrera 43A #31-182 — https://aacolombia.org/grupos/el-refugio-3/
+- official pin is 161 m from its written address (check the text): El Refugio — Carrera 43 #31-182 — https://aacolombia.org/grupos/el-refugio-3/
 - official pin replaced: it was 8.0 km from the address, now pinned by geocoder (check): La Unidad — Carrera 49 No. 50 - 58 - Of. 308 - Ed. San Fernando — https://aacolombia.org/grupos/la-unidad-14/
 - official pin is 314 m from its written address (check the text): La Nueva Semilla — Transversal 33A Sur 31E-20 — https://aacolombia.org/grupos/la-nueva-semilla-2/
 - official pin is 1288 m from its written address (check the text): La Paz — Carrera 33 39sur-50 — https://aacolombia.org/grupos/la-paz-10/
