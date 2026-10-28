@@ -1,6 +1,6 @@
 # Build report
 
-Updated 2026-10-28T00:22:56Z. Sources: {"es": "ok", "en": "ok"}. 138 Spanish groups, 8 English meetings, 2 manual.
+Updated 2026-10-28T00:27:21Z. Sources: {"es": "ok", "en": "ok"}. 138 Spanish groups, 8 English meetings, 2 manual.
 
 - address is ambiguous to the geocoder, official pin kept (check): Fuente Clara — Carrera 95 62C-87 — https://aacolombia.org/grupos/fuente-clara/
 - schedule not understood (shown as written): Nueva Dimensión — "Virtuales: Zoom ID de Reunión 456252242 contraseña 049740"
