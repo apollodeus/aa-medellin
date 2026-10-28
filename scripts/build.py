@@ -305,6 +305,8 @@ def main():
             continue
         if r["lat"] is None:
             G.place(r, venues, report)
+        elif (overrides.get(r["id"]) or {}).get("lat") is not None:
+            r["approx"] = False; r["pin_source"] = "confirmed pin (overrides.json)"
         else:
             r["approx"] = False; r["pin_source"] = "aacolombia.org"
             G.audit_official(r, report)
