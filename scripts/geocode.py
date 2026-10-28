@@ -9,7 +9,7 @@
 
 Results are cached in geocache.json so each address is looked up once.
 """
-import json, os, re, time, math, urllib.request, urllib.parse, unicodedata
+import json, os, re, time, math, urllib.request, urllib.parse, urllib.error, unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE_PATH = os.path.join(ROOT, "geocache.json")
@@ -131,7 +131,9 @@ def google_geocode(address, city="Medellín", hint=""):
 PLACE_TYPES = {"establishment", "point_of_interest", "premise", "shopping_mall", "church", "place_of_worship", "school",
                "hospital", "university", "library", "city_hall", "local_government_office", "lodging", "store", "subpremise"}
 def google_place(name, city="Medellín"):
-    """Geocode a building/business name ('Galerías de San Diego'). Only a named-place match counts (not a street or area)."""
+    """Look up a building/business name ('Galerías de San Diego') with Places API (New) text search - the same search
+    Google Maps itself uses, so local names and English/Spanish variants both work. Falls back to the Geocoding API
+    (which only knows a few landmarks) when Places is not enabled. Only a named-place match counts, never a street or area."""
     if not GOOGLE_KEY or not name:
         return None
     key = "place:" + norm(name) + " | " + norm(city)
@@ -140,6 +142,34 @@ def google_place(name, city="Medellín"):
         v = c[key]
         return (v["lat"], v["lng"]) if v else None
     result = None
+    # 1. Places API (New) text search
+    try:
+        body = json.dumps({"textQuery": "%s, %s, Antioquia, Colombia" % (name, city), "languageCode": "es", "regionCode": "CO",
+                           "pageSize": 3,
+                           "locationRestriction": {"rectangle": {"low": {"latitude": BBOX[0], "longitude": BBOX[2]},
+                                                                 "high": {"latitude": BBOX[1], "longitude": BBOX[3]}}}}).encode()
+        req = urllib.request.Request("https://places.googleapis.com/v1/places:searchText", data=body, method="POST",
+                                     headers={**UA, "Content-Type": "application/json", "X-Goog-Api-Key": GOOGLE_KEY,
+                                              "X-Goog-FieldMask": "places.displayName,places.location,places.types,places.formattedAddress"})
+        with urllib.request.urlopen(req, timeout=25) as r:
+            data = json.loads(r.read().decode("utf-8", "ignore"))
+        for pl in data.get("places", []):
+            loc = pl["location"]
+            if in_bbox(loc["latitude"], loc["longitude"]) and not ({"route", "locality", "sublocality", "neighborhood", "political"} >= set(pl.get("types", []))):
+                result = (loc["latitude"], loc["longitude"]); break
+        c[key] = {"lat": result[0], "lng": result[1], "source": "google places", "query": name} if result else None
+        return result
+    except urllib.error.HTTPError as e:
+        try:
+            err = json.loads(e.read().decode("utf-8", "ignore")).get("error", {})
+            msg = "PLACES %s: %s" % (err.get("status"), (err.get("message") or "")[:160])
+        except Exception:
+            msg = "PLACES HTTP %s" % e.code
+        if msg not in GOOGLE_ERRORS: GOOGLE_ERRORS.append(msg)
+    except Exception as e:
+        msg = "PLACES EXCEPTION: %s" % e
+        if msg not in GOOGLE_ERRORS: GOOGLE_ERRORS.append(msg)
+    # 2. fallback: Geocoding API, named-place results only
     try:
         q = urllib.parse.urlencode({"address": "%s, %s, Antioquia, Colombia" % (name, city), "components": "country:CO",
                                     "region": "co", "language": "es",
@@ -158,7 +188,7 @@ def google_place(name, city="Medellín"):
         msg = "EXCEPTION: %s" % e
         if msg not in GOOGLE_ERRORS: GOOGLE_ERRORS.append(msg)
         return None
-    c[key] = {"lat": result[0], "lng": result[1], "source": "google place"} if result else None
+    c[key] = {"lat": result[0], "lng": result[1], "source": "google geocoder (place)"} if result else None
     return result
 
 # ---------------------------------------------------------------- 5. Nominatim (street level)
