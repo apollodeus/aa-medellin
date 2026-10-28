@@ -93,6 +93,8 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 .days{display:flex;gap:5px}
 .chip{font:600 .85rem/1 var(--sans);padding:9px 0;flex:1 1 0;text-align:center;border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:10px;cursor:pointer;transition:background .12s,border-color .12s}
 .chip:hover{border-color:var(--accent)}
+.chip .today{font-size:.7rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.04em;margin-left:4px}
+.chip[aria-pressed=true] .today{color:var(--gold-hi)}
 .chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:inset 0 -2px 0 var(--gold-hi)}
 .seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 200px;background:var(--panel)}
 .seg button{flex:1;font:inherit;font-size:.9rem;padding:8px 6px;background:transparent;color:var(--fg);border:0;cursor:pointer;white-space:nowrap}
@@ -102,6 +104,9 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 .addr-row{margin:0}
 .go{font:600 .9rem var(--sans);background:var(--navy);color:#fff;border:0;border-radius:10px;padding:9px 16px;cursor:pointer;box-shadow:inset 0 -2px 0 var(--gold-hi)}
 .go:hover{filter:brightness(1.12)}
+.go.ghost{background:var(--panel);color:var(--navy);border:1px solid var(--line);box-shadow:none}
+.go.ghost:hover{border-color:var(--accent)}
+@media(max-width:560px){.go.ghost span{display:none}}
 .addr-msg{font-size:.85rem;color:var(--muted);flex:1 1 100%}
 .acwrap{position:relative}
 .acwrap input{width:100%;box-sizing:border-box}
@@ -128,6 +133,7 @@ input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid 
 .tag.o{background:transparent;border:1px solid var(--line);color:var(--muted)}
 .hor{font-weight:600;font-size:.98rem;color:var(--fg);background:var(--tint);border-left:3px solid var(--gold-hi);padding:7px 10px;border-radius:4px 8px 8px 4px;word-break:break-word;font-variant-numeric:tabular-nums}
 .place{font-weight:700;color:var(--navy)}
+.past{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:-4px}
 .addr{color:var(--fg)}
 .photo summary{cursor:pointer;list-style:none;font-size:.92rem;color:var(--accent);font-weight:600}
 .photo summary::before{content:"+ ";color:var(--gold);font-weight:700}
@@ -183,6 +189,7 @@ footer .inner{padding-block:22px 34px}
 .note a{color:var(--gold-hi)}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
 </style>
+{{ANALYTICS}}
 </head>
 <body>
 <div class="band"><div class="inner">
@@ -224,6 +231,7 @@ footer .inner{padding-block:22px 34px}
   <form class="row addr-row" id="addrform" autocomplete="off">
     <div class="acwrap" style="flex:1 1 260px"><input type="text" id="addr" placeholder="{{T_ADDR_PH}}" aria-label="{{T_ADDR}}" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="aclist"><ul class="ac" id="aclist" role="listbox" hidden></ul></div>
     <button type="submit" class="go" id="addrgo">{{T_ADDR_GO}}</button>
+    <button type="button" class="go ghost" id="mylocbtn" title="{{T_MYLOC_BTN}}" aria-label="{{T_MYLOC_BTN}}">📍 <span>{{T_MYLOC_BTN}}</span></button>
     <span class="addr-msg" id="addrmsg"></span>
   </form>
   <div class="row">
@@ -261,7 +269,7 @@ function locate(){
   const sel=document.getElementById("center");
   if(!navigator.geolocation){sel.value="pob";state.center="pob";render(false);return;}
   document.getElementById("count").textContent=T.locating;
-  navigator.geolocation.getCurrentPosition(pos=>{CENTERS.me=[pos.coords.latitude,pos.coords.longitude];state.center="me";MAP.user(CENTERS.me[0],CENTERS.me[1],T.myloc);render(false);},
+  navigator.geolocation.getCurrentPosition(pos=>{CENTERS.me=[pos.coords.latitude,pos.coords.longitude];state.center="me";sel.value="me";MAP.user(CENTERS.me[0],CENTERS.me[1],T.myloc);render(false);},
     ()=>{document.getElementById("count").textContent=T.locfail;state.center="pob";sel.value="pob";setTimeout(()=>render(false),2500);},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
 }
 const ZONES=[["Centro",6.2518,-75.5636],["El Poblado",6.2096,-75.5681],["Laureles",6.2456,-75.5916],["Belén",6.2320,-75.6010],["Robledo",6.2800,-75.5950],["Manrique",6.2690,-75.5540],["Aranjuez",6.2800,-75.5600],["Castilla",6.2920,-75.5750],["Buenos Aires",6.2380,-75.5540],["Guayabal",6.2180,-75.5880],["San Javier",6.2560,-75.6130],["La América",6.2520,-75.6010],["Villa Hermosa",6.2600,-75.5450],["Santa Cruz / Popular",6.2960,-75.5500],["Doce de Octubre",6.3020,-75.5860],["Santa Elena",6.2140,-75.4980],["San Antonio de Prado",6.1830,-75.6720],["San Cristóbal",6.2800,-75.6350],["Altavista",6.2080,-75.6230],["Envigado",6.1700,-75.5900],["Sabaneta",6.1515,-75.6160],["Itagüí",6.1720,-75.6110]];
@@ -367,6 +375,7 @@ AC.input.addEventListener("keydown",e=>{
 });
 AC.list.addEventListener("mousedown",e=>{const li=e.target.closest("li");if(li){e.preventDefault();acPick(+li.dataset.i);}});
 AC.input.addEventListener("blur",()=>setTimeout(acClose,150));
+document.getElementById("mylocbtn").onclick=()=>{const sel=document.getElementById("center");sel.value="me";document.getElementById("addrmsg").textContent="";locate();};
 function norm(s){return String(s??"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase()}
 function parseDays(h){
   const s=h.toLowerCase(), out=new Set();
@@ -459,7 +468,10 @@ function build(d){
 function nearestZone(g){const txt=[g.name,g.address,g.place,...(g.notes||[])].join(" ").toLowerCase().replace(/centro comercial/g,"");for(const z of ZONES)if(txt.includes(z[0].toLowerCase()))return z[0];if(g.lat==null)return "";let best="",bd=1e9;for(const z of ZONES){const d=km(g.lat,g.lng,z[1],z[2]);if(d<bd){bd=d;best=z[0]}}return best}
 
 const daysEl=document.getElementById("days");
-DAYS.forEach(([k,l])=>{const b=document.createElement("button");b.className="chip";b.id="day-"+k;b.textContent=l;b.setAttribute("aria-pressed","false");b.onclick=()=>{const on=state.days.has(k);state.days.clear();if(!on)state.days.add(k);daysEl.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",state.days.has(x.id.slice(4))));render(true);};daysEl.appendChild(b);});
+function bogota(){const p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Bogota",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());const g=t=>(p.find(x=>x.type===t)||{}).value||"";return {day:{Sun:"D",Mon:"L",Tue:"M",Wed:"Mc",Thu:"J",Fri:"V",Sat:"S"}[g("weekday")],now:(g("hour")==="24"?"00":g("hour"))+":"+g("minute")};}
+const TODAY=bogota().day;
+state.days.add(TODAY);
+DAYS.forEach(([k,l])=>{const b=document.createElement("button");b.className="chip";b.id="day-"+k;b.innerHTML=k===TODAY?`${esc(l)} <small class="today">${T.today}</small>`:esc(l);b.setAttribute("aria-pressed",String(k===TODAY));b.onclick=()=>{const on=state.days.has(k);state.days.clear();if(!on)state.days.add(k);daysEl.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",state.days.has(x.id.slice(4))));render(true);};daysEl.appendChild(b);});
 document.getElementById("q").oninput=e=>{state.q=e.target.value.trim();render(true)};
 for(const id of ["fmt","lang","sort"]){const el=document.getElementById(id);el.querySelectorAll("button").forEach(b=>b.onclick=()=>{state[id]=b.dataset.v;el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));save();render(true);});}
 document.getElementById("center").onchange=e=>{const v=e.target.value;if(v==="me"){locate();return;}state.center=v;save();render(true);};
@@ -536,7 +548,9 @@ function render(refit){
   rows.forEach(g=>{g.dist=(c&&g.lat!=null)?km(g.lat,g.lng,c[0],c[1]):null;g.t0=firstTime(g);});
   if(state.radius>0)rows=rows.filter(g=>g.dist==null?g.virtualOnly:g.dist<=state.radius);
   const byDist=(a,b)=>(a.dist??1e9)-(b.dist??1e9)||a.name.localeCompare(b.name);
-  if(state.sort==="time")rows.sort((a,b)=>((a.t0??"99")<(b.t0??"99")?-1:(a.t0??"99")>(b.t0??"99")?1:0)||byDist(a,b));
+  const isToday=state.days.size===1&&state.days.has(TODAY),now=isToday?bogota().now:null;
+  const tkey=g=>g.t0==null?"99":((now&&g.t0<now)?"1":"0")+g.t0;   // today: meetings already started go after the upcoming ones
+  if(state.sort==="time")rows.sort((a,b)=>(tkey(a)<tkey(b)?-1:tkey(a)>tkey(b)?1:0)||byDist(a,b));
   else if(state.sort==="name")rows.sort((a,b)=>a.name.localeCompare(b.name));
   else rows.sort(byDist);
   const shown=new Set(rows.map(g=>g.i));
@@ -554,6 +568,7 @@ function render(refit){
       ${g.virtualOnly?`<span class="tag o">${T.tag.online}</span>`:(g.virtual?`<span class="tag o">${g.format==="hybrid"?T.tag.hybrid:T.tag.virtual}</span>`:'')}
       ${g.approx&&g.lat!=null?`<span class="tag o" title="${T.approxTitle}">≈ ${T.approx}</span>`:''}
       <span class="dist">${state.sort==="time"&&g.t0?fmt12(g.t0)+(g.dist!=null?" · ":""):""}${g.dist!=null?g.dist.toFixed(1)+" km":""}</span></h2>
+    ${(isToday&&g.t0&&g.t0<now)?`<div class="past">${T.pastToday}</div>`:""}
     ${g.place&&g.format!=="online"?`<div class="place">${esc(g.place)}</div>`:""}
     ${g.address?`<div class="addr"><a href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${esc(g.address)}</a>${g.detail?" · "+esc(g.detail):""}</div>`:(g.detail?`<div class="addr">${esc(g.detail)}</div>`:"")}
     ${g.zone&&g.format!=="online"?`<div class="zone">${esc(g.zone)}</div>`:""}
@@ -572,16 +587,22 @@ function render(refit){
       ${g.format!=="online"?`<a href="${esc(viewUrl(g))}" target="_blank" rel="noopener">Google Maps</a>`:""}
       ${g.url?`<a href="${esc(g.url)}" target="_blank" rel="noopener">${g.source==="manual"?T.website:T.source}</a>`:""}
       ${calSlots(g).length?`<a href="#" class="cal" data-i="${g.i}">${T.addcal}</a>`:""}
+      <a href="#m-${esc(g.id)}" class="share" data-i="${g.i}">${T.share}</a>
     </div>
     <div class="calpop" id="cal-${g.i}" hidden></div>
   </article>`).join("");
   list.querySelectorAll(".cal").forEach(a=>a.onclick=e=>{e.preventDefault();const g=ITEMS[+a.dataset.i];const box=document.getElementById("cal-"+g.i);
     if(!box.hidden){box.hidden=true;return;}
     box.dataset.mode=box.dataset.mode||"once";renderCal(g,box);box.hidden=false;});
+  list.querySelectorAll(".share").forEach(a=>a.onclick=async e=>{e.preventDefault();const g=ITEMS[+a.dataset.i];const url=location.origin+location.pathname+"#m-"+g.id;
+    try{if(navigator.share)await navigator.share({title:g.name+" · AA Medellín",text:g.name+" — "+g.hor,url});else{await navigator.clipboard.writeText(url);const t=a.textContent;a.textContent=T.copied;setTimeout(()=>a.textContent=t,1800);}}catch(x){}});
   list.querySelectorAll(".tomap").forEach(a=>a.onclick=e=>{e.preventDefault();const g=ITEMS[+a.dataset.i];state.sel=g.i;MAP.sel(g.loc);document.getElementById("map").scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>MAP.focus(g),350);});
 }
 
-fetch("{{DATA}}?"+Date.now()).then(r=>r.json()).then(async d=>{await MAP.init();build(d);render(true);}).catch(e=>{document.getElementById("count").textContent="";document.getElementById("list").innerHTML='<p class="empty">'+T.loadfail+'</p>';});
+function openDeepLink(){const m=/^#m-(.+)$/.exec(decodeURIComponent(location.hash||""));if(!m)return;const g=ITEMS.find(x=>x.id===m[1]);if(!g)return;
+  state.days.clear();daysEl.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed","false"));state.sel=g.i;render(true);if(g.lat!=null){MAP.sel(g.loc);setTimeout(()=>MAP.focus(g),400);}
+  const el=document.getElementById("g-"+g.i);if(el)setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"center"}),500);}
+fetch("{{DATA}}?"+Date.now()).then(r=>r.json()).then(async d=>{await MAP.init();build(d);render(true);openDeepLink();}).catch(e=>{document.getElementById("count").textContent="";document.getElementById("list").innerHTML='<p class="empty">'+T.loadfail+'</p>';});
 </script>
 </body>
 </html>
