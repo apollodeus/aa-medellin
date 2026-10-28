@@ -1,6 +1,6 @@
 # Build report
 
-Updated 2026-10-28T01:42:49Z. Sources: {"es": "ok", "en": "ok"}. 138 Spanish groups, 8 English meetings, 2 manual.
+Updated 2026-10-28T01:49:55Z. Sources: {"es": "ok", "en": "ok"}. 138 Spanish groups, 8 English meetings, 2 manual.
 
 - address is ambiguous to the geocoder, official pin kept (check): Fuente Clara — Carrera 95 62C-87 — https://aacolombia.org/grupos/fuente-clara/
 - named place 'Edificio Restrepo Arango' matched 6.1 km from both the official pin and the address, not used (check): La Candelaria — https://aacolombia.org/grupos/la-candelaria-4/
