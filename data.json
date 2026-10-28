@@ -1,7 +1,7 @@
 {
- "updated": "2026-10-28T00:14:24Z",
+ "updated": "2026-10-28T00:17:23Z",
  "status": {
-  "es": "ok",
+  "es": "kept previous (<urlopen error [Errno 101] Network is unreachable>)",
   "en": "ok"
  },
  "es": [
@@ -50,7 +50,7 @@
    "schedule_en": "Tue, Wed, Thu, Sat and Sun 6:00 pm",
    "format": "in-person",
    "approx": false,
-   "pin_source": "google place (Sede Social Manila)"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-28293",
@@ -95,7 +95,7 @@
    "schedule_en": "Mon, Wed and Fri 9:00 am–12:00 noon",
    "format": "in-person",
    "approx": false,
-   "pin_source": "google place (Parroquia Fátima)"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-28109",
@@ -143,7 +143,7 @@
    "schedule_en": "Mon to Sat 7:00 pm",
    "format": "in-person",
    "approx": false,
-   "pin_source": "google geocoder"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27786",
@@ -2524,7 +2524,7 @@
    "schedule_en": "Mon to Fri 8:00 pm · Tue and Fri 7:00 pm (beginners) · Sat 7:00 pm · Sun 11:00 am and 7:00 pm · Holidays 7:00 pm",
    "format": "in-person",
    "approx": false,
-   "pin_source": "google geocoder (official pin was 161 m off)"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27544",
@@ -3567,7 +3567,7 @@
    "schedule_en": "Mon to Sat 12:15 pm (in person) · Thu and Sat 7:00 am (online)",
    "format": "hybrid",
    "approx": false,
-   "pin_source": "google geocoder (official pin was 7981 m off)"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27520",
@@ -4161,7 +4161,7 @@
    "schedule_en": "Tue to Thu 12:30 pm",
    "format": "in-person",
    "approx": false,
-   "pin_source": "google geocoder (official pin was 314 m off)"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27502",
@@ -4507,7 +4507,7 @@
    "schedule_en": "Every day 7:30 pm",
    "format": "in-person",
    "approx": false,
-   "pin_source": "google geocoder (official pin was 1288 m off)"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27496",
@@ -4750,7 +4750,7 @@
    "schedule_en": "Mon, Wed and Fri 7:00 pm · Sun 8:00 am (Oración y Meditación)",
    "format": "in-person",
    "approx": false,
-   "pin_source": "google geocoder (official pin was 10107 m off)"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27491",
@@ -6064,7 +6064,7 @@
    "schedule_en": "Mon to Fri 5:00 pm · Sat 4:00 pm",
    "format": "in-person",
    "approx": false,
-   "pin_source": "google geocoder (official pin was 776 m off)"
+   "pin_source": "aacolombia.org"
   },
   {
    "id": "es-27461",
