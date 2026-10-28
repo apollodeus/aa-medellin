@@ -1,7 +1,9 @@
 # Build report
 
-Updated 2026-10-28T00:27:21Z. Sources: {"es": "ok", "en": "ok"}. 138 Spanish groups, 8 English meetings, 2 manual.
+Updated 2026-10-28T00:29:13Z. Sources: {"es": "ok", "en": "ok"}. 138 Spanish groups, 8 English meetings, 2 manual.
 
+- GOOGLE GEOCODING ERROR — pins fell back to estimates: PLACES PERMISSION_DENIED: Places API (New) has not been used in project 584276042485 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/places
+- GOOGLE GEOCODING ERROR — pins fell back to estimates: PLACES PERMISSION_DENIED: Requests to this API places.googleapis.com method google.maps.places.v1.Places.SearchText are blocked.
 - address is ambiguous to the geocoder, official pin kept (check): Fuente Clara — Carrera 95 62C-87 — https://aacolombia.org/grupos/fuente-clara/
 - schedule not understood (shown as written): Nueva Dimensión — "Virtuales: Zoom ID de Reunión 456252242 contraseña 049740"
 - named place 'sede Accion Comunal' matched 3.6 km from both the official pin and the address, not used (check): Una Nueva Dimensión — https://aacolombia.org/grupos/una-nueva-dimension-2/
