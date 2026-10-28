@@ -1283,5 +1283,143 @@
   "lat": 6.2545276,
   "lng": -75.5821812,
   "source": "osm"
+ },
+ "place:CAFE CLICHE | MEDELLIN": {
+  "lat": 6.238067,
+  "lng": -75.5993821,
+  "query": "Cafe Cliche",
+  "source": "google places"
+ },
+ "place:CAPILLA DEL ROSARIO, BELEN RINCON | MEDELLIN": {
+  "lat": 6.2026727,
+  "lng": -75.6022198,
+  "query": "Capilla del Rosario, Belén Rincón",
+  "source": "google places"
+ },
+ "place:CENTRO DE MEDELLIN EDIFICIO AVENIDA 1O. DE MAYO | MEDELLIN": {
+  "lat": 6.2506941,
+  "lng": -75.56715129999999,
+  "query": "Centro de Medellin Edificio Avenida 1o. De Mayo",
+  "source": "google places"
+ },
+ "place:ED. COMPARTAMOS | MEDELLIN": {
+  "lat": 6.185237,
+  "lng": -75.65563039999999,
+  "query": "Ed. Compartamos",
+  "source": "google places"
+ },
+ "place:EDIFICIO MOLINOS DEL PRADO | MEDELLIN": {
+  "lat": 6.2576714,
+  "lng": -75.5613238,
+  "query": "Edificio Molinos del Prado",
+  "source": "google places"
+ },
+ "place:EDIFICIO RESTREPO ARANGO | MEDELLIN": {
+  "lat": 6.2117676,
+  "lng": -75.6095531,
+  "query": "Edificio Restrepo Arango",
+  "source": "google places"
+ },
+ "place:ESCUELA PICHINCHA | MEDELLIN": {
+  "lat": 6.255152,
+  "lng": -75.60306039999999,
+  "query": "Escuela Pichincha",
+  "source": "google places"
+ },
+ "place:HOSPITAL SAN VICENTE DE PAUL | MEDELLIN": {
+  "lat": 6.2639271,
+  "lng": -75.5647752,
+  "query": "Hospital San Vicente de Paúl",
+  "source": "google places"
+ },
+ "place:IGLESIA SANTA ROSA DE LIMA | MEDELLIN": {
+  "lat": 6.262398600000001,
+  "lng": -75.6057694,
+  "query": "Iglesia Santa Rosa de Lima",
+  "source": "google places"
+ },
+ "place:IGLESIA VERBO DIVINO | MEDELLIN": {
+  "lat": 6.241213200000001,
+  "lng": -75.58419769999999,
+  "query": "Iglesia Verbo Divino",
+  "source": "google places"
+ },
+ "place:INSTITUCION EDUCATIVA ATANASIO GIRARDOT, BARRIO NUEVO | BELLO": {
+  "lat": 6.3136689,
+  "lng": -75.56982459999999,
+  "query": "Institución Educativa Atanasio Girardot, barrio Nuevo",
+  "source": "google places"
+ },
+ "place:JUNTA DE ACCION COMUNAL | MEDELLIN": {
+  "lat": 6.2831771,
+  "lng": -75.5537126,
+  "query": "Junta de Acción Comunal",
+  "source": "google places"
+ },
+ "place:OBRA SOCIAL MADRE LAURA | MEDELLIN": {
+  "lat": 6.2501529,
+  "lng": -75.56163600000001,
+  "query": "Obra Social Madre Laura",
+  "source": "google places"
+ },
+ "place:PARROQUIA FATIMA | MEDELLIN": {
+  "lat": 6.2365083,
+  "lng": -75.583776,
+  "query": "Parroquia Fátima",
+  "source": "google places"
+ },
+ "place:PARROQUIA SANTA CRUZ DE ALCALA | ENVIGADO": {
+  "lat": 6.1702517,
+  "lng": -75.593673,
+  "query": "Parroquia Santa Cruz de Alcala",
+  "source": "google places"
+ },
+ "place:SALON COMUNAL, CONJUNTO RESIDENCIAL ESTACION DEL SUR | ITAGUI": {
+  "lat": 6.162581599999999,
+  "lng": -75.6227201,
+  "query": "Salón comunal, Conjunto Residencial Estación del Sur",
+  "source": "google places"
+ },
+ "place:SALON PARROQUIAL | MEDELLIN": {
+  "lat": 6.282189799999999,
+  "lng": -75.5616416,
+  "query": "Salón Parroquial",
+  "source": "google places"
+ },
+ "place:SEDE ACCION COMUNAL | ITAGUI": {
+  "lat": 6.1720752999999995,
+  "lng": -75.60522689999999,
+  "query": "Sede Acción Comunal",
+  "source": "google places"
+ },
+ "place:SEDE ACCION COMUNAL | MEDELLIN": {
+  "lat": 6.2831771,
+  "lng": -75.5537126,
+  "query": "sede Accion Comunal",
+  "source": "google places"
+ },
+ "place:SEDE SALON SOCIAL | MEDELLIN": {
+  "lat": 6.2046249,
+  "lng": -75.5708379,
+  "query": "Sede Salón Social",
+  "source": "google places"
+ },
+ "place:SEDE SOCIAL MANILA | MEDELLIN": {
+  "lat": 6.2128758,
+  "lng": -75.5718995,
+  "query": "Sede Social Manila",
+  "source": "google places"
+ },
+ "place:SEDE SOCIAL SANTA FE | MEDELLIN": {
+  "lat": 6.224428199999999,
+  "lng": -75.58322079999999,
+  "query": "Sede Social Santa Fe",
+  "source": "google places"
+ },
+ "place:SWEET GEORGIA CAFE  BACK ROOM (IN LAURELES) | MEDELLIN": {
+  "lat": 6.2380800999999995,
+  "lng": -75.59841879999999,
+  "query": "Sweet Georgia Cafe – back room (in Laureles)",
+  "source": "google places"
  }
 }

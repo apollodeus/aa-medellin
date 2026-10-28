@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T00:29:13Z",
+ "updated": "2026-10-28T00:38:00Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -8325,11 +8325,11 @@
    "map": "https://maps.app.goo.gl/5gt2hsbVM8B2gr9W7",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2377,
-   "lng": -75.5984,
+   "lat": 6.2380800999999995,
+   "lng": -75.59841879999999,
    "topic": "AA Big Book Study",
-   "approx": true,
-   "pin_source": "venues.json (approx)",
+   "approx": false,
+   "pin_source": "google place (Sweet Georgia Cafe – back room (in Laureles))",
    "slots": [
     {
      "days": [
@@ -8365,11 +8365,11 @@
    "map": "https://maps.app.goo.gl/5gt2hsbVM8B2gr9W7",
    "source": "aamedellin.org",
    "url": "https://aamedellin.org/meetings/",
-   "lat": 6.2377,
-   "lng": -75.5984,
+   "lat": 6.2380800999999995,
+   "lng": -75.59841879999999,
    "topic": "Open Speaker Meeting",
-   "approx": true,
-   "pin_source": "venues.json (approx)",
+   "approx": false,
+   "pin_source": "google place (Sweet Georgia Cafe – back room (in Laureles))",
    "slots": [
     {
      "days": [
