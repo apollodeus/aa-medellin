@@ -63,7 +63,7 @@ def fetch_spanish():
     rows = []
     for page in range(1, 60):
         url = ("https://aacolombia.org/wp-json/wp/v2/grupos?per_page=100&page=%d"
-               "&_fields=id,title,link,spectra_custom_meta,uagb_featured_image_src" % page)
+               "&_fields=id,title,link,featured_media,spectra_custom_meta,uagb_featured_image_src" % page)
         try:
             data = json.loads(get(url))
         except Exception as e:
