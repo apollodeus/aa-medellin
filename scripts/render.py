@@ -344,21 +344,23 @@ def render():
     disclaimer_es = ("Sitio independiente, sin afiliación con Alcoholics Anonymous World Services, AA Colombia ni los grupos listados. "
                      "Los datos se actualizan a diario desde <a href=\"https://aacolombia.org/grupos/\" target=\"_blank\" rel=\"noopener\">aacolombia.org</a> y "
                      "<a href=\"https://aamedellin.org/meetings/\" target=\"_blank\" rel=\"noopener\">aamedellin.org</a>; confirma el horario antes de ir. "
-                     "Distancias en línea recta; las ubicaciones de las reuniones en inglés son aproximadas.")
+                     "Distancias en línea recta; las ubicaciones de las reuniones en inglés son aproximadas. "
+                     "<a href=\"primera-reunion/\">Guía para tu primera reunión</a>.")
     disclaimer_en = ("Independent site, not affiliated with Alcoholics Anonymous World Services, AA Colombia or the groups listed. "
                      "Data is refreshed daily from <a href=\"https://aamedellin.org/meetings/\" target=\"_blank\" rel=\"noopener\">aamedellin.org</a> and "
                      "<a href=\"https://aacolombia.org/grupos/\" target=\"_blank\" rel=\"noopener\">aacolombia.org</a>; confirm before you go. "
-                     "Map pins for English meetings are approximate.")
+                     "Map pins for English meetings are approximate. "
+                     "<a href=\"first-meeting/\">Guide to your first meeting</a>.")
 
     pages = {
      "es": dict(ES, CARDS=sorted(es_list + en_list, key=lambda m: m["name"]), SCHEDULE=es_table + faq_html("es"),
         DESC="Mapa y horarios de %d grupos de Alcohólicos Anónimos en Medellín y %d reuniones de AA en inglés. Filtra por día, barrio y modalidad. Actualizado a diario." % (len(es_list), len(en_list)),
-        INTRO='<p class="intro">Hay %d grupos de Alcohólicos Anónimos en Medellín según el directorio de AA Colombia, y %d reuniones en inglés en El Poblado, Laureles y Sabaneta. Usa el mapa o los filtros para encontrar una reunión hoy. <a href="en/">English meetings →</a></p>' % (len(es_list), len(en_list)),
+        INTRO='<p class="intro">Hay %d grupos de Alcohólicos Anónimos en Medellín según el directorio de AA Colombia, y %d reuniones en inglés en El Poblado, Laureles y Sabaneta. Usa el mapa o los filtros para encontrar una reunión hoy. <a href="primera-reunion/">¿Es tu primera reunión? →</a> · <a href="en/">English meetings →</a></p>' % (len(es_list), len(en_list)),
         SRC="Fuentes: aacolombia.org y aamedellin.org.", NOTE=disclaimer_es,
         COUNT="%d grupos" % (len(es_list) + len(en_list)), UPDATED="Actualizado: %s." % upd.strftime("%d/%m/%Y")),
      "en": dict(EN, CARDS=en_list, SCHEDULE=en_table + faq_html("en"),
         DESC="Every English-speaking AA meeting in Medellín, Colombia: %d meetings a week in %s%s, with map, addresses, times and contacts. Updated daily." % (n_en_sessions, ", ".join(en_zones), " and online" if has_online else ""),
-        INTRO='<p class="intro">There are %d English-speaking Alcoholics Anonymous meetings each week in Medellín, Colombia, in %s%s. Below is every meeting with its address, time, contact and a map. The list is refreshed daily from aamedellin.org. Spanish-language groups (%d) are listed too; switch to "All" to see them. <a href="../">Versión en español →</a></p>' % (n_en_sessions, ", ".join(en_zones), ", plus online meetings on Zoom" if has_online else "", len(es_list)),
+        INTRO='<p class="intro">There are %d English-speaking Alcoholics Anonymous meetings each week in Medellín, Colombia, in %s%s. Below is every meeting with its address, time, contact and a map. The list is refreshed daily from aamedellin.org. Spanish-language groups (%d) are listed too; switch to "All" to see them. <a href="first-meeting/">First time at a meeting? →</a> · <a href="../">Versión en español →</a></p>' % (n_en_sessions, ", ".join(en_zones), ", plus online meetings on Zoom" if has_online else "", len(es_list)),
         SRC="Sources: aamedellin.org and aacolombia.org.", NOTE=disclaimer_en,
         COUNT="%d meetings" % len(en_list), UPDATED="Updated %s." % upd.strftime("%b %d, %Y")),
     }
@@ -388,11 +390,16 @@ def render():
         open(path, "w", encoding="utf-8").write(out)
 
     day = upd.strftime("%Y-%m-%d")
+    import pages as pages_mod
+    pages_mod.write_pages(d, rep["ANALYTICS"])
     open(os.path.join(ROOT, "sitemap.xml"), "w").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
         + "".join('<url><loc>%s%s</loc><lastmod>%s</lastmod><changefreq>daily</changefreq>'
                   '<xhtml:link rel="alternate" hreflang="es" href="%s/"/><xhtml:link rel="alternate" hreflang="en" href="%s/en/"/></url>\n'
                   % (SITE, p, day, SITE, SITE) for p in ("/", "/en/"))
+        + "".join('<url><loc>%s%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq>'
+                  '<xhtml:link rel="alternate" hreflang="es" href="%s%s"/><xhtml:link rel="alternate" hreflang="en" href="%s%s"/></url>\n'
+                  % (SITE, p, day, SITE, pages_mod.ES_PATH, SITE, pages_mod.EN_PATH) for p in (pages_mod.ES_PATH, pages_mod.EN_PATH))
         + "</urlset>\n")
     open(os.path.join(ROOT, "robots.txt"), "w").write(
         "User-agent: *\nAllow: /\n\n"
@@ -407,6 +414,8 @@ def render():
          "", "Last updated: %s" % day, "",
          "- [English-speaking AA meetings in Medellín](%s/en/): map, weekly schedule, addresses and contacts" % SITE,
          "- [Reuniones de AA en Medellín (español)](%s/): all groups with map and filters" % SITE,
+         "- [Your first AA meeting in Medellín (newcomer guide, English)](%s/en/first-meeting/)" % SITE,
+         "- [Tu primera reunión de AA en Medellín (guía, español)](%s/primera-reunion/)" % SITE,
          "- [Raw data (JSON)](%s/data.json)" % SITE,
          "- [Meeting Guide API feed (JSON)](%s/meetingguide.json): the same meetings in the format the AA Meeting Guide app consumes" % SITE, "", "## English-speaking meetings", ""]
     for m in en_list:
