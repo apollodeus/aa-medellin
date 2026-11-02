@@ -54,6 +54,9 @@ def first_meeting_es(n_es, n_en, n_en_sessions):
 <p>En Medellín, Bello, Envigado, Itagüí y Sabaneta hay {n_es} grupos registrados en AA Colombia. La mayoría se reúne todas las noches a las 7:00 p. m. Hay reuniones en línea y también {n_en_sessions} reuniones en inglés cada semana.</p>
 <p><a class="cta" href="../">Ver los grupos en el mapa →</a></p>
 
+<h2>Las Promesas</h2>
+<p>Las Promesas están en el capítulo 6 del Libro Grande, <i>Alcohólicos Anónimos</i>, páginas 83 y 84. Comienzan: «Si somos esmerados…». El Libro Grande se puede leer gratis en <a href="https://www.aa.org/es/alcoholicos-anonimos" target="_blank" rel="noopener">aa.org</a>.</p>
+
 <h2>Para familiares y amigos</h2>
 <p>Al-Anon es para los familiares y amigos de alcohólicos. <a href="https://al-anon.org/es/" target="_blank" rel="noopener">al-anon.org/es</a></p>
 
@@ -105,6 +108,9 @@ def first_meeting_en(n_es, n_en, n_en_sessions):
 <b>Solo quiero escuchar.</b><span>I just want to listen.</span>
 <b>No hablo mucho español.</b><span>I don't speak much Spanish.</span>
 </div></div>
+
+<h2>The Promises</h2>
+<p>The Promises are in Chapter 6 of the Big Book, <i>Alcoholics Anonymous</i>, pages 83–84. They begin: "If we are painstaking about this phase of our development…" <a href="https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf" target="_blank" rel="noopener">Read Chapter 6 on aa.org</a>.</p>
 
 <h2>For family and friends</h2>
 <p>Al-Anon is for the families and friends of alcoholics. <a href="https://al-anon.org" target="_blank" rel="noopener">al-anon.org</a></p>
