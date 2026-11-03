@@ -55,7 +55,11 @@ def first_meeting_es(n_es, n_en, n_en_sessions):
 <p><a class="cta" href="../">Ver los grupos en el mapa →</a></p>
 
 <h2>Las Promesas</h2>
-<p>Las Promesas están en el capítulo 6 del Libro Grande, <i>Alcohólicos Anónimos</i>, páginas 83 y 84. Comienzan: «Si somos esmerados…». El Libro Grande se puede leer gratis en <a href="https://www.aa.org/es/alcoholicos-anonimos" target="_blank" rel="noopener">aa.org</a>.</p>
+<blockquote class="preamble">
+<p>Si nos esmeramos en esta fase de nuestro desarrollo, nos sorprenderemos de los resultados antes de llegar a la mitad del camino. Vamos a conocer una libertad y una felicidad nuevas. No nos lamentaremos por el pasado ni desearemos cerrar la puerta que nos lleva a él. Comprenderemos el significado de la palabra serenidad y conoceremos la paz. Sin importar lo bajo que hayamos llegado, percibiremos cómo nuestra experiencia puede beneficiar a otros. Desaparecerá ese sentimiento de inutilidad y lástima de nosotros mismos. Perderemos el interés en cosas egoístas y nos interesaremos en nuestros compañeros. Se desvanecerá la ambición personal. Nuestra actitud y nuestro punto de vista sobre la vida cambiarán. Se nos quitará el miedo a la gente y a la inseguridad económica. Intuitivamente sabremos manejar situaciones que antes nos desconcertaban. De pronto comprenderemos que Dios está haciendo por nosotros lo que por nosotros mismos no podíamos hacer.</p>
+<p>¿Son éstas promesas extravagantes? No lo creemos. Están cumpliéndose entre nosotros, a veces rápidamente, a veces lentamente, pero siempre se realizarán si trabajamos para obtenerlas.</p>
+<footer>Alcohólicos Anónimos, páginas 83 y 84. Reimpreso con permiso de Alcoholics Anonymous World Services, Inc.</footer>
+</blockquote>
 
 <h2>Para familiares y amigos</h2>
 <p>Al-Anon es para los familiares y amigos de alcohólicos. <a href="https://al-anon.org/es/" target="_blank" rel="noopener">al-anon.org/es</a></p>
@@ -110,7 +114,11 @@ def first_meeting_en(n_es, n_en, n_en_sessions):
 </div></div>
 
 <h2>The Promises</h2>
-<p>The Promises are in Chapter 6 of the Big Book, <i>Alcoholics Anonymous</i>, pages 83–84. They begin: "If we are painstaking about this phase of our development…" <a href="https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf" target="_blank" rel="noopener">Read Chapter 6 on aa.org</a>.</p>
+<blockquote class="preamble">
+<p>If we are painstaking about this phase of our development, we will be amazed before we are half way through. We are going to know a new freedom and a new happiness. We will not regret the past nor wish to shut the door on it. We will comprehend the word serenity and we will know peace. No matter how far down the scale we have gone, we will see how our experience can benefit others. That feeling of uselessness and self-pity will disappear. We will lose interest in selfish things and gain interest in our fellows. Self-seeking will slip away. Our whole attitude and outlook upon life will change. Fear of people and of economic insecurity will leave us. We will intuitively know how to handle situations which used to baffle us. We will suddenly realize that God is doing for us what we could not do for ourselves.</p>
+<p>Are these extravagant promises? We think not. They are being fulfilled among us—sometimes quickly, sometimes slowly. They will always materialize if we work for them.</p>
+<footer>Alcoholics Anonymous, pages 83–84. Reprinted with permission of Alcoholics Anonymous World Services, Inc.</footer>
+</blockquote>
 
 <h2>For family and friends</h2>
 <p>Al-Anon is for the families and friends of alcoholics. <a href="https://al-anon.org" target="_blank" rel="noopener">al-anon.org</a></p>
