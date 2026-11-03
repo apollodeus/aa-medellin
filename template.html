@@ -70,6 +70,8 @@ h1{font:600 clamp(1.9rem,4.6vw,2.9rem)/1.1 var(--serif);margin:0 0 12px;color:#f
 @media (max-width:600px){#map{height:360px}.band .inner{padding-block:16px 84px}}
 .legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:.85rem;color:var(--muted);margin:0;padding:8px 8px 4px}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.dayinfo{margin:14px 0 -4px;font-size:.95rem;color:var(--muted)}
+.dayinfo button{font:600 .95rem var(--sans);background:none;border:0;padding:0;margin-left:6px;color:var(--accent);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .count{margin-left:auto;font-variant-numeric:tabular-nums;font-weight:600;color:var(--fg)}
 .iw{font:14px/1.4 var(--sans);color:#18213a;max-width:240px}
 .iw b{display:block;font:600 15px/1.25 var(--serif);color:#1d3461;margin-bottom:2px}
@@ -249,6 +251,7 @@ footer .inner{padding-block:22px 34px}
   </div>
 </div>
 
+<p class="dayinfo" id="dayinfo" hidden></p>
 <div class="list" id="list">{{STATIC_LIST}}</div>
 {{SCHEDULE}}
 </div>
@@ -549,7 +552,11 @@ function render(refit){
   if(state.radius>0)rows=rows.filter(g=>g.dist==null?g.virtualOnly:g.dist<=state.radius);
   const byDist=(a,b)=>(a.dist??1e9)-(b.dist??1e9)||a.name.localeCompare(b.name);
   const isToday=state.days.size===1&&state.days.has(TODAY),now=isToday?bogota().now:null;
-  const tkey=g=>g.t0==null?"99":((now&&g.t0<now)?"1":"0")+g.t0;   // today: meetings already started go after the upcoming ones
+  const anyDay=state.days.size===0;
+  if(anyDay){const B=bogota(),ORDER=["D","L","M","Mc","J","V","S"],di=ORDER.indexOf(B.day),[nh,nm]=B.now.split(":").map(Number),nowMin=nh*60+nm;
+    rows.forEach(g=>{let best=null;for(const sl of (g.slots||[]))for(const d of sl.days){const k=ORDER.indexOf(d);if(k<0)continue;for(const t of sl.times){if(!t.start)continue;const [h,m]=t.start.split(":").map(Number);
+      let mins=((k-di+7)%7)*1440+h*60+m-nowMin;if(mins<0)mins+=7*1440;if(best===null||mins<best.mins)best={mins,day:d,start:t.start};}}g.next=best;});}
+  const tkey=g=>anyDay?(g.next?String(g.next.mins).padStart(5,"0"):"99999"):(g.t0==null?"99":((now&&g.t0<now)?"1":"0")+g.t0);   // today: meetings already started go after the upcoming ones
   if(state.sort==="time")rows.sort((a,b)=>(tkey(a)<tkey(b)?-1:tkey(a)>tkey(b)?1:0)||byDist(a,b));
   else if(state.sort==="name")rows.sort((a,b)=>a.name.localeCompare(b.name));
   else rows.sort(byDist);
@@ -557,6 +564,11 @@ function render(refit){
   SHOWN=shown;for(const k in LOCS)MAP.dim(k,!LOCS[k].some(x=>shown.has(x.i)));
   if(refit)MAP.fit(rows);
   document.getElementById("count").textContent=rows.length+" / "+ITEMS.length;
+  const di=document.getElementById("dayinfo");
+  if(state.days.size){const d=[...state.days][0],nm=(T.dayFull||{})[d]||DAYS.find(x=>x[0]===d)[1];
+    di.innerHTML=`${esc(T.showingDay.replace("{n}",rows.length).replace("{d}",d===TODAY?T.todayFull:nm))}<button type="button" id="alldays">${T.allDays}</button>`;di.hidden=false;
+    document.getElementById("alldays").onclick=()=>{state.days.clear();daysEl.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed","false"));render(true);};}
+  else di.hidden=true;
   const list=document.getElementById("list");
   if(!rows.length){list.innerHTML='<p class="empty">'+T.empty+'</p>';return;}
   list.innerHTML=rows.map(g=>`<article class="card${g.i===state.sel?" sel":""}${g.kind==="12step"?" ts":""}" id="g-${g.i}">
@@ -567,7 +579,7 @@ function render(refit){
       ${g.type?`<span class="tag o">${T.tag[g.type]}</span>`:''}
       ${g.virtualOnly?`<span class="tag o">${T.tag.online}</span>`:(g.virtual?`<span class="tag o">${g.format==="hybrid"?T.tag.hybrid:T.tag.virtual}</span>`:'')}
       ${g.approx&&g.lat!=null?`<span class="tag o" title="${T.approxTitle}">≈ ${T.approx}</span>`:''}
-      <span class="dist">${state.sort==="time"&&g.t0?fmt12(g.t0)+(g.dist!=null?" · ":""):""}${g.dist!=null?g.dist.toFixed(1)+" km":""}</span></h2>
+      <span class="dist">${state.sort==="time"&&anyDay&&g.next?(g.next.day===TODAY&&g.next.mins<1440?T.today:DAYS.find(x=>x[0]===g.next.day)[1])+" "+fmt12(g.next.start)+(g.dist!=null?" · ":""):(state.sort==="time"&&g.t0?fmt12(g.t0)+(g.dist!=null?" · ":""):"")}${g.dist!=null?g.dist.toFixed(1)+" km":""}</span></h2>
     ${(isToday&&g.t0&&g.t0<now)?`<div class="past">${T.pastToday}</div>`:""}
     ${g.place&&g.format!=="online"?`<div class="place">${esc(g.place)}</div>`:""}
     ${g.address?`<div class="addr"><a href="${esc(dirUrl(g))}" target="_blank" rel="noopener">${esc(g.address)}</a>${g.detail?" · "+esc(g.detail):""}</div>`:(g.detail?`<div class="addr">${esc(g.detail)}</div>`:"")}
