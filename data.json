@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T15:38:38Z",
+ "updated": "2026-11-08T15:56:56Z",
  "status": {
   "es": "ok",
   "en": "ok"
@@ -533,8 +533,8 @@
    "lang": "es",
    "name": "Espíritu de Guerreros",
    "address": "Cra 22 47-79",
-   "detail": "Barrio Prado Centro",
-   "barrio": "",
+   "detail": "",
+   "barrio": "Buenos Aires",
    "municipio": "Medellín",
    "schedule": "Lunes a Sábado 6:30pm",
    "virtual": false,

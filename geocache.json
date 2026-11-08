@@ -1031,6 +1031,12 @@
   "precise": true,
   "source": "google"
  },
+ "google:CRA 22 47-79 | BUENOS AIRES": {
+  "lat": 6.237529899999999,
+  "lng": -75.549033,
+  "precise": true,
+  "source": "google"
+ },
  "google:CRA 40 #95A.-16, BARRIO VILLA DE GUADALUPE": {
   "lat": 6.286537,
   "lng": -75.54899189999999,
