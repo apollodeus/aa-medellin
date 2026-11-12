@@ -461,7 +461,10 @@ const MAP={pins:{},
   },
   fit(list){
     const pts=list.filter(g=>g.lat!=null&&g.lat>6.10&&g.lat<6.36&&g.lng>-75.72&&g.lng<-75.47);if(!pts.length)return;
-    if(this.g){const b=new google.maps.LatLngBounds();pts.forEach(g=>b.extend({lat:g.lat,lng:g.lng}));this.g.fitBounds(b,40);if(pts.length===1)this.g.setZoom(15);return;}
+    if(this.g){const b=new google.maps.LatLngBounds();pts.forEach(g=>b.extend({lat:g.lat,lng:g.lng}));
+      const ne=b.getNorthEast(),sw=b.getSouthWest();
+      if(Math.abs(ne.lat()-sw.lat())<0.004&&Math.abs(ne.lng()-sw.lng())<0.004){this.g.setCenter(b.getCenter());this.g.setZoom(15);return;}   // one place (or several meetings at one address)
+      this.g.fitBounds(b,40);google.maps.event.addListenerOnce(this.g,"idle",()=>{if(this.g.getZoom()>16)this.g.setZoom(16);});return;}
     const b=new maplibregl.LngLatBounds();pts.forEach(g=>b.extend([g.lng,g.lat]));this.m.fitBounds(b,{padding:50,maxZoom:15,duration:600});
   }
 };
